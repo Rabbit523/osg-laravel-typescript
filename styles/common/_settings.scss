@@ -1,0 +1,123 @@
+@mixin size-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin size-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media that spans multiple breakpoint widths.
+// Makes the @content apply between the min and max breakpoints
+
+@mixin size-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($lower, $breakpoints);
+  $max: breakpoint-max($upper, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include size-up($lower, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include size-down($upper, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+// Media between the breakpoint's minimum and maximum widths.
+// No minimum for the smallest breakpoint, and no maximum for the largest one.
+// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
+
+@mixin size-only($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  $max: breakpoint-max($name, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include size-up($name, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include size-down($name, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+// Override the default breakpoints (by Bootstrap).
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1900px
+);
+
+// Override the default max-width of the containers (by Bootstrap).
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1610px
+);
+
+// Colors
+
+$primary-color: #ffa600;
+$secondary-color: #48a200;
+$medium-gray: #4d4d4d;
+$dark-brown: #100c00;
+
+// Sizes
+
+$lg-size: 3.2rem;
+$regular-size: 1.6rem;
+$md-size: 1.4rem;
+$sm-size: 1.2rem;
+
+// Theme Colors
+
+$theme-colors: (
+  "primary": $primary-color
+);
+
+// CrossBrowser
+
+@mixin crossBrowser($property, $css) {
+  -webkit-#{$property} : $css;
+  -moz-#{$property} : $css;
+  -o-#{$property} : $css;
+  #{$property} : $css;
+} 
+
+// Fonts
+
+$primary-font: 'Square 721 BT Bold Extended';
+$secondary-font: 'Futura Medium BT';

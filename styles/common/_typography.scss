@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Square 721 BT Bold Extended';
+  src:  url('../fonts/Square721BT-BoldExtended.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Futura Medium BT';
+  src:  url('../fonts/FuturaMediumBT.ttf') format('truetype');
+  font-weight: 400;
+}
+
+
+
+
+
+
+h1, h2, h3, h4, h5, h6{
+  // font size and family? 
+
+  text-transform: uppercase;
+  span{
+    display: block;
+  }
+  &.with-stars{
+
+    &:after{
+      content: '';
+      background: url('/images/stars.png') center no-repeat transparent;
+      background-size: cover;
+      width: 16.1rem;
+      height: 4.8rem;
+      display: block;
+      margin: 0px auto;
+    }
+  }
+}

@@ -1,0 +1,200 @@
+header{
+  .navbar {
+    background: black;
+    text-transform: uppercase;
+    width: 100%;
+    height: 10.0rem;
+    color: white;
+    padding: 0;
+    z-index: 999;
+
+    .container {
+      min-height: 100%;
+
+      .logo {
+        padding: 0;
+        background: black;
+        padding: 3.0rem;
+        margin-top: 7.0rem;
+        border-radius: 50%;
+        @include size-down(md) {
+          background: none;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        img {
+          @include size-down(md) {
+            max-height: 100%;
+            padding: 1.0rem 0;
+          }
+        }
+      }
+
+      .toggleNav {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-wrapper {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        overflow: hidden;
+        @include crossBrowser(transition, max-height .15s ease-in);
+        @include size-up(xl) {
+          margin-left: 2.0rem;
+        }
+        @include size-down(md) {
+          width: 100%;
+          height: 0;
+          position: absolute;
+          top: 10.0rem;
+          max-height: 0rem !important;
+          padding: 0 5%;
+        }
+        @include size-down(sm) {
+          padding: 0;
+        }
+
+
+
+        .navlinks {
+          margin: 0;
+          padding: 0 0.5rem;
+          flex: 1;
+          justify-content: flex-end;
+          @include crossBrowser(transition, opacity .50s ease-in);
+          @include size-down(md) {
+            opacity: 0;
+            justify-content: center;
+          }
+          @include size-down(sm) {
+            width: 80%;
+            padding: 0;
+          }
+
+
+          .navlinks__item {
+            list-style: none;
+            width: auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 0 1.5rem;
+            font-size: $sm-size;
+            @include crossBrowser(transition, all 0.125s ease-in-out);
+            &:hover {
+              color: $primary-color;
+              @include size-down(sm) {
+                border-radius: 0.5rem;
+              }
+            }
+            @include size-down(sm) {
+              padding: 1.0rem 1.5rem;
+            }
+          }
+
+        }
+
+        .nav-sep {
+          background: $medium-gray;
+          padding: 3.0rem 0.1rem;
+          display: flex;
+          @include size-down(sm) {
+            padding: 0.1rem 0;
+            margin: 2.0rem 0;
+            width: 80%;
+          }  
+        }
+        
+        .nav-session {
+          padding: 0 1.0rem;
+          @include size-down(md) {
+            display: flex;
+            align-items: center;
+            max-width: 30%;
+          }
+          @include size-down(sm) {
+            flex-direction: column;
+            width: 80%;
+            padding: 0;
+            max-width: 100%;
+          }
+          
+          .btn {
+            font-size: $sm-size;
+            color: $secondary-color;
+            text-transform: uppercase;
+            padding: 0 1.0rem;
+          }
+          .btn--login {
+            background: $primary-color;
+            color: black;
+            padding: 1.0rem 3.5rem;
+            @include crossBrowser(transition, opacity .50s linear);
+          }
+        }
+
+      }
+    }
+
+    &.openMenu{
+      .nav-wrapper {
+        @include size-down(md) {
+          background: black;
+          display: flex !important;
+          left: 0;
+          max-height: 50.0rem !important;
+          height: 100% !important;
+        }
+        @include size-down(sm) {
+          flex-direction: column;
+          height: auto !important;
+          max-height: 50.0rem !important;
+          padding: 1.5rem 0;
+        }
+
+        .navlinks {
+          @include size-down(md) {
+            flex: 1;
+            opacity: 1;
+          }
+          @include size-down(sm) {
+            flex: 1;
+          }
+          @include size-down(sm) {
+            flex-direction: column;
+          }
+
+          .btn-signup {
+            @include size-down(sm) {
+              width: 100%;
+            }
+          }
+          .btn--login {
+            @include size-down(md) {
+              opacity: 1;
+              margin-left: 1.0rem;
+            }
+            @include size-down(sm) {
+              width: 100%;
+              height: 5.0rem;
+              margin-top: 1.5rem;
+              text-align: center;
+              justify-content: center;
+              margin-left: 0;
+              margin-bottom: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

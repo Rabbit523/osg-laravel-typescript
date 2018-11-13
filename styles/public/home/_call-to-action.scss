@@ -1,0 +1,73 @@
+#call-to-action{
+  @include section-with-overlay(black);
+  background: url('/images/header-bg.png') center no-repeat;
+  background-size: cover;
+
+  .container{
+    
+    h1{
+      text-align: center;
+      margin: 2.0rem;
+      color: white;
+      font-size: $lg-size;
+      font-weight: 700;
+      span{
+        font-size: $md-size;
+      }
+    }
+
+    .get-started {
+      margin: 2.0rem;
+      input {
+        font-family: $secondary-font;
+        padding: 1.0rem 1.5rem;
+        width: 30.0rem;
+        font-size: $regular-size;
+        border-radius: .5rem;
+      }
+      button {
+        background: $secondary-color;
+        color: white;
+        text-transform: uppercase;
+        padding: 1.5rem 3.5rem;
+        border-radius: .5rem;
+        margin-left: 1.0rem;
+        height: 100%;
+        cursor: pointer;
+      }
+    }
+
+    @include size-down(sm) {
+      padding: 3.5rem;
+    }
+  }
+}
+
+
+
+
+
+/*We can do WAY better here!*/
+.header__explore {
+  border: .3rem solid white;
+  width: 5.0rem;
+  height: 5.0rem;
+  position: absolute;
+  bottom: 1.5rem;
+  outline: none;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -2.5rem;
+  @include crossBrowser(border-radius, 50%);
+  i  {
+    border: solid $primary-color;
+    border-width: 0 .3rem .3rem 0;
+    display: inline-block;
+    padding: 1.0rem;
+    margin-top: -0.5rem;
+    @include crossBrowser(transform, rotate(45deg));      
+  }
+}
