@@ -1,12 +1,20 @@
-.btn--primary {
-  background: $secondary-color;
-  color: white;
-  text-transform: uppercase;
+.btn{
+  //overriding bootstrap styes for buttons is perfectly okay!
   padding: 1.5rem 3.5rem;
   border-radius: .5rem;
-  height: 100%;
-  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+
+  &.btn-primary{
+    background: $secondary-color;
+  }
+
+  &.btn-transparent{
+    background: transparent;
+  }
 }
+
+
 
 .btn--learn-more {
   color: white;
