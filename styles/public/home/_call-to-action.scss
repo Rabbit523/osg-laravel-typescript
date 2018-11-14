@@ -69,15 +69,15 @@
           @include section-with-overlay(black);
       
           &.strength-athelete{
-            background: url('/images/girl-training.jpg') center no-repeat;
+            background-image: url('/images/girl-training.jpg');
           }
       
           &.program-designer{
-            background: url('/images/list.jpg') center no-repeat;
+            background-image: url('/images/list.jpg');
           }
       
           &.personal-trainer{
-            background: url('/images/hands-five.jpg') center no-repeat;
+            background-image: url('/images/hands-five.jpg');
           }
 
           .content{

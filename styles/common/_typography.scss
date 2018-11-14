@@ -35,9 +35,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+/*TODO: Define proper font sizes for all headings, keep in mind that if anything is wrapped with <span>, the font size is smaller.*/
+
 h2 {
-  font-size: $regular-size;
+  font-size: $lg-size;
   span {
-    font-size: $lg-size;
+    font-size: $regular-size;
   }
 }

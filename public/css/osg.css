@@ -44,12 +44,14 @@ h6.with-stars:after {
   margin: 0 auto;
 }
 
+/*TODO: Define proper font sizes for all headings, keep in mind that if anything is wrapped with <span>, the font size is smaller.*/
+
 h2 {
-  font-size: 1.6rem;
+  font-size: 2.8rem;
 }
 
 h2 span {
-  font-size: 2.8rem;
+  font-size: 1.6rem;
 }
 
 .btn {
@@ -704,6 +706,17 @@ html .footer-info__credit span {
   color: #ffa600;
 }
 
+body .title-row,
+html .title-row {
+  text-align: center;
+  padding: 40px 0;
+}
+
+body .title-row h2,
+html .title-row h2 {
+  margin: 2.0rem;
+}
+
 body #main-call-to-action,
 html #main-call-to-action {
   position: relative;
@@ -841,17 +854,17 @@ html #secondary-call-to-action .container-fluid .row > div .call-to-action:befor
 
 body #secondary-call-to-action .container-fluid .row > div .call-to-action.strength-athelete,
 html #secondary-call-to-action .container-fluid .row > div .call-to-action.strength-athelete {
-  background: url("/images/girl-training.jpg") center no-repeat;
+  background-image: url("/images/girl-training.jpg");
 }
 
 body #secondary-call-to-action .container-fluid .row > div .call-to-action.program-designer,
 html #secondary-call-to-action .container-fluid .row > div .call-to-action.program-designer {
-  background: url("/images/list.jpg") center no-repeat;
+  background-image: url("/images/list.jpg");
 }
 
 body #secondary-call-to-action .container-fluid .row > div .call-to-action.personal-trainer,
 html #secondary-call-to-action .container-fluid .row > div .call-to-action.personal-trainer {
-  background: url("/images/hands-five.jpg") center no-repeat;
+  background-image: url("/images/hands-five.jpg");
 }
 
 body #secondary-call-to-action .container-fluid .row > div .call-to-action .content,
@@ -872,5 +885,150 @@ html #secondary-call-to-action .container-fluid .row > div .call-to-action .cont
 body #secondary-call-to-action .container-fluid .row > div .call-to-action .content .buttons button,
 html #secondary-call-to-action .container-fluid .row > div .call-to-action .content .buttons button {
   width: 45%;
+}
+
+body #main-features .container-fluid .row:nth-child(2) .feature,
+html #main-features .container-fluid .row:nth-child(2) .feature {
+  border-right: 1px solid lightgray;
+  height: 560px;
+}
+
+body #main-features .container-fluid .row:nth-child(2) .feature .description,
+html #main-features .container-fluid .row:nth-child(2) .feature .description {
+  width: 80%;
+  margin: 0 auto;
+}
+
+body #main-features .container-fluid .row:nth-child(2) .feature .description .icon,
+html #main-features .container-fluid .row:nth-child(2) .feature .description .icon {
+  height: 200px;
+  background: center no-repeat;
+  background-size: 120px;
+}
+
+body #main-features .container-fluid .row:nth-child(2) .feature .description ul li,
+html #main-features .container-fluid .row:nth-child(2) .feature .description ul li {
+  text-transform: uppercase;
+}
+
+body #main-features .container-fluid .row:nth-child(2) .feature .description ul li:before,
+html #main-features .container-fluid .row:nth-child(2) .feature .description ul li:before {
+  color: yellow;
+  content: "\2022";
+  font-size: 2em;
+  position: relative;
+  top: 5px;
+  padding-right: 10px;
+}
+
+body #main-features .container-fluid .row:nth-child(2) .feature.program-designs .icon,
+html #main-features .container-fluid .row:nth-child(2) .feature.program-designs .icon {
+  background-image: url("/images/icons/program-designs.png");
+}
+
+body #main-features .container-fluid .row:nth-child(2) .feature.experience-bank .icon,
+html #main-features .container-fluid .row:nth-child(2) .feature.experience-bank .icon {
+  background-image: url("/images/icons/experience-bank.png");
+}
+
+body #main-features .container-fluid .row:nth-child(2) .feature.strength-standards .icon,
+html #main-features .container-fluid .row:nth-child(2) .feature.strength-standards .icon {
+  background-image: url("/images/icons/strength-standards.png");
+}
+
+body #main-features .container-fluid .row:nth-child(2) .feature.auto-regulation .icon,
+html #main-features .container-fluid .row:nth-child(2) .feature.auto-regulation .icon {
+  background-image: url("/images/icons/auto-regulation.png");
+}
+
+body #main-features .container-fluid .row:nth-child(2) .col-3:last-child .feature,
+html #main-features .container-fluid .row:nth-child(2) .col-3:last-child .feature {
+  border-right: none;
+}
+
+body #main-features .container-fluid .row:nth-child(3) .actions,
+html #main-features .container-fluid .row:nth-child(3) .actions {
+  width: 100%;
+  text-align: center;
+  padding: 80px 0;
+}
+
+body #symbiose,
+html #symbiose {
+  height: 900px;
+  background: black;
+}
+
+body #symbiose .title-row,
+html #symbiose .title-row {
+  color: white;
+}
+
+body #profiles .container-fluid .row:nth-child(2),
+html #profiles .container-fluid .row:nth-child(2) {
+  padding-bottom: 60px;
+}
+
+body #profiles .container-fluid .row:nth-child(2) .profile,
+html #profiles .container-fluid .row:nth-child(2) .profile {
+  border-right: 1px solid lightgray;
+  height: 560px;
+}
+
+body #profiles .container-fluid .row:nth-child(2) .profile .description,
+html #profiles .container-fluid .row:nth-child(2) .profile .description {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+body #profiles .container-fluid .row:nth-child(2) .profile .description .icon,
+html #profiles .container-fluid .row:nth-child(2) .profile .description .icon {
+  height: 200px;
+  background: center no-repeat;
+  background-size: 120px;
+}
+
+body #profiles .container-fluid .row:nth-child(2) .profile .description ul li,
+html #profiles .container-fluid .row:nth-child(2) .profile .description ul li {
+  text-transform: uppercase;
+}
+
+body #profiles .container-fluid .row:nth-child(2) .profile .description ul li:before,
+html #profiles .container-fluid .row:nth-child(2) .profile .description ul li:before {
+  color: yellow;
+  content: "\2022";
+  font-size: 2em;
+  position: relative;
+  top: 5px;
+  padding-right: 10px;
+}
+
+body #profiles .container-fluid .row:nth-child(2) .profile .description .btn,
+html #profiles .container-fluid .row:nth-child(2) .profile .description .btn {
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+}
+
+body #profiles .container-fluid .row:nth-child(2) .profile.strength-athlete .icon,
+html #profiles .container-fluid .row:nth-child(2) .profile.strength-athlete .icon {
+  background-image: url("/images/icons/strength-athlete.png");
+}
+
+body #profiles .container-fluid .row:nth-child(2) .profile.program-designer .icon,
+html #profiles .container-fluid .row:nth-child(2) .profile.program-designer .icon {
+  background-image: url("/images/icons/program-designer.png");
+}
+
+body #profiles .container-fluid .row:nth-child(2) .profile.personal-trainer .icon,
+html #profiles .container-fluid .row:nth-child(2) .profile.personal-trainer .icon {
+  background-image: url("/images/icons/personal-trainer.png");
+}
+
+body #profiles .container-fluid .row:nth-child(2) .col-4:last-child .profile,
+html #profiles .container-fluid .row:nth-child(2) .col-4:last-child .profile {
+  border-right: none;
 }
 

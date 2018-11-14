@@ -13,7 +13,7 @@
         <div class="col-4">
           <div class="call-to-action strength-athelete">
               <div class="content">
-                <h2>I am a <span>Strength Athlete</span></h2>
+                <h2><span>I am a </span>Strength Athlete</h2>
                 <p>Complete programs and see how yo responded compared to your mirror athletes. Learn which program designs suits you best.</p>
                 <div class="buttons">
                   <button class="btn btn-primary">Sign Up</button>
@@ -26,7 +26,7 @@
         <div class="col-4">
           <div class="call-to-action program-designer">
               <div class="content">
-                <h2>I am a <span>Program Designer</span></h2>
+                <h2><span>I am a </span>Program Designer</h2>
                 <p>Complete programs and see how yo responded compared to your mirror athletes. Learn which program designs suits you best.</p>
                 <div class="buttons">
                   <button class="btn btn-primary">Sign Up</button>
@@ -39,7 +39,7 @@
         <div class="col-4">
           <div class="call-to-action personal-trainer">
               <div class="content">
-                <h2>I am a <span>Personal Trainer</span></h2>
+                <h2><span>I am a </span>Personal Trainer</h2>
                 <p>Complete programs and see how yo responded compared to your mirror athletes. Learn which program designs suits you best.</p>
                 <div class="buttons">
                   <button class="btn btn-primary">Sign Up</button>

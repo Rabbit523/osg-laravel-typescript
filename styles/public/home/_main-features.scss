@@ -1,0 +1,74 @@
+#main-features{
+
+    .container-fluid{
+        .row{
+            &:nth-child(2){
+                .feature{
+                    border-right: 1px solid lightgray;
+                    height: 560px;
+
+                    .description{
+                        width: 80%;
+                        margin: 0 auto;
+                        .icon{
+                            height: 200px;
+                            background: center no-repeat;
+                            background-size: 120px;
+                        }    
+                        ul{
+                            li{
+                                text-transform: uppercase;
+                                &:before{
+                                    color: yellow; // TODO: set the right color.  
+                                    content: "\2022"; 
+                                    font-size: 2em; 
+                                    position: relative;
+                                    top: 5px;
+                                    padding-right: 10px;
+                                }
+                            }
+                        }
+                    }
+
+
+                    &.program-designs{
+                        .icon{
+                            background-image: url('/images/icons/program-designs.png');
+                        }
+                    }
+                    &.experience-bank{
+                        .icon{
+                            background-image: url('/images/icons/experience-bank.png');
+                        }
+                    }
+                    &.strength-standards{
+                        .icon{
+                            background-image: url('/images/icons/strength-standards.png');
+                        }
+                    }
+                    &.auto-regulation{
+                        .icon{
+                            background-image: url('/images/icons/auto-regulation.png');
+                        }
+                    }
+                }
+
+                .col-3{
+                    &:last-child{
+                        .feature{
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+            &:nth-child(3){
+                .actions{
+                    width: 100%;
+                    text-align: center;
+                    padding: 80px 0;
+                }
+            }
+        }
+    }
+
+}
