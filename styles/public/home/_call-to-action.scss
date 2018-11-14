@@ -2,9 +2,10 @@
   @include section-with-overlay(black);
   background: url('/images/header-bg.png') center no-repeat;
   background-size: cover;
-
+  height: 100vh;
+  z-index: 5;
   .container{
-    
+
     h1{
       text-align: center;
       margin: 2.0rem;
@@ -26,28 +27,21 @@
         border-radius: .5rem;
       }
       button {
-        background: $secondary-color;
-        color: white;
-        text-transform: uppercase;
-        padding: 1.5rem 3.5rem;
-        border-radius: .5rem;
         margin-left: 1.0rem;
-        height: 100%;
-        cursor: pointer;
       }
     }
 
-    @include size-down(sm) {
+    @include size-down(md) {
       padding: 3.5rem;
     }
   }
 }
 
+/*
+  We can do WAY better here! --> 
+  Fixed the padding size, what else can we improve? Positioning?
+*/
 
-
-
-
-/*We can do WAY better here!*/
 .header__explore {
   border: .3rem solid white;
   width: 5.0rem;
@@ -66,8 +60,83 @@
     border: solid $primary-color;
     border-width: 0 .3rem .3rem 0;
     display: inline-block;
-    padding: 1.0rem;
+    padding: .625rem;
     margin-top: -0.5rem;
     @include crossBrowser(transform, rotate(45deg));      
   }
+}
+
+#cta-items {
+  height: 100vh;
+  margin-top: -4.0rem;
+  @include section-with-overlay(black);
+  color: white;
+
+  .container-fluid {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    @include size-down(md) {
+      flex-direction: column;
+    }
+  }
+
+  .cta__item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 33.3333%;
+    @include section-with-overlay(black);
+    @include size-down(md) {
+      flex: 1;
+      min-height: 45.0rem;
+      justify-content: center;
+    }
+    &:before {
+      margin-top: 4.0rem;
+      @include size-down(md) {
+        margin-top: 0;
+      }
+    }
+    .container {
+      width: 75%;
+      padding-top: 60%;
+      @include size-down(md) {
+        padding: 0;
+      }
+    }
+    p {
+      font-family: $secondary-font;
+      @include size-up(lg) {
+        height: 12.0rem;
+      }
+    }
+  }
+
+  .cta__item:nth-child(1) {
+    background: url('/images/girl-training.jpg') center no-repeat;
+    background-size: cover;
+    @include size-down(md) {
+      background-position: center -5.0rem;     
+    }
+    &:before {
+      @include size-down(md) {
+        margin-top: 4.0rem;
+      }
+    }
+  }
+  .cta__item:nth-child(2) {
+    background: url('/images/list.jpg') center no-repeat;
+    background-size: cover;
+  }
+  .cta__item:nth-child(3) {
+    background: url('/images/hands-five.jpg') center no-repeat;
+    background-size: cover;
+    @include size-down(md) {
+      background-position: center -15.0rem;     
+    }
+  }
+}
+
+.cta-buttons {
+  display: flex;
 }

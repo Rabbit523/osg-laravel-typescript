@@ -1,6 +1,5 @@
 html {
   font-size: 62.5%;
-  height: 100%;
   @include size-down(lg) {
     font-size: 54.5%;
   }
@@ -8,11 +7,9 @@ html {
 
 body {
   background: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: $md-size;
   font-family: $primary-font;
   font-weight: 400;
-  height: 100%;
 }
 
 a {
@@ -35,29 +32,13 @@ li {
 ul {
   padding: 0;
 }
-.container-xl-90 {
-  max-width: 90%;
-  @include size-only(xl) {
-    max-width: 90%;
-  }
-}
 
 .row {
   margin: 0;
 }
 
-.d-flex-center {
+.flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.flex-center {
-  align-items: center;
-  justify-content: center;
-}
-
-.fullscreen-layout {
-  overflow: hidden;
-}
-

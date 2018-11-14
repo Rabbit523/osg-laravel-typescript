@@ -10,5 +10,5 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
+mix.browserSync('test.dev');
 mix.sass('styles/public/osg.scss', 'public/css');

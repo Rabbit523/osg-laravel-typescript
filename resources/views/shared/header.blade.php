@@ -2,7 +2,7 @@
     <nav class="navbar d-block">
       <div class="container container-xl-90 h-100">
         <div class="row w-100 h-100 align-items-center">
-          <a href="#" class="logo d-flex-center flex-column">
+          <a href="#" class="logo flex-center flex-column">
             <img src="images/logo.png" alt="logo" class="logo__image">
           </a>
           <div class="toggleNav">

@@ -16,6 +16,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Square 721 BT Bold Extended";
   text-transform: uppercase;
 }
 
@@ -40,17 +41,54 @@ h6.with-stars:after {
   width: 16.1rem;
   height: 4.8rem;
   display: block;
-  margin: 0px auto;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h2 span {
+  font-size: 2.8rem;
+}
+
+.btn--primary {
+  background: #48a200;
+  color: white;
+  text-transform: uppercase;
+  padding: 1.5rem 3.5rem;
+  border-radius: .5rem;
+  height: 100%;
+  cursor: pointer;
+}
+
+.btn--learn-more {
+  color: white;
+  text-transform: uppercase;
+  padding: 1.5rem 3.5rem;
+  border-radius: .5rem;
+  height: 100%;
+  cursor: pointer;
+}
+
+.btn--learn-more-w-bg {
+  background: white;
+  color: black;
+  border-radius: 2px solid gray;
+  text-transform: uppercase;
+  padding: 1.5rem 3.5rem;
+  border-radius: .5rem;
+  height: 100%;
+  cursor: pointer;
 }
 
 /*Make this semantic and define its scope, global classes are not our favorites*/
 
 html {
   font-size: 62.5%;
-  height: 100%;
 }
 
-@media (max-width: breakpoint-max(lg, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 1199.98px) {
   html {
     font-size: 54.5%;
   }
@@ -58,11 +96,9 @@ html {
 
 body {
   background: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.4rem;
   font-family: "Square 721 BT Bold Extended";
   font-weight: 400;
-  height: 100%;
 }
 
 a {
@@ -89,21 +125,11 @@ ul {
   padding: 0;
 }
 
-.container-xl-90 {
-  max-width: 90%;
-}
-
-@media (min-width: breakpoint-min(xl, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) and (max-width: breakpoint-max(xl, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
-  .container-xl-90 {
-    max-width: 90%;
-  }
-}
-
 .row {
   margin: 0;
 }
 
-.d-flex-center {
+.flex-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,62 +141,13 @@ ul {
           justify-content: center;
 }
 
-.flex-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.fullscreen-layout {
-  overflow: hidden;
-}
-
-.btn--toggleNav {
-  display: none;
-  background: #ffa600;
-  border: none;
-  padding: .8rem;
-  border-radius: .4rem;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-left: auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-@media (max-width: breakpoint-max(xl, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
-  .btn--toggleNav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.btn--toggleNav .menu-bars .b1,
-.btn--toggleNav .menu-bars .b2,
-.btn--toggleNav .menu-bars .b3 {
-  width: 2.0rem;
-  background: black;
-  height: 0.3rem;
-  min-height: 0;
-  margin: 0;
-  border-radius: 0.1rem;
-}
-
-.btn--toggleNav .menu-bars .b2,
-.btn--toggleNav .menu-bars .b3 {
-  margin: 0.5rem 0 0;
-}
-
 body,
 html {
   height: 100%;
-  /*We can do WAY better here!*/
+  /*
+  We can do WAY better here! --> 
+  Fixed the padding size, what else can we improve? Positioning?
+*/
 }
 
 body header .navbar,
@@ -187,6 +164,14 @@ html header .navbar {
 body header .navbar .container,
 html header .navbar .container {
   min-height: 100%;
+  max-width: 90%;
+}
+
+@media (min-width: 1200px) and (max-width: 1899.98px) {
+  body header .navbar .container,
+  html header .navbar .container {
+    max-width: 90%;
+  }
 }
 
 body header .navbar .container .logo,
@@ -198,7 +183,7 @@ html header .navbar .container .logo {
   border-radius: 50%;
 }
 
-@media (max-width: breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 991.98px) {
   body header .navbar .container .logo,
   html header .navbar .container .logo {
     background: none;
@@ -208,7 +193,7 @@ html header .navbar .container .logo {
   }
 }
 
-@media (max-width: breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 991.98px) {
   body header .navbar .container .logo img,
   html header .navbar .container .logo img {
     max-height: 100%;
@@ -228,6 +213,52 @@ html header .navbar .container .toggleNav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+body header .navbar .container .btn--toggleNav,
+html header .navbar .container .btn--toggleNav {
+  display: none;
+  background: #ffa600;
+  border: none;
+  padding: .8rem;
+  border-radius: .4rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-left: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media (max-width: 1899.98px) {
+  body header .navbar .container .btn--toggleNav,
+  html header .navbar .container .btn--toggleNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+body header .navbar .container .btn--toggleNav .menu-bars .b1,
+body header .navbar .container .btn--toggleNav .menu-bars .b2,
+body header .navbar .container .btn--toggleNav .menu-bars .b3,
+html header .navbar .container .btn--toggleNav .menu-bars .b1,
+html header .navbar .container .btn--toggleNav .menu-bars .b2,
+html header .navbar .container .btn--toggleNav .menu-bars .b3 {
+  width: 2.0rem;
+  background: black;
+  height: 0.3rem;
+  min-height: 0;
+  margin: 0;
+  border-radius: 0.1rem;
+}
+
+body header .navbar .container .btn--toggleNav .menu-bars .b2,
+body header .navbar .container .btn--toggleNav .menu-bars .b3,
+html header .navbar .container .btn--toggleNav .menu-bars .b2,
+html header .navbar .container .btn--toggleNav .menu-bars .b3 {
+  margin: 0.5rem 0 0;
 }
 
 body header .navbar .container .nav-wrapper,
@@ -250,14 +281,14 @@ html header .navbar .container .nav-wrapper {
   transition: max-height 0.15s ease-in;
 }
 
-@media (min-width: breakpoint-min(xl, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (min-width: 1200px) {
   body header .navbar .container .nav-wrapper,
   html header .navbar .container .nav-wrapper {
     margin-left: 2.0rem;
   }
 }
 
-@media (max-width: breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 991.98px) {
   body header .navbar .container .nav-wrapper,
   html header .navbar .container .nav-wrapper {
     width: 100%;
@@ -269,7 +300,7 @@ html header .navbar .container .nav-wrapper {
   }
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body header .navbar .container .nav-wrapper,
   html header .navbar .container .nav-wrapper {
     padding: 0;
@@ -290,7 +321,7 @@ html header .navbar .container .nav-wrapper .navlinks {
   transition: opacity 0.5s ease-in;
 }
 
-@media (max-width: breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 991.98px) {
   body header .navbar .container .nav-wrapper .navlinks,
   html header .navbar .container .nav-wrapper .navlinks {
     opacity: 0;
@@ -300,7 +331,7 @@ html header .navbar .container .nav-wrapper .navlinks {
   }
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body header .navbar .container .nav-wrapper .navlinks,
   html header .navbar .container .nav-wrapper .navlinks {
     width: 80%;
@@ -334,14 +365,14 @@ html header .navbar .container .nav-wrapper .navlinks .navlinks__item:hover {
   color: #ffa600;
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body header .navbar .container .nav-wrapper .navlinks .navlinks__item:hover,
   html header .navbar .container .nav-wrapper .navlinks .navlinks__item:hover {
     border-radius: 0.5rem;
   }
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body header .navbar .container .nav-wrapper .navlinks .navlinks__item,
   html header .navbar .container .nav-wrapper .navlinks .navlinks__item {
     padding: 1.0rem 1.5rem;
@@ -357,7 +388,7 @@ html header .navbar .container .nav-wrapper .nav-sep {
   display: flex;
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body header .navbar .container .nav-wrapper .nav-sep,
   html header .navbar .container .nav-wrapper .nav-sep {
     padding: 0.1rem 0;
@@ -371,7 +402,7 @@ html header .navbar .container .nav-wrapper .nav-session {
   padding: 0 1.0rem;
 }
 
-@media (max-width: breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 991.98px) {
   body header .navbar .container .nav-wrapper .nav-session,
   html header .navbar .container .nav-wrapper .nav-session {
     display: -webkit-box;
@@ -384,7 +415,7 @@ html header .navbar .container .nav-wrapper .nav-session {
   }
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body header .navbar .container .nav-wrapper .nav-session,
   html header .navbar .container .nav-wrapper .nav-session {
     -webkit-box-orient: vertical;
@@ -414,7 +445,7 @@ html header .navbar .container .nav-wrapper .nav-session .btn--login {
   transition: opacity 0.5s linear;
 }
 
-@media (max-width: breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 991.98px) {
   body header .navbar.openMenu .nav-wrapper,
   html header .navbar.openMenu .nav-wrapper {
     background: black;
@@ -427,7 +458,7 @@ html header .navbar .container .nav-wrapper .nav-session .btn--login {
   }
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body header .navbar.openMenu .nav-wrapper,
   html header .navbar.openMenu .nav-wrapper {
     -webkit-box-orient: vertical;
@@ -440,7 +471,7 @@ html header .navbar .container .nav-wrapper .nav-session .btn--login {
   }
 }
 
-@media (max-width: breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 991.98px) {
   body header .navbar.openMenu .nav-wrapper .navlinks,
   html header .navbar.openMenu .nav-wrapper .navlinks {
     -webkit-box-flex: 1;
@@ -450,7 +481,7 @@ html header .navbar .container .nav-wrapper .nav-session .btn--login {
   }
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body header .navbar.openMenu .nav-wrapper .navlinks,
   html header .navbar.openMenu .nav-wrapper .navlinks {
     -webkit-box-flex: 1;
@@ -459,7 +490,7 @@ html header .navbar .container .nav-wrapper .nav-session .btn--login {
   }
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body header .navbar.openMenu .nav-wrapper .navlinks,
   html header .navbar.openMenu .nav-wrapper .navlinks {
     -webkit-box-orient: vertical;
@@ -469,14 +500,14 @@ html header .navbar .container .nav-wrapper .nav-session .btn--login {
   }
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body header .navbar.openMenu .nav-wrapper .navlinks .btn-signup,
   html header .navbar.openMenu .nav-wrapper .navlinks .btn-signup {
     width: 100%;
   }
 }
 
-@media (max-width: breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 991.98px) {
   body header .navbar.openMenu .nav-wrapper .navlinks .btn--login,
   html header .navbar.openMenu .nav-wrapper .navlinks .btn--login {
     opacity: 1;
@@ -484,7 +515,7 @@ html header .navbar .container .nav-wrapper .nav-session .btn--login {
   }
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body header .navbar.openMenu .nav-wrapper .navlinks .btn--login,
   html header .navbar.openMenu .nav-wrapper .navlinks .btn--login {
     width: 100%;
@@ -514,7 +545,7 @@ html .footer-links {
   padding: 6.0rem 2.5rem 3.0rem;
 }
 
-@media (max-width: breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 991.98px) {
   body .footer-links,
   html .footer-links {
     -webkit-box-orient: vertical;
@@ -532,7 +563,7 @@ html .footer-links-col {
           flex: 1;
 }
 
-@media (max-width: breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 991.98px) {
   body .footer-links-col,
   html .footer-links-col {
     display: -webkit-box;
@@ -586,7 +617,7 @@ html .footer-links-col li {
   margin: 2.0rem 0;
 }
 
-@media (max-width: breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 991.98px) {
   body .footer-links-col li,
   html .footer-links-col li {
     text-align: center;
@@ -614,7 +645,7 @@ html .footer-sep {
   width: 100%;
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body .footer-sep,
   html .footer-sep {
     padding: 0.05rem 0;
@@ -635,7 +666,7 @@ html .footer-info {
           align-items: center;
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body .footer-info,
   html .footer-info {
     -webkit-box-orient: vertical;
@@ -650,7 +681,7 @@ html .footer-info__logo-image {
   height: 6.0rem;
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body .footer-info__logo-image,
   html .footer-info__logo-image {
     margin-bottom: 2.5rem;
@@ -662,7 +693,7 @@ html .footer-info__copyright {
   margin-left: 2.5rem;
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body .footer-info__copyright,
   html .footer-info__copyright {
     margin-bottom: 1.0rem;
@@ -675,7 +706,7 @@ html .footer-info__credit {
   margin-left: auto;
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 767.98px) {
   body .footer-info__credit,
   html .footer-info__credit {
     margin-bottom: 1.0rem;
@@ -694,6 +725,8 @@ html #call-to-action {
   z-index: 2;
   background: url("/images/header-bg.png") center no-repeat;
   background-size: cover;
+  height: 100vh;
+  z-index: 5;
 }
 
 body #call-to-action:before,
@@ -712,7 +745,7 @@ html #call-to-action .container h1 {
   text-align: center;
   margin: 2.0rem;
   color: white;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   font-weight: 700;
 }
 
@@ -737,17 +770,10 @@ html #call-to-action .container .get-started input {
 
 body #call-to-action .container .get-started button,
 html #call-to-action .container .get-started button {
-  background: #48a200;
-  color: white;
-  text-transform: uppercase;
-  padding: 1.5rem 3.5rem;
-  border-radius: .5rem;
   margin-left: 1.0rem;
-  height: 100%;
-  cursor: pointer;
 }
 
-@media (max-width: breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1900px))) {
+@media (max-width: 991.98px) {
   body #call-to-action .container,
   html #call-to-action .container {
     padding: 3.5rem;
@@ -782,9 +808,169 @@ html .header__explore i {
   border: solid #ffa600;
   border-width: 0 .3rem .3rem 0;
   display: inline-block;
-  padding: 1.0rem;
+  padding: .625rem;
   margin-top: -0.5rem;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+body #cta-items,
+html #cta-items {
+  height: 100vh;
+  margin-top: -4.0rem;
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+body #cta-items:before,
+html #cta-items:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+body #cta-items .container-fluid,
+html #cta-items .container-fluid {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+@media (max-width: 991.98px) {
+  body #cta-items .container-fluid,
+  html #cta-items .container-fluid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body #cta-items .cta__item,
+html #cta-items .cta__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 33.3333%;
+          flex: 0 33.3333%;
+  position: relative;
+  z-index: 2;
+}
+
+body #cta-items .cta__item:before,
+html #cta-items .cta__item:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+@media (max-width: 991.98px) {
+  body #cta-items .cta__item,
+  html #cta-items .cta__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    min-height: 45.0rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body #cta-items .cta__item:before,
+html #cta-items .cta__item:before {
+  margin-top: 4.0rem;
+}
+
+@media (max-width: 991.98px) {
+  body #cta-items .cta__item:before,
+  html #cta-items .cta__item:before {
+    margin-top: 0;
+  }
+}
+
+body #cta-items .cta__item .container,
+html #cta-items .cta__item .container {
+  width: 75%;
+  padding-top: 60%;
+}
+
+@media (max-width: 991.98px) {
+  body #cta-items .cta__item .container,
+  html #cta-items .cta__item .container {
+    padding: 0;
+  }
+}
+
+body #cta-items .cta__item p,
+html #cta-items .cta__item p {
+  font-family: "Futura Medium BT";
+}
+
+@media (min-width: 992px) {
+  body #cta-items .cta__item p,
+  html #cta-items .cta__item p {
+    height: 12.0rem;
+  }
+}
+
+body #cta-items .cta__item:nth-child(1),
+html #cta-items .cta__item:nth-child(1) {
+  background: url("/images/girl-training.jpg") center no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 991.98px) {
+  body #cta-items .cta__item:nth-child(1),
+  html #cta-items .cta__item:nth-child(1) {
+    background-position: center -5.0rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body #cta-items .cta__item:nth-child(1):before,
+  html #cta-items .cta__item:nth-child(1):before {
+    margin-top: 4.0rem;
+  }
+}
+
+body #cta-items .cta__item:nth-child(2),
+html #cta-items .cta__item:nth-child(2) {
+  background: url("/images/list.jpg") center no-repeat;
+  background-size: cover;
+}
+
+body #cta-items .cta__item:nth-child(3),
+html #cta-items .cta__item:nth-child(3) {
+  background: url("/images/hands-five.jpg") center no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 991.98px) {
+  body #cta-items .cta__item:nth-child(3),
+  html #cta-items .cta__item:nth-child(3) {
+    background-position: center -15.0rem;
+  }
+}
+
+body .cta-buttons,
+html .cta-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 

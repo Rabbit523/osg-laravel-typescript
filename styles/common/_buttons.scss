@@ -1,0 +1,29 @@
+.btn--primary {
+  background: $secondary-color;
+  color: white;
+  text-transform: uppercase;
+  padding: 1.5rem 3.5rem;
+  border-radius: .5rem;
+  height: 100%;
+  cursor: pointer;
+}
+
+.btn--learn-more {
+  color: white;
+  text-transform: uppercase;
+  padding: 1.5rem 3.5rem;
+  border-radius: .5rem;
+  height: 100%;
+  cursor: pointer;
+}
+
+.btn--learn-more-w-bg {
+  background: white;
+  color: black;
+  border-radius: 2px solid gray;
+  text-transform: uppercase;
+  padding: 1.5rem 3.5rem;
+  border-radius: .5rem;
+  height: 100%;
+  cursor: pointer;
+}
