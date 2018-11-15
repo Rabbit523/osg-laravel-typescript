@@ -1,3 +1,117 @@
-.register{
-    // everything MUST be nested within this rule, otherwise we kill the purpose of using SASS.
+.register {
+  background: black;
+  display: block;
+	padding: 0;
+	position: relative;
+	border-radius: 0 0 100em 100em / 0 0 7em 7em;
+	z-index: 5;
+	@include size-up(sm) {
+		@include crossBrowser(clip-path, ellipse(100% 74% at 50% 26%));
+	};
+
+	.sign-up-benefits-wrapper {
+		background: url('/images/sign-up-benefits.jpg') center no-repeat;
+		background-size: cover;
+		@include section-with-overlay(black);
+		
+		.benefits.container {
+			padding-top: rem(100);
+			padding-bottom: rem(100);
+			color: $white;
+			width: 80%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			@include size-down(xs) {
+				padding-top: rem(60);
+				padding-bottom: rem(60);
+			}
+			h2 {
+				color: $white;
+			}
+			ul {
+				li {
+					list-style: none;
+					margin-left: -10px;
+					&:before{
+						content: '';
+						display: inline-block;
+						width: 9px;
+						margin-right: 10px;
+						height: 18px;
+						border: solid $green;
+						border-width: 0 3px 3px 0;
+						transform: rotate(45deg);
+					}
+					&:not(:first-child) {
+						margin-top: rem(15);
+					}
+				}
+			} 
+		}
+	}
+
+	.sign-up-form-wrapper {
+		border-left: 4px solid $lightgray;
+		background-color: $white;
+		
+	}
+	.content-form {
+		padding: rem(100) 0;
+		display: block;
+		position: relative;
+		@include size-down(xs) {
+			padding-top: rem(60);
+			padding-bottom: rem(60);
+		}
+
+		&>.row {
+			position: relative;
+			z-index: 5;
+		}
+	}
+
+	h2 {
+		color: #000;
+		font-family: $primary-font;
+		font-size: rem(25);
+		font-weight: bold;
+		text-align: center;
+		margin: rem(40);
+
+		small {
+			display: block;
+			font-size: 60%;
+		}
+
+	}
+
+	form {
+		.form-group {
+			@extend .form-material-design;
+			.form-control {
+				border: 2px solid $lightgray;
+				font-weight: 700;
+			}
+		}
+
+		a {
+			color: #000;
+			text-decoration: underline;
+		}
+
+		.checkbox {
+			font-size: rem(14);
+		}
+
+		.wrapper-btn {
+			.btn {
+				font-size: rem(12);
+			}
+		}
+		.custom-checkbox .checkmark {
+			border: solid 2px $lightgray;
+			background: $white;
+		}
+	}
 }

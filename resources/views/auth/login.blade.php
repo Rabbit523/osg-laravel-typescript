@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="login">
-        <div class="container">
+        <!-- <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
@@ -68,6 +68,33 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="login-content">
+                <h2>
+                    <small>Optimal Strength Gains</small>Login
+                </h2>
+                <form action="" class="login-form">
+                    <div class="form-group">
+                        <input type="email" name="e-mail" id="e-mail" class="form-control">
+                        <label for="e-mail">Email *</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" class="form-control">
+                        <label for="password">Password *</label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <small class="form-text privacy-terms">
+                        This page is protected by reCAPTCHA and subject to the GDPR Privacy <a href="#">Policy Data</a> Protection Regulation and <a href="#">Terms of Service.</a>
+                    </small>
+                    <div class="wrapper-btn text-center text-md-right mt-3">
+                        <button type="submit" class="btn btn-yellow-gradient">Login</button>
+                    </div>
+                    <small class="form-text sign-up-link">
+                        Don't have an account? <a href="#">Sign up today.</a>
+                    </small>
+                </form>
             </div>
         </div>
     </div>
