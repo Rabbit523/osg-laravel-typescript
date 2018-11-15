@@ -13,24 +13,24 @@
             <div class="ml-auto navbar-nav">
                 <ul class="menu-box navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="{{route('home')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="{{route('about')}}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">How it works</a>
+                        <a class="nav-link" href="{{route('how-it-works')}}">How it works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="{{route('features')}}">Features</a>
                     </li>
                 </ul>
                 <ul class="nav-session">
                     <li>
-                        <a class="green-text" href="#">Sign up</a>
+                        <a class="green-text" href="{{route('register')}}">Sign up</a>
                     </li>
                     <li>
-                        <a class="btn btn-yellow-gradient px-4" href="#">Login</a>
+                        <a class="btn btn-yellow-gradient px-4" href="{{route('login')}}">Login</a>
                     </li>
                 </ul>
             </div>

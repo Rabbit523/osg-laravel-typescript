@@ -12,6 +12,18 @@ class PagesController extends Controller
 {
     public function index() {
         return (Auth::check()) 
-            ? view('pages.dashboard') : view('pages.home', ['title' => 'Hjem']);
+            ? view('pages.spa') : view('pages.home', ['title' => 'Home']);
+    }
+
+    public function about(){
+        return view('pages.about', ['title' => 'About']);
+    }
+
+    public function howItWorks(){
+        return view('pages.how-it-works', ['title' => 'How it works']);
+    }
+
+    public function features(){
+        return view('pages.features', ['title' => 'Features']);
     }
 }

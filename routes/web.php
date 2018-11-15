@@ -12,3 +12,7 @@
 */
 
 Route::get('/', 'Frontend\PagesController@index')->name("home");
+Route::get('/about', 'Frontend\PagesController@about')->name("about");
+Route::get('/how-it-works', 'Frontend\PagesController@howItWorks')->name("how-it-works");
+Route::get('/features', 'Frontend\PagesController@features')->name("features");
+Auth::routes();

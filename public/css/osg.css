@@ -10595,13 +10595,13 @@ h6.with-stars.black:after {
 }
 
 .form-material-design,
-body.osg-public #get-started form .form-group {
+body.osg-public .home #get-started form .form-group {
   position: relative;
   padding: 0px;
 }
 
 .form-material-design label,
-body.osg-public #get-started form .form-group label {
+body.osg-public .home #get-started form .form-group label {
   position: absolute;
   font-weight: 400;
   color: #000;
@@ -10615,14 +10615,14 @@ body.osg-public #get-started form .form-group label {
 }
 
 .form-material-design label.labelfocus,
-body.osg-public #get-started form .form-group label.labelfocus {
+body.osg-public .home #get-started form .form-group label.labelfocus {
   font-size: 75%;
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0);
 }
 
 .form-material-design .form-control,
-body.osg-public #get-started form .form-group .form-control {
+body.osg-public .home #get-started form .form-group .form-control {
   padding: 20px 5px 3px 15px;
   border-radius: 0px;
   color: #000;
@@ -10631,13 +10631,13 @@ body.osg-public #get-started form .form-group .form-control {
 }
 
 .form-material-design .form-control:focus,
-body.osg-public #get-started form .form-group .form-control:focus {
+body.osg-public .home #get-started form .form-group .form-control:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 .form-material-design select,
-body.osg-public #get-started form .form-group select {
+body.osg-public .home #get-started form .form-group select {
   background: #FFF url(/images/arrow-black-select.png) no-repeat 95% center;
   background-size: auto 50%;
   appearance: none;
@@ -10647,7 +10647,7 @@ body.osg-public #get-started form .form-group select {
 }
 
 .form-material-design select + label,
-body.osg-public #get-started form .form-group select + label {
+body.osg-public .home #get-started form .form-group select + label {
   font-size: 75%;
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0);
@@ -10939,25 +10939,25 @@ body.osg-public footer .footer-info a {
   color: #FFF;
 }
 
-body.osg-public .title-row {
+body.osg-public .home .title-row {
   text-align: center;
   padding: 40px 0;
 }
 
-body.osg-public .title-row h2 {
+body.osg-public .home .title-row h2 {
   margin: 2.0rem;
 }
 
-body.osg-public ul {
+body.osg-public .home ul {
   list-style: none;
   padding: 0;
 }
 
-body.osg-public .btn {
+body.osg-public .home .btn {
   text-transform: uppercase;
 }
 
-body.osg-public #main-call-to-action {
+body.osg-public .home #main-call-to-action {
   position: relative;
   z-index: 2;
   height: 100vh;
@@ -10977,7 +10977,7 @@ body.osg-public #main-call-to-action {
   background-size: cover;
 }
 
-body.osg-public #main-call-to-action:before {
+body.osg-public .home #main-call-to-action:before {
   content: '';
   width: 100%;
   height: 100%;
@@ -10987,7 +10987,7 @@ body.osg-public #main-call-to-action:before {
   z-index: -1;
 }
 
-body.osg-public #main-call-to-action h1 {
+body.osg-public .home #main-call-to-action h1 {
   text-align: center;
   margin: 2.0rem;
   color: white;
@@ -10995,16 +10995,16 @@ body.osg-public #main-call-to-action h1 {
   font-weight: 700;
 }
 
-body.osg-public #main-call-to-action h1 span {
+body.osg-public .home #main-call-to-action h1 span {
   font-size: 1.4rem;
 }
 
-body.osg-public #main-call-to-action .get-started {
+body.osg-public .home #main-call-to-action .get-started {
   margin: 2.0rem;
   text-align: center;
 }
 
-body.osg-public #main-call-to-action .get-started input {
+body.osg-public .home #main-call-to-action .get-started input {
   font-family: "Futura Medium BT";
   padding: 1.0rem 1.5rem;
   width: 30.0rem;
@@ -11012,11 +11012,11 @@ body.osg-public #main-call-to-action .get-started input {
   border-radius: .5rem;
 }
 
-body.osg-public #main-call-to-action .get-started button {
+body.osg-public .home #main-call-to-action .get-started button {
   margin-left: 1.0rem;
 }
 
-body.osg-public #main-call-to-action .view-more {
+body.osg-public .home #main-call-to-action .view-more {
   border: 2px solid white;
   width: 5.0rem;
   height: 5.0rem;
@@ -11038,7 +11038,7 @@ body.osg-public #main-call-to-action .view-more {
   border-radius: 50%;
 }
 
-body.osg-public #main-call-to-action .view-more i {
+body.osg-public .home #main-call-to-action .view-more i {
   border: solid #ffa600;
   border-width: 0 .3rem .3rem 0;
   display: inline-block;
@@ -11048,19 +11048,19 @@ body.osg-public #main-call-to-action .view-more i {
   transform: rotate(45deg);
 }
 
-body.osg-public #secondary-call-to-action .container-fluid {
+body.osg-public .home #secondary-call-to-action .container-fluid {
   padding: 0;
 }
 
-body.osg-public #secondary-call-to-action .container-fluid .row {
+body.osg-public .home #secondary-call-to-action .container-fluid .row {
   margin: 0;
 }
 
-body.osg-public #secondary-call-to-action .container-fluid .row > div {
+body.osg-public .home #secondary-call-to-action .container-fluid .row > div {
   padding: 0;
 }
 
-body.osg-public #secondary-call-to-action .container-fluid .row > div .call-to-action {
+body.osg-public .home #secondary-call-to-action .container-fluid .row > div .call-to-action {
   background-size: cover;
   height: 800px;
   position: relative;
@@ -11068,7 +11068,7 @@ body.osg-public #secondary-call-to-action .container-fluid .row > div .call-to-a
   z-index: 2;
 }
 
-body.osg-public #secondary-call-to-action .container-fluid .row > div .call-to-action:before {
+body.osg-public .home #secondary-call-to-action .container-fluid .row > div .call-to-action:before {
   content: '';
   width: 100%;
   height: 100%;
@@ -11078,59 +11078,59 @@ body.osg-public #secondary-call-to-action .container-fluid .row > div .call-to-a
   z-index: -1;
 }
 
-body.osg-public #secondary-call-to-action .container-fluid .row > div .call-to-action.strength-athelete {
+body.osg-public .home #secondary-call-to-action .container-fluid .row > div .call-to-action.strength-athelete {
   background-image: url("/images/girl-training.jpg");
 }
 
-body.osg-public #secondary-call-to-action .container-fluid .row > div .call-to-action.program-designer {
+body.osg-public .home #secondary-call-to-action .container-fluid .row > div .call-to-action.program-designer {
   background-image: url("/images/list.jpg");
 }
 
-body.osg-public #secondary-call-to-action .container-fluid .row > div .call-to-action.personal-trainer {
+body.osg-public .home #secondary-call-to-action .container-fluid .row > div .call-to-action.personal-trainer {
   background-image: url("/images/hands-five.jpg");
 }
 
-body.osg-public #secondary-call-to-action .container-fluid .row > div .call-to-action .content {
+body.osg-public .home #secondary-call-to-action .container-fluid .row > div .call-to-action .content {
   position: absolute;
   bottom: 0;
   padding: 0 40px 40px;
   color: white;
 }
 
-body.osg-public #secondary-call-to-action .container-fluid .row > div .call-to-action .content h2,
-body.osg-public #secondary-call-to-action .container-fluid .row > div .call-to-action .content p {
+body.osg-public .home #secondary-call-to-action .container-fluid .row > div .call-to-action .content h2,
+body.osg-public .home #secondary-call-to-action .container-fluid .row > div .call-to-action .content p {
   margin-bottom: 20px;
 }
 
-body.osg-public #secondary-call-to-action .container-fluid .row > div .call-to-action .content .buttons button {
+body.osg-public .home #secondary-call-to-action .container-fluid .row > div .call-to-action .content .buttons button {
   width: 45%;
 }
 
-body.osg-public #main-features {
+body.osg-public .home #main-features {
   background: white;
 }
 
-body.osg-public #main-features .container-fluid .row:nth-child(2) .feature {
+body.osg-public .home #main-features .container-fluid .row:nth-child(2) .feature {
   border-right: 1px solid lightgray;
   height: 560px;
 }
 
-body.osg-public #main-features .container-fluid .row:nth-child(2) .feature .description {
+body.osg-public .home #main-features .container-fluid .row:nth-child(2) .feature .description {
   width: 80%;
   margin: 0 auto;
 }
 
-body.osg-public #main-features .container-fluid .row:nth-child(2) .feature .description .icon {
+body.osg-public .home #main-features .container-fluid .row:nth-child(2) .feature .description .icon {
   height: 200px;
   background: center no-repeat;
   background-size: 120px;
 }
 
-body.osg-public #main-features .container-fluid .row:nth-child(2) .feature .description ul li {
+body.osg-public .home #main-features .container-fluid .row:nth-child(2) .feature .description ul li {
   text-transform: uppercase;
 }
 
-body.osg-public #main-features .container-fluid .row:nth-child(2) .feature .description ul li:before {
+body.osg-public .home #main-features .container-fluid .row:nth-child(2) .feature .description ul li:before {
   color: #ffa600;
   content: "\2022";
   font-size: 2em;
@@ -11139,72 +11139,72 @@ body.osg-public #main-features .container-fluid .row:nth-child(2) .feature .desc
   padding-right: 10px;
 }
 
-body.osg-public #main-features .container-fluid .row:nth-child(2) .feature.program-designs .icon {
+body.osg-public .home #main-features .container-fluid .row:nth-child(2) .feature.program-designs .icon {
   background-image: url("/images/icons/program-designs.png");
 }
 
-body.osg-public #main-features .container-fluid .row:nth-child(2) .feature.experience-bank .icon {
+body.osg-public .home #main-features .container-fluid .row:nth-child(2) .feature.experience-bank .icon {
   background-image: url("/images/icons/experience-bank.png");
 }
 
-body.osg-public #main-features .container-fluid .row:nth-child(2) .feature.strength-standards .icon {
+body.osg-public .home #main-features .container-fluid .row:nth-child(2) .feature.strength-standards .icon {
   background-image: url("/images/icons/strength-standards.png");
 }
 
-body.osg-public #main-features .container-fluid .row:nth-child(2) .feature.auto-regulation .icon {
+body.osg-public .home #main-features .container-fluid .row:nth-child(2) .feature.auto-regulation .icon {
   background-image: url("/images/icons/auto-regulation.png");
 }
 
-body.osg-public #main-features .container-fluid .row:nth-child(2) .col-3:last-child .feature {
+body.osg-public .home #main-features .container-fluid .row:nth-child(2) .col-3:last-child .feature {
   border-right: none;
 }
 
-body.osg-public #main-features .container-fluid .row:nth-child(3) .actions {
+body.osg-public .home #main-features .container-fluid .row:nth-child(3) .actions {
   width: 100%;
   text-align: center;
   padding: 80px 0;
 }
 
-body.osg-public #symbiose {
+body.osg-public .home #symbiose {
   height: 900px;
   background: black;
 }
 
-body.osg-public #symbiose .title-row {
+body.osg-public .home #symbiose .title-row {
   color: white;
 }
 
-body.osg-public #profiles {
+body.osg-public .home #profiles {
   background: white;
 }
 
-body.osg-public #profiles .container-fluid .row:nth-child(2) {
+body.osg-public .home #profiles .container-fluid .row:nth-child(2) {
   padding-bottom: 60px;
 }
 
-body.osg-public #profiles .container-fluid .row:nth-child(2) .profile {
+body.osg-public .home #profiles .container-fluid .row:nth-child(2) .profile {
   border-right: 1px solid lightgray;
   height: 560px;
 }
 
-body.osg-public #profiles .container-fluid .row:nth-child(2) .profile .description {
+body.osg-public .home #profiles .container-fluid .row:nth-child(2) .profile .description {
   height: 100%;
   width: 80%;
   margin: 0 auto;
   position: relative;
 }
 
-body.osg-public #profiles .container-fluid .row:nth-child(2) .profile .description .icon {
+body.osg-public .home #profiles .container-fluid .row:nth-child(2) .profile .description .icon {
   height: 200px;
   background: center no-repeat;
   background-size: 120px;
 }
 
-body.osg-public #profiles .container-fluid .row:nth-child(2) .profile .description ul li {
+body.osg-public .home #profiles .container-fluid .row:nth-child(2) .profile .description ul li {
   text-transform: uppercase;
 }
 
-body.osg-public #profiles .container-fluid .row:nth-child(2) .profile .description ul li:before {
+body.osg-public .home #profiles .container-fluid .row:nth-child(2) .profile .description ul li:before {
   color: #ffa600;
   content: "\2022";
   font-size: 2em;
@@ -11213,29 +11213,29 @@ body.osg-public #profiles .container-fluid .row:nth-child(2) .profile .descripti
   padding-right: 10px;
 }
 
-body.osg-public #profiles .container-fluid .row:nth-child(2) .profile .description .btn {
+body.osg-public .home #profiles .container-fluid .row:nth-child(2) .profile .description .btn {
   position: absolute;
   bottom: 50px;
   left: 30px;
 }
 
-body.osg-public #profiles .container-fluid .row:nth-child(2) .profile.strength-athlete .icon {
+body.osg-public .home #profiles .container-fluid .row:nth-child(2) .profile.strength-athlete .icon {
   background-image: url("/images/icons/strength-athlete.png");
 }
 
-body.osg-public #profiles .container-fluid .row:nth-child(2) .profile.program-designer .icon {
+body.osg-public .home #profiles .container-fluid .row:nth-child(2) .profile.program-designer .icon {
   background-image: url("/images/icons/program-designer.png");
 }
 
-body.osg-public #profiles .container-fluid .row:nth-child(2) .profile.personal-trainer .icon {
+body.osg-public .home #profiles .container-fluid .row:nth-child(2) .profile.personal-trainer .icon {
   background-image: url("/images/icons/personal-trainer.png");
 }
 
-body.osg-public #profiles .container-fluid .row:nth-child(2) .col-4:last-child .profile {
+body.osg-public .home #profiles .container-fluid .row:nth-child(2) .col-4:last-child .profile {
   border-right: none;
 }
 
-body.osg-public #get-started {
+body.osg-public .home #get-started {
   background: #ffbf00;
   background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffbf00), color-stop(100%, #ff9100));
   background: -webkit-gradient(linear, left top, left bottom, from(#ffbf00), to(#ff9100));
@@ -11247,17 +11247,17 @@ body.osg-public #get-started {
   position: relative;
 }
 
-body.osg-public #get-started .content-form {
+body.osg-public .home #get-started .content-form {
   display: block;
   position: relative;
 }
 
-body.osg-public #get-started .content-form > .row {
+body.osg-public .home #get-started .content-form > .row {
   position: relative;
   z-index: 5;
 }
 
-body.osg-public #get-started .content-form:after {
+body.osg-public .home #get-started .content-form:after {
   content: "";
   background: url(/images/get-started-siluete.png) no-repeat right center;
   background-size: auto 100%;
@@ -11271,14 +11271,14 @@ body.osg-public #get-started .content-form:after {
   opacity: 0.5;
 }
 
-body.osg-public #get-started figure {
+body.osg-public .home #get-started figure {
   display: block;
   position: relative;
   margin: 0;
   padding: 0;
 }
 
-body.osg-public #get-started figure:before {
+body.osg-public .home #get-started figure:before {
   content: "";
   display: block;
   position: absolute;
@@ -11290,12 +11290,12 @@ body.osg-public #get-started figure:before {
   z-index: 2;
 }
 
-body.osg-public #get-started figure img {
+body.osg-public .home #get-started figure img {
   position: relative;
   z-index: 1;
 }
 
-body.osg-public #get-started h2 {
+body.osg-public .home #get-started h2 {
   color: #000;
   font-family: "Square 721 BT Bold Extended";
   font-size: 1.5625rem;
@@ -11303,25 +11303,29 @@ body.osg-public #get-started h2 {
   margin: 0;
 }
 
-body.osg-public #get-started h2 small {
+body.osg-public .home #get-started h2 small {
   display: block;
   font-size: 60%;
 }
 
-body.osg-public #get-started h2 img {
+body.osg-public .home #get-started h2 img {
   width: 20%;
 }
 
-body.osg-public #get-started form a {
+body.osg-public .home #get-started form a {
   color: #000;
   text-decoration: underline;
 }
 
-body.osg-public #get-started form .checkbox {
+body.osg-public .home #get-started form .checkbox {
   font-size: 0.875rem;
 }
 
-body.osg-public #get-started form .wrapper-btn .btn {
+body.osg-public .home #get-started form .wrapper-btn .btn {
   font-size: 0.75rem;
+}
+
+body.osg-public .register {
+  background: white;
 }
 

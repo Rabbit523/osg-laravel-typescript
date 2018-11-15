@@ -12,5 +12,6 @@ body {
     &.osg-public {
         @import 'shared/main';
         @import 'home/main';
+        @import 'auth/main';
     }
 }
