@@ -7,8 +7,17 @@
     padding: 40px 0;
 }
 
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.btn{
+    text-transform: uppercase;
+}
+
 @import 'call-to-action';
 @import 'main-features';
 @import 'symbiose';
 @import 'profiles';
-@import 'sign-up';
+@import 'get-started';

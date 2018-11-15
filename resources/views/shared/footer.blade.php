@@ -1,8 +1,8 @@
 <footer>
     <div class="container">
-      <section class="footer-links">
-        <div class="footer-links-col">
-          <h3>Product</h3>
+      <div class="row justify-content-around">
+        <div class="col-6 col-sm-auto mb-5 mb-md-0">
+        <h3>Product</h3>
           <ul>
             <li><a href="#">Features</a></li>
             <li><a href="#">Strength Athlete</a></li>
@@ -10,8 +10,8 @@
             <li><a href="#">Personal Trainer</a></li>
           </ul>
         </div>
-        <div class="footer-links-col">
-          <h3>About</h3>
+        <div class="col-6 col-sm-auto mb-5 mb-md-0">
+        <h3>About</h3>
           <ul>
             <li><a href="#">Contact us</a></li>
             <li><a href="#">About us</a></li>
@@ -19,8 +19,8 @@
             <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
-        <div class="footer-links-col">
-          <h3>For Users</h3>
+        <div class="col-6 col-sm-auto mb-5 mb-md-0">
+        <h3>For Users</h3>
           <ul>
             <li><a href="#">Login</a></li>
             <li><a href="#">Get Started</a></li>
@@ -28,33 +28,32 @@
             <li><a href="#">Help Center</a></li>
           </ul>
         </div>
-        <div class="footer-links-col">
-          <h3>Follow Us</h3>
+        <div class="col-6 col-sm-auto mb-5 mb-md-0">
+        <h3>Follow Us</h3>
           <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Youtube</a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i> Youtube</a></li>
           </ul>
         </div>
-        <div class="footer-links-col">
-          <h3 class="no-blur">Download</h3>
+        <div class="col-6 col-sm-auto mb-5 mb-md-0">
+        <h3 class="no-blur">Download</h3>
           <ul>
-            <li><a href="#"><img src="images/btn--google-play.png" alt="Google-Play"></a></li>
-            <li><a href="#"><img src="images/btn--app-store.png" alt="App-Store"></a></li>
+            <li><a href="#" class="img-fluid mx-auto d-block mb-3"><img src="images/btn--google-play.png" alt="Google-Play"></a></li>
+            <li><a href="#" class="img-fluid mx-auto d-block"><img src="images/btn--app-store.png" alt="App-Store"></a></li>
           </ul>
         </div>
-      </section>
-      <div class="footer-sep"></div>
+      </div>
       <section class="footer-info">
-        <div class="footer-info__logo">
-            <img src="images/logo.png" alt="logo" class="footer-info__logo-image">
-        </div>
-        <div class="footer-info__copyright">
-          <p>Copyright {{date('Y')}} © Optimal Strength Gains AS. All Rights Reserved.</p>
-        </div>
-        <div class="footer-info__credit">
-          <p>Web Design & Web Development: <a href="https://fantasylab.io" target="_blank"><span>FantasyLab.</span></a></p>
+        <div class="row">
+          <div class="col-12 col-sm-8 text-center text-md-left">
+              <img src="images/logo.png" alt="logo" class="img-fluid d-inline-block logo-footer">
+              <p class="d-inline-block">Copyright {{date('Y')}} © Optimal Strength Gains AS. All Rights Reserved.</p>
+          </div>
+          <div class="col-12 col-sm-4 text-center text-md-right">
+            <p>Web Design & Web Development: <a href="https://fantasylab.io" target="_blank"><span>FantasyLab.</span></a></p>
+          </div>
         </div>
       </section>
     </div>

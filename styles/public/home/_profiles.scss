@@ -1,5 +1,5 @@
 #profiles{
-
+    background: $white;
     .container-fluid{
         .row{
             &:nth-child(2){
@@ -23,7 +23,7 @@
                             li{
                                 text-transform: uppercase;
                                 &:before{
-                                    color: yellow; // TODO: set the right color.  
+                                    color: $yellow; // TODO: set the right color.  
                                     content: "\2022"; 
                                     font-size: 2em; 
                                     position: relative;

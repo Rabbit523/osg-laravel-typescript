@@ -1,0 +1,93 @@
+#get-started {
+    @include yellowGradient;
+    display: block;
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    .content-form {
+        display: block;
+        position: relative;
+
+        &>.row {
+            position: relative;
+            z-index: 5;
+        }
+
+        &:after {
+            content: "";
+            background: url(/images/get-started-siluete.png) no-repeat right center;
+            background-size: auto 100%;
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            right: -15px;
+            opacity: 0.5;
+        }
+    }
+
+    figure {
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        img {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    h2 {
+        color: #000;
+        font-family: $primary-font;
+        font-size: rem(25);
+        font-weight: bold;
+        margin: 0;
+
+        small {
+            display: block;
+            font-size: 60%;
+        }
+
+        img {
+            width: 20%;
+        }
+    }
+
+    form {
+        .form-group {
+            @extend .form-material-design;
+        }
+
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        .checkbox {
+            font-size: rem(14);
+        }
+
+        .wrapper-btn {
+            .btn {
+                font-size: rem(12);
+            }
+        }
+    }
+}

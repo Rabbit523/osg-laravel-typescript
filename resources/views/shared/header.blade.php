@@ -1,33 +1,40 @@
 <header>
-    <nav class="navbar d-block">
-      <div class="container container-xl-90 h-100">
-        <div class="row w-100 h-100 align-items-center">
-          <a href="#" class="logo flex-center flex-column">
-            <img src="images/logo.png" alt="logo" class="logo__image">
-          </a>
-          <div class="toggleNav">
-            <a href="javascript:void(0);" class="btn--toggleNav d-flex d-lg-none">
-              <i class="menu-bars">
-                <div class="b1"></div>
-                <div class="b2"></div>
-                <div class="b3"></div>
-              </i>
-            </a>
-          </div>
-          <div class="nav-wrapper row d-xl-flex">
-            <nav class="navlinks h-100 d-flex">
-              <a href="#" class="navlinks__item">Home</a>
-              <a href="#" class="navlinks__item">About Us</a>
-              <a href="#" class="navlinks__item">How it works</a>
-              <a href="#" class="navlinks__item">Features</a>
-            </nav>
-            <div class="nav-sep"></div>
-            <div class="nav-session">
-              <a href="#" class="btn btn--signup">Sign up</a>
-              <button class="btn btn--login">Login</button>
+  <nav class="navbar navbar-expand-md">
+    <div class="container position-relative">
+        <a class="navbar-brand" href="#"><img src="images/logo.png" clas="img-fluid d-block mx-auto" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="ml-auto navbar-nav">
+                <ul class="menu-box navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">How it works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                </ul>
+                <ul class="nav-session">
+                    <li>
+                        <a class="green-text" href="#">Sign up</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-yellow-gradient px-4" href="#">Login</a>
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
-      </div>
-    </nav>
+    </div>
+  </nav>
 </header>

@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-lg-4 col-sm-12">
                 <div class="profile strength-athlete">
                     <div class="description">
                         <div class="icon"></div>
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-sm-12">
                 <div class="profile program-designer">
                     <div class="description">
                         <div class="icon"></div>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-sm-12">
                 <div class="profile personal-trainer">
                     <div class="description">
                         <div class="icon"></div>
