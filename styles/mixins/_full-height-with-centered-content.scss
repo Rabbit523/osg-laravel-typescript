@@ -1,0 +1,7 @@
+@mixin full-height-with-centered-content{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}

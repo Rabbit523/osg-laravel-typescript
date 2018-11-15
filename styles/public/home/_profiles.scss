@@ -1,0 +1,74 @@
+#profiles{
+    background: $white;
+    .container-fluid{
+        .row{
+            &:nth-child(2){
+                padding-bottom: 60px;
+                .profile{
+                    border-right: 1px solid lightgray;
+                    height: 560px;
+
+                    .description{
+                        height: 100%;
+                        width: 80%;
+                        margin: 0 auto;
+                        position: relative;
+                        
+                        .icon{
+                            height: 200px;
+                            background: center no-repeat;
+                            background-size: 120px;
+                        }    
+                        ul{
+                            li{
+                                text-transform: uppercase;
+                                &:before{
+                                    color: $yellow; // TODO: set the right color.  
+                                    content: "\2022"; 
+                                    font-size: 2em; 
+                                    position: relative;
+                                    top: 5px;
+                                    padding-right: 10px;
+                                }
+                            }
+                        }
+                        
+
+                        .btn{
+                            position: absolute;
+                            bottom: 50px;
+                            left: 30px;
+                        }
+                    }
+
+
+                    &.strength-athlete{
+                        .icon{
+                            background-image: url('/images/icons/strength-athlete.png');
+                        }
+                    }
+                    &.program-designer{
+                        .icon{
+                            background-image: url('/images/icons/program-designer.png');
+                        }
+                    }
+                    &.personal-trainer{
+                        .icon{
+                            background-image: url('/images/icons/personal-trainer.png');
+                        }
+                    }
+                }
+
+                .col-4{
+                    &:last-child{
+                        .profile{
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+}

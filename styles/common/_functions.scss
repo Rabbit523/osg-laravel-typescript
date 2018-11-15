@@ -1,0 +1,7 @@
+@function rem($pixels, $context: $browser-context) {
+    @return #{$pixels / $context}rem;
+}
+
+@function le($element) {
+    @return #{$element / 1000}em;
+}

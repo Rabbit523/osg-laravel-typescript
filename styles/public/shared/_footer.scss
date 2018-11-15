@@ -1,0 +1,54 @@
+footer {
+    background: black;
+    color: white;
+    padding: 50px 0px 20px 0px;
+
+    h3 {
+        color: $yellow;
+        text-transform: uppercase;
+        font-family: $primary-font;
+        font-size: rem(18);
+        margin: 0px 0px 30px 0px;
+        text-shadow: 0px 0px 20px rgba(255, 191, 0, 0.6);
+
+        &.no-blur {
+            text-shadow: none;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-family: $third-font;
+
+        li {
+            display: block;
+            margin-bottom: 15px;
+            font-size: rem(16);
+
+            a {
+                color: #FFF;
+            }
+        }
+    }
+
+    .footer-info {
+        color: #FFF;
+        display: block;
+        border-top: solid 1px $gray;
+        font-family: $third-font;
+        margin: 40px 0px 0px 0px;
+        padding: 20px 0px 0px 0px;
+        font-size: rem(14);
+
+        .logo-footer {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        a {
+            color: #FFF;
+        }
+    }
+}
