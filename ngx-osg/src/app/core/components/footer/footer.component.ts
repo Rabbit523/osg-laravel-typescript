@@ -5,5 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './footer.component.html'
 })
 export class FooterComponent {
+
+  today: Date = new Date();
   
 }

@@ -1,7 +1,158 @@
-osg-navigation{
-    display: block;
-    
-    //delete these dummy properties
-    height: 40px;
-    background: black;
+osg-navigation {
+	display: block;
+	background: black;
+	nav {
+		.container {
+			@include size-up(lg) {
+				max-width: 90%;
+				padding: 0;
+			}
+			@include size-down(sm) {
+				padding: 15px 30px;
+			}
+		}
+		.row {
+			margin: 0;
+		}
+		&.navbar {
+			font-family: $primary-font;
+			text-transform: uppercase;
+			height: 100px;
+			padding: 0;
+			@include size-down(md) {
+				height: auto;
+			}
+			@include size-down(xs) {
+				padding-top: 0;
+			}
+		}
+		.nav-sep {
+			background: $gray;
+			width: 1px;
+			height: 60px;
+			margin: 20px 10px;
+			@include size-down(sm) {
+				display: none;
+			}
+		}
+		.navbar-brand {
+			position: relative;
+			padding: 20px 0;
+			img {
+				height: 100%;
+				max-height: 100px;
+			}
+		}
+		.navbar-toggler {
+			outline: none;
+			padding: 0px;
+			width: 40px;
+			height: 30px;
+			margin-left: auto;
+			position: relative;
+			transform: rotate(0deg);
+			transition: .5s ease-in-out;
+			span {
+				display: block;
+				position: absolute;
+				height: 5px;
+				width: 100%;
+				background: $yellow;
+				border-radius: 9px;
+				opacity: 1;
+				left: 0;
+				transform: rotate(0deg);
+				transition: .25s ease-in-out;
+				&:nth-child(1) {
+					top: 0px;
+				}
+
+				&:nth-child(2) {
+					top: 12px;
+				}
+
+				&:nth-child(3) {
+					top: 24px;
+				}
+			}
+		}
+		.navbar-collapse {
+			font-size: 10px;
+			.navbar-collapse-content {
+				@include size-down(md) {
+					display: flex;
+					flex-direction: column;
+					padding-top: 20px;
+				}
+			}
+			.navbar-nav {
+				a {
+					color: $white;
+					&:hover {
+						color: $yellow;
+						transition: .15s ease-out;
+					}
+					img {
+						width: 25px;
+						height: 25px;
+						margin-right: 5px;
+					}
+				}
+			}
+			.navbar-links {
+				flex: 1;
+				@include size-down(md) {
+					order: 2;
+				}
+				li {
+					padding: 10px 2.5px;
+				}
+			}
+			.navbar-menu {
+				margin-left: auto;
+				@include size-down(md) {
+					order: 1;
+					margin: auto;
+					padding-bottom: 20px;
+					width: 100%;
+					justify-content: center;
+				}
+				li {
+					height: 100%;
+					padding: 0 7.5px;
+					@include size-down(md) {
+						padding: 0 10px;
+					}
+					a {
+						height: 100%;
+						display: flex;
+						align-items: center;
+						border-top: 4px solid transparent;
+						border-bottom: 4px solid transparent;
+						&:hover {
+							border-bottom: 4px solid $yellow;
+						}
+						img {
+							width: 25px;
+							height: 25px;
+						}
+					}
+				}
+			}
+
+			.navbar-menu-account {
+				padding: 5px 5px 5px 25px;
+				position: relative;
+				a {
+					color: $white;
+					text-decoration: none;
+				}
+				img {
+					width: 40px;
+					height: 40px;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
 }
