@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ApplicationUser } from 'src/app/core/classes/user';
 
 @Component({
-  selector: 'osg-personal-trainer',
-  templateUrl: './personal-trainer.component.html'
+  selector: 'osg-profile-cover',
+  templateUrl: './profile-cover.component.html'
 })
-export class PersonalTrainerComponent implements OnInit{
-  
+export class ProfileCoverComponent implements OnInit{
+    
   @Input() applicationUser: ApplicationUser;
 
   ngOnInit(): void {

@@ -1,0 +1,83 @@
+osg-news-feed{
+    
+    .post-creator{
+        @include shadowed-container;
+        padding: 20px 30px;
+        min-height: 180px;
+    }
+
+
+    .post{
+        @include shadowed-container;
+        min-height: 280px;
+        margin: 15px 0;
+
+        .content{
+            margin: 20px 30px;
+            .author{
+                height: 60px;
+                display: flex;
+                flex-direction: row;
+                border-bottom: 1px solid $lightgray;
+    
+                img{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    border: 1px solid black;
+                    margin-right: 10px;
+                }
+                .summary{
+                    
+                    span{
+                        display: block;
+                    }
+                }
+            }
+    
+            .post-content{
+                margin: 20px 0;
+            }
+        }
+
+        .comments-box{
+            
+            .comment, .comment-creator{
+                padding: 20px 30px;
+                border-top: 1px solid $lightgray;
+                display: flex;
+                flex-direction: row;
+                img{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    border: 1px solid black;
+                    margin-right: 10px;
+                }
+            }
+            .comment{
+                .speech-bubble{
+                    width: 80%;
+                    .comment-container{
+                        padding: 10px;
+                        
+                        border-radius: 5px;
+                        background: $lightgray;
+
+                        p{
+                            margin: 0;
+                        }
+                    }
+
+                    span{
+                        padding-left: 10px;
+                    }
+
+                }
+            }
+            .comment-creator{
+                
+            }
+        }
+    }
+}

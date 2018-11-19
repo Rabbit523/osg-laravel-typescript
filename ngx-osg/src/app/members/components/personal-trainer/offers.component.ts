@@ -2,10 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ApplicationUser } from 'src/app/core/classes/user';
 
 @Component({
-  selector: 'osg-personal-trainer',
-  templateUrl: './personal-trainer.component.html'
+  selector: 'osg-personal-trainer-offers',
+  templateUrl: './offers.component.html'
 })
-export class PersonalTrainerComponent implements OnInit{
+export class PersonalTrainerOffersComponent implements OnInit{
   
   @Input() applicationUser: ApplicationUser;
 

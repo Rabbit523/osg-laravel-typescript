@@ -1,0 +1,8 @@
+@mixin shadowed-container{
+    border: 1px solid $lightgray;
+    //TODO: Is this right?
+    $shadow-color: darken($lightgray, 20);
+    -webkit-box-shadow: 0px 5px 4px 0px $shadow-color;
+    -moz-box-shadow: 0px 5px 4px 0px $shadow-color;
+    box-shadow: 0px 5px 4px 0px $shadow-color;
+}

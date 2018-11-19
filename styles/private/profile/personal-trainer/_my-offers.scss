@@ -1,0 +1,35 @@
+osg-personal-trainer-offers{
+    display: block;
+    
+    .offers-container{
+        display: flex;
+        flex-direction: row;
+        .offer{
+            @include shadowed-container;
+            height: 480px;
+            width: 25%;
+            background: $white;
+            margin-right: 20px;
+            header{
+                height: 245px;
+                background: $black;
+            }
+
+            .description, .pricing{
+                text-align: center;
+                margin: 0 40px;
+                span{
+                    display: block;
+                }
+            }
+
+            .description{
+                margin-top: 30px;
+                @include section-separator(25px);
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}

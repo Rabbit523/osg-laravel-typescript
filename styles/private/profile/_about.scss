@@ -1,0 +1,42 @@
+osg-profile-about-me{
+    display: block;
+    .about-me-container{
+        @include shadowed-container;
+        min-height: 480px;
+        padding: 20px 30px;
+        text-align: justify;
+
+        .summary{
+            width: 100%;
+            margin: 50px 0;
+            .entry{
+                span{
+                    display: block;
+                    &:first-child{
+                        float: left;
+                        text-align: left;
+                        color: $black;
+                    }
+                    &:last-child{
+                        float: right;
+                        text-align: right;
+                        color: $medium-gray;
+                        
+                    }
+                }
+
+                &:after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                
+            }
+        }
+
+        button{
+            width: 100%;
+        }
+    }
+    @include section-separator;
+}
