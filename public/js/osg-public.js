@@ -17,10 +17,25 @@ Controllers.floaLabel = function (element){
     });
 };
 
+Controllers.addStickyMenu = function (){
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1) {
+            $('header nav').addClass("sticky");
+            //nodes.contentWrapper.addClass("sticky");
+        } else {
+            $('header nav').removeClass("sticky");
+            //nodes.contentWrapper.removeClass("sticky");
+        }
+    });
+};
+
 /*  */
 Controllers.home = function () {
     var init = function () {
         new osg.Controllers.floaLabel('#get-started .form-control');
+        new osg.Controllers.floaLabel('.sign-up-form-wrapper .form-control');
+        new osg.Controllers.floaLabel('.login-content .login-form .form-control');
+        new osg.Controllers.addStickyMenu();
     };
     init();
 };

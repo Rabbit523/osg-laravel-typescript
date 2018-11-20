@@ -1,117 +1,139 @@
 .register {
-  background: black;
-  display: block;
-	padding: 0;
-	position: relative;
-	border-radius: 0 0 100em 100em / 0 0 7em 7em;
-	z-index: 5;
-	@include size-up(sm) {
-		@include crossBrowser(clip-path, ellipse(100% 74% at 50% 26%));
-	};
+    background: #FFF;
+    display: block;
+    padding: 0;
+    position: relative;
+    z-index: 5;
+    clip-path: ellipse(100% 60% at 50% 40%);
+	-webkit-clip-path: ellipse(100% 60% at 50% 40%);
+	
+	@include media-breakpoint-down(md){
+		-webkit-clip-path: none;
+		clip-path: none;
+	}
 
-	.sign-up-benefits-wrapper {
-		background: url('/images/sign-up-benefits.jpg') center no-repeat;
+    .sign-up-benefits-wrapper {
+        display: block;
+        height: 100%;
+        background: url('/images/sign-up-benefits.jpg') center no-repeat #000;
 		background-size: cover;
+		border-right: 4px solid $lightgray;
 		@include section-with-overlay(black);
 		
-		.benefits.container {
-			padding-top: rem(100);
-			padding-bottom: rem(100);
-			color: $white;
-			width: 80%;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			@include size-down(xs) {
-				padding-top: rem(60);
-				padding-bottom: rem(60);
+		@include media-breakpoint-down(md){
+			border: none;
+		}
+
+        .benefits {
+            color: $white;
+            display: block;
+            padding-top: 180px;
+            padding-bottom: 100px;
+
+            h2 {
+                color: $white;
+                text-transform: uppercase;
+                font-family: $primary-font;
+                font-size: rem(30);
+
+                small {
+                    font-size: 50%;
+                    display: block;
+                }
+            }
+
+            ul {
+                display: block;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    list-style: none;
+                    position: relative;
+                    padding-left: 30px;
+                    margin-bottom: 15px;
+
+                    &:before {
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        content: '';
+                        display: block;
+                        width: 9px;
+                        margin-right: 10px;
+                        height: 18px;
+                        border: solid $green;
+                        border-width: 0 3px 3px 0;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .sign-up-form-wrapper {
+		background-color: $white;
+		display: block;
+
+        h2 {
+            color: #000;
+            text-transform: uppercase;
+            font-family: $primary-font;
+            font-size: rem(30);
+
+            small {
+                font-size: 50%;
+                display: block;
+            }
+        }
+
+        .content-form {
+            padding-top: 180px;
+            padding-bottom: 100px;
+            display: block;
+			position: relative;
+			@include media-breakpoint-down(md){
+				padding-top: 50px;
 			}
-			h2 {
-				color: $white;
-			}
-			ul {
-				li {
-					list-style: none;
-					margin-left: -10px;
-					&:before{
-						content: '';
-						display: inline-block;
-						width: 9px;
-						margin-right: 10px;
-						height: 18px;
-						border: solid $green;
-						border-width: 0 3px 3px 0;
-						transform: rotate(45deg);
-					}
-					&:not(:first-child) {
-						margin-top: rem(15);
+
+            form {
+                .form-group {
+                    @extend .form-material-design;
+
+                    .form-control {
+                        border: 2px solid $lightgray;
+                        font-weight: 700;
+                    }
+                }
+
+                a {
+                    color: #000;
+                    text-decoration: underline;
+                }
+
+                .checkbox {
+                    font-size: rem(14);
+                }
+
+                .wrapper-btn {
+                    .btn {
+                        font-size: rem(12);
+                    }
+                }
+
+                .custom-checkbox .checkmark {
+                    border: solid 2px $lightgray;
+                    background: $white;
+				}
+				.no-sign-up{
+					p{
+						font-size: rem(14);
+						a{
+							color: $yellow;
+						}
 					}
 				}
-			} 
-		}
-	}
-
-	.sign-up-form-wrapper {
-		border-left: 4px solid $lightgray;
-		background-color: $white;
-		
-	}
-	.content-form {
-		padding: rem(100) 0;
-		display: block;
-		position: relative;
-		@include size-down(xs) {
-			padding-top: rem(60);
-			padding-bottom: rem(60);
-		}
-
-		&>.row {
-			position: relative;
-			z-index: 5;
-		}
-	}
-
-	h2 {
-		color: #000;
-		font-family: $primary-font;
-		font-size: rem(25);
-		font-weight: bold;
-		text-align: center;
-		margin: rem(40);
-
-		small {
-			display: block;
-			font-size: 60%;
-		}
-
-	}
-
-	form {
-		.form-group {
-			@extend .form-material-design;
-			.form-control {
-				border: 2px solid $lightgray;
-				font-weight: 700;
-			}
-		}
-
-		a {
-			color: #000;
-			text-decoration: underline;
-		}
-
-		.checkbox {
-			font-size: rem(14);
-		}
-
-		.wrapper-btn {
-			.btn {
-				font-size: rem(12);
-			}
-		}
-		.custom-checkbox .checkmark {
-			border: solid 2px $lightgray;
-			background: $white;
-		}
-	}
+            }
+        }
+    }
 }

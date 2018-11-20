@@ -2,6 +2,7 @@
     outline: none;
     border-radius: 5px;
     border: none;
+    font-size: rem(14);
 
     &.btn-primary {
         background: $green;
@@ -34,6 +35,13 @@
     &:focus {
         color: #FFF;
     }
+}
+
+.btn-white-border{
+    color: #000;
+    font-family: $primary-font;
+    border: solid 1px #acacac;
+    background: #FFF;
 }
 
 

@@ -1,3 +1,18 @@
+@mixin placeholderColor($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+}
+
 @mixin yellowGradient {
     background: rgba(255, 191, 0, 1);
     background: -moz-linear-gradient(top, rgba(255, 191, 0, 1) 0%, rgba(255, 145, 0, 1) 100%);

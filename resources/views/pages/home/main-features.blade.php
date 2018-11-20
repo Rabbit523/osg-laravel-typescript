@@ -1,12 +1,11 @@
 <section id="main-features">
-    <div class="container-fluid">
-        <div class="row title-row">
-            <div class="col">
-                <h2 class="with-stars"><span>check out our</span> main features</h2>
-            </div>
+    <div class="container">
+        <h2><small>check out our</small> main features</h2>
+        <div class="stars">
+            <img src="images/stars.png" class="img-fluid d-block mx-auto" alt="">
         </div>
-        <div class="row">
-            <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="row mt-5">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="feature program-designs">
                     <div class="description">
                         <div class="icon"></div>
@@ -20,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="feature experience-bank">
                     <div class="description">
                         <div class="icon"></div>
@@ -34,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="feature strength-standards">
                     <div class="description">
                         <div class="icon"></div>
@@ -48,8 +47,7 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="feature auto-regulation">
                     <div class="description">
                         <div class="icon"></div>
@@ -66,11 +64,11 @@
         </div>
 
 
-        <div class="row">
-            <div class="col">
-                <div class="actions">
-                    <button class="btn btn-primary">get started</button>
-                    <button class="btn btn-primary">learn more</button>
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="actions text-center">
+                    <button class="btn btn-green-gradient py-3 px-3 mr-3">get started</button>
+                    <button class="btn btn-white-border py-3 px-3">learn more</button>
                 </div>
             </div>
         </div>
