@@ -1,14 +1,14 @@
 <section id="get-started">
     <div class="row m-0">
-        <div class="col-12 col-sm-6 p-0">
+        <div class="col-12 col-sm-12 col-md-6 p-0">
             <figure>
                 <img src="images/people.jpg" class="img-fluid mx-auto d-block" alt="">
             </figure>
         </div>
-        <div class="col-12 col-sm-6">
+        <div class="col-12 col-sm-12 col-md-6 py-5 py-md-0">
             <div class="content-form h-100">
                 <div class="row justify-content-center h-100">
-                    <div class="col-12 col-sm-10 col-md-8 align-self-center">
+                    <div class="col-12 col-sm-10 col-md-10 col-lg-8 align-self-center">
                         <h2 class="with-stars black">
                             <small>REACH YOUR FITNESS GOALS</small>LET’S GET STARTED
                         </h2>
@@ -20,21 +20,21 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-12 col-sm-6">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                     <input type="text" name="phone" id="phone" class="form-control">
                                     <label for="phone">Phone number *</label>
                                 </div>
-                                <div class="col-12 col-sm-6">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 mt-lg-0">
                                     <input type="email" name="e-mail" id="e-mail" class="form-control">
                                     <label for="e-mail">E-mail *</label>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-12 col-sm-6">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                     <input type="password" class="form-control" name="password" id="password">
                                     <label for="password">Password *</label>
                                 </div>
-                                <div class="col-12 col-sm-6">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 mt-lg-0">
                                     <input type="password" class="form-control" name="password_1" id="password_1">
                                     <label for="password_1">Retype password *</label>
                                 </div>

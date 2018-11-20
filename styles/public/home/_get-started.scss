@@ -34,6 +34,7 @@
         position: relative;
         margin: 0;
         padding: 0;
+        height: 100%;
 
         &:before {
             content: "";
@@ -50,6 +51,14 @@
         img {
             position: relative;
             z-index: 1;
+            @include media-breakpoint-down(lg){
+                height: 100%;
+                object-fit: cover;
+                -o-object-fit: cover;
+            }
+            @include media-breakpoint-down(sm) {
+                height: auto;
+            }
         }
     }
 
@@ -59,6 +68,10 @@
         font-size: rem(25);
         font-weight: bold;
         margin: 0;
+        @include media-breakpoint-down(md) {
+            font-size: rem(20);
+            margin-bottom: 20px;
+        }
 
         small {
             display: block;

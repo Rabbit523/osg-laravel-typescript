@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Square 721 BT Bold Extended';
     src: url('../fonts/Square721BT-BoldExtended.eot?#iefix') format('embedded-opentype'), url('../fonts/Square721BT-BoldExtended.woff') format('woff'), url('../fonts/Square721BT-BoldExtended.ttf') format('truetype'), url('../fonts/Square721BT-BoldExtended.svg#Square721BT-BoldExtended') format('svg');
-    font-weight: 700;
+    font-weight: bold;
     font-style: normal;
 }
 
@@ -23,7 +23,7 @@
 }
 
 
-h1,h2,h3,h4,h5, h6 {
+/* h1,h2,h3,h4,h5, h6 {
     //font-family: $primary-font;
     text-transform: uppercase;
     span {
@@ -48,4 +48,4 @@ h1,h2,h3,h4,h5, h6 {
             }   
         }
     }
-}
+} */

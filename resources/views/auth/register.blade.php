@@ -79,34 +79,42 @@
             </div>
         </div> -->
         <!-- End Laravel default form -->
-        <div class="container-fluid p-0">
-            <div class="row m-0">
-                <div class="col-12 col-sm-6  p-0 sign-up-benefits-wrapper">
-                    <div class="benefits container">
-                        <h2>
-                            <small>Benefits as a</small>Member
-                        </h2>
-                        <div class="benefits-content">
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
-                                <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
-                                <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
-                                <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
-                                <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
-                                <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
-                                <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
-                                <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
-                            </ul>
+        <div class="row m-0">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-0">
+                <div class="sign-up-benefits-wrapper">
+                    <div class="row justify-content-center m-0">
+                        <div class="col-12 col-sm-12 col-md-8">
+                            <div class="benefits">
+                                <div class="text-center mb-5">
+                                    <h2>
+                                        <small>Benefits as a</small>Member
+                                    </h2>
+                                </div>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur ipsum dolor</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 sign-up-form-wrapper">
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                <div class="sign-up-form-wrapper">
                     <div class="content-form h-100">
                         <div class="row justify-content-center">
                             <div class="col-12 col-sm-10 col-md-8 align-self-center">
-                                <h2>
-                                    <small>Optimal Strength Gains</small>Sign up
-                                </h2>
+                                <div class="text-center mb-4">
+                                    <h2>
+                                        <small>Optimal Strength Gains</small>Sign up
+                                    </h2>
+                                </div>
                                 <form action="">
                                     <div class="form-group row">
                                         <div class="col-12">
@@ -115,21 +123,21 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <div class="col-12 col-sm-6">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                             <input type="text" name="phone" id="phone" class="form-control">
                                             <label for="phone">Phone number *</label>
                                         </div>
-                                        <div class="col-12 col-sm-6">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 mt-lg-0">
                                             <input type="email" name="e-mail" id="e-mail" class="form-control">
                                             <label for="e-mail">E-mail *</label>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <div class="col-12 col-sm-6">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                             <input type="password" class="form-control" name="password" id="password">
                                             <label for="password">Password *</label>
                                         </div>
-                                        <div class="col-12 col-sm-6">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 mt-lg-0">
                                             <input type="password" class="form-control" name="password_1" id="password_1">
                                             <label for="password_1">Retype password *</label>
                                         </div>
@@ -151,7 +159,10 @@
                                         </label>
                                     </div>
                                     <div class="wrapper-btn text-center text-md-right mt-3">
-                                        <input type="submit" value="GET STARTED" class="btn btn-green-gradient px-5 py-3">
+                                        <input type="submit" value="SIGN UP" class="btn btn-green-gradient btn-block px-5 py-3">
+                                    </div>
+                                    <div class="no-sign-up text-center mt-3">
+                                        <p>Already have an account? <a href="">Login to your account.</a></p>
                                     </div>
                                 </form>
                             </div>

@@ -1,181 +1,154 @@
-#main-call-to-action{
-  @include section-with-overlay(black);
-  @include full-height-with-centered-content;
-  background: url('/images/header-bg.png') center no-repeat;
-  background-size: cover;
-  h1{
-    text-align: center;
-    margin: 2.0rem;
-    color: white;
-    font-size: $lg-size;
-    font-weight: 700;
-    span{
-      font-size: $md-size;
-    }
-  }
+#main-call-to-action {
+    @include section-with-overlay(black);
+    clip-path: ellipse(100% 60% at 50% 40%);
+    -webkit-clip-path: ellipse(100% 60% at 50% 40%);
 
-  .get-started {
-    margin: 2.0rem;
-    text-align: center;
-    input {
-      font-family: $secondary-font;
-      padding: 1.0rem 1.5rem;
-      width: 30.0rem;
-      font-size: $regular-size;
-      border-radius: .5rem;
+    @include media-breakpoint-down(sm) {
+        height: 550px;
     }
-    button {
-      margin-left: 1.0rem;
+    &>img {
+        position: relative;
+        z-index: -2;
+        @include media-breakpoint-down(sm) {
+            height: 100%;
+            object-fit: cover;
+        }
     }
-  }
 
-  .view-more {
-    border: 2px solid white;
-    width: 5.0rem;
-    height: 5.0rem;
-    position: absolute;
-    bottom: 1.5rem;
-    outline: none;
-    left: 50%;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: -2.5rem;
-    @include crossBrowser(border-radius, 50%);
-    i  {
-      border: solid $yellow;
-      border-width: 0 .3rem .3rem 0;
-      display: inline-block;
-      padding: .625rem;
-      margin-top: -8px;
-      @include crossBrowser(transform, rotate(45deg));      
+    .content-cta {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 2;
+
+        h2 {
+            font-family: $primary-font;
+            text-align: center;
+            margin: 0;
+            color: white;
+            font-size: rem(30);
+            text-transform: uppercase;
+            font-weight: bold;
+
+            small {
+                display: block;
+                font-size: rem(16);
+            }
+            @include media-breakpoint-down(md) {
+                font-size: rem(20);
+            }
+        }
+
+        form.get-started {
+            .form-control {
+                @include placeholderColor(#000);
+                height: auto;
+                font-size: rem(14);
+                border: none;
+            }
+
+            .btn {
+                font-size: rem(14);
+            }
+        }
     }
-  }
+
+
+    .view-more {
+        border: 2px solid white;
+        width: rem(50);
+        height: rem(50);
+        position: absolute;
+        bottom: 30px;
+        outline: none;
+        left: 0%;
+        right: 0px;
+        z-index: 2;
+        margin: 0px auto;
+        text-align: center;
+        border-radius: 100%;
+        font-size: rem(40);
+        line-height: 1.2;
+
+        i {
+            color: $yellow;
+        }
+    }
 }
 
-#secondary-call-to-action{
-  // margin-top: -20px;
-  .container-fluid{
-    padding: 0;
-    .row{
-      margin: 0;
-      > div{
-        padding: 0;
-        .call-to-action{
-          background-size: cover;
-          height: 800px;
-          position: relative;
-          @include section-with-overlay(black);
-      
-          &.strength-athelete{
-            background-image: url('/images/girl-training.jpg');
-          }
-      
-          &.program-designer{
-            background-image: url('/images/list.jpg');
-          }
-      
-          &.personal-trainer{
-            background-image: url('/images/hands-five.jpg');
-          }
+#secondary-call-to-action {
+    position: relative;
+    z-index: 1;
+    margin-top: -55px;
 
-          .content{
+    .call-to-action {
+        position: relative;
+        @include section-with-overlay(black);
+
+        @include media-breakpoint-down(md) {
+            height: 600px;
+        }
+        @include media-breakpoint-down(sm) {
+            height: auto;
+        }
+
+        &>img {
+            position: relative;
+            z-index: -2;
+            @include media-breakpoint-down(md) {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content {
             position: absolute;
             bottom: 0;
             padding: 0 40px 40px;
             color: white;
-
-            h2, p{
-              margin-bottom: 20px;
+            @include media-breakpoint-down(md) {
+                padding-left: 20px;
+                padding-right: 20px;
             }
 
+            h2 {
+                font-family: $primary-font;
+                text-transform: uppercase;
+                font-size: rem(30);
+
+                @include media-breakpoint-down(md) {
+                    font-size: rem(25);
+                }
+
+                small {
+                    display: block;
+                    font-size: 50%;
+                }
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
             .buttons{
-              button{
-                width: 45%;
-              }
+                a{
+                    font-size: rem(14);
+                    @include media-breakpoint-down(lg){
+                        display: block;
+                        text-align: center;
+                    }
+                    &.learn-more{
+                        color: #FFF;
+                        text-transform: uppercase;
+                        font-family: $primary-font;
+                        @include media-breakpoint-down(lg){
+                            margin-top: 20px;
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     }
-  }
 }
-
-
-
-
-
-
-
-
-// #cta-items {
-//   height: 100vh;
-//   margin-top: -4.0rem;
-  
-//   color: white;
-
-//   .container-fluid {
-//     margin: 0;
-//     padding: 0;
-//     height: 100%;
-//     @include size-down(md) {
-//       flex-direction: column;
-//     }
-//   }
-
-//   .cta__item {
-//     display: flex;
-//     flex-direction: column;
-//     flex: 0 33.3333%;
-//     @include section-with-overlay(black);
-//     @include size-down(md) {
-//       flex: 1;
-//       min-height: 45.0rem;
-//       justify-content: center;
-//     }
-//     &:before {
-//       margin-top: 4.0rem;
-//       @include size-down(md) {
-//         margin-top: 0;
-//       }
-//     }
-//     .container {
-//       width: 75%;
-//       padding-top: 60%;
-//       @include size-down(md) {
-//         padding: 0;
-//       }
-//     }
-//     p {
-//       font-family: $secondary-font;
-//       @include size-up(lg) {
-//         height: 12.0rem;
-//       }
-//     }
-//   }
-
-//   .cta__item:nth-child(1) {
-//     background: url('/images/girl-training.jpg') center no-repeat;
-//     background-size: cover;
-//     @include size-down(md) {
-//       background-position: center -5.0rem;     
-//     }
-//     &:before {
-//       @include size-down(md) {
-//         margin-top: 4.0rem;
-//       }
-//     }
-//   }
-//   .cta__item:nth-child(2) {
-//     background: url('/images/list.jpg') center no-repeat;
-//     background-size: cover;
-//   }
-//   .cta__item:nth-child(3) {
-//     background: url('/images/hands-five.jpg') center no-repeat;
-//     background-size: cover;
-//     @include size-down(md) {
-//       background-position: center -15.0rem;     
-//     }
-//   }
-// }

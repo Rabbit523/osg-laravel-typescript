@@ -1,12 +1,14 @@
 header {
     nav {
+        background: #000;
+        transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
         &.navbar {
             padding-top: 31px;
             padding-bottom: 31px;
             font-family: $primary-font;
-            @include media-breakpoint-down(xs) {
-              padding-top: 0;
-            }
 
             .navbar-toggler {
                 outline: none;
@@ -53,98 +55,130 @@ header {
                         top: 24px;
                     }
                 }
+                @include media-breakpoint-down(md) {
+                    position: absolute;
+                    right: 0px;
+                    top: -15px;
+                }
             }
 
             .navbar-brand {
                 background: black;
-                padding: 3.0rem;
+                padding: rem(35);
                 border-radius: 50%;
                 position: absolute;
-                top: -70px;
+                top: -50px;
                 z-index: 10;
                 left: -15px;
+                width: 200px;
+                margin: 0px;
+                transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
 
-                @include media-breakpoint-down(xs) {
-                    position: relative;
-                    top: 0px;
-                    left: 0px;
-                    padding: 0;
-                }
-            }
-        }
-
-        .menu-box {
-            font-size: rem(12);
-
-            li {
-                margin-left: 10px;
-                margin-right: 10px;
-                @include media-breakpoint-down(xs) {
-                  text-align: center;
-                }
-                a {
-                    color: #FFF;
-                    text-transform: uppercase;
-                }
-            }
-        }
-
-        .nav-session {
-            font-size: rem(12);
-            position: relative;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            padding-left: 0;
-            margin-bottom: 0;
-            list-style: none;
-            text-transform: uppercase;
-
-            @include media-breakpoint-up(md) {
-                -webkit-box-orient: horizontal;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                flex-direction: row;
-
-            }
-
-            &:before {
-                content: "";
-                background: $gray;
-                width: 1px;
-                height: 100%;
-                position: absolute;
-                top: 0px;
-                left: 0px;
-
-                @include media-breakpoint-down(sm) {
-                    display: none;
+                @include media-breakpoint-down(md) {
+                    width: 120px;
                 }
             }
 
-            @include media-breakpoint-down(md) {
-                text-align: center;
-            }
+            .menu-box {
+                font-size: rem(12);
+                @include media-breakpoint-down(md) {
+                    padding-top: 50px;
+                    text-align: center;
+                }
 
-            li {
-                margin-left: 10px;
+                li {
+                    margin-left: 10px;
+                    margin-right: 10px;
 
-                a {
-                    padding-right: 0.5rem;
-                    padding-left: 0.5rem;
-                    display: block;
-                    padding: 0.5rem 1rem;
-
-                    &.green-text {
-                        color: $green;
+                    @include media-breakpoint-down(xs) {
+                        text-align: center;
                     }
 
-                    &.btn {
-                        font-size: rem(12);
+                    a {
+                        color: #FFF;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .nav-session {
+                font-size: rem(12);
+                position: relative;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                padding-left: 0;
+                margin-bottom: 0;
+                list-style: none;
+                text-transform: uppercase;
+
+                @include media-breakpoint-up(md) {
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: row;
+                    flex-direction: row;
+                    text-align: center;
+                }
+                @include media-breakpoint-down(md) {
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                &:before {
+                    content: "";
+                    background: $gray;
+                    width: 1px;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+
+                    @include media-breakpoint-down(md) {
+                        display: none;
+                    }
+                }
+
+                li {
+                    margin-left: 10px;
+
+                    a {
+                        padding-right: 0.5rem;
+                        padding-left: 0.5rem;
+                        display: block;
+                        padding: 0.5rem 1rem;
+
+                        &.green-text {
+                            color: $green;
+                        }
+
+                        &.btn {
+                            font-size: rem(12);
+                        }
+                    }
+                }
+            }
+
+            &.sticky {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                @include media-breakpoint-down(md) {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                }
+                .navbar-brand{
+                    transform: scale(0.4);
+                    transform-origin: center top;
+                    top: -20px;
+                    @include media-breakpoint-down(md) {
+                        transform: scale(1);
+                        top: -50px
                     }
                 }
             }

@@ -31,10 +31,10 @@
         <div class="col-6 col-sm-auto mb-5 mb-md-0">
         <h3>Follow Us</h3>
           <ul>
-            <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-            <li><a href="#"><i class="fab fa-youtube"></i> Youtube</a></li>
+            <li><a href="#"><i class="fa fa-facebook-f"></i> Facebook</a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i> Youtube</a></li>
           </ul>
         </div>
         <div class="col-6 col-sm-auto mb-5 mb-md-0">
@@ -47,11 +47,11 @@
       </div>
       <section class="footer-info">
         <div class="row">
-          <div class="col-12 col-sm-8 text-center text-md-left">
+          <div class="col-12 col-sm-12 col-lg-8 text-center text-lg-left">
               <img src="images/logo.png" alt="logo" class="img-fluid d-inline-block logo-footer">
               <p class="d-inline-block">Copyright {{date('Y')}} © Optimal Strength Gains AS. All Rights Reserved.</p>
           </div>
-          <div class="col-12 col-sm-4 text-center text-md-right">
+          <div class="col-12 col-sm-12 col-lg-4 text-center text-lg-right">
             <p>Web Design & Web Development: <a href="https://fantasylab.io" target="_blank"><span>FantasyLab.</span></a></p>
           </div>
         </div>

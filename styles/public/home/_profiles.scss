@@ -1,73 +1,102 @@
-#profiles{
+#profiles {
     background: $white;
-    .container-fluid{
-        .row{
-            &:nth-child(2){
-                padding-bottom: 60px;
-                .profile{
-                    border-right: 1px solid lightgray;
-                    height: 560px;
+    padding: 80px 0;
 
-                    .description{
-                        height: 100%;
-                        width: 80%;
-                        margin: 0 auto;
-                        position: relative;
-                        
-                        .icon{
-                            height: 200px;
-                            background: center no-repeat;
-                            background-size: 120px;
-                        }    
-                        ul{
-                            li{
-                                text-transform: uppercase;
-                                &:before{
-                                    color: $yellow; // TODO: set the right color.  
-                                    content: "\2022"; 
-                                    font-size: 2em; 
-                                    position: relative;
-                                    top: 5px;
-                                    padding-right: 10px;
-                                }
-                            }
-                        }
-                        
+    h2 {
+        display: block;
+        font-size: rem(25);
+        font-family: $primary-font;
+        color: #000;
+        text-align: center;
+        text-transform: uppercase;
 
-                        .btn{
-                            position: absolute;
-                            bottom: 50px;
-                            left: 30px;
-                        }
-                    }
+        small {
+            display: block;
+            font-size: 60%;
+        }
+    }
 
+    .profile {
+        height: 100%;
 
-                    &.strength-athlete{
-                        .icon{
-                            background-image: url('/images/icons/strength-athlete.png');
-                        }
-                    }
-                    &.program-designer{
-                        .icon{
-                            background-image: url('/images/icons/program-designer.png');
-                        }
-                    }
-                    &.personal-trainer{
-                        .icon{
-                            background-image: url('/images/icons/personal-trainer.png');
-                        }
-                    }
-                }
+        &:after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background: #d8d8d8;
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
 
-                .col-4{
-                    &:last-child{
-                        .profile{
-                            border-right: none;
-                        }
+        .description {
+            display: block;
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+
+            h3 {
+                text-transform: uppercase;
+                font-size: rem(14);
+                font-family: $primary-font;
+                margin: 0 0 30px;
+            }
+
+            .icon {
+                height: 200px;
+                background: center no-repeat;
+                background-size: 120px;
+            }
+
+            ul {
+                font-size: rem(12);
+                text-transform: uppercase;
+                font-weight: bold;
+                font-family: $primary-font;
+                margin-bottom: 40px;
+                li {    
+                    display: block;
+                    position: relative;
+                    padding-left: 30px;
+                    margin-bottom: 10px;
+                    &:before {
+                        position: absolute;
+                        top: 0px;
+                        line-height: 1;
+                        left: 0px;
+                        color: #ffbf00;
+                        content: "\2022";
+                        font-size: 2em;
                     }
                 }
             }
-            
+        }
+
+
+        &.strength-athlete {
+            .icon {
+                background-image: url('/images/icons/strength-athlete.png');
+            }
+        }
+
+        &.program-designer {
+            .icon {
+                background-image: url('/images/icons/program-designer.png');
+            }
+        }
+
+        &.personal-trainer {
+            &:after {
+                display: none;
+            }
+
+            .icon {
+                background-image: url('/images/icons/personal-trainer.png');
+            }
         }
     }
 
