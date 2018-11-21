@@ -1,42 +1,62 @@
-osg-profile-about-me{
+osg-profile-about-me {
     display: block;
-    .about-me-container{
+
+    h3{
+        text-transform: uppercase;
+        font-family: $primary-font;
+        font-size: rem(14);
+        margin: 0px;
+        display: block;
+        float: left;
+    }
+    .edit{
+        display: block;
+        float: right;
+        width: 20px;
+        filter: brightness(0.5) sepia(1) hue-rotate(140deg) saturate(0);
+    }
+
+    .about-me-container {
         @include shadowed-container;
-        min-height: 480px;
-        padding: 20px 30px;
+        min-height: 400px;
+        padding: 20px 30px 50px;
         text-align: justify;
 
-        .summary{
+
+        .summary {
             width: 100%;
             margin: 50px 0;
-            .entry{
-                span{
+
+            .entry {
+                span {
                     display: block;
-                    &:first-child{
+
+                    &:first-child {
                         float: left;
                         text-align: left;
                         color: $black;
+                        img{
+                            width: 14px;
+                        }
                     }
-                    &:last-child{
+
+                    &:last-child {
                         float: right;
                         text-align: right;
                         color: $medium-gray;
-                        
+
                     }
                 }
 
-                &:after{
+                &:after {
                     content: '';
                     display: block;
                     clear: both;
                 }
-                
+
             }
         }
-
-        button{
-            width: 100%;
-        }
     }
+
     @include section-separator;
 }
