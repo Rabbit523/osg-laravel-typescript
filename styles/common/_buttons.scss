@@ -11,6 +11,10 @@
     &.btn-transparent {
         background: transparent;
     }
+
+    img{
+        width: 20px;
+    }
 }
 
 .btn-yellow-gradient {
@@ -27,6 +31,18 @@
 
 .btn-green-gradient {
     @include greenGradient;
+    color: #FFF;
+    letter-spacing: le(100);
+    font-family: $primary-font;
+
+    &:hover,
+    &:focus {
+        color: #FFF;
+    }
+}
+
+.btn-black {
+    background: #000;
     color: #FFF;
     letter-spacing: le(100);
     font-family: $primary-font;
