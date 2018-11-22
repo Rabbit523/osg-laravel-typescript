@@ -1,3 +1,135 @@
-osg-strength-athlete-top-program-designs{
-    
+osg-strength-athlete-top-program-designs {
+    .title {
+        display: block;
+        width: 100%;
+        border-bottom: solid 1px #b7b7b7;
+        padding-bottom: 0px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+
+        h3 {
+            text-transform: uppercase;
+            font-family: $primary-font;
+            font-size: rem(14);
+            margin: 0px;
+            display: block;
+            float: left;
+        }
+
+        .sort-box {
+            font-weight: bold;
+            font-size: rem(12);
+            font-family: $primary-font;
+
+            p {
+                display: inline-block;
+                color: #ababab;
+            }
+
+            .dropdown {
+                display: inline-block;
+                outline: none;
+
+                .btn {
+                    background: transparent;
+                    outline: none;
+                    color: #000;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    .table-top-program {
+        thead {
+            tr {
+                th {
+                    border: none;
+
+                    &:nth-child(2) {
+                        background: #FFF;
+                        text-transform: uppercase;
+                        font-family: $primary-font;
+                        font-size: rem(10);
+                        color: #000;
+                        border-top: 2px solid #78cd18;
+                        border-right: 2px solid #78cd18;
+                        border-left: 2px solid #78cd18;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    background: #FFF;
+                    border: 1px solid #dadada;
+                    font-size: rem(10);
+                    padding: 0.55rem;
+                    color: #000;
+                    &.orange{
+                        background: #fff0cf;
+                    }
+                    &.green{
+                        background: #e8fecd;
+                    }
+                    &.blue{
+                        background: #f0feff;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    td {
+                        &:first-child {
+                            color: #838383;
+                        }
+                        &:last-child{
+                            border-right: solid $orange 2px;
+                            border-left: solid $orange 2px;
+                        }
+                        &:nth-child(4){
+                            border-left: 2px solid #78cd18;
+                        }
+                        &:nth-child(14){
+                            border-left: 2px solid #78cd18;
+                        }
+                    }
+                }
+
+                &:last-child{
+                    td{
+                        border-bottom: 2px solid #78cd18;
+                    }
+                }
+
+                &:first-child,
+                &:nth-child(2) {
+                    td {
+                        font-size: rem(12);
+                        color: #000 !important;
+                    }
+                }
+                &:first-child{
+                    td{
+                        vertical-align: middle;
+                        border-top: 2px solid #dadada;
+                        &:last-child{
+                            border-top: solid $orange 2px;
+                        }
+                        &:nth-child(12){
+                            border-left: 2px solid #78cd18;
+                        }
+                    }
+                }
+                &:nth-last-child(2){
+                    td{
+                        &:last-child{
+                            border-bottom: solid $orange 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

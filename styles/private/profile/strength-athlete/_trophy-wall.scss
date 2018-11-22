@@ -1,3 +1,119 @@
-osg-strength-athlete-trophy-wall{
-    
+osg-strength-athlete-trophy-wall {
+    display: block;
+
+    h3 {
+        text-transform: uppercase;
+        font-family: $primary-font;
+        font-size: rem(14);
+        margin: 0px;
+        display: block;
+        float: left;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        color: #000;
+        font-family: $primary-font;
+        font-size: rem(10);
+        margin: 0;
+    }
+
+    p {
+        color: #838383;
+        font-size: rem(12);
+        margin: 0;
+        b {
+            color: #000;
+        }
+    }
+
+    .trophy {
+        @include shadowed-container;
+        display: block;
+        background: #FFF;
+        margin-top: 15px;
+        margin-bottom: 30px;
+
+        .strenght-level {
+            display: block;
+            border-right: 1px #dadada solid;
+            height: 100%;
+            padding: 30px 20px;
+
+            .exercise-list {
+                display: block;
+                margin-top: 15px;
+
+                .list {
+                    display: block;
+                    margin-top: 15px;
+                    height: 235px;
+                    overflow: auto;
+
+                    .checkbox {
+                        color: #838383;
+                        font-size: rem(10);
+                        margin-bottom: 5px;
+                        display: block;
+
+                        .checkmark {
+                            background: #FFF;
+                            border-color: #dadada;
+                        }
+
+                        label {
+                            margin-top: 5px;
+
+                            input:checked~.checkmark {
+                                border-color: #2ebf0d;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .performance-graph {
+            display: block;
+            height: 100%;
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .total-percentage {
+            display: block;
+            border-left: 1px #dadada solid;
+            height: 100%;
+            padding-top: 30px;
+            .program-period{
+                display: block;
+                border-top: 1px #dadada solid;
+                padding: 20px;
+            }
+        }
+
+        .current-level {
+            display: block;
+            border-top: 2px #dadada solid;
+            padding: 0px;
+
+            .title{
+                padding-top: 30px;
+                padding-left: 20px;
+            }
+
+            .level {
+                display: block;
+                height: 100%;
+                text-align: center;
+                border-left: 1px #dadada solid;
+                padding: 20px 5px;
+
+                &.no-border{
+                    border: none;
+                }
+            }
+        }
+    }
 }
