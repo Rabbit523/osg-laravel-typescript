@@ -1,34 +1,80 @@
-osg-personal-trainer-offers{
+osg-personal-trainer-offers {
     display: block;
-    
-    .offers-container{
-        display: flex;
-        flex-direction: row;
-        .offer{
-            @include shadowed-container;
-            height: 480px;
-            width: 25%;
-            background: $white;
-            margin-right: 20px;
-            header{
-                height: 245px;
-                background: $black;
-            }
+    border-bottom: solid 1px #bfbfbf;
+    margin-bottom: 40px;
 
-            .description, .pricing{
-                text-align: center;
-                margin: 0 40px;
-                span{
+    .title {
+        display: block;
+        margin-bottom: 10px;
+
+        h3 {
+            text-transform: uppercase;
+            font-family: $primary-font;
+            font-size: rem(14);
+            margin: 0px;
+            display: block;
+        }
+    }
+
+    .offers-container {
+        @extend .row;
+
+        .offer {
+            @extend .col-lg-3;
+            @extend .col-sm-6;
+            @extend .col-12;
+            margin-bottom: 2rem;
+
+            .content-offer {
+                @include shadowed-container;
+                display: block;
+                background: $white;
+                padding-bottom: rem(30);
+
+                header {
                     display: block;
+                    background: $black;
+                    clip-path: ellipse(100% 60% at 65% 40%);
+                    -webkit-clip-path: ellipse(100% 60% at 65% 40%);
+                    figure{
+                        display: block;
+                        margin: 0 auto;
+                        width: 60px;
+                        padding: 70px 0px;
+                    }
                 }
-            }
 
-            .description{
-                margin-top: 30px;
-                @include section-separator(25px);
-            }
-            &:last-child{
-                margin-right: 0;
+                .pricing {
+                    text-align: center;
+                    margin: 0 20px;
+
+                    span {
+                        display: block;
+                    }
+                    .btn{
+                        text-transform: uppercase;
+                        @extend .py-2;
+                        @extend .mt-1;
+                    }
+                }
+
+                .description {
+                    margin: 30px auto;
+                    display: block;
+                    text-align: center;
+                    width: 80%;
+                    @include section-separator(25px, #c6c6c6);
+                    h4{
+                        text-transform: uppercase;
+                        font-family: $primary-font;
+                        color: #000;
+                        font-size: rem(16);
+                        margin: 0;
+                    }
+                    span{
+                        color: $text-gray;
+                    }
+                }
             }
         }
     }

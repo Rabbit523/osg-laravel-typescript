@@ -51,6 +51,10 @@
     &:focus {
         color: #FFF;
     }
+    img{
+        -webkit-filter: brightness(0.5) sepia(1) hue-rotate(10deg) saturate(6);
+        filter: brightness(0.5) sepia(1) hue-rotate(10deg) saturate(6);
+    }
 }
 
 .btn-white-border{

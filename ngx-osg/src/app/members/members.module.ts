@@ -5,6 +5,7 @@ import { PersonalTrainerComponent } from './components/personal-trainer/personal
 import { ProgramDesignerComponent } from './components/program-designer/program-designer.component';
 import { StrengthAthleteComponent } from './components/strength-athlete/strength-athlete.component';
 import { PersonalTrainerOffersComponent } from './components/personal-trainer/offers.component';
+import { PersonalTrainerGetStartedComponent } from './components/personal-trainer/get-started.component';
 import { PersonalTrainerExperienceBankComponent } from './components/personal-trainer/experience-bank.component';
 import { PersonalTrainerBookingCalendarComponent } from './components/personal-trainer/booking-calendar.component';
 import { CoreModule } from '../core/core.module';
@@ -27,6 +28,7 @@ import { StrengthAthleteTrainingCalendarComponent } from './components/strength-
     PersonalTrainerOffersComponent,
     PersonalTrainerExperienceBankComponent,
     PersonalTrainerBookingCalendarComponent,
+    PersonalTrainerGetStartedComponent,
     ProgramDesignerComponent,
     StrengthAthleteComponent,
     StrengthAthleteTrophyWallComponent,

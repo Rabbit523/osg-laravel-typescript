@@ -116,7 +116,7 @@ osg-strength-athlete-timeline {
                             }
 
                             &.need-improvement {
-                                background: #e91212;
+                                background: $red;
                                 width: 100%;
                                 border-radius: 8px;
                                 height: 15px;
@@ -208,7 +208,7 @@ osg-strength-athlete-timeline {
                     width: 10px;
                     height: 10px;
                     border-radius: 100px;
-                    background: #e91212;
+                    background: $red;
                 }
             }
             &.add-trainer{

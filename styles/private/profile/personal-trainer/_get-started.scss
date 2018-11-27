@@ -1,0 +1,50 @@
+osg-personal-trainer-get-started{
+    display: block;
+    h3 {
+        text-transform: uppercase;
+        font-family: $primary-font;
+        font-size: rem(14);
+        margin: 0px;
+        display: block;
+    }
+    .articles-list{
+        @extend .row;
+        @extend .no-gutters;
+        @include shadowed-container;
+        margin-top: 10px;
+        margin-bottom: rem(40);
+        height: 100%;
+        background: #FFF;
+        .article{
+            @extend .col-12;
+            @extend .col-sm-3;
+            background: #FFF;
+            border-right: solid 1px #c6c6c6;
+            padding: 30px 40px;
+            h4{
+                text-transform: uppercase;
+                font-family: $primary-font;
+                font-size: rem(12);
+                margin: 0px 0px 30px;
+                display: block;
+            }
+            .btn{
+                font-size: rem(8);
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+            }
+            &.brand-box{
+                background: $black;
+                border: none;
+                figure{
+                    margin: 10px auto;
+                    display: block;
+                    width: 50%;
+                }
+            }
+            &:last-child{
+                border: none;
+            }
+        }
+    }
+}

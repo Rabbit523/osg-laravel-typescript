@@ -1,4 +1,211 @@
 osg-personal-trainer-experience-bank{
     display: block;
-    height: 720px;
+    margin-bottom: 3rem;
+    h3 {
+        text-transform: uppercase;
+        font-family: $primary-font;
+        font-size: rem(14);
+        margin: 0px;
+        display: block;
+    }
+    .title{
+        @extend .row;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 15px;
+        .filter-box {
+            font-weight: bold;
+            font-size: rem(10);
+            font-family: $primary-font;
+
+            p {
+                display: inline-block;
+                color: #ababab;
+                text-transform: uppercase;
+                margin-bottom: 0px;
+            }
+
+            .dropdown {
+                display: inline-block;
+                outline: none;
+                text-transform: uppercase;
+
+                .btn {
+                    background: transparent;
+                    outline: none;
+                    color: #000;
+                    text-transform: uppercase;
+                    font-size: rem(10);
+                }
+                .dropdown-menu{
+                    font-size: rem(10);
+                }
+                .text-red{
+                    color: $red;
+                }
+                .text-orange{
+                    color: $orange;
+                }
+                .text-blue{
+                    color: $light-blue;
+                }
+                .text-green{
+                    color: $dark-green;
+                }
+                .dropdown-black{
+                    background: $black;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    a{
+                        border-bottom: solid 1px #303030;
+                        padding: 0.45rem 1.5rem;
+                        &:last-child{
+                            border: none;
+                        }
+                        &:hover{
+                            background: #232323;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    small{
+        @extend .col-12;
+        margin-top: rem(20);
+        color: $text-gray;
+    }
+    table{
+        @include shadowed-container;
+        thead{
+            tr{
+                th{
+                    background: #fff6e1;
+                    text-transform: uppercase;
+                    color: #000;
+                    font-family: $primary-font;
+                    font-size: rem(10);
+                    text-align: center;
+                    border-bottom: solid 1px #e2ded3;
+                    border-left: solid 1px #e2ded3;
+                    border-right: solid 1px #e2ded3;
+                    border-top: solid 1px #fff;
+                }
+            }
+        }
+        tbody{
+            font-size: rem(12);
+            tr{
+                &:last-child,
+                &:nth-last-child(2){
+                    td{
+                        color: #000;
+                        background: #fff6e1;
+                    }
+                }
+                td{
+                    background: #FFF;
+                    color: $red;
+                    border: solid 1px #e2ded3;
+                    &:first-child{
+                        background: #fff6e1;
+                        color: $black;
+                    }
+                    b{
+                        font-family: $primary-font;
+                        font-size: rem(10);
+                    }
+                    span{
+                        color: $light-blue;
+                    }
+                }
+            }
+        }
+    }
+    .review-box{
+        @include shadowed-container;
+        background: #FFF;
+        display: block;
+        padding: 20px 10px;
+        .review{
+            font-size: rem(12);
+            display: block;
+            border-bottom: solid 1px #e1e1e1;
+            margin-bottom: 20px;
+            &:nth-last-child(2){
+                border: none;
+            }
+            p{
+                color: $text-gray;
+                &.name{
+                    color: $light-blue;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        .btn{
+            font-size: rem(8);
+            span{
+                color: $orange;
+                .fa-inverse{
+                    color: $black;
+                }
+            }
+        }
+    }
+    .average-box{
+        @include shadowed-container;
+        background: #FFF;
+        display: block;
+        padding: 20px 10px;
+        .average{
+            font-size: rem(12);
+            display: block;
+            border-bottom: solid 1px #e1e1e1;
+            margin-bottom: 10px;
+            p{
+                color: $text-gray;
+                margin-bottom: 0px;
+            }
+        }
+        .btn{
+            font-size: rem(8);
+            img{
+                width: 15px;
+            }
+        }
+    }
+    .rating{
+        font-size: 10px;
+        color: #b7b7b7;
+        display: block;
+        margin-bottom: 5px;
+        span{
+            color: #b7b7b7;
+            &.excellent{
+                color: #4b870a;
+            }
+            &.good{
+                color: $dark-green;
+            }
+            &.middle{
+                color: $orange;
+            }
+        }
+        &.excellent{
+            p{
+                color: #4b870a;
+            }
+        }
+        &.good{
+            p{
+                color: $dark-green;
+            }
+        }
+        &.middle{
+            p{
+                color: $orange;
+            }
+        }
+    }
 }

@@ -73,7 +73,7 @@ osg-strength-athlete-training-calendar {
 
             &.completed {
                 span {
-                    border-top: solid 3px #76cf16;
+                    border-top: solid 3px $dark-green;
                 }
             }
 
@@ -142,11 +142,11 @@ osg-strength-athlete-training-calendar {
                 }
                 &.completed{
                     background: #f0ffdf;
-                    border-bottom-color: #76cf16;
+                    border-bottom-color: $dark-green;
                     border-left-color: #d5ebbd;
                     border-right-color: #d5ebbd;
                     .time{
-                        color: #76cf16;
+                        color: $dark-green;
                     }
                 }
                 &.missed{
@@ -155,7 +155,7 @@ osg-strength-athlete-training-calendar {
                     border-left-color: #f8d4b8;
                     border-right-color: #f8d4b8;
                     .time{
-                        color: #76cf16;
+                        color: $dark-green;
                     }
                 }
                 &.test{
