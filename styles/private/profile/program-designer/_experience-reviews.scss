@@ -1,0 +1,91 @@
+osg-program-designer-experience-reviews{
+    .title {
+        display: block;
+        width: 100%;
+
+        h3 {
+            @include section-title;
+            width: 100%;
+            &:after{
+                content: "";
+                background: #b7b7b7;
+                display: block;
+                width: 105%;
+                height: 1px;
+                margin-top: 15px;
+            }
+
+            span {
+                color: $light-blue;
+            }
+        }
+        .btn{
+            font-size: rem(8);
+            span{
+                color: $orange;
+                .fa-inverse{
+                    color: $black;
+                }
+            }
+            img{
+                width: 16px;
+            }
+        }
+    }
+    .review-box{
+        @extend .col-12;
+        @extend .col-sm;
+        margin-top: 20px;
+        .review{
+            @include shadowed-container;
+            display: block;
+            background: #FFF;
+            font-size: rem(12);
+            text-align: center;
+            padding: 20px 10px;
+            height: 100%;
+            p{
+                color: $text-gray;
+                &.name{
+                    color: $light-blue;
+                    margin-bottom: 5px;
+                }
+            }
+            figure{
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .rating{
+        font-size: 10px;
+        color: #b7b7b7;
+        display: block;
+        margin-bottom: 5px;
+        text-align: center;
+        &:before{
+            content:"";
+            display: block;
+            background: #bebebe;
+            width: 50%;
+            height: 1px;
+            margin: 15px auto;
+        }
+        span{
+            color: #b7b7b7;
+            &.excellent{
+                color: #4b870a;
+            }
+            &.good{
+                color: $dark-green;
+            }
+            &.middle{
+                color: $orange;
+            }
+        }
+        p{
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 0;
+        }
+    }
+}

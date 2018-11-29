@@ -1,0 +1,120 @@
+osg-program-designer-program-filter{
+    display: block;
+    margin-bottom: 30px;
+    .title {
+        display: block;
+        width: 100%;
+        border-bottom: solid 1px #b7b7b7;
+        padding-bottom: 10px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+
+        h3 {
+            @include section-title;
+
+            span {
+                color: $light-blue;
+            }
+        }
+    }
+    .filter-box{
+        @include shadowed-container;
+        display: block;
+        position: relative;
+        background: #FFF;
+        padding: 20px;
+        h4{
+            text-transform: uppercase;
+            font-size: rem(10);
+            font-family: $primary-font;
+        }
+        .checbox-dropdown{
+            .custom-checkbox{
+                display: inline-block;
+                width: 15%;
+                .checkmark{
+                    background: #FFF;
+                    border-color: #c7c7c7;
+                }
+                label input:checked ~ .checkmark{
+                    border-color: $green;
+                } 
+            }
+            .dropdown{
+                display: inline-block;
+                width: 85%;
+            }
+        }
+        .dropdown{
+            &.with-label{
+                .btn{
+                    padding-top: 15px;
+                }
+            }
+            label{
+                display: block;
+                color: #838383;
+                font-weight: normal;
+                font-size: 9px;
+                position: absolute;
+                top: 5px;
+                left: 15px;
+                pointer-events: none;
+                margin-bottom: 0px;
+            }
+            &.white-dropdown{
+                .btn{
+                    text-align: left;
+                    border: solid 1px #c7c7c7;
+                    color: #000;
+                    border-radius: 0px;
+                    height: 44px;
+                }
+                .dropdown-toggle{
+                    &:before{
+                        display: block;
+                        content: "";
+                        background: #c7c7c7;
+                        width: 1px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0px;
+                        right: 35px;
+                        pointer-events: none;
+                    }
+                    &:after{
+                        float: right;
+                        margin-top: 5px;
+                        color: #c7c7c7;
+                    }
+                }
+                .dropdown-menu{
+                    width: 100%;
+                }
+            }
+        }
+        .actions{
+            @extend .row;
+            @extend .mt-3;
+            .btn{
+                font-size: rem(10);
+            }
+            .gender{
+                @extend .row;
+                h4{
+                    @extend .col-12;
+                    @extend .col-sm-2;
+                }
+                p{
+                    @extend .col-auto;
+                    color: #838383;
+                    font-size: rem(10);
+                    margin-bottom: 0;
+                    span{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

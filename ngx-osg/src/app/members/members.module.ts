@@ -16,7 +16,12 @@ import { StrengthAthleteTimelineComponent } from './components/strength-athlete/
 import { StrengthAthletePerformanceTableComponent } from './components/strength-athlete/performance-table.component';
 import { StrengthAthleteTopProgramDesignsComponent } from './components/strength-athlete/top-program-designs.component';
 import { StrengthAthleteTrainingCalendarComponent } from './components/strength-athlete/training-calendar.component';
-
+import { ProgramDesignerPublishedProgramsComponent } from './components/program-designer/published-programs.component';
+import { ProgramDesignerProgramFilterComponent } from './components/program-designer/program-filter.component';
+import { ProgramDesignerExperienceBankComponent } from './components/program-designer/experience-bank.component';
+import { ProgramDesignerExperienceReviewsComponent } from './components/program-designer/experience-reviews.component';
+import { ProgramDesignerProgramDesignComponent } from './components/program-designer/program-design.component';
+import { ProgramDesignerTrainingCalendarComponent } from './components/program-designer/training-calendar.component';
 
 
 @NgModule({
@@ -30,6 +35,12 @@ import { StrengthAthleteTrainingCalendarComponent } from './components/strength-
     PersonalTrainerBookingCalendarComponent,
     PersonalTrainerGetStartedComponent,
     ProgramDesignerComponent,
+    ProgramDesignerPublishedProgramsComponent,
+    ProgramDesignerProgramFilterComponent,
+    ProgramDesignerExperienceBankComponent,
+    ProgramDesignerExperienceReviewsComponent,
+    ProgramDesignerProgramDesignComponent,
+    ProgramDesignerTrainingCalendarComponent,
     StrengthAthleteComponent,
     StrengthAthleteTrophyWallComponent,
     StrengthAthleteTimelineComponent,

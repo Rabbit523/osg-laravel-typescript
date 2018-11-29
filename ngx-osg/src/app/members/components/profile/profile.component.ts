@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit{
 
   ngOnInit(): void {
     this.applicationUser = new ApplicationUser({
-      role: ApplicationUserRole.PersonalTrainer
+      role: ApplicationUserRole.ProgramDesigner
     });
   }
 
