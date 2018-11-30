@@ -1,0 +1,123 @@
+osg-plan-builder-calendar {
+    @extend .col;
+    @extend .col-sm;
+    .subtitle{
+        border-left: solid 1px #d8ddd1;
+        border-right: solid 1px #d8ddd1;
+        border-bottom: solid 1px #d8ddd1;
+        display: block;
+        padding: 30px 15px 35px;
+    }
+    h3{
+        @include section-title(14);
+    }
+    .workouts-list{
+        padding: 10px 15px 0px;
+        border-bottom: solid 1px #d8ddd1;
+        border-left: solid 1px #d8ddd1;
+        border-right: solid 1px #d8ddd1;
+        .workout{
+            @include section-title(12);
+            margin-bottom: 10px;
+            span{
+                color: #000;
+                background: $yellow;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                line-height: 30px;
+                text-align: center;
+                display: inline-block;
+            }
+            p{
+                color: #838383;
+                margin-bottom: 0px;
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+    .table-responsive{
+        height: 400px;
+        overflow-y: auto;
+    }
+    table{
+        margin-bottom: 0px;
+        thead{
+            tr{
+                &:first-child{
+                    th{
+                        border-top: none;
+                    }
+                }
+                th{
+                    border: solid 1px #d8ddd1;
+                    font-family: $primary-font;
+                    font-size: rem(8);
+                    text-transform: uppercase;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    border: solid 1px #d8ddd1;
+                    font-family: $primary-font;
+                    font-size: rem(8);
+                    text-transform: uppercase;
+                    vertical-align: middle;
+                    text-align: center;
+                    span{
+                        color: #000;
+                        background: $yellow;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100%;
+                        line-height: 30px;
+                        text-align: center;
+                        display: inline-block;
+                    }
+                }
+                &:last-child{
+                    td{
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+    .calendar-info{
+        display: block;
+        padding: 20px 15px 20px;
+        border-left: solid 1px #d8ddd1;
+        border-top: solid 1px #d8ddd1;
+        border-right: solid 1px #d8ddd1;
+        p{
+            margin-bottom: 0px;
+            span{
+                font-family: $primary-font;
+                color: #000;
+                font-size: rem(10);
+                text-transform: uppercase;
+            }
+            &.program{
+                color: $light-blue;
+                font-size: rem(10);
+                font-family: $primary-font;
+                text-transform: uppercase;
+            }
+            &.category{
+                color: $red;
+                font-size: rem(10);
+                font-family: $primary-font;
+                text-transform: uppercase;
+            }
+            &.description{
+                color: #838383;
+                font-size: rem(14);
+            }
+        }
+    }
+}

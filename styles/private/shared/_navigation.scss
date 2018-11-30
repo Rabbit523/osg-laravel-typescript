@@ -7,7 +7,7 @@ osg-navigation {
 
         &.navbar {
             font-family: $primary-font;
-			text-transform: uppercase;
+            text-transform: uppercase;
 
             .navbar-brand {
                 position: relative;
@@ -69,66 +69,121 @@ osg-navigation {
                 font-size: rem(12);
 
                 @media (max-width: 1250px) {
-					font-size: rem(10);
-				}
-				@include media-breakpoint-down(md){
-					flex-direction: row;
-					justify-content: center;
-				}
+                    font-size: rem(10);
+                }
+
+                @include media-breakpoint-down(md) {
+                    flex-direction: row;
+                    justify-content: center;
+                }
 
                 li {
                     position: relative;
                     margin-right: 5px;
+                    height: 40px;
+                    transition: 0.4s linear all;
+                    &.active,
+                    &:hover {
+                        a {
+                            color: #f29900;
+
+                            &:after{
+                                left: 0px;
+                                opacity: 1;
+                                visibility: visible;
+                            }
+
+                            
+
+                            img {
+                                filter: brightness(0.5) sepia(1) hue-rotate(10deg) saturate(6);
+                            }
+                        }
+                    }
 
                     a {
                         color: #FFF;
+                        transition: 0.4s linear all;
+                        &:after {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 3px;
+                            background: #f29900;
+                            position: absolute;
+                            bottom: -26px;
+                            left: -100%;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: 0.4s linear all;
+
+                            @include media-breakpoint-down(md) {
+                                bottom: -16px;
+                            }
+                        }
                         img {
                             width: 20px;
-							margin-right: 5px;
+                            margin-right: 5px;
                         }
                     }
 
                     &:last-child {
                         margin-right: 0px;
                     }
-				}
-				
-				&.left-menu{
-					@include media-breakpoint-down(xs){
-						flex-direction: column;
-						text-align: center;
-					}
-					li{
-						a{
-							@include media-breakpoint-down(lg){
-								padding-left: 0.2rem;
-								padding-right: 0.3rem;
-								img{
-									width: 10px;
-									margin-right: 0px;
-									@include media-breakpoint-down(md){
-										width: 20px;
-										margin-right: 5px;
-									}
-								}
-							}
-						}
-					}
-				}
+                }
+
+                &.left-menu {
+                    @include media-breakpoint-down(xs) {
+                        flex-direction: column;
+                        text-align: center;
+                    }
+
+                    li {
+
+                        a {
+                            @include media-breakpoint-down(lg) {
+                                padding-left: 0.2rem;
+                                padding-right: 0.3rem;
+
+                                img {
+                                    width: 10px;
+                                    margin-right: 0px;
+
+                                    @include media-breakpoint-down(md) {
+                                        width: 20px;
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
 
                 &.right-menu {
                     li {
-						@include media-breakpoint-down(lg){
-							a{
-								padding-left: 0.2rem;
-								padding-right: 0.2rem;
-								img{
-									width: 15px;
-								}
-							}
-						}
+                        @include media-breakpoint-down(lg) {
+                            a {
+                                padding-left: 0.2rem;
+                                padding-right: 0.2rem;
+
+                                img {
+                                    width: 15px;
+                                }
+                            }
+                        }
+
                         &.profile {
                             margin-left: 15px;
+
+                            &:hover {
+
+                                a {
+                                    color: #FFF;
+                                    &:after {
+                                        display: none;
+                                    }
+                                }
+                            }
 
                             &:before {
                                 content: "";
@@ -138,7 +193,7 @@ osg-navigation {
                                 background: #595959;
                                 position: absolute;
                                 top: 0px;
-								left: -10px;
+                                left: -10px;
 
                             }
 
@@ -148,28 +203,6 @@ osg-navigation {
 
                                 @media (max-width: 1250px) {
                                     width: 30px;
-								}
-                            }
-                        }
-
-                        &.active {
-                            a {
-                                &:after {
-                                    content: "";
-                                    display: block;
-                                    width: 100%;
-                                    height: 3px;
-                                    background: #f29900;
-                                    position: absolute;
-                                    bottom: -29px;
-									left: 0px;
-									@include media-breakpoint-down(md){
-										bottom: -16px;
-									}
-                                }
-
-                                img {
-                                    filter: brightness(0.5) sepia(1) hue-rotate(10deg) saturate(6);
                                 }
                             }
                         }

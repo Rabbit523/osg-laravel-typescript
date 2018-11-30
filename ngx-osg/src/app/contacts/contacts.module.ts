@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { DashboardComponent } from './components/main.component';
+import { ContactsComponent } from './components/main.component';
 import { CoreModule } from '../core/core.module';
 
 @NgModule({
   declarations: [
-    DashboardComponent,
+    ContactsComponent,
   ],
   imports: [
     BrowserModule,
@@ -13,4 +13,4 @@ import { CoreModule } from '../core/core.module';
   ],
   providers: [],
 })
-export class DashboardModule { }
+export class ContactsModule { }

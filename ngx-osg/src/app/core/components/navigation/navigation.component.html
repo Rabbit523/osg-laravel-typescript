@@ -11,14 +11,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto left-menu">
-                <li class="nav-item">
+                <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" routerLink="/plan">
                         <img src="/assets/images/icons/icon-plan.svg">
                         Plan
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/contacts">
                         <img src="/assets/images/icons/icon-contacts.svg">
                         Contacts
                     </a>
@@ -37,19 +37,19 @@
                 </li> -->
             </ul>
             <ul class="navbar-nav ml-auto align-items-center right-menu">
-                <li class="nav item active">
-                    <a href="#" class="nav-link"><img class="d-block mx-auto img-fluid" src="/assets/images/icons/icon-home.svg"></a>
+                <li class="nav item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    <a routerLink="/" class="nav-link"><img class="d-block mx-auto img-fluid" src="/assets/images/icons/icon-home.svg"></a>
                 </li>
-                <li class="nav item">
-                    <a href="#" class="nav-link"><img class="d-block mx-auto img-fluid" src="/assets/images/icons/icon-notifications.svg"></a>
+                <li class="nav item" routerLinkActive="active">
+                    <a routerLink="/notifications" class="nav-link"><img class="d-block mx-auto img-fluid" src="/assets/images/icons/icon-notifications.svg"></a>
                 </li>
-                <li class="nav item">
-                    <a href="#" class="nav-link"><img class="d-block mx-auto img-fluid" src="/assets/images/icons/icon-house.svg"></a>
+                <li class="nav item" routerLinkActive="active">
+                    <a routerLink="/unknown" class="nav-link"><img class="d-block mx-auto img-fluid" src="/assets/images/icons/icon-house.svg"></a>
                 </li>
-                <li class="nav item">
-                    <a href="#" class="nav-link"><img class="d-block mx-auto img-fluid" src="/assets/images/icons/icon-info.svg"></a>
+                <li class="nav item" routerLinkActive="active">
+                    <a routerLink="/info" class="nav-link"><img class="d-block mx-auto img-fluid" src="/assets/images/icons/icon-info.svg"></a>
                 </li>
-                <li class="nav item profile">
+                <li class="nav item profile" routerLinkActive="active">
                     <a routerLink="/profile" class="nav-link">Nohman J.<img class="img-fluid ml-3 ml-lg-2 ml-xl-3" src="/assets/images/icons/icon-account.svg"></a>
                 </li>
             </ul>

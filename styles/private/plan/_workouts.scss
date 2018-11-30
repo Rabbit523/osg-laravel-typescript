@@ -1,0 +1,117 @@
+osg-plan-builder-workout {
+    @extend .col;
+    @extend .col-sm;
+    .subtitle{
+        border-left: solid 1px #d8ddd1;
+        border-right: solid 1px #d8ddd1;
+        border-bottom: solid 1px #d8ddd1;
+        display: block;
+        padding: 25px 15px 29px;
+    }
+    h3{
+        @include section-title(14);
+        span{
+            color: #000;
+            background: $yellow;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            line-height: 30px;
+            text-align: center;
+            display: inline-block;
+        }
+    }
+    .table-responsive{
+        height: 553px;
+        overflow-y: auto;
+    }
+    table{
+        margin-bottom: 0;
+        thead{
+            tr{
+                &:first-child{
+                    th{
+                        border-top: none;
+                    }
+                }
+                th{
+                    border: solid 1px #d8ddd1;
+                    font-family: $primary-font;
+                    font-size: rem(8);
+                    text-transform: uppercase;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    border: solid 1px #d8ddd1;
+                    font-family: $primary-font;
+                    font-size: rem(8);
+                    text-transform: uppercase;
+                    vertical-align: middle;
+                }
+                &:last-child{
+                    td{
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+    .add{
+        color: #000;
+        span{
+            display: inline-block;
+            font-size: 14px;
+            background: $yellow;
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 16px
+        }
+    }
+    .remove{
+        color: #000;
+        margin-left: 15px;
+        span{
+            display: inline-block;
+            font-size: 14px;
+            background: $red;
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 16px
+        }
+    }
+    .actions{
+        display: block;
+        padding: 20px 15px 20px;
+        border-left: solid 1px #d8ddd1;
+        border-top: solid 1px #d8ddd1;
+        border-right: solid 1px #d8ddd1;
+        .btn{
+            font-size: rem(8);
+            span{
+                display: inline-block;
+                background: $yellow;
+                width: 13px;
+                height: 13px;
+                border-radius: 100%;
+                text-align: center;
+                line-height: 13px;
+                color: #000;
+            }
+            img{
+                width: 13px;
+            }
+            &.btn-gray{
+                margin-left: 10px;
+            }
+        }
+    }
+}

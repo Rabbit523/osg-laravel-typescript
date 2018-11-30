@@ -9,6 +9,7 @@ import { CoreModule } from './core/core.module';
 import { ProfileModule } from './profile/profile.module';
 import { PlanBuilderModule } from './plan/plan.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { ContactsModule } from './contacts/contacts.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     CoreModule,
     ProfileModule,
     PlanBuilderModule,
-    DashboardModule
+    DashboardModule,
+    ContactsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

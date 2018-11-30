@@ -57,6 +57,22 @@
     }
 }
 
+.btn-gray {
+    background: #e4e4e4;
+    color: #505050;
+    letter-spacing: le(100);
+    font-family: $primary-font;
+
+    &:hover,
+    &:focus {
+        color: #505050;
+    }
+    img{
+        -webkit-filter: brightness(0.5) sepia(1) hue-rotate(10deg) saturate(6);
+        filter: brightness(0.5) sepia(1) hue-rotate(10deg) saturate(6);
+    }
+}
+
 .btn-white-border{
     color: #000;
     font-family: $primary-font;
