@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" routerLink="/">
             <img src="/assets/images/logo.png" class="img-fluid d-block mx-auto" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -12,7 +12,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto left-menu">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" routerLink="/plan">
                         <img src="/assets/images/icons/icon-plan.svg">
                         Plan
                     </a>
@@ -23,7 +23,7 @@
                         Contacts
                     </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">
                         <img src="/assets/images/icons/icon-strength.svg">
                         Strength Standards
@@ -34,7 +34,7 @@
                         <img src="/assets/images/icons/icon-gear.svg">
                         Program Designs
                     </a>
-                </li>
+                </li> -->
             </ul>
             <ul class="navbar-nav ml-auto align-items-center right-menu">
                 <li class="nav item active">
@@ -50,7 +50,7 @@
                     <a href="#" class="nav-link"><img class="d-block mx-auto img-fluid" src="/assets/images/icons/icon-info.svg"></a>
                 </li>
                 <li class="nav item profile">
-                    <a href="#" class="nav-link">Nohman J.<img class="img-fluid ml-3 ml-lg-2 ml-xl-3" src="/assets/images/icons/icon-account.svg"></a>
+                    <a routerLink="/profile" class="nav-link">Nohman J.<img class="img-fluid ml-3 ml-lg-2 ml-xl-3" src="/assets/images/icons/icon-account.svg"></a>
                 </li>
             </ul>
         </div>

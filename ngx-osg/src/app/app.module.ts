@@ -6,7 +6,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { MembersModule } from './members/members.module';
+import { ProfileModule } from './profile/profile.module';
+import { PlanBuilderModule } from './plan/plan.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { MembersModule } from './members/members.module';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    MembersModule
+    ProfileModule,
+    PlanBuilderModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileComponent } from './components/main.component';
 import { PersonalTrainerComponent } from './components/personal-trainer/personal-trainer.component';
 import { ProgramDesignerComponent } from './components/program-designer/program-designer.component';
 import { StrengthAthleteComponent } from './components/strength-athlete/strength-athlete.component';
@@ -55,4 +55,4 @@ import { ProgramDesignerTrainingCalendarComponent } from './components/program-d
   exports: [],
   providers: [],
 })
-export class MembersModule { }
+export class ProfileModule { }

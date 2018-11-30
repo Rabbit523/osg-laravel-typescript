@@ -3,7 +3,7 @@ import { ApplicationUser, ApplicationUserRole } from 'src/app/core/classes/user'
 
 @Component({
   selector: 'osg-profile',
-  templateUrl: './profile.component.html'
+  templateUrl: './main.component.html'
 })
 export class ProfileComponent implements OnInit{
   
