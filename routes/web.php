@@ -15,4 +15,6 @@ Route::get('/', 'Frontend\PagesController@index')->name("home");
 Route::get('/about', 'Frontend\PagesController@about')->name("about");
 Route::get('/how-it-works', 'Frontend\PagesController@howItWorks')->name("how-it-works");
 Route::get('/features', 'Frontend\PagesController@features')->name("features");
-Auth::routes();
+Route::get('/tos', 'Frontend\PagesController@features')->name("tos");
+Route::get('/privacy', 'Frontend\PagesController@features')->name("privacy");
+Auth::routes(['verify' => true]);

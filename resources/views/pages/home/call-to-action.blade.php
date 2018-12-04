@@ -12,7 +12,7 @@
                         <div class="col-12 col-sm-12 col-md-10 col-lg-8">
                             <form class="get-started">
                                 <div class="form-group row">
-                                    <div class="col-12 col-sm-6 col-lg-7"><input type="email" id="email" name="email" placeholder="E-mail address" class="form-control py-3"></div>
+                                    <div class="col-12 col-sm-6 col-lg-7"><input type="email" id="e-mail" name="email" placeholder="E-mail address" class="form-control py-3"></div>
                                     <div class="col-12 col-sm-6 col-lg-5"><button type="submit" name="email" class="btn btn-green-gradient btn-block px-5 py-3 mt-3 mt-sm-0">Get started</button></div>
                                 </div>
                             </form>

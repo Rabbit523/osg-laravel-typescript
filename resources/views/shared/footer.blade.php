@@ -40,15 +40,15 @@
         <div class="col-6 col-sm-auto mb-5 mb-md-0">
         <h3 class="no-blur">Download</h3>
           <ul>
-            <li><a href="#" class="img-fluid mx-auto d-block mb-3"><img src="images/btn--google-play.png" alt="Google-Play"></a></li>
-            <li><a href="#" class="img-fluid mx-auto d-block"><img src="images/btn--app-store.png" alt="App-Store"></a></li>
+            <li><a href="#" class="img-fluid mx-auto d-block mb-3"><img src="/images/btn--google-play.png" alt="Google-Play"></a></li>
+            <li><a href="#" class="img-fluid mx-auto d-block"><img src="/images/btn--app-store.png" alt="App-Store"></a></li>
           </ul>
         </div>
       </div>
       <section class="footer-info">
         <div class="row">
           <div class="col-12 col-sm-12 col-lg-8 text-center text-lg-left">
-              <img src="images/logo.png" alt="logo" class="img-fluid d-inline-block logo-footer">
+              <img src="/images/logo.png" alt="logo" class="img-fluid d-inline-block logo-footer">
               <p class="d-inline-block">Copyright {{date('Y')}} © Optimal Strength Gains AS. All Rights Reserved.</p>
           </div>
           <div class="col-12 col-sm-12 col-lg-4 text-center text-lg-right">

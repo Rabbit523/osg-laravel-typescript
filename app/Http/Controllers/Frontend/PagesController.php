@@ -10,9 +10,13 @@ use App\Http\Controllers\Controller;
 
 class PagesController extends Controller
 {
+
     public function index() {
-        return (Auth::check()) 
-            ? view('pages.spa') : view('pages.home', ['title' => 'Home']);
+        return Auth::check() ? $this->ngx() : view('pages.home', ['title' => 'Home']);
+    }
+
+    public function ngx(){
+        return Auth::user()->email_verified_at === null ? redirect('/email/verify') :view('pages.spa');
     }
 
     public function about(){

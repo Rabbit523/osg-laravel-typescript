@@ -10,4 +10,6 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.sass('styles/public/osg.scss', 'public/css');
+mix.js('resources/js/app.js', 'public/js/app.min.js')
+    .sass('resources/styles/common/_typography.scss', 'public/css/osg.typography.css')
+    .sass('resources/styles/public/osg.scss', 'public/css');
