@@ -21,6 +21,8 @@ import { ProgramDesignerExperienceBankComponent } from './components/program-des
 import { ProgramDesignerExperienceReviewsComponent } from './components/program-designer/experience-reviews.component';
 import { ProgramDesignerProgramDesignComponent } from './components/program-designer/program-design.component';
 import { ProgramDesignerTrainingCalendarComponent } from './components/program-designer/training-calendar.component';
+import { StrengthAthleteTrophyComponent } from './components/strength-athlete/trophy.component';
+import { StrengthAthletePerformanceComparisonComponent } from './components/strength-athlete/performance-comparison.component';
 
 
 @NgModule({
@@ -41,8 +43,10 @@ import { ProgramDesignerTrainingCalendarComponent } from './components/program-d
     ProgramDesignerTrainingCalendarComponent,
     StrengthAthleteComponent,
     StrengthAthleteTrophyWallComponent,
+    StrengthAthleteTrophyComponent,
     StrengthAthleteTimelineComponent,
     StrengthAthletePerformanceTableComponent,
+    StrengthAthletePerformanceComparisonComponent,
     StrengthAthleteTopProgramDesignsComponent,
     StrengthAthleteTrainingCalendarComponent
   ],

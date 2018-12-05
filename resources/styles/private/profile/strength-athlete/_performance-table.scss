@@ -36,11 +36,12 @@ osg-strength-athlete-performance-table{
                 background: #fff6e1;
                 text-transform: uppercase;
                 font-family: $primary-font;
-                font-size: rem(10);
+                font-size: rem(8);
                 color: #000;
                 padding: 0.75rem;
                 border-left: 1px solid #dadada;
                 border-right: 1px solid #dadada;
+                border-top: none;
             }
             >tbody{
                 > tr{
@@ -48,6 +49,18 @@ osg-strength-athlete-performance-table{
                         padding: 0;
                         border: none;
                     }
+                    /* &:nth-child(2){
+                        td{
+                            background: #fff6e1;
+                            text-transform: uppercase;
+                            font-family: $primary-font;
+                            font-size: rem(8);
+                            color: #000;
+                            padding: 0.75rem;
+                            border-left: 1px solid #dadada;
+                            border-right: 1px solid #dadada;
+                        }
+                    } */
                 }
             }
             .first-table{
@@ -61,7 +74,7 @@ osg-strength-athlete-performance-table{
                             background: #fff6e1;
                             text-transform: uppercase;
                             font-family: $primary-font;
-                            font-size: rem(10);
+                            font-size: rem(8);
                             color: #000;
                         }
                         &:not(:first-child){
@@ -77,7 +90,7 @@ osg-strength-athlete-performance-table{
                             background: #fff6e1;
                             text-transform: uppercase;
                             font-family: $primary-font;
-                            font-size: rem(10);
+                            font-size: rem(8);
                             color: #000;
                             border: 1px solid #dadada;
                         }
@@ -103,7 +116,7 @@ osg-strength-athlete-performance-table{
                         background: #fff6e1;
                         text-transform: uppercase;
                         font-family: $primary-font;
-                        font-size: rem(10);
+                        font-size: rem(8);
                         color: #000;
                         border: 1px solid #dadada;
                     }
@@ -120,7 +133,7 @@ osg-strength-athlete-performance-table{
                             background: #fff6e1;
                             text-transform: uppercase;
                             font-family: $primary-font;
-                            font-size: rem(10);
+                            font-size: rem(8);
                             color: #000;
                         }
                     }
@@ -129,7 +142,7 @@ osg-strength-athlete-performance-table{
         }
     }
     
-    .program-detail{
+    osg-strength-athlete-performance-comparison{
         background: #FFF;
         display: block;
         border-left: 1px solid #dadada;
@@ -159,6 +172,16 @@ osg-strength-athlete-performance-table{
             padding: 15px 10px;
             border-bottom: 1px solid #dadada;
             border-right: 1px solid #dadada;
+
+            .gauge-container{
+                display: block;
+                margin: 0 auto 15px;
+                osg-gauge{
+                    width: 80%;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
             p {
                 color: #838383;
                 font-size: rem(10);
@@ -179,6 +202,15 @@ osg-strength-athlete-performance-table{
                 font-size: rem(10);
                 margin: 0;
             }
+
+            .row{
+                > div{
+                    &:last-child{
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
         }
     }
     
@@ -192,7 +224,7 @@ osg-strength-athlete-performance-table{
                 color: #000;
                 text-transform: uppercase;
                 font-family: $primary-font;
-                font-size: rem(12);
+                font-size: rem(10);
                 margin: 0;
             }
             p{
@@ -241,7 +273,7 @@ osg-strength-athlete-performance-table{
                 color: #000;
                 text-transform: uppercase;
                 font-family: $primary-font;
-                font-size: rem(12);
+                font-size: rem(10);
                 margin: 0;
             }
             p{

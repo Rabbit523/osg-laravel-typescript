@@ -16,6 +16,7 @@ osg-program-designer-training-calendar {
 
             span {
                 color: $light-blue;
+                display: inline-block;
             }
         }
 
@@ -24,7 +25,7 @@ osg-program-designer-training-calendar {
                 display: inline-block;
                 text-transform: uppercase;
                 font-family: $primary-font;
-                font-size: rem(14);
+                font-size: rem(12);
                 margin: 0px;
             }
 

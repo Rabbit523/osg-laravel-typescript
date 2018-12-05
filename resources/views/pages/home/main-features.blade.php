@@ -67,8 +67,8 @@
         <div class="row mt-5">
             <div class="col-12">
                 <div class="actions text-center">
-                    <button class="btn btn-green-gradient py-3 px-3 mr-3">get started</button>
-                    <button class="btn btn-white-border py-3 px-3">learn more</button>
+                    <a class="btn btn-green-gradient py-3 px-3 mr-3" href="{{route('register')}}">get started</a>
+                    <a class="btn btn-white-border py-3 px-3">learn more</a>
                 </div>
             </div>
         </div>

@@ -27,7 +27,7 @@ osg-strength-athlete-trophy-wall {
         }
     }
 
-    .trophy {
+    osg-strength-athlete-trophy {
         @include shadowed-container;
         display: block;
         background: #FFF;
@@ -86,10 +86,25 @@ osg-strength-athlete-trophy-wall {
             border-left: 1px #dadada solid;
             height: 100%;
             padding-top: 30px;
+            .title{
+                padding: 0px 15px;
+            }
             .program-period{
                 display: block;
                 border-top: 1px #dadada solid;
                 padding: 20px;
+            }
+
+            .gauge-container{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                margin-top: 2rem;
+                osg-gauge{
+                    width: 60%;
+                    display: block;
+                    margin: 0 auto;
+                }
             }
         }
 
@@ -101,6 +116,7 @@ osg-strength-athlete-trophy-wall {
             .title{
                 padding-top: 30px;
                 padding-left: 20px;
+                padding-right: 20px;
             }
 
             .level {
@@ -108,10 +124,27 @@ osg-strength-athlete-trophy-wall {
                 height: 100%;
                 text-align: center;
                 border-left: 1px #dadada solid;
-                padding: 20px 5px;
+                padding: 20px 15px;
+
+                .gauge-container{
+                    display: block;
+                    margin: 0 auto 15px;
+                    osg-gauge{
+                        width: 60%;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+
+                p{
+                    font-size: rem(10);
+                }
 
                 &.no-border{
                     border: none;
+                }
+                &.yellow-bg{
+                    background: #fff6e1;
                 }
             }
         }

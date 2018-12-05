@@ -5,8 +5,11 @@ osg-plan-builder {
 
     h1 {
         @include section-title(30);
-        width: 35%;
         margin-bottom: 40px;
+        width: 35%;
+        @media (max-width: 1315px){
+            width: 100%;
+        }
     }
 
     h2 {
@@ -46,10 +49,10 @@ osg-plan-builder {
         @extend .col;
 
         .btn {
-            font-size: rem(12);
+            font-size: rem(9);
 
             img {
-                width: 16px;
+                width: 15px;
             }
 
             &:first-child {
@@ -58,7 +61,7 @@ osg-plan-builder {
 
             &.btn-next {
                 position: relative;
-                padding-right: 2.5rem;
+                padding: 0.55rem 2.5rem 0.55rem 1rem;
                 -webkit-clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
                 clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
 
@@ -69,7 +72,7 @@ osg-plan-builder {
                     color: #fff;
                     position: absolute;
                     right: 8px;
-                    top: 4px;
+                    top: 2px;
                 }
             }
         }

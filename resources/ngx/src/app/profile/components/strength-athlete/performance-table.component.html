@@ -1,9 +1,9 @@
 <div class="title">
   <div class="row align-items-center">
-    <div class="col-12 col-sm-6">
+    <div class="col-12 col-sm">
       <h3>PERFORMANCE TABLE (YOUR RESULTS)</h3>
     </div>
-    <div class="col-12 col-sm-6 text-right">
+    <div class="col-12 col-sm-auto text-right">
       <div class="sort-box">
         <p>SORT BY:</p>
         <div class="dropdown">
@@ -25,7 +25,7 @@
             <tbody>
                 <tr>
                     <td>
-                        <table class="first-table" height="185px">
+                        <table class="first-table" height="179px">
                             <tr>
                                 <td>Program:</td>
                                 <td>GVT</td>
@@ -82,7 +82,13 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="title-variables" colspan="2">BACKGROUND VARIABLES:</td>
+                    <td colspan="2">
+                        <table width="100%">
+                            <tr>
+                                <td class="title-variables">BACKGROUND VARIABLES:</td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -133,144 +139,15 @@
 </div>
 
 <div class="row">
-    <div class="col-12 col-sm-3">
-        <div class="program-detail">
-            <div class="detail-title text-center">
-                <h4>BENCH PRESS</h4>
-                <p>You responded better than:</p>
-            </div>
-            <div class="row no-gutters text-center">
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-footer">
-                <div class="row">
-                    <div class="col-12 col-sm-3"></div>
-                    <div class="col-12 col-sm-9"><p>of your mirror athletes (all variables combined)</p></div>
-                </div>
+
+    <div class="col-12 col-sm-9">
+        <div class="row">
+            <div class="col-sm-4" *ngFor="let comparison of comparisons">
+                <osg-strength-athlete-performance-comparison [title]="comparison"></osg-strength-athlete-performance-comparison>
             </div>
         </div>
     </div>
-    <div class="col-12 col-sm-3">
-        <div class="program-detail">
-            <div class="detail-title text-center">
-                <h4>BENCH PRESS</h4>
-                <p>You responded better than:</p>
-            </div>
-            <div class="row no-gutters text-center">
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-footer">
-                <div class="row">
-                    <div class="col-12 col-sm-3"></div>
-                    <div class="col-12 col-sm-9"><p>of your mirror athletes (all variables combined)</p></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-sm-3">
-        <div class="program-detail">
-            <div class="detail-title text-center">
-                <h4>BENCH PRESS</h4>
-                <p>You responded better than:</p>
-            </div>
-            <div class="row no-gutters text-center">
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="graph">
-                        <p>of male lifters at your <b>strength level</b></p>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-footer">
-                <div class="row">
-                    <div class="col-12 col-sm-3"></div>
-                    <div class="col-12 col-sm-9"><p>of your mirror athletes (all variables combined)</p></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <div class="col-12 col-sm-3">
         <div class="recomendations">

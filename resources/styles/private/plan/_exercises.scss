@@ -1,6 +1,6 @@
 osg-plan-builder-exercises{
     @extend .col;
-    @extend .col-sm-3;
+    @extend .col-md-3;
     .search-form{
         display: block;
         padding: 20px 15px 0px;
@@ -69,8 +69,9 @@ osg-plan-builder-exercises{
             width: 100%;
         }
         .exercise{
-            @extend .col;
-            @extend .col-sm-6;
+            @extend .col-6;
+            @extend .col-sm-12;
+            @extend .col-md-6;
             text-align: center;
             figure{
                 border: solid 1px #d8ddd1;
@@ -78,9 +79,15 @@ osg-plan-builder-exercises{
                 display: block;
                 padding: 20px;
                 height: calc(100% - 20px);
+                @include media-breakpoint-down(lg){
+                    padding: 20px 5px;
+                }
             }
             h4{
                 @include section-title(8);
+                @include media-breakpoint-down(lg){
+                    font-size: rem(6);
+                }
             }
         }
     }

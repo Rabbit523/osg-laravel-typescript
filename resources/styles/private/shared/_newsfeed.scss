@@ -19,7 +19,7 @@ osg-news-feed {
 
     .post-creator {
         @include shadowed-container;
-        padding: 20px 30px 30px;
+        padding: 20px 15px 30px;
 
         figure {
             width: 40px;
@@ -54,6 +54,9 @@ osg-news-feed {
             .add-media {
                 color: $text-gray;
             }
+            .btn{
+                font-size: rem(12);
+            }
         }
     }
 
@@ -64,7 +67,7 @@ osg-news-feed {
         margin: 15px 0;
 
         .content {
-            margin: 20px 30px;
+            margin: 20px 15px;
 
             .author {
                 height: 60px;
@@ -113,7 +116,7 @@ osg-news-feed {
         .comments-box {
 
             .comment {
-                padding: 20px 30px;
+                padding: 20px 15px;
                 border-top: 1px solid $lightgray;
                 display: block;
                 position: relative;
@@ -136,7 +139,7 @@ osg-news-feed {
             }
 
             .comment-creator {
-                padding: 20px 30px;
+                padding: 20px 15px;
                 border-top: 1px solid $lightgray;
 
                 figure {

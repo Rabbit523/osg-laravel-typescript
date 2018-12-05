@@ -8,6 +8,7 @@ import { NewsFeedComponent } from './components/news-feed/news-feed-component';
 import { GetStartedComponent } from './components/get-started/get-started.component';
 import { InformationComponent } from './components/info/info.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
+import { GaugeComponent } from './components/gauge/gauge.component';
 
 
 let components = [
@@ -16,7 +17,8 @@ let components = [
     NewsFeedComponent,
     GetStartedComponent,
     InformationComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    GaugeComponent
 ];
 
 @NgModule({

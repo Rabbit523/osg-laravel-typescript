@@ -30,6 +30,7 @@ osg-personal-trainer-offers {
                 display: block;
                 background: $white;
                 padding-bottom: rem(30);
+                height: 100%;
 
                 header {
                     display: block;
@@ -53,6 +54,7 @@ osg-personal-trainer-offers {
                     }
                     .btn{
                         text-transform: uppercase;
+                        font-size: rem(12);
                         @extend .py-2;
                         @extend .mt-1;
                     }
@@ -62,13 +64,13 @@ osg-personal-trainer-offers {
                     margin: 30px auto;
                     display: block;
                     text-align: center;
-                    width: 80%;
+                    width: 85%;
                     @include section-separator(25px, #c6c6c6);
                     h4{
                         text-transform: uppercase;
                         font-family: $primary-font;
                         color: #000;
-                        font-size: rem(16);
+                        font-size: rem(14);
                         margin: 0;
                     }
                     span{

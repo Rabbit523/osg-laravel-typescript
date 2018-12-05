@@ -72,11 +72,6 @@ osg-navigation {
                     font-size: rem(10);
                 }
 
-                @include media-breakpoint-down(md) {
-                    flex-direction: row;
-                    justify-content: center;
-                }
-
                 li {
                     position: relative;
                     margin-right: 5px;
@@ -133,6 +128,10 @@ osg-navigation {
                 }
 
                 &.left-menu {
+                    @include media-breakpoint-down(md) {
+                        flex-direction: row;
+                        justify-content: center;
+                    }
                     @include media-breakpoint-down(xs) {
                         flex-direction: column;
                         text-align: center;
@@ -160,6 +159,15 @@ osg-navigation {
                 }
 
                 &.right-menu {
+                    @include media-breakpoint-down(md) {
+                        flex-direction: row;
+                        justify-content: center;
+                        padding-bottom: 10px;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        display: block;
+                        text-align: center;
+                    }
                     li {
                         @include media-breakpoint-down(lg) {
                             a {
@@ -171,9 +179,23 @@ osg-navigation {
                                 }
                             }
                         }
+                        @include media-breakpoint-down(md) {
+                            margin-top: 15px;
+                        }
+                        @include media-breakpoint-down(sm) {
+                            display: inline-block;
+                        }
 
                         &.profile {
                             margin-left: 15px;
+                            @include media-breakpoint-down(md) {
+                                margin-top: 0px;
+                            }
+                            @include media-breakpoint-down(sm) {
+                                clear: both;
+                                display: block;
+                                margin-left: 0px;
+                            }
 
                             &:hover {
 
@@ -194,7 +216,9 @@ osg-navigation {
                                 position: absolute;
                                 top: 0px;
                                 left: -10px;
-
+                                @include media-breakpoint-down(sm) {
+                                    display: none;
+                                }
                             }
 
                             img {

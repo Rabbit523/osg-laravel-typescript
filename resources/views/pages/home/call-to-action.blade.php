@@ -10,10 +10,10 @@
                     </div>
                     <div class="row justify-content-center mt-4">
                         <div class="col-12 col-sm-12 col-md-10 col-lg-8">
-                            <form class="get-started">
+                            <form class="get-started" method="GET" action="{{route('register')}}">
                                 <div class="form-group row">
                                     <div class="col-12 col-sm-6 col-lg-7"><input type="email" id="e-mail" name="email" placeholder="E-mail address" class="form-control py-3"></div>
-                                    <div class="col-12 col-sm-6 col-lg-5"><button type="submit" name="email" class="btn btn-green-gradient btn-block px-5 py-3 mt-3 mt-sm-0">Get started</button></div>
+                                    <div class="col-12 col-sm-6 col-lg-5"><button type="submit" class="btn btn-green-gradient btn-block px-5 py-3 mt-3 mt-sm-0">Get started</button></div>
                                 </div>
                             </form>
                         </div>
@@ -21,10 +21,11 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="view-more"><i class="fa fa-angle-down"></i></a>
+        <a href="#learn-more" class="view-more anchor"><i class="fa fa-angle-down"></i></a>
     </div>
 </section>
 
+<a name="learn-more" id="learn-more"></a>
 <section id="secondary-call-to-action">
     <div class="row no-gutters">
         <div class="col-12 col-sm-12 col-md-4 col-lg-4">
@@ -35,7 +36,7 @@
                     <p>Complete programs and see how yo responded compared to your mirror athletes. Learn which program
                         designs suits you best.</p>
                     <div class="buttons">
-                        <a class="btn btn-green-gradient py-3 px-4 mr-0 mr-md-4" href="">Sign Up</a>
+                        <a class="btn btn-green-gradient py-3 px-4 mr-0 mr-md-4" href="{{route('register', ['strengthAthlete'])}}">Sign Up</a>
                         <a class="learn-more" href="#">Learn More</a>
                     </div>
                 </div>
@@ -50,7 +51,7 @@
                     <p>Complete programs and see how yo responded compared to your mirror athletes. Learn which program
                         designs suits you best.</p>
                     <div class="buttons">
-                        <a class="btn btn-green-gradient py-3 px-4 mr-0 mr-md-4" href="">Sign Up</a>
+                        <a class="btn btn-green-gradient py-3 px-4 mr-0 mr-md-4" href="{{route('register', ['programDesigner'])}}">Sign Up</a>
                         <a class="learn-more" href="#">Learn More</a>
                     </div>
                 </div>
@@ -65,7 +66,7 @@
                     <p>Complete programs and see how yo responded compared to your mirror athletes. Learn which program
                         designs suits you best.</p>
                     <div class="buttons">
-                        <a class="btn btn-green-gradient py-3 px-4 mr-0 mr-md-4" href="">Sign Up</a>
+                        <a class="btn btn-green-gradient py-3 px-4 mr-0 mr-md-4" href="{{route('register', ['personalTrainer'])}}">Sign Up</a>
                         <a class="learn-more" href="#">Learn More</a>
                     </div>
                 </div>

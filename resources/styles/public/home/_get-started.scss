@@ -1,9 +1,19 @@
 #get-started {
     @include yellowGradient;
-    display: block;
-    padding: 0;
+    @extend .row;
     margin: 0;
-    position: relative;
+    padding: 0;
+    height: 620px;
+
+    @include media-breakpoint-down(lg) {
+        height: 680px;
+    }
+    @include media-breakpoint-down(md) {
+        height: 750px;
+    }
+    @include media-breakpoint-down(sm) {
+        height: auto;
+    }
 
     .content-form {
         display: block;
@@ -51,11 +61,9 @@
         img {
             position: relative;
             z-index: 1;
-            @include media-breakpoint-down(lg){
-                height: 100%;
-                object-fit: cover;
-                -o-object-fit: cover;
-            }
+            height: 100%;
+            object-fit: cover;
+            -o-object-fit: cover;
             @include media-breakpoint-down(sm) {
                 height: auto;
             }

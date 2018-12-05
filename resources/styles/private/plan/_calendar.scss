@@ -1,6 +1,6 @@
 osg-plan-builder-calendar {
     @extend .col;
-    @extend .col-sm;
+    @extend .col-md-4;
     .subtitle{
         border-left: solid 1px #d8ddd1;
         border-right: solid 1px #d8ddd1;
@@ -17,7 +17,7 @@ osg-plan-builder-calendar {
         border-left: solid 1px #d8ddd1;
         border-right: solid 1px #d8ddd1;
         .workout{
-            @include section-title(12);
+            @include section-title(8);
             margin-bottom: 10px;
             span{
                 color: #000;
@@ -38,7 +38,7 @@ osg-plan-builder-calendar {
         }
     }
     .table-responsive{
-        height: 400px;
+        height: 352px;
         overflow-y: auto;
     }
     table{
@@ -88,6 +88,32 @@ osg-plan-builder-calendar {
             }
         }
     }
+    .actions{
+        display: block;
+        padding: 10px 15px 10px;
+        border-left: solid 1px #d8ddd1;
+        border-top: solid 2px #d8ddd1;
+        border-right: solid 1px #d8ddd1;
+        .btn{
+            font-size: rem(8);
+            span{
+                display: inline-block;
+                background: $yellow;
+                width: 13px;
+                height: 13px;
+                border-radius: 100%;
+                text-align: center;
+                line-height: 13px;
+                color: #000;
+            }
+            img{
+                width: 13px;
+            }
+            &.btn-gray{
+                margin-left: 10px;
+            }
+        }
+    }
     .calendar-info{
         display: block;
         padding: 20px 15px 20px;
@@ -96,27 +122,28 @@ osg-plan-builder-calendar {
         border-right: solid 1px #d8ddd1;
         p{
             margin-bottom: 0px;
+            font-size: 10px;
             span{
                 font-family: $primary-font;
                 color: #000;
-                font-size: rem(10);
                 text-transform: uppercase;
             }
             &.program{
                 color: $light-blue;
-                font-size: rem(10);
                 font-family: $primary-font;
                 text-transform: uppercase;
             }
             &.category{
                 color: $red;
-                font-size: rem(10);
                 font-family: $primary-font;
                 text-transform: uppercase;
             }
             &.description{
                 color: #838383;
-                font-size: rem(14);
+                font-size: rem(12);
+                span{
+                    font-size: 10px;
+                }
             }
         }
     }

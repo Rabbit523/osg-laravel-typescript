@@ -17,6 +17,7 @@ osg-program-designer-experience-reviews{
 
             span {
                 color: $light-blue;
+                display: inline-block;
             }
         }
         .btn{
@@ -34,7 +35,8 @@ osg-program-designer-experience-reviews{
     }
     .review-box{
         @extend .col-12;
-        @extend .col-sm;
+        @extend .col-md-auto;
+        @extend .col-lg;
         margin-top: 20px;
         .review{
             @include shadowed-container;

@@ -26,7 +26,8 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "../styles/private/ngx-osg.scss"
+              "../styles/private/ngx-osg.scss",
+              "./node_modules/c3/c3.css"
             ],
             "scripts": []
           },

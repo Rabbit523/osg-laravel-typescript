@@ -17,7 +17,7 @@
             <label for="phone">Phone number *</label>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 mt-lg-0">
-            <input type="email" name="email" id="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" value="{{ old('email') }}" required data-msg-required="Please enter your email address">
+            <input type="email" name="email" id="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" value="{{ request()->has('email') ? request()->get('email') : old('email') }}" required data-msg-required="Please enter your email address">
             <label for="email">E-mail *</label>
             @if ($errors->has('email'))
             <span class="invalid-feedback" role="alert">
@@ -44,9 +44,9 @@
     <div class="form-group row">
         <div class="col-12">
             <select name="role" class="form-control" id="role" required>
-                <option value="0">Personal Trainer</option>
-                <option value="1">Program Designer</option>
-                <option value="2">Strength Athlete</option>
+                <option {{ request()->has('personalTrainer')? "selected" : "" }} value="0">Personal Trainer</option>
+                <option {{ request()->has('programDesigner')? "selected" : "" }} value="1">Program Designer</option>
+                <option {{ request()->has('strengthAthlete')? "selected" : "" }} value="2">Strength Athlete</option>
             </select>
             <label for="role" class="labelfocus">Select type of user *</label>
         </div>

@@ -9,6 +9,8 @@ export class StrengthAthletePerformanceTableComponent implements OnInit{
   
   @Input() applicationUser: ApplicationUser;
 
+  comparisons: string[] = ['bench press', 'squats', 'deadlift'];
+
   ngOnInit(): void {
     
   }
