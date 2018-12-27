@@ -9,7 +9,7 @@ osg-plan-builder-calendar {
         padding: 30px 15px 35px;
     }
     h3{
-        @include section-title(14);
+        @include section-title(rem(14));
     }
     .workouts-list{
         padding: 10px 15px 0px;
@@ -17,7 +17,7 @@ osg-plan-builder-calendar {
         border-left: solid 1px #d8ddd1;
         border-right: solid 1px #d8ddd1;
         .workout{
-            @include section-title(8);
+            @include section-title(rem(8));
             margin-bottom: 10px;
             span{
                 color: #000;
@@ -52,8 +52,9 @@ osg-plan-builder-calendar {
                 }
                 th{
                     border: solid 1px #d8ddd1;
-                    font-family: $primary-font;
-                    font-size: rem(8);
+                    font-family: $secondary-font;
+                    font-weight: bold;
+                    font-size: 0.8rem;
                     text-transform: uppercase;
                     text-align: center;
                     vertical-align: middle;
@@ -64,8 +65,8 @@ osg-plan-builder-calendar {
             tr{
                 td{
                     border: solid 1px #d8ddd1;
-                    font-family: $primary-font;
-                    font-size: rem(8);
+                    font-family: $secondary-font;
+                    font-size: 0.8rem;
                     text-transform: uppercase;
                     vertical-align: middle;
                     text-align: center;

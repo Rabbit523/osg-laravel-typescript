@@ -62,7 +62,7 @@ osg-plan-builder-exercises{
         border-left: solid 1px #d8ddd1;
         border-bottom: solid 2px #a9a9a9;
         h3{
-            @include section-title(10);
+            @include section-title(rem(10));
             margin-bottom: 10px;
             padding-left: 15px;
             padding-right: 15px;
@@ -84,7 +84,7 @@ osg-plan-builder-exercises{
                 }
             }
             h4{
-                @include section-title(8);
+                @include section-title(rem(8));
                 @include media-breakpoint-down(lg){
                     font-size: rem(6);
                 }

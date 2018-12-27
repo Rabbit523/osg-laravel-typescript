@@ -25,10 +25,10 @@
                         <div class="icon"></div>
                         <h3>experience bank</h3>
                         <ul>
-                            <li>Volume</li>
-                            <li>Intensity</li>
-                            <li>Frequency</li>
-                            <li>Other variables</li>
+                            <li>Achieved results</li>
+                            <li>All strength athletes</li>
+                            <li>All programs</li>
+                            <li>All test exercises</li>
                         </ul>
                     </div>
                 </div>
@@ -39,10 +39,10 @@
                         <div class="icon"></div>
                         <h3>strength standards</h3>
                         <ul>
-                            <li>Volume</li>
-                            <li>Intensity</li>
-                            <li>Frequency</li>
-                            <li>Other variables</li>
+                            <li>Strength</li>
+                            <li>Hypertrophy</li>
+                            <li>Power</li>
+                            <li>Muscular endurance</li>
                         </ul>
                     </div>
                 </div>
@@ -53,10 +53,9 @@
                         <div class="icon"></div>
                         <h3>auto regulation</h3>
                         <ul>
-                            <li>Volume</li>
-                            <li>Intensity</li>
-                            <li>Frequency</li>
-                            <li>Other variables</li>
+                            <li>Training log</li>
+                            <li>Fatique level</li>
+                            <li>Autoregulate working load</li>
                         </ul>
                     </div>
                 </div>

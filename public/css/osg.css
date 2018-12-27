@@ -10712,7 +10712,7 @@ body {
   display: block;
   background: #000;
   font-size: 16px;
-  font-family: "Futura Medium BT";
+  font-family: "Futura BT";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11105,7 +11105,9 @@ body.osg-public .home #main-call-to-action .content-cta form.get-started .form-c
 }
 
 body.osg-public .home #main-call-to-action .content-cta form.get-started .btn {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
+  font-family: "Futura BT";
+  font-weight: bold;
 }
 
 body.osg-public .home #main-call-to-action .view-more {
@@ -11212,7 +11214,8 @@ body.osg-public .home #secondary-call-to-action .call-to-action .content p {
 }
 
 body.osg-public .home #secondary-call-to-action .call-to-action .content .buttons a {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 @media (max-width: 1199.98px) {
@@ -11282,7 +11285,8 @@ body.osg-public .home #main-features .feature .description {
 
 body.osg-public .home #main-features .feature .description h3 {
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 1.2rem;
+  text-align: center;
   font-family: "Square 721 BT Bold Extended";
   margin: 0 0 30px;
 }
@@ -11296,26 +11300,23 @@ body.osg-public .home #main-features .feature .description .icon {
 body.osg-public .home #main-features .feature .description ul {
   font-size: 0.75rem;
   text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Square 721 BT Bold Extended";
+  text-align: center;
   margin-bottom: 20px;
 }
 
 body.osg-public .home #main-features .feature .description ul li {
   display: block;
   position: relative;
-  padding-left: 30px;
   margin-bottom: 10px;
-}
-
-body.osg-public .home #main-features .feature .description ul li:before {
-  position: absolute;
-  top: 0px;
-  line-height: 1;
-  left: 0px;
-  color: #ffbf00;
-  content: "\2022";
-  font-size: 2em;
+  /* &:before {
+                        position: absolute;
+                        top: 0px;
+                        line-height: 1;
+                        left: 0px;
+                        color: #ffbf00;
+                        content: "\2022";
+                        font-size: 2em;
+                    } */
 }
 
 body.osg-public .home #main-features .feature.program-designs .icon {
@@ -11342,6 +11343,11 @@ body.osg-public .home #main-features .feature.auto-regulation:after {
 
 body.osg-public .home #main-features .feature.auto-regulation .icon {
   background-image: url("/images/icons/auto-regulation.png");
+}
+
+body.osg-public .home #main-features .actions .btn {
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 body.osg-public .home #symbiose {
@@ -11453,6 +11459,11 @@ body.osg-public .home #profiles .profile .description ul li:before {
   color: #ffbf00;
   content: "\2022";
   font-size: 2em;
+}
+
+body.osg-public .home #profiles .profile .description .btn {
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 body.osg-public .home #profiles .profile.strength-athlete .icon {
@@ -11593,7 +11604,8 @@ body.osg-public .home #get-started form .checkbox {
 }
 
 body.osg-public .home #get-started form .wrapper-btn .btn {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 body.osg-public .register {
@@ -11731,7 +11743,8 @@ body.osg-public .register .sign-up-form-wrapper .content-form form .checkbox {
 }
 
 body.osg-public .register .sign-up-form-wrapper .content-form form .wrapper-btn .btn {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 body.osg-public .register .sign-up-form-wrapper .content-form form .custom-checkbox .checkmark {
@@ -11788,6 +11801,10 @@ body.osg-public .login .login-content h1 small {
   font-size: 50%;
 }
 
+body.osg-public .login .login-content form .invalid-feedback {
+  color: white;
+}
+
 body.osg-public .login .login-content form .form-group .form-control {
   border-radius: 4px;
 }
@@ -11815,6 +11832,8 @@ body.osg-public .login .login-content .btn {
   width: 100%;
   text-transform: uppercase;
   padding: 0.625rem 0;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 body.osg-public .login .login-content .sign-up-link {

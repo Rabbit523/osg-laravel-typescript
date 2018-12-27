@@ -44,6 +44,7 @@ osg-program-designer-published-programs{
 
         .btn {
             font-size: rem(10);
+            font-family: $secondary-font;
         }
         
     }
@@ -55,8 +56,8 @@ osg-program-designer-published-programs{
                 th{
                     border: solid 1px #dadada;
                     background: #fff6e1;
-                    font-family: $primary-font;
-                    font-size: rem(10);
+                    font-size: 0.8rem;
+                    font-weight: bold;
                     text-transform: uppercase;
                     text-align: left;
                     color: $light-blue;
@@ -71,7 +72,7 @@ osg-program-designer-published-programs{
                 td{
                     border: solid 1px #dadada;
                     background: #FFF;
-                    font-size: rem(10);
+                    font-size: 0.8rem;
                     color: #838383;
                     &:first-child{
                         color: #000;

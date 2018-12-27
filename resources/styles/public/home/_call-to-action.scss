@@ -51,7 +51,9 @@
             }
 
             .btn {
-                font-size: rem(14);
+                font-size: 0.8rem;
+                font-family: $secondary-font;
+                font-weight: bold;
             }
         }
     }
@@ -134,7 +136,8 @@
             }
             .buttons{
                 a{
-                    font-size: rem(14);
+                    font-size: 0.8rem;
+                    font-weight: bold;
                     @include media-breakpoint-down(lg){
                         display: block;
                         text-align: center;

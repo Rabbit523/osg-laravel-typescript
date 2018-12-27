@@ -98,11 +98,26 @@
     </div>
     <div class="col-12 col-sm">
         <div class="performance-graph">
-            <div class="title">
-                <h4>PERFORMANCE GRAPH</h4>
-                <p>Bench Press (1RM)</p>
-
-                <div [id]="performanceGraphId"></div>
+            <div class="row">
+                <div class="col-12 col-sm-7">
+                    <div class="title">
+                        <h4>PERFORMANCE GRAPH</h4>
+                        <p>Bench Press (1RM)</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-5">
+                    <img src="assets/images/icons/trophy.svg" class="img-fluid trophy" alt="">
+                    <img src="assets/images/icons/trophy.svg" class="img-fluid trophy" alt="">
+                    <img src="assets/images/icons/trophy.svg" class="img-fluid trophy" alt="">
+                </div>
+            </div>
+            <div [id]="performanceGraphId"></div>
+            <div class="conventions">
+                <p class="start-end"><span></span>Start/End program</p>
+                <p class="performance"><span></span>Performance</p>
+                <p class="levels"><span></span>Levels</p>
+                <p class="pretest"><span></span>Pretest</p>
+                <p class="posttest"><span></span>Posttest</p>
             </div>
         </div>
     </div>

@@ -2,11 +2,7 @@ osg-strength-athlete-trophy-wall {
     display: block;
 
     h3 {
-        text-transform: uppercase;
-        font-family: $primary-font;
-        font-size: rem(14);
-        margin: 0px;
-        display: block;
+        @include section-title;
         float: left;
     }
 
@@ -79,6 +75,94 @@ osg-strength-athlete-trophy-wall {
             padding-top: 30px;
             padding-left: 20px;
             padding-right: 20px;
+            .trophy{
+                width: 40px;
+            }
+            .conventions{
+                display: block;
+                margin-bottom: 20px;
+                p {
+                    color: #838383;
+                    font-size: rem(12);
+                    display: inline-block;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    &:first-child{
+                        margin-left: 0px;
+                    }
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+        
+                    span {
+                        display: inline-block;
+                        margin-right: 5px;
+                    }
+                    &.start-end{
+                        span{
+                            width: 25px;
+                            height: 2px;
+                            background: #838383;
+                        }
+                    }
+                    &.performance{
+                        span{
+                            width: 25px;
+                            height: 2px;
+                            background: #ffa500;
+                        }
+                    }
+                    &.levels{
+                        span{
+                            width: 25px;
+                            height: 2px;
+                            background: #dadada;
+                        }
+                    }
+                    &.pretest{
+                        span{
+                            width: 10px;
+                            height: 10px;
+                            background: #FFF;
+                            border: solid 3px #86d531;
+                            border-radius: 100%;
+                            position: relative;
+                            &:after{
+                                content: "";
+                                border: solid 1px #86d531;
+                                display: block;
+                                position: absolute;
+                                top: -6px;
+                                left: -6px;
+                                border-radius: 100%;
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                    }
+                    &.posttest{
+                        span{
+                            width: 10px;
+                            height: 10px;
+                            background: #FFF;
+                            border: solid 3px #ff0000;
+                            border-radius: 100%;
+                            position: relative;
+                            &:after{
+                                content: "";
+                                border: solid 1px #ff0000;
+                                display: block;
+                                position: absolute;
+                                top: -6px;
+                                left: -6px;
+                                border-radius: 100%;
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .total-percentage {

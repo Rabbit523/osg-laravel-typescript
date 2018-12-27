@@ -27,6 +27,9 @@
         }
 
         form {
+            .invalid-feedback{
+                color: white;
+            }
             .form-group {
                 @extend .form-material-design;
 
@@ -58,6 +61,8 @@
             width: 100%;
             text-transform: uppercase;
             padding: rem(10) 0;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
 
         .sign-up-link {

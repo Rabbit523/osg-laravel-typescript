@@ -24,7 +24,8 @@ osg-program-designer-experience-bank{
     }
     h4{
         text-transform: uppercase;
-        font-size: rem(10);
+        font-size: 0.8rem;
+        font-weight: bold;
         font-family: $primary-font;
         span{
             color: #838383;
@@ -36,8 +37,9 @@ osg-program-designer-experience-bank{
                 th{
                     border: solid 1px #dadada;
                     background: #fff6e1;
-                    font-family: $primary-font;
-                    font-size: rem(8);
+                    font-family: $secondary-font;
+                    font-weight: bold;
+                    font-size: 0.8rem;
                     text-transform: uppercase;
                     text-align: center;
                 }
@@ -48,7 +50,7 @@ osg-program-designer-experience-bank{
                 td{
                     border: solid 1px #dadada;
                     background: #FFF;
-                    font-size: rem(10);
+                    font-size: 0.8rem;
                     color: #838383;
                     &:first-child{
                         color: #000;

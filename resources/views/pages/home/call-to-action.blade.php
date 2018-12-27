@@ -3,7 +3,7 @@
     <div class="content-cta">
         <div class="container h-100">
             <div class="row justify-content-center align-items-center h-100">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-10"> 
+                <div class="col-12 col-sm-12 col-md-12 col-lg-10">
                     <h2><small>A NEW WAY TO</small>  CREATE, FIND & EXECUTE <br>STRENGTH TRAINING PROGRAMS</h2>
                     <div class="stars">
                         <img src="images/stars.png" class="img-fluid d-block mx-auto" alt="">
@@ -33,8 +33,7 @@
                 <img src="images/girl-training.jpg" class="w-100 img-fluid mx-auto d-block" alt="">
                 <div class="content">
                     <h2><small>I am a </small>Strength Athlete</h2>
-                    <p>Complete programs and see how yo responded compared to your mirror athletes. Learn which program
-                        designs suits you best.</p>
+                    <p>Complete programs and see how you responded compared to your mirror athletes. Learn which program designs that suits you best. </p>
                     <div class="buttons">
                         <a class="btn btn-green-gradient py-3 px-4 mr-0 mr-md-4" href="{{route('register', ['strengthAthlete'])}}">Sign Up</a>
                         <a class="learn-more" href="#">Learn More</a>
@@ -48,8 +47,7 @@
                 <img src="images/list.jpg" class="w-100 img-fluid mx-auto d-block" alt="">
                 <div class="content">
                     <h2><small>I am a </small>Program Designer</h2>
-                    <p>Complete programs and see how yo responded compared to your mirror athletes. Learn which program
-                        designs suits you best.</p>
+                    <p>Create and publish programs. Get feedback on how different strength athletes responds to your program through the Experience bank and strength athlete reviews. </p>
                     <div class="buttons">
                         <a class="btn btn-green-gradient py-3 px-4 mr-0 mr-md-4" href="{{route('register', ['programDesigner'])}}">Sign Up</a>
                         <a class="learn-more" href="#">Learn More</a>
@@ -63,8 +61,7 @@
                 <img src="images/hands-five.jpg" class="w-100 img-fluid mx-auto d-block" alt="">
                 <div class="content">
                     <h2><small>I am a </small>Personal Trainer</h2>
-                    <p>Complete programs and see how yo responded compared to your mirror athletes. Learn which program
-                        designs suits you best.</p>
+                    <p>Interact with your clients. Let Optimal Strength Gains find the best strength training programs for strength athletes with different needs and goals, freeing up your time and reducing frustration. </p>
                     <div class="buttons">
                         <a class="btn btn-green-gradient py-3 px-4 mr-0 mr-md-4" href="{{route('register', ['personalTrainer'])}}">Sign Up</a>
                         <a class="learn-more" href="#">Learn More</a>

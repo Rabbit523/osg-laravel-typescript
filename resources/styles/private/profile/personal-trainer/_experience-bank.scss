@@ -2,11 +2,7 @@ osg-personal-trainer-experience-bank{
     display: block;
     margin-bottom: 3rem;
     h3 {
-        text-transform: uppercase;
-        font-family: $primary-font;
-        font-size: rem(14);
-        margin: 0px;
-        display: block;
+        @include section-title;
     }
     .title{
         @extend .row;
@@ -83,8 +79,8 @@ osg-personal-trainer-experience-bank{
                     background: #fff6e1;
                     text-transform: uppercase;
                     color: #000;
-                    font-family: $primary-font;
-                    font-size: rem(10);
+                    font-size: 0.8rem;
+                    font-weight: bold;
                     text-align: center;
                     border-bottom: solid 1px #e2ded3;
                     border-left: solid 1px #e2ded3;
@@ -107,13 +103,15 @@ osg-personal-trainer-experience-bank{
                     background: #FFF;
                     color: $red;
                     border: solid 1px #e2ded3;
+                    text-align: center;
+                    vertical-align: middle;
                     &:first-child{
                         background: #fff6e1;
                         color: $black;
                     }
                     b{
-                        font-family: $primary-font;
-                        font-size: rem(10);
+                        font-size: 0.8rem;
+                        font-weight: bold;
                     }
                     span{
                         color: $light-blue;

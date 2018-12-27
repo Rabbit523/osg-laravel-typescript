@@ -8,11 +8,7 @@ osg-personal-trainer-offers {
         margin-bottom: 10px;
 
         h3 {
-            text-transform: uppercase;
-            font-family: $primary-font;
-            font-size: rem(14);
-            margin: 0px;
-            display: block;
+            @include section-title;
         }
     }
 

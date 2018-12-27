@@ -51,6 +51,14 @@ osg-profile-cover {
             background: $white;
             overflow: hidden;
             margin: 0 auto 20px;
+            position: relative;
+            img{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+            }
         }
 
         h2 {
