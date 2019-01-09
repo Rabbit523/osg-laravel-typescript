@@ -12,6 +12,8 @@ export class StrengthAthleteTrophyComponent implements OnInit {
 
   private _id: number;
   @Input() applicationUser: ApplicationUser;
+  @Input() title: string;
+  @Input() gaugeCss: string;
 
   constructor() {
     this._id = ++StrengthAthleteTrophyComponent.counter;

@@ -39,8 +39,9 @@ osg-strength-athlete-timeline {
                     th {
                         background: #fff6e1;
                         color: #000;
-                        font-family: $primary-font;
-                        font-size: rem(9);
+                        font-family: $secondary-font;
+                        font-weight: bold;
+                        font-size: rem(10);
                         text-transform: uppercase;
                         border-top: none;
                         border-bottom: 1px solid #dadada;
@@ -73,8 +74,9 @@ osg-strength-athlete-timeline {
                         &:first-child {
                             background: #fff6e1;
                             color: #000;
-                            font-family: $primary-font;
-                            font-size: rem(9);
+                            font-family: $secondary-font;
+                            font-size: rem(10);
+                            font-weight: bold;
                             text-transform: uppercase;
                         }
 

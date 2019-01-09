@@ -15,11 +15,12 @@ osg-strength-athlete-top-program-designs {
         .sort-box {
             font-weight: bold;
             font-size: rem(12);
-            font-family: $primary-font;
+            font-family: $secondary-font;
 
             p {
                 display: inline-block;
                 color: #ababab;
+                text-transform: uppercase;
             }
 
             .dropdown {
@@ -45,7 +46,7 @@ osg-strength-athlete-top-program-designs {
                     &:nth-child(2) {
                         background: #FFF;
                         text-transform: uppercase;
-                        font-family: $primary-font;
+                        font-family: $secondary-font;
                         font-size: rem(10);
                         color: #000;
                         border-top: 2px solid #78cd18;

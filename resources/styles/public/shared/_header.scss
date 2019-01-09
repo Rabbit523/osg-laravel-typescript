@@ -8,7 +8,7 @@ header {
         &.navbar {
             padding-top: 31px;
             padding-bottom: 31px;
-            font-family: $primary-font;
+            font-family: $secondary-font;
 
             .navbar-toggler {
                 outline: none;
@@ -83,7 +83,7 @@ header {
             }
 
             .menu-box {
-                font-size: rem(12);
+                font-size: 16px;
                 @include media-breakpoint-down(md) {
                     padding-top: 50px;
                     text-align: center;
@@ -165,10 +165,13 @@ header {
 
                         &.green-text {
                             color: $green;
+                            font-size: 16px;
                         }
 
                         &.btn {
-                            font-size: rem(12);
+                            font-size: 14px;
+                            font-weight: bold;
+                            font-family: $secondary-font;
                         }
                     }
                 }

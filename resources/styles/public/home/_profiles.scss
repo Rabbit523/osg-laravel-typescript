@@ -18,6 +18,7 @@
 
     .profile {
         height: 100%;
+        text-align: center;
 
         &:after {
             content: "";
@@ -55,15 +56,13 @@
             ul {
                 font-size: rem(12);
                 text-transform: uppercase;
-                font-weight: bold;
-                font-family: $primary-font;
                 margin-bottom: 40px;
                 li {    
                     display: block;
                     position: relative;
-                    padding-left: 30px;
+                    /* padding-left: 30px; */
                     margin-bottom: 10px;
-                    &:before {
+                    /* &:before {
                         position: absolute;
                         top: 0px;
                         line-height: 1;
@@ -71,7 +70,7 @@
                         color: #ffbf00;
                         content: "\2022";
                         font-size: 2em;
-                    }
+                    } */
                 }
             }
             .btn{

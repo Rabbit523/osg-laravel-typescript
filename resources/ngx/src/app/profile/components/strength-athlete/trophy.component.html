@@ -6,7 +6,7 @@
                 <p>Choose test exercise</p>
             </div>
             <div class="exercise-list">
-                <h4>Chest</h4>
+                <h4>{{title}}</h4>
                 <div class="list">
                     <div class="checkbox custom-checkbox">
                         <label>
@@ -131,7 +131,7 @@
                         </div>
 
                         <div class="gauge-container">
-                            <osg-gauge css="yellow" [value]="33"></osg-gauge>
+                            <osg-gauge [css]="gaugeCss" [value]="33"></osg-gauge>
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,10 @@ import { NotificationsComponent } from './core/components/notifications/notifica
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
-  { path: 'plan', component: PlanBuilderComponent},
+  { path: 'calendar-builder', component: PlanBuilderComponent},
+  { path: 'experience-bank', component: InformationComponent},
+  { path: 'strength-standards', component: InformationComponent},
+  { path: 'program-designs', component: InformationComponent},
   { path: 'contacts', component: ContactsComponent},
   { path: 'profile', component: ProfileComponent },
   { path: 'profile/:handle', component: ProfileComponent },

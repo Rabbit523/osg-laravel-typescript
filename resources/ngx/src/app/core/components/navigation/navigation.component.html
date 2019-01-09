@@ -11,30 +11,39 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto left-menu">
-                <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/plan">
+                <li *ngIf="isProgramDesigner" class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/calendar-builder">
                         <img src="assets/images/icons/icon-plan.svg">
-                        Plan
+                        Calendar Builder
                     </a>
                 </li>
+
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/experience-bank">
+                        <img src="/assets/images/icons/icon-house.svg">
+                        Experience Bank
+                    </a>
+                </li>
+
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/strength-standards">
+                        <img src="/assets/images/icons/icon-strength.svg">
+                        Strength Standards
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/program-designs">
+                        <img src="/assets/images/icons/icon-gear.svg">
+                        Program Designs
+                    </a>
+                </li>
+
                 <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" routerLink="/contacts">
                         <img src="assets/images/icons/icon-contacts.svg">
                         Contacts
                     </a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <img src="/assets/images/icons/icon-strength.svg">
-                        Strength Standards
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <img src="/assets/images/icons/icon-gear.svg">
-                        Program Designs
-                    </a>
-                </li> -->
             </ul>
             <ul class="navbar-nav ml-auto align-items-center right-menu">
                 <li class="nav item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
@@ -43,11 +52,11 @@
                 <li class="nav item" routerLinkActive="active">
                     <a routerLink="/notifications" class="nav-link"><img class="d-block mx-auto img-fluid" src="assets/images/icons/icon-notifications.svg"></a>
                 </li>
-                <li class="nav item" >
-                    <a (click)="logout()" class="nav-link"><img class="d-block mx-auto img-fluid" src="assets/images/icons/icon-house.svg"></a>
-                </li>
                 <li class="nav item" routerLinkActive="active">
                     <a routerLink="/info" class="nav-link"><img class="d-block mx-auto img-fluid" src="assets/images/icons/icon-info.svg"></a>
+                </li>
+                <li class="nav item" >
+                    <a (click)="logout()" class="nav-link"><img class="d-block mx-auto img-fluid" src="assets/images/icons/icon-logout.svg"></a>
                 </li>
                 <li class="nav item profile" routerLinkActive="active">
                     <a routerLink="/profile" class="nav-link">{{fullName}}<img class="img-fluid ml-3 ml-lg-2 ml-xl-3" src="assets/images/icons/icon-account.svg"></a>

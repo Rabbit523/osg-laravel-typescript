@@ -8,7 +8,12 @@ import { ApplicationUser } from 'src/app/core/classes/user';
 export class StrengthAthleteTrophyWallComponent implements OnInit{
   
   @Input() applicationUser: ApplicationUser;
-
+  trophies: any[] = [
+    {title: 'CHEST', css: 'yellow'},
+    {title: 'BACK', css: 'green'},
+    {title: 'QUADS', css: 'blue'},
+  ];
+  
   ngOnInit(): void {
     
   }

@@ -10728,7 +10728,7 @@ body.osg-public header nav {
 body.osg-public header nav.navbar {
   padding-top: 31px;
   padding-bottom: 31px;
-  font-family: "Square 721 BT Bold Extended";
+  font-family: "Futura BT";
 }
 
 body.osg-public header nav.navbar .navbar-toggler {
@@ -10801,7 +10801,7 @@ body.osg-public header nav.navbar .navbar-brand {
 }
 
 body.osg-public header nav.navbar .menu-box {
-  font-size: 0.75rem;
+  font-size: 16px;
 }
 
 @media (max-width: 991.98px) {
@@ -10901,10 +10901,13 @@ body.osg-public header nav.navbar .nav-session li a {
 
 body.osg-public header nav.navbar .nav-session li a.green-text {
   color: #4fb100;
+  font-size: 16px;
 }
 
 body.osg-public header nav.navbar .nav-session li a.btn {
-  font-size: 0.75rem;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Futura BT";
 }
 
 body.osg-public header nav.navbar.sticky {
@@ -11397,6 +11400,7 @@ body.osg-public .home #profiles h2 small {
 
 body.osg-public .home #profiles .profile {
   height: 100%;
+  text-align: center;
 }
 
 body.osg-public .home #profiles .profile:after {
@@ -11439,26 +11443,23 @@ body.osg-public .home #profiles .profile .description .icon {
 body.osg-public .home #profiles .profile .description ul {
   font-size: 0.75rem;
   text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Square 721 BT Bold Extended";
   margin-bottom: 40px;
 }
 
 body.osg-public .home #profiles .profile .description ul li {
   display: block;
   position: relative;
-  padding-left: 30px;
+  /* padding-left: 30px; */
   margin-bottom: 10px;
-}
-
-body.osg-public .home #profiles .profile .description ul li:before {
-  position: absolute;
-  top: 0px;
-  line-height: 1;
-  left: 0px;
-  color: #ffbf00;
-  content: "\2022";
-  font-size: 2em;
+  /* &:before {
+                        position: absolute;
+                        top: 0px;
+                        line-height: 1;
+                        left: 0px;
+                        color: #ffbf00;
+                        content: "\2022";
+                        font-size: 2em;
+                    } */
 }
 
 body.osg-public .home #profiles .profile .description .btn {

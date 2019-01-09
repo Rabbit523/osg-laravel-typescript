@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ApplicationService } from '../../services/application.service';
 import { Meta } from '@angular/platform-browser';
+import { ApplicationUserRole } from '../../classes/user';
 
 
 @Component({
@@ -23,6 +24,23 @@ export class NavigationComponent implements OnInit{
 
   get csrf(){
     return this.meta.getTag('name=csrf-token').content;
+  }
+
+  get role(): string{
+    return this.user ? this.user.role : '';
+  }
+
+
+  get isPersonalTrainer(): boolean{
+    return this.role === ApplicationUserRole.PersonalTrainer;
+  }
+
+  get isProgramDesigner(): boolean{
+    return this.role === ApplicationUserRole.ProgramDesigner;
+  }
+
+  get isStrengthAthlete(): boolean{
+    return this.role === ApplicationUserRole.StrengthAthlete;
   }
 
   logout(){
