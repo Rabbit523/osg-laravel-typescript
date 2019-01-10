@@ -66,7 +66,7 @@ osg-navigation {
             }
 
             .navbar-nav {
-                font-size: rem(12);
+                font-size: rem(10);
 
                 @media (max-width: 1250px) {
                     font-size: rem(10);
@@ -74,21 +74,22 @@ osg-navigation {
 
                 li {
                     position: relative;
-                    margin-right: 5px;
                     height: 40px;
+                    margin-right: 10px;
                     transition: 0.4s linear all;
+
                     &.active,
                     &:hover {
                         a {
                             color: #f29900;
 
-                            &:after{
+                            &:after {
                                 left: 0px;
                                 opacity: 1;
                                 visibility: visible;
                             }
 
-                            
+
 
                             img {
                                 filter: brightness(0.5) sepia(1) hue-rotate(10deg) saturate(6);
@@ -98,7 +99,10 @@ osg-navigation {
 
                     a {
                         color: #FFF;
+                        position: relative;
+                        padding-left: 20px;
                         transition: 0.4s linear all;
+
                         &:after {
                             content: "";
                             display: block;
@@ -116,9 +120,13 @@ osg-navigation {
                                 bottom: -16px;
                             }
                         }
+
                         img {
-                            width: 20px;
-                            margin-right: 5px;
+                            width: 15px;
+                            margin-right: 2px;
+                            position: absolute;
+                            top: 8px;
+                            left: 0px;
                         }
                     }
 
@@ -132,6 +140,7 @@ osg-navigation {
                         flex-direction: row;
                         justify-content: center;
                     }
+
                     @include media-breakpoint-down(xs) {
                         flex-direction: column;
                         text-align: center;
@@ -164,10 +173,12 @@ osg-navigation {
                         justify-content: center;
                         padding-bottom: 10px;
                     }
+
                     @include media-breakpoint-down(sm) {
                         display: block;
                         text-align: center;
                     }
+
                     li {
                         @include media-breakpoint-down(lg) {
                             a {
@@ -179,25 +190,29 @@ osg-navigation {
                                 }
                             }
                         }
+
                         @include media-breakpoint-down(md) {
                             margin-top: 15px;
                         }
+
                         @include media-breakpoint-down(sm) {
                             display: inline-block;
                         }
 
                         &.profile {
                             margin-left: 15px;
+
                             @include media-breakpoint-down(md) {
                                 margin-top: 0px;
                             }
+
                             @include media-breakpoint-down(sm) {
                                 clear: both;
                                 display: block;
                                 margin-left: 0px;
                             }
 
-                            a{
+                            a {
                                 padding-top: 0px;
                             }
 
@@ -205,6 +220,7 @@ osg-navigation {
 
                                 a {
                                     color: #FFF;
+
                                     &:after {
                                         display: none;
                                     }
@@ -220,6 +236,7 @@ osg-navigation {
                                 position: absolute;
                                 top: 0px;
                                 left: -10px;
+
                                 @include media-breakpoint-down(sm) {
                                     display: none;
                                 }

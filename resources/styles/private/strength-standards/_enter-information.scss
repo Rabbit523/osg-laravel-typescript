@@ -1,0 +1,149 @@
+osg-strength-standards-enter-information{
+    display: block;
+    background: #000;
+    margin-top: 50px;
+    border-top: 5px solid $yellow;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    h2{
+        color: #FFF;
+        text-transform: uppercase;
+        font-family: $primary-font;
+        font-size: rem(16);
+        margin: 0px 0px 50px 0px;
+    }
+    .checbox-dropdown{
+        .custom-checkbox{
+            display: inline-block;
+            width: 10%;
+            .checkmark{
+                background: #000;
+                border-color: #7d7d7d;
+            }
+            label input:checked ~ .checkmark{
+                border-color: $green;
+            } 
+        }
+        .dropdown{
+            display: inline-block;
+            width: 85%;
+        }
+    }
+    .dropdown{
+        .btn{
+            font-size: 0.8rem;
+            &:focus{
+                box-shadow: none;
+            }
+            &:hover,
+            &:focus{
+                border-color: #252525 !important;
+                &:before{
+                    background: #000 !important;
+                }
+                &:after{
+                    color: #7d7d7d !important;
+                }
+            }
+        }
+        &.with-label{
+            .btn{
+                padding-top: 15px;
+            }
+        }
+        &.show{
+            .btn{
+                background: #323232 !important;
+            }
+        }
+        label{
+            display: block;
+            color: #c4c4c4;
+            font-weight: normal;
+            font-size: 10px;
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            pointer-events: none;
+            margin-bottom: 0px;
+        }
+        &.black-dropdown{
+            .btn{
+                text-align: left;
+                border: solid 1px #252525;
+                color: #ffffff;
+                border-radius: 0px;
+                height: 44px;
+                background: #252525;
+            }
+            .dropdown-toggle{
+                &:before{
+                    display: block;
+                    content: "";
+                    background: #000;
+                    width: 1px;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    right: 35px;
+                    pointer-events: none;
+                }
+                &:after{
+                    float: right;
+                    margin-top: 5px;
+                    color: #7d7d7d;
+                }
+            }
+            .dropdown-menu{
+                width: 100%;
+                border-radius: 0px;
+                background: #252525;
+                color: #8c8c8c;
+                padding: 0px;
+                margin: 1px 0px 0px;
+                a{
+                    color: #8c8c8c;
+                    border-bottom: 1px solid #393939;
+                    padding: 10px;
+                    font-size: rem(16);
+                    &:hover{
+                        background: #323232;
+                        color: #c4c4c4;
+                    }
+                }
+            }
+        }
+    }
+
+    .actions{
+        @extend .row;
+        @extend .mt-5;
+        align-items: center !important;
+        justify-content: space-between !important;
+        .btn{
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .results{
+            display: block;
+            h4{
+                display: inline-block;
+                color: #FFF;
+                font-family: $primary-font;
+                font-size: rem(10);
+                text-transform: uppercase;
+                margin: 0px 10px 0px 0px;
+            }
+            p{
+                display: inline-block;
+                color: #838383;
+                font-size: 0.8rem;
+                margin-bottom: 0;
+                span{
+                    cursor: pointer;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}

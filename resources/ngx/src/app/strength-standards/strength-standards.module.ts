@@ -5,10 +5,14 @@ import { CoreModule } from '../core/core.module';
 
 import { StrengthStandardsComponent } from './components/main.component';
 
+import { StrengthStandardsEnterInformation } from './components/enter-information/enter-information.component';
+import { StrengthStandardsExerciseTable } from './components/exercise-table/exercise-table.component';
 
 @NgModule({
   declarations: [
-    StrengthStandardsComponent
+    StrengthStandardsComponent,
+    StrengthStandardsEnterInformation,
+    StrengthStandardsExerciseTable
   ],
   imports: [
     BrowserModule,
