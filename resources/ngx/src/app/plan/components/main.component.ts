@@ -6,9 +6,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanBuilderComponent implements OnInit{
   
+  step: PlanBuilderStep; 
 
   ngOnInit(): void {
-    
+    this.step = PlanBuilderStep.ProgressionBuilder;
   }
 
+  get isBuildingCalendar(): boolean{
+    return this.step === PlanBuilderStep.CalendarBuilder;
+  }
+
+  get isBuildingProgress(): boolean{
+    return this.step === PlanBuilderStep.ProgressionBuilder;
+  }
+
+}
+
+
+enum PlanBuilderStep{
+  CalendarBuilder,
+  ProgressionBuilder
 }

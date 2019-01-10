@@ -13,6 +13,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { ContactsModule } from './contacts/contacts.module';
 import { ApplicationService } from './core/services/application.service';
 import { AuthInterceptor } from './core/services/auth.interceptor';
+import { ExperienceBankModule } from './experience-bank/experience-bank.module';
+import { StrengthStandardsModule } from './strength-standards/strength-standards.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { AuthInterceptor } from './core/services/auth.interceptor';
     CoreModule,
     ProfileModule,
     PlanBuilderModule,
+    ExperienceBankModule,
+    StrengthStandardsModule,
     DashboardModule,
     ContactsModule
   ],
