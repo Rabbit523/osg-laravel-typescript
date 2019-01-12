@@ -4,26 +4,26 @@ import { Component, OnInit } from '@angular/core';
   selector: 'osg-plan-builder',
   templateUrl: './main.component.html'
 })
-export class PlanBuilderComponent implements OnInit{
-  
-  step: PlanBuilderStep; 
+export class PlanBuilderComponent implements OnInit {
+
+  step: PlanBuilderStep;
 
   ngOnInit(): void {
     this.step = PlanBuilderStep.ProgressionBuilder;
   }
 
-  get isBuildingCalendar(): boolean{
+  get isBuildingCalendar(): boolean {
     return this.step === PlanBuilderStep.CalendarBuilder;
   }
 
-  get isBuildingProgress(): boolean{
+  get isBuildingProgress(): boolean {
     return this.step === PlanBuilderStep.ProgressionBuilder;
   }
 
 }
 
 
-enum PlanBuilderStep{
+enum PlanBuilderStep {
   CalendarBuilder,
   ProgressionBuilder
 }

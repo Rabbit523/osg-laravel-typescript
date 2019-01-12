@@ -9,7 +9,9 @@ import { PlanBuilderWorkoutsComponent } from './components/calendar-builder/work
 import { PlanBuilderCalendarComponent } from './components/calendar-builder/calendar/calendar.component';
 import { CalendarBuilderComponent } from './components/calendar-builder/main.component';
 import { ProgressionBuilderComponent } from './components/progression-builder/main.component';
-
+import { ProgressionBuilderProgressiveOverloadGraphComponent } from './components/progression-builder/progressive-overload-graph/progressive-overload-graph.component';
+import { ProgressionBuilderTrainingProgramComponent } from './components/progression-builder/training-program/training-program.component';
+import { ProgressionBuilderProgramDesignComponent } from './components/progression-builder/program-design/program-design.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +21,10 @@ import { ProgressionBuilderComponent } from './components/progression-builder/ma
     PlanBuilderWorkoutsComponent,
     PlanBuilderCalendarComponent,
 
-    ProgressionBuilderComponent
+    ProgressionBuilderComponent,
+    ProgressionBuilderProgressiveOverloadGraphComponent,
+    ProgressionBuilderTrainingProgramComponent,
+    ProgressionBuilderProgramDesignComponent
   ],
   imports: [
     BrowserModule,

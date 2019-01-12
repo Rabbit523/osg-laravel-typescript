@@ -1,3 +1,35 @@
 osg-progression-builder{
     display: block;
+    overflow: hidden;
+    h1{
+        width: 100%;
+    }
+    .general-actions{
+        @extend .row;
+        .btn{
+            font-size: rem(9);
+            img {
+                width: 15px;
+            }
+            &.btn-back {
+                position: relative;
+                padding: 0.55rem 1rem 0.55rem 1.5rem;
+                -webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 50%);
+                clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 50%);
+    
+                &:after {
+                    display: block;
+                    content: "\f104";
+                    font: normal normal normal 25px/1 FontAwesome;
+                    color: #000;
+                    position: absolute;
+                    left: 8px;
+                    top: 2px;
+                }
+            }
+        }
+    }
+    @import "progressive-overload-graph";
+    @import "training-program";
+    @import "program-design";
 }

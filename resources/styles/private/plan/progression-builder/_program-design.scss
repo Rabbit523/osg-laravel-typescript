@@ -1,0 +1,103 @@
+osg-progression-builder-program-design {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    .table-program-design {
+        display: block;
+        margin-top: 20px;
+        /* thead {
+            tr {
+                th {
+                    border: none;
+
+                    &:nth-child(2) {
+                        background: #FFF;
+                        text-transform: uppercase;
+                        font-family: $primary-font;
+                        font-size: rem(10);
+                        color: #000;
+                        border-top: 2px solid #78cd18;
+                        border-right: 2px solid #78cd18;
+                        border-left: 2px solid #78cd18;
+                    }
+                }
+            }
+        } */
+
+        tbody {
+            tr {
+                td {
+                    background: #FFF;
+                    border: 1px solid #dadada;
+                    font-size: rem(10);
+                    padding: 0.55rem;
+                    color: #000;
+
+                    &.red {
+                        background: #fff0e8 !important;
+                    }
+
+                    &.green {
+                        background: #e8fecd !important;
+                    }
+
+                    &.blue {
+                        background: #f0feff !important;
+                    }
+                }
+
+                &:not(:nth-child(2)) {
+                    td {
+                        &:last-child {
+                            border-right: 2px solid #78cd18;
+                        }
+                    }
+                }
+
+                &:nth-child(odd) {
+                    td {
+                        &:first-child{
+                            background: #fff0cf;
+                        }
+                        &:first-child,
+                        &:nth-child(2) {
+                            color: #000;
+                        }
+
+                        &:nth-child(2) {
+                            border-right: 2px solid #78cd18;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    td {
+                        border-bottom: 2px solid #78cd18;
+                    }
+                }
+
+                &:first-child,
+                &:nth-child(2) {
+                    td {
+                        font-size: rem(12);
+                        color: #000 !important;
+                    }
+                }
+
+                &:first-child {
+                    td {
+                        vertical-align: middle;
+                        border-top: 2px solid #78cd18;
+                        background: #fff0cf;
+
+                        &:first-child,
+                        &:nth-child(2) {
+                            border-top: 2px solid #dadada;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
