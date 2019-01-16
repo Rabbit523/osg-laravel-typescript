@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'osg-profile-about-me',
@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
 })
 export class ProfileAboutMeComponent {
   
+  @Input() text: string = '';
+  @Input() interests: string = 'Norges idrettshöyskole';
+  @Input() experience: string = 'Sport performance';
+  @Input() profile: string = '';
+
 }
