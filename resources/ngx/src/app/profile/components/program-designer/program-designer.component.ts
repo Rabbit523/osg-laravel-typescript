@@ -9,6 +9,8 @@ export class ProgramDesignerComponent implements OnInit{
   
   @Input() applicationUser: ApplicationUser;
 
+  getStartedSections = ["calendar builder guide", "progression model guide", "about auto-regulation", "experience bank guide"];
+
   ngOnInit(): void {
     
   }

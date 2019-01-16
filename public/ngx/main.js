@@ -529,7 +529,7 @@ var GaugeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col-12\">\n        <h3>GET STARTED</h3>\n    </div>\n</div>\n\n<div class=\"articles-list\">\n    <div class=\"article brand-box\">\n        <figure>\n            <img alt=\"\" class=\"img-fluid d-block mx-auto\" src=\"/assets/images/logo.png\">\n        </figure>\n    </div>\n    <div class=\"article\">\n        <h4>CALENDAR BUILDER GUIDE</h4>\n        <a href=\"\" class=\"btn btn-yellow-gradient\">READ MORE</a>\n    </div>\n    <div class=\"article\">\n        <h4>PROGRESSION MODEL GUIDE</h4>\n        <a href=\"\" class=\"btn btn-yellow-gradient\">READ MORE</a>\n    </div>\n    <div class=\"article\">\n        <h4>ABOUT AUTO-REGULATION</h4>\n        <a href=\"\" class=\"btn btn-yellow-gradient\">READ MORE</a>\n    </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n    <div class=\"col-12\">\n        <h3>GET STARTED</h3>\n    </div>\n</div>\n\n<div class=\"articles-list\">\n    <div class=\"article brand-box\">\n        <figure>\n            <img alt=\"\" class=\"img-fluid d-block mx-auto\" src=\"/assets/images/logo.png\">\n        </figure>\n    </div>\n    <div class=\"article\" *ngFor=\"let section of sections\">\n        <h4>{{section}}</h4>\n        <a href=\"\" class=\"btn btn-yellow-gradient\">READ MORE</a>\n    </div>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -544,7 +544,6 @@ module.exports = "<div class=\"row\">\n    <div class=\"col-12\">\n        <h3>G
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GetStartedComponent", function() { return GetStartedComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_app_core_classes_user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/core/classes/user */ "./src/app/core/classes/user.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -555,16 +554,34 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
 var GetStartedComponent = /** @class */ (function () {
     function GetStartedComponent() {
+        this.css = 'primary';
+        this.sections = [];
     }
+    Object.defineProperty(GetStartedComponent.prototype, "view", {
+        set: function (v) {
+            // supports: primary, secondary, tertiary
+            this.css = v ? v : 'primary';
+        },
+        enumerable: true,
+        configurable: true
+    });
     GetStartedComponent.prototype.ngOnInit = function () {
     };
     __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostBinding"])('class'),
+        __metadata("design:type", String)
+    ], GetStartedComponent.prototype, "css", void 0);
+    __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", src_app_core_classes_user__WEBPACK_IMPORTED_MODULE_1__["ApplicationUser"])
-    ], GetStartedComponent.prototype, "applicationUser", void 0);
+        __metadata("design:type", String),
+        __metadata("design:paramtypes", [String])
+    ], GetStartedComponent.prototype, "view", null);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Array)
+    ], GetStartedComponent.prototype, "sections", void 0);
     GetStartedComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'osg-get-started',
@@ -1592,7 +1609,7 @@ var PlanBuilderWorkoutsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<osg-calendar-builder *ngIf=\"isBuildingCalendar\"></osg-calendar-builder>\n<osg-progression-builder *ngIf=\"isBuildingProgress\"></osg-progression-builder>\n\n<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-12\">\n            <hr>\n            <osg-get-started></osg-get-started>\n        </div>\n    </div>\n</div>"
+module.exports = "<osg-calendar-builder *ngIf=\"isBuildingCalendar\"></osg-calendar-builder>\n<osg-progression-builder *ngIf=\"isBuildingProgress\"></osg-progression-builder>\n\n<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-12\">\n            <hr>\n            <osg-get-started view=\"secondary\" [sections]=\"getStartedSections\"></osg-get-started>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1617,9 +1634,19 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var PlanBuilderComponent = /** @class */ (function () {
     function PlanBuilderComponent() {
     }
+    //getStartedSections: string[] = ["the workout & calendar builder", "progression builder", "experience bank & reviews", "auto-regulation"];
     PlanBuilderComponent.prototype.ngOnInit = function () {
         this.step = PlanBuilderStep.ProgressionBuilder;
     };
+    Object.defineProperty(PlanBuilderComponent.prototype, "getStartedSections", {
+        get: function () {
+            return this.isBuildingCalendar
+                ? ["the workout & calendar builder", "progression builder", "experience bank & reviews", "auto-regulation"]
+                : ["strength training principles", "program design variables", "progression models and strategies", "save & publish programs"];
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(PlanBuilderComponent.prototype, "isBuildingCalendar", {
         get: function () {
             return this.step === PlanBuilderStep.CalendarBuilder;
@@ -2232,7 +2259,7 @@ var PersonalTrainerOffersComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n    <osg-profile-about-me></osg-profile-about-me>\n    <osg-news-feed></osg-news-feed>\n</div>\n<div>\n    <osg-personal-trainer-offers></osg-personal-trainer-offers>\n    <osg-personal-trainer-experience-bank></osg-personal-trainer-experience-bank>\n    <osg-personal-trainer-booking-calendar></osg-personal-trainer-booking-calendar>\n    <osg-get-started></osg-get-started>\n</div>"
+module.exports = "<div>\n    <osg-profile-about-me></osg-profile-about-me>\n    <osg-news-feed></osg-news-feed>\n</div>\n<div>\n    <osg-personal-trainer-offers></osg-personal-trainer-offers>\n    <osg-personal-trainer-experience-bank></osg-personal-trainer-experience-bank>\n    <osg-personal-trainer-booking-calendar></osg-personal-trainer-booking-calendar>\n    <osg-get-started [sections]=\"getStartedSections\"></osg-get-started>\n</div>"
 
 /***/ }),
 
@@ -2261,6 +2288,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var PersonalTrainerComponent = /** @class */ (function () {
     function PersonalTrainerComponent() {
+        this.getStartedSections = ["calendar builder guide", "progression model guide", "about auto-regulation"];
     }
     PersonalTrainerComponent.prototype.ngOnInit = function () {
     };
@@ -2562,7 +2590,7 @@ var ProgramDesignerProgramDesignComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n    <osg-profile-about-me></osg-profile-about-me>\n    <osg-news-feed></osg-news-feed>\n</div>\n<div>\n    <osg-program-designer-published-programs></osg-program-designer-published-programs>\n    <osg-program-designer-program-filter></osg-program-designer-program-filter>\n    <osg-program-designer-experience-bank></osg-program-designer-experience-bank>\n    <osg-program-designer-experience-reviews></osg-program-designer-experience-reviews>\n    <osg-program-designer-program-design></osg-program-designer-program-design>\n    <osg-program-designer-training-calendar></osg-program-designer-training-calendar>\n    <osg-get-started></osg-get-started>\n</div>"
+module.exports = "<div>\n    <osg-profile-about-me></osg-profile-about-me>\n    <osg-news-feed></osg-news-feed>\n</div>\n<div>\n    <osg-program-designer-published-programs></osg-program-designer-published-programs>\n    <osg-program-designer-program-filter></osg-program-designer-program-filter>\n    <osg-program-designer-experience-bank></osg-program-designer-experience-bank>\n    <osg-program-designer-experience-reviews></osg-program-designer-experience-reviews>\n    <osg-program-designer-program-design></osg-program-designer-program-design>\n    <osg-program-designer-training-calendar></osg-program-designer-training-calendar>\n    <osg-get-started view=\"secondary\" [sections]=\"getStartedSections\"></osg-get-started>\n</div>"
 
 /***/ }),
 
@@ -2591,6 +2619,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var ProgramDesignerComponent = /** @class */ (function () {
     function ProgramDesignerComponent() {
+        this.getStartedSections = ["calendar builder guide", "progression model guide", "about auto-regulation", "experience bank guide"];
     }
     ProgramDesignerComponent.prototype.ngOnInit = function () {
     };
@@ -2898,7 +2927,7 @@ var StrengthAthletePerformanceTableComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n    <osg-profile-about-me></osg-profile-about-me>\n    <osg-news-feed></osg-news-feed>\n</div>\n<div>\n    <osg-strength-athlete-trophy-wall></osg-strength-athlete-trophy-wall>\n    <osg-strength-athlete-timeline></osg-strength-athlete-timeline>\n    <osg-strength-athlete-performance-table></osg-strength-athlete-performance-table>\n    <osg-strength-athlete-top-program-designs></osg-strength-athlete-top-program-designs>\n    <osg-strength-athlete-training-calendar></osg-strength-athlete-training-calendar>\n</div>"
+module.exports = "<div>\n    <osg-profile-about-me></osg-profile-about-me>\n    <osg-news-feed></osg-news-feed>\n</div>\n<div>\n    <osg-strength-athlete-trophy-wall></osg-strength-athlete-trophy-wall>\n    <osg-strength-athlete-timeline></osg-strength-athlete-timeline>\n    <osg-strength-athlete-performance-table></osg-strength-athlete-performance-table>\n    <osg-strength-athlete-top-program-designs></osg-strength-athlete-top-program-designs>\n    <osg-strength-athlete-training-calendar></osg-strength-athlete-training-calendar>\n    <osg-get-started view=\"tertiary\" [sections]=\"getStartedSections\"></osg-get-started>\n</div>"
 
 /***/ }),
 
@@ -2927,6 +2956,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var StrengthAthleteComponent = /** @class */ (function () {
     function StrengthAthleteComponent() {
+        this.getStartedSections = ["the strength athlete profile", "about auto-regulation", "strength standards guide", "experience bank guide", "program design guide"];
     }
     StrengthAthleteComponent.prototype.ngOnInit = function () {
     };
@@ -3679,7 +3709,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/macbookfabi/Sites/fantasylab/osg.no/resources/ngx/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/Rauxmedia/Documents/fantasylab/projects/php/osg.no/resources/ngx/src/main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -10,16 +10,10 @@
             <img alt="" class="img-fluid d-block mx-auto" src="/assets/images/logo.png">
         </figure>
     </div>
-    <div class="article">
-        <h4>CALENDAR BUILDER GUIDE</h4>
-        <a href="" class="btn btn-yellow-gradient">READ MORE</a>
-    </div>
-    <div class="article">
-        <h4>PROGRESSION MODEL GUIDE</h4>
-        <a href="" class="btn btn-yellow-gradient">READ MORE</a>
-    </div>
-    <div class="article">
-        <h4>ABOUT AUTO-REGULATION</h4>
+    <div class="article" *ngFor="let section of sections">
+        <h4>{{section}}</h4>
         <a href="" class="btn btn-yellow-gradient">READ MORE</a>
     </div>
 </div>
+
+

@@ -32,6 +32,8 @@ osg-get-started{
                 font-size: rem(8);
                 padding-top: 0.75rem;
                 padding-bottom: 0.75rem;
+                position: absolute;
+                bottom: 30px;
             }
             &.brand-box{
                 background: $black;
@@ -44,6 +46,35 @@ osg-get-started{
             }
             &:last-child{
                 border: none;
+            }
+        }
+    }
+
+
+
+    // &.primary{
+    //     .articles-list{
+    //         .article{
+                
+    //         }
+    //     }
+    // }
+    &.secondary{
+        .articles-list{
+            .article{
+                max-width: 20%;
+                
+            }
+        }
+    }
+
+    &.tertiary{
+        .articles-list{
+            .article{
+                max-width: 20%;
+                &:nth-child(1){
+                    display: none;
+                }
             }
         }
     }
