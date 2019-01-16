@@ -11,7 +11,7 @@ export class PlanBuilderComponent implements OnInit {
   //getStartedSections: string[] = ["the workout & calendar builder", "progression builder", "experience bank & reviews", "auto-regulation"];
 
   ngOnInit(): void {
-    this.step = PlanBuilderStep.ProgressionBuilder;
+    this.step = PlanBuilderStep.CalendarBuilder;
   }
 
   get getStartedSections(): string[]{
@@ -26,6 +26,14 @@ export class PlanBuilderComponent implements OnInit {
 
   get isBuildingProgress(): boolean {
     return this.step === PlanBuilderStep.ProgressionBuilder;
+  }
+
+  next(){
+    this.step = PlanBuilderStep.ProgressionBuilder;
+  }
+
+  previous(){
+    this.step = PlanBuilderStep.CalendarBuilder;
   }
 
 }

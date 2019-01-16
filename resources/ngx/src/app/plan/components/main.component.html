@@ -1,5 +1,5 @@
-<osg-calendar-builder *ngIf="isBuildingCalendar"></osg-calendar-builder>
-<osg-progression-builder *ngIf="isBuildingProgress"></osg-progression-builder>
+<osg-calendar-builder *ngIf="isBuildingCalendar" (complete)="next()"></osg-calendar-builder>
+<osg-progression-builder *ngIf="isBuildingProgress" (cancel)="previous()"></osg-progression-builder>
 
 <div class="container">
     <div class="row">

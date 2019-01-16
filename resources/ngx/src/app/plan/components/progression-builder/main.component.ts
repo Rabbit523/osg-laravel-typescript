@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'osg-progression-builder',
@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressionBuilderComponent implements OnInit{
   
+  @Output() cancel: EventEmitter<any> = new EventEmitter();
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {}
+
+  back(){
+    this.cancel.emit(null);
   }
 
 }
