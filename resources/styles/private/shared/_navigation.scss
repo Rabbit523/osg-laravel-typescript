@@ -8,6 +8,12 @@ osg-navigation {
         &.navbar {
             font-family: $primary-font;
             text-transform: uppercase;
+            padding-left: 0rem;
+            padding-right: 0rem;
+            @include media-breakpoint-down(md){
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
 
             .navbar-brand {
                 position: relative;
@@ -66,10 +72,10 @@ osg-navigation {
             }
 
             .navbar-nav {
-                font-size: rem(10);
+                font-size: 0.75rem;
 
                 @media (max-width: 1250px) {
-                    font-size: rem(10);
+                    font-size: 0.75rem;
                 }
 
                 li {
@@ -101,6 +107,7 @@ osg-navigation {
                         color: #FFF;
                         position: relative;
                         padding-left: 20px;
+                        height: 55px;
                         transition: 0.4s linear all;
 
                         &:after {
@@ -110,7 +117,7 @@ osg-navigation {
                             height: 3px;
                             background: #f29900;
                             position: absolute;
-                            bottom: -26px;
+                            bottom: -10px;
                             left: -100%;
                             opacity: 0;
                             visibility: hidden;
@@ -130,9 +137,9 @@ osg-navigation {
                         }
                     }
 
-                    &:last-child {
+                    /* &:last-child {
                         margin-right: 0px;
-                    }
+                    } */
                 }
 
                 &.left-menu {
@@ -160,6 +167,7 @@ osg-navigation {
                                     @include media-breakpoint-down(md) {
                                         width: 20px;
                                         margin-right: 5px;
+                                        position: relative;
                                     }
                                 }
                             }
@@ -180,6 +188,7 @@ osg-navigation {
                     }
 
                     li {
+                        text-align: center;
                         @include media-breakpoint-down(lg) {
                             a {
                                 padding-left: 0.2rem;
@@ -188,6 +197,13 @@ osg-navigation {
                                 img {
                                     width: 15px;
                                 }
+                            }
+                        }
+                        a{
+                            padding: 0;
+                            img{
+                                position: relative;
+                                width: 20px;
                             }
                         }
 
@@ -201,9 +217,11 @@ osg-navigation {
 
                         &.profile {
                             margin-left: 15px;
+                            text-align: left;
 
                             @include media-breakpoint-down(md) {
                                 margin-top: 0px;
+                                text-align: center;
                             }
 
                             @include media-breakpoint-down(sm) {
@@ -213,7 +231,9 @@ osg-navigation {
                             }
 
                             a {
-                                padding-top: 0px;
+                                padding-top: 5px;
+                                padding-left: 40px;
+                                padding-right: 0px;
                             }
 
                             &:hover {
@@ -243,11 +263,14 @@ osg-navigation {
                             }
 
                             img {
-                                width: 40px;
+                                width: 30px;
                                 margin-right: 0px;
+                                top: 0px;
+                                position: absolute;
 
                                 @media (max-width: 1250px) {
                                     width: 30px;
+                                    position: relative;
                                 }
                             }
                         }

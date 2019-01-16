@@ -9,7 +9,7 @@ osg-strength-standards-enter-information{
         color: #FFF;
         text-transform: uppercase;
         font-family: $primary-font;
-        font-size: rem(16);
+        font-size: 1.1rem;
         margin: 0px 0px 50px 0px;
     }
     .checbox-dropdown{
@@ -120,9 +120,12 @@ osg-strength-standards-enter-information{
         @extend .mt-5;
         align-items: center !important;
         justify-content: space-between !important;
+        border-top: solid 1px #393939;
+        padding-top: 30px;
         .btn{
             font-size: 0.8rem;
             font-weight: bold;
+            font-family: $secondary-font;
         }
         .results{
             display: block;

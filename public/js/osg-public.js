@@ -35,6 +35,7 @@ Controllers.home = function () {
         new osg.Controllers.floaLabel('#get-started .form-control');
         new osg.Controllers.floaLabel('.sign-up-form-wrapper .form-control');
         new osg.Controllers.floaLabel('.login-content .login-form .form-control');
+        new osg.Controllers.floaLabel('.reset-content .login-form .form-control');
         new osg.Controllers.addStickyMenu();
     };
     init();

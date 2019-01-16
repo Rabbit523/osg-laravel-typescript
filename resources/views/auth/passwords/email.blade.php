@@ -2,42 +2,43 @@
 @section('title', 'Reset Password') 
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card" style="margin: 180px 0;">
-                <div class="card-header">{{ __('Reset Password') }}</div>
-
-                <div class="card-body">
+<div class="reset">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-5">
+                <div class="reset-content">
+                    <h1>
+                        <small>Optimal Strength Gains</small>{{ __('Reset Password') }}
+                    </h1>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ route('password.email') }}">
+                    <form method="POST" action="{{ route('password.email') }}" class="login-form mt-4">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                        <div class="form-group">
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                            <input id="email" type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                            <label for="email">{{ __('E-Mail Address') }}</label>
 
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                            @if ($errors->has('email'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                            @endif
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
-                                </button>
-                            </div>
+                        <small class="form-text privacy-terms">
+                            This page is protected by reCAPTCHA and subject to the GDPR Privacy <a href="{{ route('privacy') }}">Policy Data</a> Protection Regulation and <a href="{{ route('tos') }}"">Terms of Service.</a>
+                        </small>
+
+                        <div class="wrapper-btn text-center text-md-right mt-3">
+                            <button type="submit" class="btn btn-yellow-gradient">
+                                {{ __('Send Password Reset Link') }}
+                            </button>
                         </div>
                     </form>
                 </div>

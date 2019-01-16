@@ -9,10 +9,11 @@ osg-strength-standards {
         font-family: $primary-font;
         h1{
             margin: 0;
-            font-size: rem(24);
+            font-size: 2rem;
         }
         span{
             color: #838383;
+            font-size: 1.6rem;
         }
     }
     @import "enter-information";

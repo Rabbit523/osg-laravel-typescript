@@ -647,7 +647,7 @@ var InformationComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg fixed-top\">\n    <div class=\"container-fluid\">\n        <a class=\"navbar-brand\" routerLink=\"/\">\n            <img src=\"assets/images/logo.png\" class=\"img-fluid d-block mx-auto\" alt=\"\">\n        </a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n            aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span></span>\n            <span></span>\n            <span></span>\n        </button>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul class=\"navbar-nav mr-auto left-menu\">\n                <li *ngIf=\"isProgramDesigner\" class=\"nav-item\" routerLinkActive=\"active\">\n                    <a class=\"nav-link\" routerLink=\"/calendar-builder\">\n                        <img src=\"assets/images/icons/icon-plan.svg\">\n                        Calendar Builder\n                    </a>\n                </li>\n\n                <li class=\"nav-item\" routerLinkActive=\"active\">\n                    <a class=\"nav-link\" routerLink=\"/experience-bank\">\n                        <img src=\"/assets/images/icons/icon-house.svg\">\n                        Experience Bank\n                    </a>\n                </li>\n\n                <li class=\"nav-item\" routerLinkActive=\"active\">\n                    <a class=\"nav-link\" routerLink=\"/strength-standards\">\n                        <img src=\"/assets/images/icons/icon-strength.svg\">\n                        Strength Standards\n                    </a>\n                </li>\n                <li class=\"nav-item\" routerLinkActive=\"active\">\n                    <a class=\"nav-link\" routerLink=\"/program-designs\">\n                        <img src=\"/assets/images/icons/icon-gear.svg\">\n                        Program Designs\n                    </a>\n                </li>\n\n                <li class=\"nav-item\" routerLinkActive=\"active\">\n                    <a class=\"nav-link\" routerLink=\"/contacts\">\n                        <img src=\"assets/images/icons/icon-contacts.svg\">\n                        Contacts\n                    </a>\n                </li>\n            </ul>\n            <ul class=\"navbar-nav ml-auto align-items-center right-menu\">\n                <li class=\"nav item\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact: true}\">\n                    <a routerLink=\"/\" class=\"nav-link\"><img class=\"d-block mx-auto img-fluid\" src=\"assets/images/icons/icon-home.svg\"></a>\n                </li>\n                <li class=\"nav item\" routerLinkActive=\"active\">\n                    <a routerLink=\"/notifications\" class=\"nav-link\"><img class=\"d-block mx-auto img-fluid\" src=\"assets/images/icons/icon-notifications.svg\"></a>\n                </li>\n                <li class=\"nav item\" routerLinkActive=\"active\">\n                    <a routerLink=\"/info\" class=\"nav-link\"><img class=\"d-block mx-auto img-fluid\" src=\"assets/images/icons/icon-info.svg\"></a>\n                </li>\n                <li class=\"nav item\" >\n                    <a (click)=\"logout()\" class=\"nav-link\"><img class=\"d-block mx-auto img-fluid\" src=\"assets/images/icons/icon-logout.svg\"></a>\n                </li>\n                <li class=\"nav item profile\" routerLinkActive=\"active\">\n                    <a routerLink=\"/profile\" class=\"nav-link\">{{fullName}}<img class=\"img-fluid ml-3 ml-lg-2 ml-xl-3\" src=\"assets/images/icons/icon-account.svg\"></a>\n                </li>\n            </ul>\n\n            <form #logoutForm ngNoForm id=\"logout-form\" action=\"/logout\" method=\"POST\" style=\"display: none;\">\n                <input type=\"hidden\" name=\"_token\" value=\"{{csrf}}\" />\n            </form>\n        </div>\n    </div>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg fixed-top\">\n    <div class=\"container-fluid\">\n        <a class=\"navbar-brand\" routerLink=\"/\">\n            <img src=\"assets/images/logo.png\" class=\"img-fluid d-block mx-auto\" alt=\"\">\n        </a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n            aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span></span>\n            <span></span>\n            <span></span>\n        </button>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul class=\"navbar-nav mr-auto left-menu\">\n                <li *ngIf=\"isProgramDesigner\" class=\"nav-item\" routerLinkActive=\"active\">\n                    <a class=\"nav-link\" routerLink=\"/calendar-builder\">\n                        <img src=\"assets/images/icons/icon-plan.svg\">\n                        Calendar Builder\n                    </a>\n                </li>\n\n                <li class=\"nav-item\" routerLinkActive=\"active\">\n                    <a class=\"nav-link\" routerLink=\"/experience-bank\">\n                        <img src=\"/assets/images/icons/icon-house.svg\">\n                        Experience Bank\n                    </a>\n                </li>\n\n                <li class=\"nav-item\" routerLinkActive=\"active\">\n                    <a class=\"nav-link\" routerLink=\"/strength-standards\">\n                        <img src=\"/assets/images/icons/icon-strength.svg\">\n                        Strength Standards\n                    </a>\n                </li>\n                <li class=\"nav-item\" routerLinkActive=\"active\">\n                    <a class=\"nav-link\" routerLink=\"/program-designs\">\n                        <img src=\"/assets/images/icons/icon-gear.svg\">\n                        Program Designs\n                    </a>\n                </li>\n\n                <li class=\"nav-item\" routerLinkActive=\"active\">\n                    <a class=\"nav-link\" routerLink=\"/contacts\">\n                        <img src=\"assets/images/icons/icon-contacts.svg\">\n                        Contacts\n                    </a>\n                </li>\n            </ul>\n            <ul class=\"navbar-nav ml-auto align-items-center right-menu\">\n                <li class=\"nav item\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact: true}\">\n                    <a routerLink=\"/\" class=\"nav-link\"><img class=\"d-block mx-auto img-fluid\" src=\"assets/images/icons/icon-home.svg\"></a>\n                </li>\n                <li class=\"nav item\" routerLinkActive=\"active\">\n                    <a routerLink=\"/notifications\" class=\"nav-link\"><img class=\"d-block mx-auto img-fluid\" src=\"assets/images/icons/icon-notifications.svg\"></a>\n                </li>\n                <li class=\"nav item\" routerLinkActive=\"active\">\n                    <a routerLink=\"/info\" class=\"nav-link\"><img class=\"d-block mx-auto img-fluid\" src=\"assets/images/icons/icon-info.svg\"></a>\n                </li>\n                <li class=\"nav item\" >\n                    <a (click)=\"logout()\" class=\"nav-link\"><img class=\"d-block mx-auto img-fluid\" src=\"assets/images/icons/icon-logout.svg\"></a>\n                </li>\n                <li class=\"nav item profile\" routerLinkActive=\"active\">\n                    <a routerLink=\"/profile\" class=\"nav-link\"><img class=\"img-fluid ml-3 ml-lg-2 ml-xl-1\" src=\"assets/images/icons/icon-account.svg\">{{fullName}}</a>\n                </li>\n            </ul>\n\n            <form #logoutForm ngNoForm id=\"logout-form\" action=\"/logout\" method=\"POST\" style=\"display: none;\">\n                <input type=\"hidden\" name=\"_token\" value=\"{{csrf}}\" />\n            </form>\n        </div>\n    </div>\n</nav>\n"
 
 /***/ }),
 
@@ -2759,7 +2759,7 @@ var ProgramDesignerPublishedProgramsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"title\">\n  <div class=\"col-12 col-lg col-xl-5 mb-4 mb-xl-0\">\n    <h3>THE TRAINING PROGRAM: <span>GVT</span></h3>\n  </div>\n  <div class=\"col-12 col-sm-auto col-lg-auto\">\n    <div class=\"control-slider\">\n      <p>AUGUST 2018</p>\n      <a href=\"\" class=\"btn-control prev\"><i class=\"fa fa-angle-up\" aria-hidden=\"true\"></i></a>\n      <a href=\"\" class=\"btn-control next\"><i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i></a>\n    </div>\n  </div>\n  <div class=\"col-12 col-sm-auto col-lg-12 col-xl-auto\">\n    <a href=\"\" class=\"btn btn-green-gradient py-2\">ADD TO YOUR CALENDAR</a>\n  </div>\n</div>\n\n<div class=\"conventions\">\n  <p class=\"test-days\"><span></span>Test days</p>\n  <p class=\"training-days\"><span></span>Training days</p>\n</div>\n\n<div class=\"calendar\">\n  <div class=\"week-days\">\n    <div class=\"col\">Sunday</div>\n    <div class=\"col\">Monday</div>\n    <div class=\"col\">Tuesday</div>\n    <div class=\"col\">Wednesday</div>\n    <div class=\"col\">Thursday</div>\n    <div class=\"col\">Friday</div>\n    <div class=\"col\">Saturday</div>\n  </div>\n  <div class=\"wrapper-weeks\">\n    <div class=\"week\">\n\n      <div class=\"day\">\n        <div><span class=\"time\">30</span></div>\n      </div>\n\n      <div class=\"day training-days test-days\">\n        <div>\n          <span class=\"time\">Jul 31</span>\n          <b>GVT</b>\n          <p>Quads, hamstrings,and calves</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">Aug 1</span></div>\n      </div>\n\n      <div class=\"day training-days test-days\">\n        <div>\n          <span class=\"time\">2</span>\n          <b>GVT</b>\n          <p>Chest, shoulders, and triceps </p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">3</span></div>\n      </div>\n\n      <div class=\"day training-days test-days\">\n        <div>\n          <span class=\"time\">4</span>\n          <b>GVT</b>\n          <p>Back, biceps, and abs</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">5</span></div>\n      </div>\n\n    </div>\n\n    <div class=\"week\">\n\n      <div class=\"day\">\n        <div><span class=\"time\">6</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">7</span>\n          <b>GVT</b>\n          <p>Quads, hamstrings,and calves</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">8</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">9</span>\n          <b>GVT</b>\n          <p>Chest, shoulders, and triceps </p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">10</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">11</span>\n          <b>GVT</b>\n          <p>Back, biceps, and abs</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">12</span></div>\n      </div>\n\n    </div>\n\n    <div class=\"week\">\n\n      <div class=\"day\">\n        <div><span class=\"time\">13</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">14</span>\n          <b>GVT</b>\n          <p>Quads, hamstrings,and calves</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">15</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">16</span>\n          <b>GVT</b>\n          <p>Chest, shoulders, and triceps </p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">17</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">18</span>\n          <b>GVT</b>\n          <p>Back, biceps, and abs</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">19</span></div>\n      </div>\n\n    </div>\n\n    <div class=\"week\">\n\n      <div class=\"day\">\n        <div><span class=\"time\">20</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">21</span>\n          <b>GVT</b>\n          <p>Quads, hamstrings,and calves</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">22</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">23</span>\n          <b>GVT</b>\n          <p>Chest, shoulders, and triceps </p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">24</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">25</span>\n          <b>GVT</b>\n          <p>Back, biceps, and abs</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">26</span></div>\n      </div>\n\n    </div>\n\n    <div class=\"week\">\n\n      <div class=\"day\">\n        <div><span class=\"time\">27</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">28</span>\n          <b>GVT</b>\n          <p>Quads, hamstrings,and calves</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">29</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">30</span>\n          <b>GVT</b>\n          <p>Chest, shoulders, and triceps </p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">Aug 31</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">Sep 1</span>\n          <b>GVT</b>\n          <p>Back, biceps, and abs</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">2</span></div>\n      </div>\n\n    </div>\n\n  </div>\n</div>\n"
+module.exports = "<div class=\"title\">\n  <div class=\"col-12 col-lg col-xl-5 mb-4 mb-xl-0\">\n    <h3>THE TRAINING PROGRAM: <span>GVT</span></h3>\n  </div>\n  <div class=\"col-12 col-sm-auto col-lg-auto\">\n    <div class=\"control-slider\">\n      <p>AUGUST 2018</p>\n      <a href=\"\" class=\"btn-control prev\"><i class=\"fa fa-angle-up\" aria-hidden=\"true\"></i></a>\n      <a href=\"\" class=\"btn-control next\"><i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i></a>\n    </div>\n  </div>\n  <div class=\"col-12 col-sm-auto col-lg-12 col-xl-auto\">\n    <a href=\"\" class=\"btn btn-green-gradient py-2\">ADD TO YOUR CALENDAR</a>\n  </div>\n</div>\n\n<div class=\"conventions\">\n  <p class=\"test-days\"><span></span>Test days</p>\n  <p class=\"training-days\"><span></span>Training days</p>\n</div>\n\n<div class=\"calendar\">\n  <div class=\"week-days\">\n    <div class=\"col\">Sunday</div>\n    <div class=\"col\">Monday</div>\n    <div class=\"col\">Tuesday</div>\n    <div class=\"col\">Wednesday</div>\n    <div class=\"col\">Thursday</div>\n    <div class=\"col\">Friday</div>\n    <div class=\"col\">Saturday</div>\n  </div>\n  <div class=\"wrapper-weeks\" (click)=\"showModal()\">\n    <div class=\"week\">\n\n      <div class=\"day\">\n        <div><span class=\"time\">30</span></div>\n      </div>\n\n      <div class=\"day training-days test-days\">\n        <div>\n          <span class=\"time\">Jul 31</span>\n          <b>GVT</b>\n          <p>Quads, hamstrings,and calves</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">Aug 1</span></div>\n      </div>\n\n      <div class=\"day training-days test-days\">\n        <div>\n          <span class=\"time\">2</span>\n          <b>GVT</b>\n          <p>Chest, shoulders, and triceps </p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">3</span></div>\n      </div>\n\n      <div class=\"day training-days test-days\">\n        <div>\n          <span class=\"time\">4</span>\n          <b>GVT</b>\n          <p>Back, biceps, and abs</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">5</span></div>\n      </div>\n\n    </div>\n\n    <div class=\"week\">\n\n      <div class=\"day\">\n        <div><span class=\"time\">6</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">7</span>\n          <b>GVT</b>\n          <p>Quads, hamstrings,and calves</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">8</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">9</span>\n          <b>GVT</b>\n          <p>Chest, shoulders, and triceps </p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">10</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">11</span>\n          <b>GVT</b>\n          <p>Back, biceps, and abs</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">12</span></div>\n      </div>\n\n    </div>\n\n    <div class=\"week\">\n\n      <div class=\"day\">\n        <div><span class=\"time\">13</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">14</span>\n          <b>GVT</b>\n          <p>Quads, hamstrings,and calves</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">15</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">16</span>\n          <b>GVT</b>\n          <p>Chest, shoulders, and triceps </p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">17</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">18</span>\n          <b>GVT</b>\n          <p>Back, biceps, and abs</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">19</span></div>\n      </div>\n\n    </div>\n\n    <div class=\"week\">\n\n      <div class=\"day\">\n        <div><span class=\"time\">20</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">21</span>\n          <b>GVT</b>\n          <p>Quads, hamstrings,and calves</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">22</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">23</span>\n          <b>GVT</b>\n          <p>Chest, shoulders, and triceps </p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">24</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">25</span>\n          <b>GVT</b>\n          <p>Back, biceps, and abs</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">26</span></div>\n      </div>\n\n    </div>\n\n    <div class=\"week\">\n\n      <div class=\"day\">\n        <div><span class=\"time\">27</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">28</span>\n          <b>GVT</b>\n          <p>Quads, hamstrings,and calves</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">29</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">30</span>\n          <b>GVT</b>\n          <p>Chest, shoulders, and triceps </p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">Aug 31</span></div>\n      </div>\n\n      <div class=\"day training-days\">\n        <div>\n          <span class=\"time\">Sep 1</span>\n          <b>GVT</b>\n          <p>Back, biceps, and abs</p>\n        </div>\n      </div>\n\n      <div class=\"day\">\n        <div><span class=\"time\">2</span></div>\n      </div>\n\n    </div>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2775,6 +2775,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProgramDesignerTrainingCalendarComponent", function() { return ProgramDesignerTrainingCalendarComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_core_classes_user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/core/classes/user */ "./src/app/core/classes/user.ts");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var _training_day_modal_training_day_modal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./training-day-modal/training-day-modal.component */ "./src/app/profile/components/program-designer/training-day-modal/training-day-modal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2786,10 +2788,18 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
+
 var ProgramDesignerTrainingCalendarComponent = /** @class */ (function () {
-    function ProgramDesignerTrainingCalendarComponent() {
+    function ProgramDesignerTrainingCalendarComponent(modalService) {
+        this.modalService = modalService;
     }
     ProgramDesignerTrainingCalendarComponent.prototype.ngOnInit = function () {
+    };
+    ProgramDesignerTrainingCalendarComponent.prototype.showModal = function () {
+        this.bsModalRef = this.modalService.show(_training_day_modal_training_day_modal_component__WEBPACK_IMPORTED_MODULE_3__["ProgramDesignerTrainingDayModalComponent"], {
+            class: 'modal-lg',
+        });
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -2799,9 +2809,110 @@ var ProgramDesignerTrainingCalendarComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'osg-program-designer-training-calendar',
             template: __webpack_require__(/*! ./training-calendar.component.html */ "./src/app/profile/components/program-designer/training-calendar.component.html")
-        })
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_2__["BsModalService"]])
     ], ProgramDesignerTrainingCalendarComponent);
     return ProgramDesignerTrainingCalendarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/profile/components/program-designer/training-day-modal/training-day-modal.component.html":
+/*!**********************************************************************************************************!*\
+  !*** ./src/app/profile/components/program-designer/training-day-modal/training-day-modal.component.html ***!
+  \**********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-header\">\n    <h4 class=\"modal-title pull-left\">{{title}}Training Program for Mon, 7th August 2018</h4>\n    <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"close()\">\n        <span aria-hidden=\"true\">&times;</span>\n    </button>\n</div>\n<div class=\"modal-body\">\n    <table class=\"table\">\n        <thead>\n            <tr>\n                <th rowspan=\"2\">Exercises</th>\n                <th colspan=\"2\">Volume</th>\n                <th colspan=\"2\">Intensity</th>\n                <th colspan=\"3\"></th>\n            </tr>\n            <tr>\n                <th>Set</th>\n                <th>Reps</th>\n                <th>Reps to failure</th>\n                <th>% of 1 rm</th>\n                <th>Method</th>\n                <th>Rest period <br> (min)</th>\n                <th>Tempo</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr>\n                <td>squats</td>\n                <td>1</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td></td>\n                <td>2</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td>Lunges</td>\n                <td>1</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td></td>\n                <td>2</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td></td>\n                <td>3</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td>Leg Press</td>\n                <td>1</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td></td>\n                <td>2</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td></td>\n                <td>3</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td>Leg Press</td>\n                <td>1</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td></td>\n                <td>2</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td></td>\n                <td>3</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td>Lunges</td>\n                <td>1</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td></td>\n                <td>2</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td></td>\n                <td>3</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td>Lunges</td>\n                <td>1</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td></td>\n                <td>2</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n            <tr>\n                <td></td>\n                <td>3</td>\n                <td>12</td>\n                <td>@ 1</td>\n                <td>60</td>\n                <td>Straight set</td>\n                <td>2</td>\n                <td>3-0-2</td>\n            </tr>\n        </tbody>\n    </table>\n\n</div>\n<!-- <div class=\"modal-footer\">\n    <button type=\"button\" class=\"btn btn-default\" (click)=\"close()\">Cancel</button>\n</div> -->"
+
+/***/ }),
+
+/***/ "./src/app/profile/components/program-designer/training-day-modal/training-day-modal.component.ts":
+/*!********************************************************************************************************!*\
+  !*** ./src/app/profile/components/program-designer/training-day-modal/training-day-modal.component.ts ***!
+  \********************************************************************************************************/
+/*! exports provided: ProgramDesignerTrainingDayModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProgramDesignerTrainingDayModalComponent", function() { return ProgramDesignerTrainingDayModalComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+var ProgramDesignerTrainingDayModalComponent = /** @class */ (function () {
+    function ProgramDesignerTrainingDayModalComponent(bsModalRef) {
+        this.bsModalRef = bsModalRef;
+        this.onClose = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.onComplete = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+    }
+    ProgramDesignerTrainingDayModalComponent.prototype.ngOnInit = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/];
+            });
+        });
+    };
+    ProgramDesignerTrainingDayModalComponent.prototype.close = function () {
+        this.onClose.emit(null);
+        this.bsModalRef.hide();
+    };
+    ProgramDesignerTrainingDayModalComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'osg-program-designer-training-day-modal',
+            template: __webpack_require__(/*! ./training-day-modal.component.html */ "./src/app/profile/components/program-designer/training-day-modal/training-day-modal.component.html"),
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
+    ], ProgramDesignerTrainingDayModalComponent);
+    return ProgramDesignerTrainingDayModalComponent;
 }());
 
 
@@ -3341,29 +3452,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfileModule", function() { return ProfileModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _components_main_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/main.component */ "./src/app/profile/components/main.component.ts");
-/* harmony import */ var _components_personal_trainer_personal_trainer_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/personal-trainer/personal-trainer.component */ "./src/app/profile/components/personal-trainer/personal-trainer.component.ts");
-/* harmony import */ var _components_program_designer_program_designer_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/program-designer/program-designer.component */ "./src/app/profile/components/program-designer/program-designer.component.ts");
-/* harmony import */ var _components_strength_athlete_strength_athlete_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/strength-athlete/strength-athlete.component */ "./src/app/profile/components/strength-athlete/strength-athlete.component.ts");
-/* harmony import */ var _components_personal_trainer_offers_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/personal-trainer/offers.component */ "./src/app/profile/components/personal-trainer/offers.component.ts");
-/* harmony import */ var _components_personal_trainer_experience_bank_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/personal-trainer/experience-bank.component */ "./src/app/profile/components/personal-trainer/experience-bank.component.ts");
-/* harmony import */ var _components_personal_trainer_booking_calendar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/personal-trainer/booking-calendar.component */ "./src/app/profile/components/personal-trainer/booking-calendar.component.ts");
-/* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../core/core.module */ "./src/app/core/core.module.ts");
-/* harmony import */ var _components_profile_profile_cover_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/profile/profile-cover.component */ "./src/app/profile/components/profile/profile-cover.component.ts");
-/* harmony import */ var _components_profile_profile_about_me_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/profile/profile-about-me-component */ "./src/app/profile/components/profile/profile-about-me-component.ts");
-/* harmony import */ var _components_strength_athlete_trophy_wall_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/strength-athlete/trophy-wall.component */ "./src/app/profile/components/strength-athlete/trophy-wall.component.ts");
-/* harmony import */ var _components_strength_athlete_timeline_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/strength-athlete/timeline.component */ "./src/app/profile/components/strength-athlete/timeline.component.ts");
-/* harmony import */ var _components_strength_athlete_performance_table_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/strength-athlete/performance-table.component */ "./src/app/profile/components/strength-athlete/performance-table.component.ts");
-/* harmony import */ var _components_strength_athlete_top_program_designs_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/strength-athlete/top-program-designs.component */ "./src/app/profile/components/strength-athlete/top-program-designs.component.ts");
-/* harmony import */ var _components_strength_athlete_training_calendar_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/strength-athlete/training-calendar.component */ "./src/app/profile/components/strength-athlete/training-calendar.component.ts");
-/* harmony import */ var _components_program_designer_published_programs_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/program-designer/published-programs.component */ "./src/app/profile/components/program-designer/published-programs.component.ts");
-/* harmony import */ var _components_program_designer_program_filter_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/program-designer/program-filter.component */ "./src/app/profile/components/program-designer/program-filter.component.ts");
-/* harmony import */ var _components_program_designer_experience_bank_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/program-designer/experience-bank.component */ "./src/app/profile/components/program-designer/experience-bank.component.ts");
-/* harmony import */ var _components_program_designer_experience_reviews_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/program-designer/experience-reviews.component */ "./src/app/profile/components/program-designer/experience-reviews.component.ts");
-/* harmony import */ var _components_program_designer_program_design_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/program-designer/program-design.component */ "./src/app/profile/components/program-designer/program-design.component.ts");
-/* harmony import */ var _components_program_designer_training_calendar_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/program-designer/training-calendar.component */ "./src/app/profile/components/program-designer/training-calendar.component.ts");
-/* harmony import */ var _components_strength_athlete_trophy_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/strength-athlete/trophy.component */ "./src/app/profile/components/strength-athlete/trophy.component.ts");
-/* harmony import */ var _components_strength_athlete_performance_comparison_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/strength-athlete/performance-comparison.component */ "./src/app/profile/components/strength-athlete/performance-comparison.component.ts");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var _components_main_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/main.component */ "./src/app/profile/components/main.component.ts");
+/* harmony import */ var _components_personal_trainer_personal_trainer_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/personal-trainer/personal-trainer.component */ "./src/app/profile/components/personal-trainer/personal-trainer.component.ts");
+/* harmony import */ var _components_program_designer_program_designer_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/program-designer/program-designer.component */ "./src/app/profile/components/program-designer/program-designer.component.ts");
+/* harmony import */ var _components_strength_athlete_strength_athlete_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/strength-athlete/strength-athlete.component */ "./src/app/profile/components/strength-athlete/strength-athlete.component.ts");
+/* harmony import */ var _components_personal_trainer_offers_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/personal-trainer/offers.component */ "./src/app/profile/components/personal-trainer/offers.component.ts");
+/* harmony import */ var _components_personal_trainer_experience_bank_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/personal-trainer/experience-bank.component */ "./src/app/profile/components/personal-trainer/experience-bank.component.ts");
+/* harmony import */ var _components_personal_trainer_booking_calendar_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/personal-trainer/booking-calendar.component */ "./src/app/profile/components/personal-trainer/booking-calendar.component.ts");
+/* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../core/core.module */ "./src/app/core/core.module.ts");
+/* harmony import */ var _components_profile_profile_cover_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/profile/profile-cover.component */ "./src/app/profile/components/profile/profile-cover.component.ts");
+/* harmony import */ var _components_profile_profile_about_me_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/profile/profile-about-me-component */ "./src/app/profile/components/profile/profile-about-me-component.ts");
+/* harmony import */ var _components_strength_athlete_trophy_wall_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/strength-athlete/trophy-wall.component */ "./src/app/profile/components/strength-athlete/trophy-wall.component.ts");
+/* harmony import */ var _components_strength_athlete_timeline_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/strength-athlete/timeline.component */ "./src/app/profile/components/strength-athlete/timeline.component.ts");
+/* harmony import */ var _components_strength_athlete_performance_table_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/strength-athlete/performance-table.component */ "./src/app/profile/components/strength-athlete/performance-table.component.ts");
+/* harmony import */ var _components_strength_athlete_top_program_designs_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/strength-athlete/top-program-designs.component */ "./src/app/profile/components/strength-athlete/top-program-designs.component.ts");
+/* harmony import */ var _components_strength_athlete_training_calendar_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/strength-athlete/training-calendar.component */ "./src/app/profile/components/strength-athlete/training-calendar.component.ts");
+/* harmony import */ var _components_program_designer_published_programs_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/program-designer/published-programs.component */ "./src/app/profile/components/program-designer/published-programs.component.ts");
+/* harmony import */ var _components_program_designer_program_filter_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/program-designer/program-filter.component */ "./src/app/profile/components/program-designer/program-filter.component.ts");
+/* harmony import */ var _components_program_designer_experience_bank_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/program-designer/experience-bank.component */ "./src/app/profile/components/program-designer/experience-bank.component.ts");
+/* harmony import */ var _components_program_designer_experience_reviews_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/program-designer/experience-reviews.component */ "./src/app/profile/components/program-designer/experience-reviews.component.ts");
+/* harmony import */ var _components_program_designer_program_design_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/program-designer/program-design.component */ "./src/app/profile/components/program-designer/program-design.component.ts");
+/* harmony import */ var _components_program_designer_training_calendar_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/program-designer/training-calendar.component */ "./src/app/profile/components/program-designer/training-calendar.component.ts");
+/* harmony import */ var _components_strength_athlete_trophy_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/strength-athlete/trophy.component */ "./src/app/profile/components/strength-athlete/trophy.component.ts");
+/* harmony import */ var _components_strength_athlete_performance_comparison_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/strength-athlete/performance-comparison.component */ "./src/app/profile/components/strength-athlete/performance-comparison.component.ts");
+/* harmony import */ var _components_program_designer_training_day_modal_training_day_modal_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/program-designer/training-day-modal/training-day-modal.component */ "./src/app/profile/components/program-designer/training-day-modal/training-day-modal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3395,38 +3508,46 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+var modals = [
+    _components_program_designer_training_day_modal_training_day_modal_component__WEBPACK_IMPORTED_MODULE_26__["ProgramDesignerTrainingDayModalComponent"]
+];
 var ProfileModule = /** @class */ (function () {
     function ProfileModule() {
     }
     ProfileModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            entryComponents: modals,
             declarations: [
-                _components_main_component__WEBPACK_IMPORTED_MODULE_2__["ProfileComponent"],
-                _components_profile_profile_cover_component__WEBPACK_IMPORTED_MODULE_10__["ProfileCoverComponent"],
-                _components_profile_profile_about_me_component__WEBPACK_IMPORTED_MODULE_11__["ProfileAboutMeComponent"],
-                _components_personal_trainer_personal_trainer_component__WEBPACK_IMPORTED_MODULE_3__["PersonalTrainerComponent"],
-                _components_personal_trainer_offers_component__WEBPACK_IMPORTED_MODULE_6__["PersonalTrainerOffersComponent"],
-                _components_personal_trainer_experience_bank_component__WEBPACK_IMPORTED_MODULE_7__["PersonalTrainerExperienceBankComponent"],
-                _components_personal_trainer_booking_calendar_component__WEBPACK_IMPORTED_MODULE_8__["PersonalTrainerBookingCalendarComponent"],
-                _components_program_designer_program_designer_component__WEBPACK_IMPORTED_MODULE_4__["ProgramDesignerComponent"],
-                _components_program_designer_published_programs_component__WEBPACK_IMPORTED_MODULE_17__["ProgramDesignerPublishedProgramsComponent"],
-                _components_program_designer_program_filter_component__WEBPACK_IMPORTED_MODULE_18__["ProgramDesignerProgramFilterComponent"],
-                _components_program_designer_experience_bank_component__WEBPACK_IMPORTED_MODULE_19__["ProgramDesignerExperienceBankComponent"],
-                _components_program_designer_experience_reviews_component__WEBPACK_IMPORTED_MODULE_20__["ProgramDesignerExperienceReviewsComponent"],
-                _components_program_designer_program_design_component__WEBPACK_IMPORTED_MODULE_21__["ProgramDesignerProgramDesignComponent"],
-                _components_program_designer_training_calendar_component__WEBPACK_IMPORTED_MODULE_22__["ProgramDesignerTrainingCalendarComponent"],
-                _components_strength_athlete_strength_athlete_component__WEBPACK_IMPORTED_MODULE_5__["StrengthAthleteComponent"],
-                _components_strength_athlete_trophy_wall_component__WEBPACK_IMPORTED_MODULE_12__["StrengthAthleteTrophyWallComponent"],
-                _components_strength_athlete_trophy_component__WEBPACK_IMPORTED_MODULE_23__["StrengthAthleteTrophyComponent"],
-                _components_strength_athlete_timeline_component__WEBPACK_IMPORTED_MODULE_13__["StrengthAthleteTimelineComponent"],
-                _components_strength_athlete_performance_table_component__WEBPACK_IMPORTED_MODULE_14__["StrengthAthletePerformanceTableComponent"],
-                _components_strength_athlete_performance_comparison_component__WEBPACK_IMPORTED_MODULE_24__["StrengthAthletePerformanceComparisonComponent"],
-                _components_strength_athlete_top_program_designs_component__WEBPACK_IMPORTED_MODULE_15__["StrengthAthleteTopProgramDesignsComponent"],
-                _components_strength_athlete_training_calendar_component__WEBPACK_IMPORTED_MODULE_16__["StrengthAthleteTrainingCalendarComponent"]
+                _components_main_component__WEBPACK_IMPORTED_MODULE_3__["ProfileComponent"],
+                _components_profile_profile_cover_component__WEBPACK_IMPORTED_MODULE_11__["ProfileCoverComponent"],
+                _components_profile_profile_about_me_component__WEBPACK_IMPORTED_MODULE_12__["ProfileAboutMeComponent"],
+                _components_personal_trainer_personal_trainer_component__WEBPACK_IMPORTED_MODULE_4__["PersonalTrainerComponent"],
+                _components_personal_trainer_offers_component__WEBPACK_IMPORTED_MODULE_7__["PersonalTrainerOffersComponent"],
+                _components_personal_trainer_experience_bank_component__WEBPACK_IMPORTED_MODULE_8__["PersonalTrainerExperienceBankComponent"],
+                _components_personal_trainer_booking_calendar_component__WEBPACK_IMPORTED_MODULE_9__["PersonalTrainerBookingCalendarComponent"],
+                _components_program_designer_program_designer_component__WEBPACK_IMPORTED_MODULE_5__["ProgramDesignerComponent"],
+                _components_program_designer_published_programs_component__WEBPACK_IMPORTED_MODULE_18__["ProgramDesignerPublishedProgramsComponent"],
+                _components_program_designer_program_filter_component__WEBPACK_IMPORTED_MODULE_19__["ProgramDesignerProgramFilterComponent"],
+                _components_program_designer_experience_bank_component__WEBPACK_IMPORTED_MODULE_20__["ProgramDesignerExperienceBankComponent"],
+                _components_program_designer_experience_reviews_component__WEBPACK_IMPORTED_MODULE_21__["ProgramDesignerExperienceReviewsComponent"],
+                _components_program_designer_program_design_component__WEBPACK_IMPORTED_MODULE_22__["ProgramDesignerProgramDesignComponent"],
+                _components_program_designer_training_calendar_component__WEBPACK_IMPORTED_MODULE_23__["ProgramDesignerTrainingCalendarComponent"],
+                _components_strength_athlete_strength_athlete_component__WEBPACK_IMPORTED_MODULE_6__["StrengthAthleteComponent"],
+                _components_strength_athlete_trophy_wall_component__WEBPACK_IMPORTED_MODULE_13__["StrengthAthleteTrophyWallComponent"],
+                _components_strength_athlete_trophy_component__WEBPACK_IMPORTED_MODULE_24__["StrengthAthleteTrophyComponent"],
+                _components_strength_athlete_timeline_component__WEBPACK_IMPORTED_MODULE_14__["StrengthAthleteTimelineComponent"],
+                _components_strength_athlete_performance_table_component__WEBPACK_IMPORTED_MODULE_15__["StrengthAthletePerformanceTableComponent"],
+                _components_strength_athlete_performance_comparison_component__WEBPACK_IMPORTED_MODULE_25__["StrengthAthletePerformanceComparisonComponent"],
+                _components_strength_athlete_top_program_designs_component__WEBPACK_IMPORTED_MODULE_16__["StrengthAthleteTopProgramDesignsComponent"],
+                _components_strength_athlete_training_calendar_component__WEBPACK_IMPORTED_MODULE_17__["StrengthAthleteTrainingCalendarComponent"],
+                modals
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _core_core_module__WEBPACK_IMPORTED_MODULE_9__["CoreModule"]
+                _core_core_module__WEBPACK_IMPORTED_MODULE_10__["CoreModule"],
+                ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_2__["ModalModule"].forRoot(),
             ],
             exports: [],
             providers: [],
@@ -3709,7 +3830,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Rauxmedia/Documents/fantasylab/projects/php/osg.no/resources/ngx/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/macbookfabi/Sites/fantasylab/osg.no/resources/ngx/src/main.ts */"./src/main.ts");
 
 
 /***/ })

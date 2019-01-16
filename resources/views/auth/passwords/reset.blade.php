@@ -2,13 +2,14 @@
 @section('title', 'Reset Password') 
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card" style="margin: 180px 0;">
-                <div class="card-header">{{ __('Reset Password') }}</div>
-
-                <div class="card-body">
+<div class="reset">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-5">
+                <div class="reset-content">
+                    <h1>
+                        <small>Optimal Strength Gains</small>{{ __('Reset Password') }}
+                    </h1>
                     <form method="POST" action="{{ route('password.update') }}">
                         @csrf
 

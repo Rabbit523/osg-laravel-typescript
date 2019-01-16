@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 import { ProfileComponent } from './components/main.component';
 import { PersonalTrainerComponent } from './components/personal-trainer/personal-trainer.component';
 import { ProgramDesignerComponent } from './components/program-designer/program-designer.component';
@@ -23,9 +26,16 @@ import { ProgramDesignerProgramDesignComponent } from './components/program-desi
 import { ProgramDesignerTrainingCalendarComponent } from './components/program-designer/training-calendar.component';
 import { StrengthAthleteTrophyComponent } from './components/strength-athlete/trophy.component';
 import { StrengthAthletePerformanceComparisonComponent } from './components/strength-athlete/performance-comparison.component';
+import { ProgramDesignerTrainingDayModalComponent } from './components/program-designer/training-day-modal/training-day-modal.component';
 
+
+
+const modals = [
+  ProgramDesignerTrainingDayModalComponent
+];
 
 @NgModule({
+  entryComponents: modals,
   declarations: [
     ProfileComponent,
     ProfileCoverComponent,
@@ -48,11 +58,13 @@ import { StrengthAthletePerformanceComparisonComponent } from './components/stre
     StrengthAthletePerformanceTableComponent,
     StrengthAthletePerformanceComparisonComponent,
     StrengthAthleteTopProgramDesignsComponent,
-    StrengthAthleteTrainingCalendarComponent
+    StrengthAthleteTrainingCalendarComponent,
+    modals
   ],
   imports: [
     BrowserModule,
-    CoreModule
+    CoreModule,
+    ModalModule.forRoot(),
   ],
   exports: [],
   providers: [],

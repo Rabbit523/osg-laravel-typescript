@@ -1,0 +1,77 @@
+.reset {
+    @include section-with-overlay(black);
+    background: url('/images/login-page-bg.png') center no-repeat black;
+    background-size: cover;
+    height: 90vh;
+    display: block;
+    clip-path: ellipse(100% 60% at 50% 40%);
+    -webkit-clip-path: ellipse(100% 60% at 50% 40%);
+    .reset-content {
+        display: block;
+        margin: auto;
+        color: $white;
+
+        h1{
+            font-family: $primary-font;
+            font-size: rem(30);
+            font-weight: bold;
+            text-align: center;
+            margin: 0px;
+            text-transform: uppercase;
+
+            small {
+                display: block;
+                font-size: 50%;
+            }
+        }
+
+        form {
+            .invalid-feedback{
+                color: white;
+            }
+            .form-group {
+                @extend .form-material-design;
+
+                .form-control {
+                    border-radius: 4px;
+                }
+
+                .forgot-password {
+                    position: absolute;
+                    font-weight: 400;
+                    color: $medium-gray;
+                    font-size: rem(16);
+                    top: 13px;
+                    right: 13px;
+                    padding: 0 15px 0 0;
+                    transition: all 200ms;
+                    text-decoration: none;
+                    margin: 0;
+                }
+            }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        .btn {
+            width: 100%;
+            text-transform: uppercase;
+            padding: rem(10) 0;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .sign-up-link {
+            text-align: center;
+            margin-top: rem(15);
+
+            a {
+                color: $green;
+                text-decoration: none;
+            }
+        }
+    }
+}

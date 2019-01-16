@@ -62,8 +62,27 @@ osg-get-started{
     &.secondary{
         .articles-list{
             .article{
-                max-width: 20%;
-                
+                @extend .col-12;
+                @extend .col-md;
+                @include media-breakpoint-down(lg){
+                    &:not(:first-child){
+                        padding-bottom: 60px;
+                        flex: 0 0 25%;
+                        max-width: 25%;
+                    }
+                    &:first-child{
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+                @include media-breakpoint-down(sm){
+                    &:not(:first-child){
+                        padding-bottom: 60px;
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                        border-right: none;
+                    }
+                }
             }
         }
     }

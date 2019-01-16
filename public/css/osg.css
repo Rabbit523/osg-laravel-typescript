@@ -10526,7 +10526,8 @@ a.text-dark:focus {
 .form-material-design,
 body.osg-public .home #get-started form .form-group,
 body.osg-public .register .sign-up-form-wrapper .content-form form .form-group,
-body.osg-public .login .login-content form .form-group {
+body.osg-public .login .login-content form .form-group,
+body.osg-public .reset .reset-content form .form-group {
   position: relative;
   padding: 0px;
 }
@@ -10534,7 +10535,8 @@ body.osg-public .login .login-content form .form-group {
 .form-material-design label,
 body.osg-public .home #get-started form .form-group label,
 body.osg-public .register .sign-up-form-wrapper .content-form form .form-group label,
-body.osg-public .login .login-content form .form-group label {
+body.osg-public .login .login-content form .form-group label,
+body.osg-public .reset .reset-content form .form-group label {
   position: absolute;
   font-weight: 400;
   color: #000;
@@ -10550,7 +10552,8 @@ body.osg-public .login .login-content form .form-group label {
 .form-material-design label.labelfocus,
 body.osg-public .home #get-started form .form-group label.labelfocus,
 body.osg-public .register .sign-up-form-wrapper .content-form form .form-group label.labelfocus,
-body.osg-public .login .login-content form .form-group label.labelfocus {
+body.osg-public .login .login-content form .form-group label.labelfocus,
+body.osg-public .reset .reset-content form .form-group label.labelfocus {
   font-size: 75%;
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0);
@@ -10559,7 +10562,8 @@ body.osg-public .login .login-content form .form-group label.labelfocus {
 .form-material-design .form-control,
 body.osg-public .home #get-started form .form-group .form-control,
 body.osg-public .register .sign-up-form-wrapper .content-form form .form-group .form-control,
-body.osg-public .login .login-content form .form-group .form-control {
+body.osg-public .login .login-content form .form-group .form-control,
+body.osg-public .reset .reset-content form .form-group .form-control {
   padding: 20px 5px 3px 15px;
   border-radius: 0px;
   color: #000;
@@ -10570,7 +10574,8 @@ body.osg-public .login .login-content form .form-group .form-control {
 .form-material-design .form-control:focus,
 body.osg-public .home #get-started form .form-group .form-control:focus,
 body.osg-public .register .sign-up-form-wrapper .content-form form .form-group .form-control:focus,
-body.osg-public .login .login-content form .form-group .form-control:focus {
+body.osg-public .login .login-content form .form-group .form-control:focus,
+body.osg-public .reset .reset-content form .form-group .form-control:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -10578,7 +10583,8 @@ body.osg-public .login .login-content form .form-group .form-control:focus {
 .form-material-design select,
 body.osg-public .home #get-started form .form-group select,
 body.osg-public .register .sign-up-form-wrapper .content-form form .form-group select,
-body.osg-public .login .login-content form .form-group select {
+body.osg-public .login .login-content form .form-group select,
+body.osg-public .reset .reset-content form .form-group select {
   background: #FFF url(/images/arrow-black-select.png) no-repeat 95% center;
   background-size: auto 50%;
   appearance: none;
@@ -10590,7 +10596,8 @@ body.osg-public .login .login-content form .form-group select {
 .form-material-design select + label,
 body.osg-public .home #get-started form .form-group select + label,
 body.osg-public .register .sign-up-form-wrapper .content-form form .form-group select + label,
-body.osg-public .login .login-content form .form-group select + label {
+body.osg-public .login .login-content form .form-group select + label,
+body.osg-public .reset .reset-content form .form-group select + label {
   font-size: 75%;
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0);
@@ -11843,6 +11850,92 @@ body.osg-public .login .login-content .sign-up-link {
 }
 
 body.osg-public .login .login-content .sign-up-link a {
+  color: #4fb100;
+  text-decoration: none;
+}
+
+body.osg-public .reset {
+  position: relative;
+  z-index: 2;
+  background: url("/images/login-page-bg.png") center no-repeat black;
+  background-size: cover;
+  height: 90vh;
+  display: block;
+  clip-path: ellipse(100% 60% at 50% 40%);
+  -webkit-clip-path: ellipse(100% 60% at 50% 40%);
+}
+
+body.osg-public .reset:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+body.osg-public .reset .reset-content {
+  display: block;
+  margin: auto;
+  color: white;
+}
+
+body.osg-public .reset .reset-content h1 {
+  font-family: "Square 721 BT Bold Extended";
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+body.osg-public .reset .reset-content h1 small {
+  display: block;
+  font-size: 50%;
+}
+
+body.osg-public .reset .reset-content form .invalid-feedback {
+  color: white;
+}
+
+body.osg-public .reset .reset-content form .form-group .form-control {
+  border-radius: 4px;
+}
+
+body.osg-public .reset .reset-content form .form-group .forgot-password {
+  position: absolute;
+  font-weight: 400;
+  color: #9a9a9a;
+  font-size: 1rem;
+  top: 13px;
+  right: 13px;
+  padding: 0 15px 0 0;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  text-decoration: none;
+  margin: 0;
+}
+
+body.osg-public .reset .reset-content a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+body.osg-public .reset .reset-content .btn {
+  width: 100%;
+  text-transform: uppercase;
+  padding: 0.625rem 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+body.osg-public .reset .reset-content .sign-up-link {
+  text-align: center;
+  margin-top: 0.9375rem;
+}
+
+body.osg-public .reset .reset-content .sign-up-link a {
   color: #4fb100;
   text-decoration: none;
 }
