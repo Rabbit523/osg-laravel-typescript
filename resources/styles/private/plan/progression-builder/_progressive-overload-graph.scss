@@ -10,6 +10,33 @@ osg-progression-builder-progressive-overload-graph{
         padding-top: 30px;
         margin-top: 20px;
         margin-bottom: 30px;
+
+        .week-types{
+            display: flex;
+            flex-direction: row;
+
+            > div{
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                > div{
+                    width: 80%;
+                    margin: 0 auto;
+                    text-align: center;
+                    span{
+                        display: block;
+                        font-size: 0.75rem;
+                        &:first-child{
+                            color: #838383;
+                        }
+                        &:last-child{
+                            color: black;
+                        }
+                    }
+                }
+                
+            }
+        }
         .conventions {
             display: block;
             text-align: center;

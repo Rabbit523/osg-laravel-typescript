@@ -78,6 +78,35 @@ osg-strength-athlete-trophy-wall {
             .trophy{
                 width: 40px;
             }
+
+            .descriptions{
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 30px;
+                width: 90%;
+                > div{
+                    text-align: center;
+                    span{
+                        display: block;
+                        font-size: 0.75rem;
+                        color: #838383;
+                        &:first-child{
+                            color: $light-blue;
+                        }
+                    }
+                    &:first-child{
+                        width: 25%;
+                    }
+
+                    &:nth-child(2){
+                        width: 50%;
+                    }
+
+                    &:last-child{
+                        width: 25%;
+                    }
+                }
+            }
             .conventions{
                 display: block;
                 margin-bottom: 20px;

@@ -29,10 +29,12 @@ export class PlanBuilderComponent implements OnInit {
   }
 
   next(){
+    window.scroll(0,0);
     this.step = PlanBuilderStep.ProgressionBuilder;
   }
 
   previous(){
+    window.scroll(0,0);
     this.step = PlanBuilderStep.CalendarBuilder;
   }
 

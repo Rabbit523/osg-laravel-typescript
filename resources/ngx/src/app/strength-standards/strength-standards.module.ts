@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { CoreModule } from '../core/core.module';
 
@@ -16,6 +17,7 @@ import { StrengthStandardsExerciseTable } from './components/exercise-table/exer
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     CoreModule
   ],
   providers: [],

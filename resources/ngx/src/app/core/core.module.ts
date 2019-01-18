@@ -9,6 +9,7 @@ import { GetStartedComponent } from './components/get-started/get-started.compon
 import { InformationComponent } from './components/info/info.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { GaugeComponent } from './components/gauge/gauge.component';
+import { SelectComponent } from './components/select/select.component';
 
 
 let components = [
@@ -18,7 +19,8 @@ let components = [
     GetStartedComponent,
     InformationComponent,
     NotificationsComponent,
-    GaugeComponent
+    GaugeComponent,
+    SelectComponent
 ];
 
 @NgModule({

@@ -27,11 +27,13 @@ import { ProgramDesignerTrainingCalendarComponent } from './components/program-d
 import { StrengthAthleteTrophyComponent } from './components/strength-athlete/trophy.component';
 import { StrengthAthletePerformanceComparisonComponent } from './components/strength-athlete/performance-comparison.component';
 import { ProgramDesignerTrainingDayModalComponent } from './components/program-designer/training-day-modal/training-day-modal.component';
+import { PersonalTrainerBookingDetailsModalComponent } from './components/personal-trainer/booking-details-modal/booking-details-modal.component';
 
 
 
 const modals = [
-  ProgramDesignerTrainingDayModalComponent
+  ProgramDesignerTrainingDayModalComponent,
+  PersonalTrainerBookingDetailsModalComponent
 ];
 
 @NgModule({

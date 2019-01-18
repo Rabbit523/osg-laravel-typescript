@@ -34,16 +34,36 @@ export class StrengthAthleteTrophyComponent implements OnInit {
       },
       axis: {
         y: {
-          max: 5
+          max: 5,
+          tick: {
+            outer: true,
+            format: (d): string => {
+              return '';
+            }
+          }
+        },
+        y2: {
+          show: true,
+          tick: {
+            format: (d): string => {
+              console.log(d)
+              let v = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
+              let labels = ['Time', '', 'Untrained', '', 'Novice', '', 'Intermediate', '', 'Advanced', '', 'Elite'];
+              let idx = v.indexOf(d);
+              return labels[idx];
+            }
+          }
         },
         x: {
-          type: 'timeseries',
+          
           tick: {
-            format: '%Y-%m-%d'
+            format: (d): string => {
+              return '';
+            }
           }
         }
       },
-      transition:{
+      transition: {
         duration: 1000
       },
       data: {
@@ -54,15 +74,32 @@ export class StrengthAthleteTrophyComponent implements OnInit {
           data3: '#F3A83B'
         },
         columns: [
-          ['x', '2013-01-01', '2013-01-02', '2013-01-03', '2013-01-06', '2013-01-07', '2013-01-08'],
-          ['data1', 1, 1.2],
-          ['data2', null, null, 1.3, 2.1],
-          ['data3', null, null, null, null, 2.4, 3.3]
+          ['x', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+          ['data1', 1, 1.2, null, null, null, null, null, null, null, null, null],
+          ['data2', null, null, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, null, null],
+          ['data3', null, null, null, null, null, null, null, null, null, 2.1, 2.5]
         ],
         types: {
           data1: 'area',
           data2: 'area',
           data3: 'area'
+        }
+      },
+      grid: {
+        x: {
+          lines: [
+            { value: 1.5, text: '' },
+            { value: 8.5, text: '' }
+          ]
+        },
+        y: {
+          lines: [
+            { value: 1, text: '' },
+            { value: 2, text: '', class: 'label-5' },
+            { value: 3, text: '', position: 'start' },
+            { value: 4, text: '', position: 'start' },
+            { value: 5, text: '', position: 'start' }
+          ]
         }
       }
     });
