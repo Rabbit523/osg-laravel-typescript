@@ -393,6 +393,100 @@ var ApplicationUser = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/components/enter-information/enter-information.component.html":
+/*!************************************************************************************!*\
+  !*** ./src/app/core/components/enter-information/enter-information.component.html ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Enter your information</h2>\n\n<div class=\"row mb-4\">\n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <osg-select label=\"Gender\" [(value)]=\"information.gender\" [options]=\"genderOptions\" (change)=\"onGenderChange()\"></osg-select>\n        </div>\n    </div>\n    \n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <osg-select label=\"Body Weight (kg)\" [(value)]=\"information.bodyWeight\" [options]=\"bodyWeightOptions\"></osg-select>\n        </div>\n    </div>\n    \n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <osg-select label=\"Height\" [(value)]=\"information.height\" [options]=\"heightOptions\"></osg-select>\n        </div>\n    </div>\n</div>\n\n<div class=\"row\">\n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <osg-select label=\"Waist-Hip Ratio\" [(value)]=\"information.waistHipRatio\" [options]=\"waistToHipRatioOptions\"></osg-select>\n        </div>\n    </div>\n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <osg-select label=\"Age (years)\" [(value)]=\"information.years\" [options]=\"ageOptions\"></osg-select>\n        </div>\n    </div>\n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <osg-select label=\"Muscle Fiber Type\" [(value)]=\"information.muscleFiberType\" [options]=\"muscleFiberOptions\"></osg-select>\n        </div>\n    </div>\n</div>\n\n<div class=\"actions\">\n    <div class=\"col-12 col-lg-8\">\n        <div class=\"results\">\n            <h4>Results: </h4>\n            <p>Male<span>x</span></p>\n        </div>\n    </div>\n    <div class=\"col-12 col-lg-3 mt-2 mt-lg-0 text-center text-lg-right\">\n        <a href=\"\" class=\"btn btn-yellow-gradient py-2 btn-block\">DONE</a>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/core/components/enter-information/enter-information.component.ts":
+/*!**********************************************************************************!*\
+  !*** ./src/app/core/components/enter-information/enter-information.component.ts ***!
+  \**********************************************************************************/
+/*! exports provided: EnterInformation */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EnterInformation", function() { return EnterInformation; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var EnterInformation = /** @class */ (function () {
+    function EnterInformation() {
+        this.information = {
+            gender: 'Male'
+        };
+        this.genderOptions = ['Male', 'Female'];
+    }
+    EnterInformation.prototype.onGenderChange = function () {
+        this.bodyWeightOptions = this.getBodyWeightOptions();
+        this.waistToHipRatioOptions = this.getWaistToHipRatioOptions();
+        this.ageOptions = this.getAgeOptions();
+        this.strengthLevelsOptions = this.getStrengthLevelsOptions();
+        this.heightOptions = this.getHeightOptions();
+        this.muscleFiberOptions = this.getMuscleFiberOptions();
+    };
+    EnterInformation.prototype.getBodyWeightOptions = function () {
+        return this.information.gender === 'Male'
+            ? ['0-50', '51-60', '61-70', '71-80', '81-90', '91-100', '101-110', '111-120', '121-160']
+            : ['0-40', '41-50', '51-60', '61-70', '71-80', '81-90', '91-100', '101-110', '111-130'];
+    };
+    EnterInformation.prototype.getWaistToHipRatioOptions = function () {
+        return this.information.gender === 'Male'
+            ? ['0,71-0,80', '0.81-0,90', '0,91-1,00', '1,01-1,10', '1,11-1,20']
+            : ['0,61-0,70', '0,71-0,80', '0.81-0,90', '0,91-1,00', '1,01-1,10'];
+    };
+    EnterInformation.prototype.getAgeOptions = function () {
+        return this.information.gender === 'Male'
+            ? ['0-20', '21-30', '31-40', '41-50', '51-60', '61-80']
+            : ['0-20', '21-30', '31-40', '41-50', '51-60', '61-80'];
+    };
+    EnterInformation.prototype.getStrengthLevelsOptions = function () {
+        return this.information.gender === 'Male'
+            ? ['Untrained', 'Novice', 'Intermediate', 'Advanced', 'Elite']
+            : ['Untrained', 'Novice', 'Intermediate', 'Advanced', 'Elite'];
+    };
+    EnterInformation.prototype.getHeightOptions = function () {
+        return this.information.gender === 'Male'
+            ? ['0-150', '151-160', '161-170', '171-180', '181-190', '191-200', '201-210', '211-220']
+            : ['0-140', '141-150', '151-160', '161-170', '171-180', '181-190', '191-200', '201-210',];
+    };
+    EnterInformation.prototype.getMuscleFiberOptions = function () {
+        return this.information.gender === 'Male'
+            ? ['Slow twitch', 'Fast twitch', 'Fast and slow twitch']
+            : ['Slow twitch', 'Fast twitch', 'Fast and slow twitch'];
+    };
+    EnterInformation.prototype.ngOnInit = function () {
+        this.onGenderChange();
+    };
+    EnterInformation = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'osg-enter-information',
+            template: __webpack_require__(/*! ./enter-information.component.html */ "./src/app/core/components/enter-information/enter-information.component.html")
+        }),
+        __metadata("design:paramtypes", [])
+    ], EnterInformation);
+    return EnterInformation;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/core/components/footer/footer.component.html":
 /*!**************************************************************!*\
   !*** ./src/app/core/components/footer/footer.component.html ***!
@@ -1011,12 +1105,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/notifications/notifications.component */ "./src/app/core/components/notifications/notifications.component.ts");
 /* harmony import */ var _components_gauge_gauge_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/gauge/gauge.component */ "./src/app/core/components/gauge/gauge.component.ts");
 /* harmony import */ var _components_select_select_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/select/select.component */ "./src/app/core/components/select/select.component.ts");
+/* harmony import */ var _components_enter_information_enter_information_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/enter-information/enter-information.component */ "./src/app/core/components/enter-information/enter-information.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1036,7 +1132,8 @@ var components = [
     _components_info_info_component__WEBPACK_IMPORTED_MODULE_7__["InformationComponent"],
     _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_8__["NotificationsComponent"],
     _components_gauge_gauge_component__WEBPACK_IMPORTED_MODULE_9__["GaugeComponent"],
-    _components_select_select_component__WEBPACK_IMPORTED_MODULE_10__["SelectComponent"]
+    _components_select_select_component__WEBPACK_IMPORTED_MODULE_10__["SelectComponent"],
+    _components_enter_information_enter_information_component__WEBPACK_IMPORTED_MODULE_11__["EnterInformation"]
 ];
 var CoreModule = /** @class */ (function () {
     function CoreModule() {
@@ -1293,61 +1390,6 @@ var DashboardModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/experience-bank/components/enter-information/enter-information.component.html":
-/*!***********************************************************************************************!*\
-  !*** ./src/app/experience-bank/components/enter-information/enter-information.component.html ***!
-  \***********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2>Enter your information</h2>\n\n<div class=\"row mb-4\">\n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <div class=\"dropdown black-dropdown with-label\">\n                <label for=\"\">Gender</label>\n                <button class=\"btn dropdown-toggle btn-block\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">Male\n                </button>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton1\">\n                    <a class=\"dropdown-item\" href=\"#\">Male</a>\n                    <a class=\"dropdown-item\" href=\"#\">Female</a>\n                </div>\n            </div>\n        </div>\n    </div>\n    \n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <div class=\"dropdown black-dropdown with-label\">\n                <label for=\"\">Body Weight (kg)</label>\n                <button class=\"btn dropdown-toggle btn-block\" type=\"button\" id=\"dropdownMenuButton2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">0-50\n                </button>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton2\">\n                    <a class=\"dropdown-item\" href=\"#\">0-50</a>\n                    <a class=\"dropdown-item\" href=\"#\">51-60</a>\n                    <a class=\"dropdown-item\" href=\"#\">61-70</a>\n                    <a class=\"dropdown-item\" href=\"#\">71-80</a>\n                    <a class=\"dropdown-item\" href=\"#\">81-90</a>\n                    <a class=\"dropdown-item\" href=\"#\">91-100</a>\n                    <a class=\"dropdown-item\" href=\"#\">101-110</a>\n                    <a class=\"dropdown-item\" href=\"#\">111-120</a>\n                    <a class=\"dropdown-item\" href=\"#\">121-160</a>\n                </div>\n            </div>\n        </div>\n    </div>\n    \n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <div class=\"dropdown black-dropdown with-label\">\n                <label for=\"\">Height</label>\n                <button class=\"btn dropdown-toggle btn-block\" type=\"button\" id=\"dropdownMenuButton3\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">0-150\n                </button>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton3\">\n                    <a class=\"dropdown-item\" href=\"#\">0-150 </a>\n                    <a class=\"dropdown-item\" href=\"#\">151-160</a>\n                    <a class=\"dropdown-item\" href=\"#\">161-170</a>\n                    <a class=\"dropdown-item\" href=\"#\">171-180</a>\n                    <a class=\"dropdown-item\" href=\"#\">181-190</a>\n                    <a class=\"dropdown-item\" href=\"#\">191-200</a>\n                    <a class=\"dropdown-item\" href=\"#\">201-210</a>\n                    <a class=\"dropdown-item\" href=\"#\">211-220</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"row\">\n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <div class=\"dropdown black-dropdown with-label\">\n                <label for=\"\">Waist-Hip Ratio</label>\n                <button class=\"btn dropdown-toggle btn-block\" type=\"button\" id=\"dropdownMenuButton4\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">0,71-0,80</button>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton4\">\n                    <a class=\"dropdown-item\" href=\"#\">0,71-0,80</a>\n                    <a class=\"dropdown-item\" href=\"#\">0.81-0,90</a>\n                    <a class=\"dropdown-item\" href=\"#\">0,91-1,00</a>\n                    <a class=\"dropdown-item\" href=\"#\">1,01-1,10</a>\n                    <a class=\"dropdown-item\" href=\"#\">1,11-1,20</a>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <div class=\"dropdown black-dropdown with-label\">\n                <label for=\"\">Age (years)</label>\n                <button class=\"btn dropdown-toggle btn-block\" type=\"button\" id=\"dropdownMenuButton5\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">0-20</button>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton5\">\n                    <a class=\"dropdown-item\" href=\"#\">0-20</a>\n                    <a class=\"dropdown-item\" href=\"#\">21-30</a>\n                    <a class=\"dropdown-item\" href=\"#\">31-40</a>\n                    <a class=\"dropdown-item\" href=\"#\">41-50</a>\n                    <a class=\"dropdown-item\" href=\"#\">51-60</a>\n                    <a class=\"dropdown-item\" href=\"#\">61-80</a>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <div class=\"dropdown black-dropdown with-label\">\n                <label for=\"\">Muscle Fiber Type</label>\n                <button class=\"btn dropdown-toggle btn-block\" type=\"button\" id=\"dropdownMenuButton6\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">0-20</button>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton6\">\n                    <a class=\"dropdown-item\" href=\"#\">Slow twitch</a>\n                    <a class=\"dropdown-item\" href=\"#\">Fast twitch</a>\n                    <a class=\"dropdown-item\" href=\"#\">Fast and slow twitch</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"actions\">\n    <div class=\"col-12 col-lg-8\">\n        <div class=\"results\">\n            <h4>Results: </h4>\n            <p>Male<span>x</span></p>\n        </div>\n    </div>\n    <div class=\"col-12 col-lg-3 mt-2 mt-lg-0 text-center text-lg-right\">\n        <a href=\"\" class=\"btn btn-yellow-gradient py-2 btn-block\">DONE</a>\n    </div>\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/experience-bank/components/enter-information/enter-information.component.ts":
-/*!*********************************************************************************************!*\
-  !*** ./src/app/experience-bank/components/enter-information/enter-information.component.ts ***!
-  \*********************************************************************************************/
-/*! exports provided: ExperienceBankEnterInformation */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExperienceBankEnterInformation", function() { return ExperienceBankEnterInformation; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ExperienceBankEnterInformation = /** @class */ (function () {
-    function ExperienceBankEnterInformation() {
-        this.title = '';
-    }
-    ExperienceBankEnterInformation.prototype.ngOnInit = function () {
-    };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", String)
-    ], ExperienceBankEnterInformation.prototype, "title", void 0);
-    ExperienceBankEnterInformation = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'osg-experience-bank-enter-information',
-            template: __webpack_require__(/*! ./enter-information.component.html */ "./src/app/experience-bank/components/enter-information/enter-information.component.html")
-        })
-    ], ExperienceBankEnterInformation);
-    return ExperienceBankEnterInformation;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/experience-bank/components/main.component.html":
 /*!****************************************************************!*\
   !*** ./src/app/experience-bank/components/main.component.html ***!
@@ -1355,7 +1397,7 @@ var ExperienceBankEnterInformation = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <div class=\"main-title\">\n        <h1>EXPERIENCE BANK</h1>\n        <span>SEARCH: TOP 3 PROGRAMS</span>\n    </div>\n    <osg-experience-bank-enter-information></osg-experience-bank-enter-information>\n    <osg-experience-bank-muscle-group-table></osg-experience-bank-muscle-group-table>\n</div>"
+module.exports = "<div class=\"container\">\n    <div class=\"main-title\">\n        <h1>EXPERIENCE BANK</h1>\n        <span>SEARCH: TOP 3 PROGRAMS</span>\n    </div>\n    <osg-enter-information></osg-enter-information>\n    <osg-experience-bank-muscle-group-table></osg-experience-bank-muscle-group-table>\n</div>"
 
 /***/ }),
 
@@ -1464,15 +1506,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/core.module */ "./src/app/core/core.module.ts");
 /* harmony import */ var _components_main_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/main.component */ "./src/app/experience-bank/components/main.component.ts");
-/* harmony import */ var _components_enter_information_enter_information_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/enter-information/enter-information.component */ "./src/app/experience-bank/components/enter-information/enter-information.component.ts");
-/* harmony import */ var _components_muscle_group_muscle_group_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/muscle-group/muscle-group-table.component */ "./src/app/experience-bank/components/muscle-group/muscle-group-table.component.ts");
+/* harmony import */ var _components_muscle_group_muscle_group_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/muscle-group/muscle-group-table.component */ "./src/app/experience-bank/components/muscle-group/muscle-group-table.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -1485,8 +1525,7 @@ var ExperienceBankModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
                 _components_main_component__WEBPACK_IMPORTED_MODULE_3__["ExperienceBankComponent"],
-                _components_enter_information_enter_information_component__WEBPACK_IMPORTED_MODULE_4__["ExperienceBankEnterInformation"],
-                _components_muscle_group_muscle_group_table_component__WEBPACK_IMPORTED_MODULE_5__["ExperienceBankMuscleGroupTable"]
+                _components_muscle_group_muscle_group_table_component__WEBPACK_IMPORTED_MODULE_4__["ExperienceBankMuscleGroupTable"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -1877,7 +1916,7 @@ var ProgressionBuilderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Program design:</h2>\n\n<div class=\"table-program-design\">\n  <div class=\"table-responsive\">\n    <table class=\"table\">\n      <tbody>\n        <tr>\n          <td rowspan=\"2\">Muscle Group</td>\n          <td rowspan=\"2\">Test Exercise</td>\n          <td rowspan=\"2\">Type of exercise Level 1</td>\n          <td rowspan=\"2\">Exercises Level 2</td>\n          <td colspan=\"2\" class=\"blue\">Volume</td>\n          <td colspan=\"2\" class=\"red\">Intensity</td>\n          <td rowspan=\"2\" class=\"green\">Frequency (muscle group per week)</td>\n          <td rowspan=\"2\">Progression model</td>\n          <td rowspan=\"2\">Rest periods (min-max)</td>\n          <td rowspan=\"2\">Tempo (all)</td>\n        </tr>\n        <tr>\n          <td class=\"blue\">Reps (min-max)</td>\n          <td class=\"blue\">Volume pr week (setxreps)</td>\n          <td class=\"red\">% of 1RM (min-max)</td>\n          <td class=\"red\">Reps to failure (min-max)</td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Chest</td>\n          <td rowspan=\"2\">Bench Press</td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Back</td>\n          <td rowspan=\"2\">Deadlift</td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Quads</td>\n          <td rowspan=\"2\">Squat</td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Shoulders</td>\n          <td rowspan=\"2\"></td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Hamstrings</td>\n          <td rowspan=\"2\"></td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Calves</td>\n          <td rowspan=\"2\"></td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Triceps</td>\n          <td rowspan=\"2\"></td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Biceps</td>\n          <td rowspan=\"2\"></td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td class=\"green\"></td>\n          <td></td>\n          <td></td>\n          <td></td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n"
+module.exports = "<h2>Program design:</h2>\n\n<div class=\"table-program-design\">\n  <div class=\"table-responsive\">\n    <table class=\"table\">\n      <thead>\n          <tr>\n            <th rowspan=\"2\">Muscle Group</th>\n            <th rowspan=\"2\">Test Exercise</th>\n            <th rowspan=\"2\">Type of exercise Level 1</th>\n            <th rowspan=\"2\">Exercises Level 2</th>\n            <th colspan=\"2\" class=\"blue\">Volume</th>\n            <th colspan=\"2\" class=\"red\">Intensity</th>\n            <th rowspan=\"2\" class=\"green\">Frequency (muscle group per week)</th>\n            <th rowspan=\"2\">Progression model</th>\n            <th rowspan=\"2\">Rest periods (min-max)</th>\n            <th rowspan=\"2\">Tempo (all)</th>\n          </tr>\n          <tr>\n            <th class=\"blue\">Reps (min-max)</th>\n            <th class=\"blue\">Volume pr week (setxreps)</th>\n            <th class=\"red\">% of 1RM (min-max)</th>\n            <th class=\"red\">Reps to failure (min-max)</th>\n          </tr>\n          <!--  -->\n      </thead>\n      <tbody>\n        <tr>\n          <td rowspan=\"2\">Chest</td>\n          <td rowspan=\"2\">Bench Press</td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td rowspan=\"2\" class=\"green\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Back</td>\n          <td rowspan=\"2\">Deadlift</td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td rowspan=\"2\" class=\"green\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Quads</td>\n          <td rowspan=\"2\">Squat</td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td rowspan=\"2\" class=\"green\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Shoulders</td>\n          <td rowspan=\"2\"></td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td rowspan=\"2\" class=\"green\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Hamstrings</td>\n          <td rowspan=\"2\"></td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td rowspan=\"2\" class=\"green\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Calves</td>\n          <td rowspan=\"2\"></td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td rowspan=\"2\" class=\"green\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Triceps</td>\n          <td rowspan=\"2\"></td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td rowspan=\"2\" class=\"green\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n        </tr>\n        <!--  -->\n        <tr>\n          <td rowspan=\"2\">Biceps</td>\n          <td rowspan=\"2\"></td>\n          <td>Multi joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n          <td rowspan=\"2\" class=\"green\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n          <td rowspan=\"2\"></td>\n        </tr>\n        <tr>\n          <td>Single joint exercises</td>\n          <td></td>\n          <td class=\"blue\"></td>\n          <td class=\"blue\"></td>\n          <td class=\"red\"></td>\n          <td class=\"red\"></td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2026,11 +2065,8 @@ var ProgressionBuilderProgressiveOverloadGraphComponent = /** @class */ (functio
                 x: {
                     type: 'timeseries',
                     tick: {
-                        //count: 50,
+                        culling: false,
                         rotate: 90,
-                        multiline: false,
-                        //values: 
-                        //fit: true,
                         format: function (x) {
                             var s = x.getFullYear() + "-01-01";
                             var v = ['2000-01-01', '2001-01-01', '2002-01-01', '2003-01-01', '2004-01-01', '2005-01-01', '2006-01-01', '2007-01-01', '2008-01-01', '2009-01-01', '2010-01-01', '2011-01-01', '2012-01-01', '2013-01-01', '2014-01-01', '2015-01-01', '2016-01-01', '2017-01-01', '2018-01-01', '2019-01-01', '2020-01-01', '2021-01-01', '2022-01-01', '2023-01-01', '2024-01-01', '2025-01-01', '2026-01-01', '2027-01-01', '2028-01-01', '2029-01-01', '2030-01-01', '2031-01-01', '2032-01-01', '2033-01-01', '2034-01-01'];
@@ -2039,7 +2075,7 @@ var ProgressionBuilderProgressiveOverloadGraphComponent = /** @class */ (functio
                             return l[idx];
                         },
                     },
-                    height: 40
+                    height: 50
                 },
                 y: {
                     min: 0,
@@ -2644,7 +2680,7 @@ var PersonalTrainerOffersComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n    <osg-profile-about-me profile=\"Personal Trainer\" [text]=\"about\"></osg-profile-about-me>\n    <osg-news-feed></osg-news-feed>\n</div>\n<div>\n    <osg-personal-trainer-offers></osg-personal-trainer-offers>\n    <osg-personal-trainer-experience-bank></osg-personal-trainer-experience-bank>\n    <osg-personal-trainer-booking-calendar></osg-personal-trainer-booking-calendar>\n    <osg-get-started [sections]=\"getStartedSections\"></osg-get-started>\n</div>"
+module.exports = "<div>\n    <osg-profile-about-me profile=\"Personal Trainer\" [text]=\"about\" education=\"Norges idrettshøyskole\" specialities=\"Sport performance\" experience=\"10 Years\" country=\"Oslo, Norway\" location=\"Elixia Kalbakken\"></osg-profile-about-me>\n    <osg-news-feed></osg-news-feed>\n</div>\n<div>\n    <osg-personal-trainer-offers></osg-personal-trainer-offers>\n    <osg-personal-trainer-experience-bank></osg-personal-trainer-experience-bank>\n    <osg-personal-trainer-booking-calendar></osg-personal-trainer-booking-calendar>\n    <osg-get-started [sections]=\"getStartedSections\"></osg-get-started>\n</div>"
 
 /***/ }),
 
@@ -2719,8 +2755,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var ProfileAboutMeComponent = /** @class */ (function () {
     function ProfileAboutMeComponent() {
         this.text = '';
-        this.interests = 'Norges idrettshöyskole';
-        this.experience = 'Sport performance';
+        this.interests = '';
+        this.education = '';
+        this.specialities = '';
+        this.experience = '';
+        this.country = '';
+        this.location = '';
         this.profile = '';
     }
     __decorate([
@@ -2734,7 +2774,23 @@ var ProfileAboutMeComponent = /** @class */ (function () {
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", String)
+    ], ProfileAboutMeComponent.prototype, "education", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], ProfileAboutMeComponent.prototype, "specialities", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
     ], ProfileAboutMeComponent.prototype, "experience", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], ProfileAboutMeComponent.prototype, "country", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], ProfileAboutMeComponent.prototype, "location", void 0);
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", String)
@@ -2759,7 +2815,7 @@ var ProfileAboutMeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row mb-2 align-items-center\">\n    <div class=\"col text-left\"><h3>about me</h3></div>\n    <div class=\"col text-right\"><a href=\"\" class=\"edit\"><img src=\"/assets/images/icons/icon-pencil.svg\" class=\"img-fluid\" alt=\"\"></a></div>\n</div>\n<div class=\"about-me-container\">\n    <p>{{text}}</p>\n    <div class=\"summary\">\n        <div class=\"entry\"><span> <img src=\"/assets/images/icons/icon-star.png\" class=\"img-fluid d-inline-block\" alt=\"\"> Interests:</span><span>{{interests}}</span></div>\n        <div class=\"entry\"><span><img src=\"/assets/images/icons/icon-calendar.png\" class=\"img-fluid d-inline-block\" alt=\"\"> Experience:</span><span>{{experience}}</span></div>\n        <div class=\"entry\"><span><img src=\"/assets/images/icons/icon-world.png\" class=\"img-fluid d-inline-block\" alt=\"\"> Country:</span><span>Oslo, Norway</span></div>\n        <div class=\"entry\"><span><img src=\"/assets/images/icons/icon-profile.png\" class=\"img-fluid d-inline-block\" alt=\"\"> Profile:</span><span>{{profile}}</span></div>\n    </div>\n    <button class=\"btn btn-black btn-block text-uppercase py-2\"> <img src=\"/assets/images/icons/icon-go-to.svg\" class=\"d-inline-block img-fluid\" alt=\"\"> Contact me</button>\n</div>"
+module.exports = "<div class=\"row mb-2 align-items-center\">\n    <div class=\"col text-left\"><h3>about me</h3></div>\n    <div class=\"col text-right\"><a href=\"\" class=\"edit\"><img src=\"/assets/images/icons/icon-pencil.svg\" class=\"img-fluid\" alt=\"\"></a></div>\n</div>\n<div class=\"about-me-container\">\n    <p>{{text}}</p>\n    <div class=\"summary\">\n        <div *ngIf=\"interests\" class=\"entry\"><span> <img src=\"/assets/images/icons/icon-star.png\" class=\"img-fluid d-inline-block\" alt=\"\"> Interests:</span><span>{{interests}}</span></div>\n\n        <div *ngIf=\"education\" class=\"entry\"><span><img src=\"/assets/images/icons/icon-education.png\" class=\"img-fluid d-inline-block\" alt=\"\"> Education:</span><span>{{education}}</span></div>\n\n        <div *ngIf=\"specialities\" class=\"entry\"><span><img src=\"/assets/images/icons/icon-star.png\" class=\"img-fluid d-inline-block\" alt=\"\"> Specialities:</span><span>{{specialities}}</span></div>\n        \n        <div *ngIf=\"experience\" class=\"entry\"><span><img src=\"/assets/images/icons/icon-calendar.png\" class=\"img-fluid d-inline-block\" alt=\"\"> Experience:</span><span>{{experience}}</span></div>\n\n        <div *ngIf=\"country\" class=\"entry\"><span><img src=\"/assets/images/icons/icon-world.png\" class=\"img-fluid d-inline-block\" alt=\"\"> Country:</span><span>{{country}}</span></div>\n\n        <div *ngIf=\"location\" class=\"entry\"><span><img src=\"/assets/images/icons/icon-pin-map.png\" class=\"img-fluid d-inline-block\" alt=\"\"> Location:</span><span>{{location}}</span></div>\n\n        <div *ngIf=\"profile\" class=\"entry\"><span><img src=\"/assets/images/icons/icon-profile.png\" class=\"img-fluid d-inline-block\" alt=\"\"> Profile:</span><span>{{profile}}</span></div>\n    </div>\n    <button class=\"btn btn-black btn-block text-uppercase py-2\"> <img src=\"/assets/images/icons/icon-go-to.svg\" class=\"d-inline-block img-fluid\" alt=\"\"> Contact me</button>\n</div>"
 
 /***/ }),
 
@@ -2999,7 +3055,7 @@ var ProgramDesignerProgramDesignComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n    <osg-profile-about-me profile=\"Program Designer\" [text]=\"about\"></osg-profile-about-me>\n    <osg-news-feed></osg-news-feed>\n</div>\n<div>\n    <osg-program-designer-published-programs></osg-program-designer-published-programs>\n    <osg-program-designer-program-filter></osg-program-designer-program-filter>\n    <osg-program-designer-experience-bank></osg-program-designer-experience-bank>\n    <osg-program-designer-experience-reviews></osg-program-designer-experience-reviews>\n    <osg-program-designer-program-design></osg-program-designer-program-design>\n    <osg-program-designer-training-calendar></osg-program-designer-training-calendar>\n    <osg-get-started view=\"secondary\" [sections]=\"getStartedSections\"></osg-get-started>\n</div>"
+module.exports = "<div>\n    <osg-profile-about-me profile=\"Program Designer\" [text]=\"about\" education=\"Norges idrettshøyskole\" specialities=\"Sport performance\" experience=\"10 Years\" country=\"Oslo, Norway\" ></osg-profile-about-me>\n    <osg-news-feed></osg-news-feed>\n</div>\n<div>\n    <osg-program-designer-published-programs></osg-program-designer-published-programs>\n    <osg-program-designer-program-filter></osg-program-designer-program-filter>\n    <osg-program-designer-experience-bank></osg-program-designer-experience-bank>\n    <osg-program-designer-experience-reviews></osg-program-designer-experience-reviews>\n    <osg-program-designer-program-design></osg-program-designer-program-design>\n    <osg-program-designer-training-calendar></osg-program-designer-training-calendar>\n    <osg-get-started view=\"secondary\" [sections]=\"getStartedSections\"></osg-get-started>\n</div>"
 
 /***/ }),
 
@@ -3448,7 +3504,7 @@ var StrengthAthletePerformanceTableComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n    <osg-profile-about-me profile=\"Strength Athlete\" experience=\"11 years\" interests=\"Hypertrophy and power lifting\" [text]=\"about\"></osg-profile-about-me>\n    <osg-news-feed></osg-news-feed>\n</div>\n<div>\n    <osg-strength-athlete-trophy-wall></osg-strength-athlete-trophy-wall>\n    <osg-strength-athlete-timeline></osg-strength-athlete-timeline>\n    <osg-strength-athlete-performance-table></osg-strength-athlete-performance-table>\n    <osg-strength-athlete-top-program-designs></osg-strength-athlete-top-program-designs>\n    <osg-strength-athlete-training-calendar></osg-strength-athlete-training-calendar>\n    <osg-get-started view=\"tertiary\" [sections]=\"getStartedSections\"></osg-get-started>\n</div>"
+module.exports = "<div>\n    <osg-profile-about-me profile=\"Strength Athlete\" experience=\"11 years\" interests=\"Hypertrophy and power lifting\" [text]=\"about\" country=\"Bergen, Norway\" ></osg-profile-about-me>\n    <osg-news-feed></osg-news-feed>\n</div>\n<div>\n    <osg-strength-athlete-trophy-wall></osg-strength-athlete-trophy-wall>\n    <osg-strength-athlete-timeline></osg-strength-athlete-timeline>\n    <osg-strength-athlete-performance-table></osg-strength-athlete-performance-table>\n    <osg-strength-athlete-top-program-designs></osg-strength-athlete-top-program-designs>\n    <osg-strength-athlete-training-calendar></osg-strength-athlete-training-calendar>\n    <osg-get-started view=\"tertiary\" [sections]=\"getStartedSections\"></osg-get-started>\n</div>"
 
 /***/ }),
 
@@ -3773,6 +3829,7 @@ var StrengthAthleteTrophyComponent = /** @class */ (function () {
     StrengthAthleteTrophyComponent.prototype.ngOnInit = function () {
     };
     StrengthAthleteTrophyComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
         var chart = c3__WEBPACK_IMPORTED_MODULE_2__["generate"]({
             bindto: "#" + this.performanceGraphId,
             size: {
@@ -3789,13 +3846,16 @@ var StrengthAthleteTrophyComponent = /** @class */ (function () {
                         format: function (d) {
                             return '';
                         }
+                    },
+                    label: {
+                        text: 'Kg',
+                        position: 'outer-top',
                     }
                 },
                 y2: {
                     show: true,
                     tick: {
                         format: function (d) {
-                            console.log(d);
                             var v = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
                             var labels = ['Time', '', 'Untrained', '', 'Novice', '', 'Intermediate', '', 'Advanced', '', 'Elite'];
                             var idx = v.indexOf(d);
@@ -3849,6 +3909,27 @@ var StrengthAthleteTrophyComponent = /** @class */ (function () {
                         { value: 5, text: '', position: 'start' }
                     ]
                 }
+            },
+            onrendered: function () {
+                var $lines = $("#" + _this.performanceGraphId + " .c3-chart-lines .c3-chart-line");
+                $.each($lines, function (i, el) {
+                    var $circles = $(el).find('.c3-circles .c3-circle').filter(function (i, c) { return $(c).css('opacity') === "1"; });
+                    if ($circles.length) {
+                        var $first = $($circles[0]), $last = $($circles[$circles.length - 1]), $firstExtra = void 0, $lastExtra = void 0;
+                        $first.addClass('pretest');
+                        $last.addClass('posttest');
+                        $firstExtra = $first.clone();
+                        $lastExtra = $last.clone();
+                        $firstExtra.addClass('extra');
+                        $lastExtra.addClass('extra');
+                        $first.attr('r', 8);
+                        $last.attr('r', 8);
+                        $firstExtra.attr('r', 4);
+                        $lastExtra.attr('r', 4);
+                        $firstExtra.appendTo($(el).find('.c3-circles'));
+                        $lastExtra.appendTo($(el).find('.c3-circles'));
+                    }
+                });
             }
         });
     };
@@ -4010,105 +4091,6 @@ var ProfileModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/strength-standards/components/enter-information/enter-information.component.html":
-/*!**************************************************************************************************!*\
-  !*** ./src/app/strength-standards/components/enter-information/enter-information.component.html ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2>Enter your information</h2>\n\n<div class=\"row mb-4\">\n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <osg-select label=\"Gender\" [(value)]=\"information.gender\" [options]=\"genderOptions\" (change)=\"onGenderChange()\"></osg-select>\n        </div>\n    </div>\n    \n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <osg-select label=\"Body Weight (kg)\" [(value)]=\"information.bodyWeight\" [options]=\"bodyWeightOptions\"></osg-select>\n        </div>\n    </div>\n    \n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <osg-select label=\"Height\" [(value)]=\"information.height\" [options]=\"heightOptions\"></osg-select>\n        </div>\n    </div>\n</div>\n\n<div class=\"row\">\n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <osg-select label=\"Waist-Hip Ratio\" [(value)]=\"information.waistHipRatio\" [options]=\"waistToHipRatioOptions\"></osg-select>\n        </div>\n    </div>\n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <osg-select label=\"Age (years)\" [(value)]=\"information.years\" [options]=\"ageOptions\"></osg-select>\n        </div>\n    </div>\n    <div class=\"col-12 col-sm-6 col-md-4\">\n        <div class=\"checbox-dropdown\">\n            <div class=\"checkbox custom-checkbox\">\n                <label>\n                    <input type=\"checkbox\" value=\"\">\n                    <span class=\"checkmark\"></span>\n                </label>\n            </div>\n            <osg-select label=\"Muscle Fiber Type\" [(value)]=\"information.muscleFiberType\" [options]=\"muscleFiberOptions\"></osg-select>\n        </div>\n    </div>\n</div>\n\n<div class=\"actions\">\n    <div class=\"col-12 col-lg-8\">\n        <div class=\"results\">\n            <h4>Results: </h4>\n            <p>Male<span>x</span></p>\n        </div>\n    </div>\n    <div class=\"col-12 col-lg-3 mt-2 mt-lg-0 text-center text-lg-right\">\n        <a href=\"\" class=\"btn btn-yellow-gradient py-2 btn-block\">DONE</a>\n    </div>\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/strength-standards/components/enter-information/enter-information.component.ts":
-/*!************************************************************************************************!*\
-  !*** ./src/app/strength-standards/components/enter-information/enter-information.component.ts ***!
-  \************************************************************************************************/
-/*! exports provided: StrengthStandardsEnterInformation */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StrengthStandardsEnterInformation", function() { return StrengthStandardsEnterInformation; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var StrengthStandardsEnterInformation = /** @class */ (function () {
-    function StrengthStandardsEnterInformation() {
-        this.title = '';
-        this.information = {
-            gender: 'Male'
-        };
-        this.genderOptions = ['Male', 'Female'];
-    }
-    StrengthStandardsEnterInformation.prototype.onGenderChange = function () {
-        this.bodyWeightOptions = this.getBodyWeightOptions();
-        this.waistToHipRatioOptions = this.getWaistToHipRatioOptions();
-        this.ageOptions = this.getAgeOptions();
-        this.strengthLevelsOptions = this.getStrengthLevelsOptions();
-        this.heightOptions = this.getHeightOptions();
-        this.muscleFiberOptions = this.getMuscleFiberOptions();
-    };
-    StrengthStandardsEnterInformation.prototype.getBodyWeightOptions = function () {
-        return this.information.gender === 'Male'
-            ? ['0-50', '51-60', '61-70', '71-80', '81-90', '91-100', '101-110', '111-120', '121-160']
-            : ['0-40', '41-50', '51-60', '61-70', '71-80', '81-90', '91-100', '101-110', '111-130'];
-    };
-    StrengthStandardsEnterInformation.prototype.getWaistToHipRatioOptions = function () {
-        return this.information.gender === 'Male'
-            ? ['0,71-0,80', '0.81-0,90', '0,91-1,00', '1,01-1,10', '1,11-1,20']
-            : ['0,61-0,70', '0,71-0,80', '0.81-0,90', '0,91-1,00', '1,01-1,10'];
-    };
-    StrengthStandardsEnterInformation.prototype.getAgeOptions = function () {
-        return this.information.gender === 'Male'
-            ? ['0-20', '21-30', '31-40', '41-50', '51-60', '61-80']
-            : ['0-20', '21-30', '31-40', '41-50', '51-60', '61-80'];
-    };
-    StrengthStandardsEnterInformation.prototype.getStrengthLevelsOptions = function () {
-        return this.information.gender === 'Male'
-            ? ['Untrained', 'Novice', 'Intermediate', 'Advanced', 'Elite']
-            : ['Untrained', 'Novice', 'Intermediate', 'Advanced', 'Elite'];
-    };
-    StrengthStandardsEnterInformation.prototype.getHeightOptions = function () {
-        return this.information.gender === 'Male'
-            ? ['0-150', '151-160', '161-170', '171-180', '181-190', '191-200', '201-210', '211-220']
-            : ['0-140', '141-150', '151-160', '161-170', '171-180', '181-190', '191-200', '201-210',];
-    };
-    StrengthStandardsEnterInformation.prototype.getMuscleFiberOptions = function () {
-        return this.information.gender === 'Male'
-            ? ['Slow twitch', 'Fast twitch', 'Fast and slow twitch']
-            : ['Slow twitch', 'Fast twitch', 'Fast and slow twitch'];
-    };
-    StrengthStandardsEnterInformation.prototype.ngOnInit = function () {
-        this.onGenderChange();
-    };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", String)
-    ], StrengthStandardsEnterInformation.prototype, "title", void 0);
-    StrengthStandardsEnterInformation = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'osg-strength-standards-enter-information',
-            template: __webpack_require__(/*! ./enter-information.component.html */ "./src/app/strength-standards/components/enter-information/enter-information.component.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], StrengthStandardsEnterInformation);
-    return StrengthStandardsEnterInformation;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/strength-standards/components/exercise-table/exercise-table.component.html":
 /*!********************************************************************************************!*\
   !*** ./src/app/strength-standards/components/exercise-table/exercise-table.component.html ***!
@@ -4171,7 +4153,7 @@ var StrengthStandardsExerciseTable = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <div class=\"main-title\">\n        <h1>STRENGTH STANDARDS</h1>\n        <span>HOW STRONG ARE YOU?</span>\n    </div>\n    <osg-strength-standards-enter-information></osg-strength-standards-enter-information>\n    <osg-strength-standards-exercise-table></osg-strength-standards-exercise-table>\n</div>"
+module.exports = "<div class=\"container\">\n    <div class=\"main-title\">\n        <h1>STRENGTH STANDARDS</h1>\n        <span>HOW STRONG ARE YOU?</span>\n    </div>\n    <osg-enter-information></osg-enter-information>\n    <osg-strength-standards-exercise-table></osg-strength-standards-exercise-table>\n</div>"
 
 /***/ }),
 
@@ -4226,15 +4208,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/core.module */ "./src/app/core/core.module.ts");
 /* harmony import */ var _components_main_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/main.component */ "./src/app/strength-standards/components/main.component.ts");
-/* harmony import */ var _components_enter_information_enter_information_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/enter-information/enter-information.component */ "./src/app/strength-standards/components/enter-information/enter-information.component.ts");
-/* harmony import */ var _components_exercise_table_exercise_table_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/exercise-table/exercise-table.component */ "./src/app/strength-standards/components/exercise-table/exercise-table.component.ts");
+/* harmony import */ var _components_exercise_table_exercise_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/exercise-table/exercise-table.component */ "./src/app/strength-standards/components/exercise-table/exercise-table.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -4248,8 +4228,7 @@ var StrengthStandardsModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
                 _components_main_component__WEBPACK_IMPORTED_MODULE_4__["StrengthStandardsComponent"],
-                _components_enter_information_enter_information_component__WEBPACK_IMPORTED_MODULE_5__["StrengthStandardsEnterInformation"],
-                _components_exercise_table_exercise_table_component__WEBPACK_IMPORTED_MODULE_6__["StrengthStandardsExerciseTable"]
+                _components_exercise_table_exercise_table_component__WEBPACK_IMPORTED_MODULE_5__["StrengthStandardsExerciseTable"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],

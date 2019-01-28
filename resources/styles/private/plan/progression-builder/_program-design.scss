@@ -5,24 +5,51 @@ osg-progression-builder-program-design {
     .table-program-design {
         display: block;
         margin-top: 20px;
-        /* thead {
+        thead {
             tr {
                 th {
-                    border: none;
+                    border: 1px solid #dadada;
+                    font-size: rem(12);
+                    color: #000 !important;
+                    vertical-align: middle;
+                    background: #fff0cf;
+                    &.red {
+                        background: #fff0e8 !important;
+                    }
 
-                    &:nth-child(2) {
-                        background: #FFF;
-                        text-transform: uppercase;
-                        font-family: $primary-font;
-                        font-size: rem(10);
-                        color: #000;
-                        border-top: 2px solid #78cd18;
-                        border-right: 2px solid #78cd18;
-                        border-left: 2px solid #78cd18;
+                    &.green {
+                        background: #e8fecd !important;
+                    }
+
+                    &.blue {
+                        background: #f0feff !important;
+                    }
+                }
+                &:first-child{
+                    th{
+                        &:not(:nth-child(2)),
+                        &:not(:first-child){
+                            border-top: 2px solid #78cd18;
+                        }
+                        &:nth-child(2),
+                        &:first-child{
+                            border-top: 2px solid #dadada;
+                        }
+                        &:nth-child(3){
+                            border-left: 2px solid #78cd18;
+                        }
+                        &:last-child{
+                            border-right: 2px solid #78cd18;
+                        }
+                    }
+                }
+                &:last-child{
+                    th{
+                        font-size: 0.6rem;
                     }
                 }
             }
-        } */
+        }
 
         tbody {
             tr {
@@ -46,14 +73,6 @@ osg-progression-builder-program-design {
                     }
                 }
 
-                &:not(:nth-child(2)) {
-                    td {
-                        &:last-child {
-                            border-right: 2px solid #78cd18;
-                        }
-                    }
-                }
-
                 &:nth-child(odd) {
                     td {
                         &:first-child{
@@ -64,7 +83,7 @@ osg-progression-builder-program-design {
                             color: #000;
                         }
 
-                        &:nth-child(2) {
+                        &:last-child{
                             border-right: 2px solid #78cd18;
                         }
                     }
@@ -76,23 +95,13 @@ osg-progression-builder-program-design {
                     }
                 }
 
-                &:first-child,
-                &:nth-child(2) {
+                &:nth-last-child(2){
                     td {
-                        font-size: rem(12);
-                        color: #000 !important;
-                    }
-                }
-
-                &:first-child {
-                    td {
-                        vertical-align: middle;
-                        border-top: 2px solid #78cd18;
-                        background: #fff0cf;
-
-                        &:first-child,
-                        &:nth-child(2) {
-                            border-top: 2px solid #dadada;
+                        &:last-child(),
+                        &:nth-last-child(2),
+                        &:nth-last-child(3),
+                        &:nth-last-child(4){
+                            border-bottom: 2px solid #78cd18;
                         }
                     }
                 }

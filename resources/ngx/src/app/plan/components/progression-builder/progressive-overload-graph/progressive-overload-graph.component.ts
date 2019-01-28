@@ -81,11 +81,8 @@ export class ProgressionBuilderProgressiveOverloadGraphComponent implements OnIn
                 x: {
                     type: 'timeseries',
                     tick: {
-                        //count: 50,
+                        culling: false,
                         rotate: 90,
-                        multiline: false,
-                        //values: 
-                        //fit: true,
                         format: (x: Date): string => {
                             let s = `${x.getFullYear()}-01-01`;
                             let v = ['2000-01-01', '2001-01-01', '2002-01-01', '2003-01-01', '2004-01-01', '2005-01-01', '2006-01-01', '2007-01-01', '2008-01-01', '2009-01-01', '2010-01-01', '2011-01-01', '2012-01-01', '2013-01-01', '2014-01-01', '2015-01-01', '2016-01-01', '2017-01-01', '2018-01-01', '2019-01-01', '2020-01-01', '2021-01-01', '2022-01-01', '2023-01-01', '2024-01-01', '2025-01-01', '2026-01-01', '2027-01-01', '2028-01-01', '2029-01-01', '2030-01-01', '2031-01-01', '2032-01-01', '2033-01-01', '2034-01-01'];
@@ -94,7 +91,7 @@ export class ProgressionBuilderProgressiveOverloadGraphComponent implements OnIn
                             return l[idx];
                         },
                     },
-                    height: 40
+                    height: 50
                 },
                 y: {
                     min: 0,

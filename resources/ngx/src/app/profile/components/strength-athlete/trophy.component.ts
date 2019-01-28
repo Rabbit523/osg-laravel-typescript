@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ApplicationUser } from 'src/app/core/classes/user';
 
 import * as c3 from 'c3';
+declare var $: any;
 
 @Component({
   selector: 'osg-strength-athlete-trophy',
@@ -40,13 +41,16 @@ export class StrengthAthleteTrophyComponent implements OnInit {
             format: (d): string => {
               return '';
             }
+          },
+          label: {
+            text: 'Kg',
+            position: 'outer-top',
           }
         },
         y2: {
           show: true,
           tick: {
             format: (d): string => {
-              console.log(d)
               let v = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
               let labels = ['Time', '', 'Untrained', '', 'Novice', '', 'Intermediate', '', 'Advanced', '', 'Elite'];
               let idx = v.indexOf(d);
@@ -101,6 +105,27 @@ export class StrengthAthleteTrophyComponent implements OnInit {
             { value: 5, text: '', position: 'start' }
           ]
         }
+      },
+      onrendered: () => {
+        let $lines = $(`#${this.performanceGraphId} .c3-chart-lines .c3-chart-line`);
+        $.each($lines, (i, el) => {
+          let $circles = $(el).find('.c3-circles .c3-circle').filter((i, c) => $(c).css('opacity') === "1");
+          if($circles.length){
+            let $first = $($circles[0]), $last = $($circles[$circles.length - 1]), $firstExtra, $lastExtra;
+            $first.addClass('pretest');
+            $last.addClass('posttest');
+            $firstExtra = $first.clone();
+            $lastExtra = $last.clone();
+            $firstExtra.addClass('extra');
+            $lastExtra.addClass('extra');
+            $first.attr('r', 8);
+            $last.attr('r', 8);
+            $firstExtra.attr('r', 4);
+            $lastExtra.attr('r', 4);
+            $firstExtra.appendTo($(el).find('.c3-circles'));
+            $lastExtra.appendTo($(el).find('.c3-circles'));
+          }
+        })
       }
     });
   }

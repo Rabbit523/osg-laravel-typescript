@@ -31,13 +31,13 @@
 
 .btn-green-gradient {
     @include greenGradient;
-    color: #FFF;
+    color: #FFF !important;
     letter-spacing: le(100);
     font-family: $primary-font;
 
     &:hover,
     &:focus {
-        color: #FFF;
+        color: #FFF !important;
     }
 }
 

@@ -1,13 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'osg-strength-standards-enter-information',
+  selector: 'osg-enter-information',
   templateUrl: './enter-information.component.html'
 })
-export class StrengthStandardsEnterInformation implements OnInit{
+export class EnterInformation implements OnInit{
   
-  @Input() title: string = '';
-
   information: StrengthStandardInformation = {
     gender: 'Male'
   };

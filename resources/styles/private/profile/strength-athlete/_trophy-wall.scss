@@ -43,7 +43,7 @@ osg-strength-athlete-trophy-wall {
                 .list {
                     display: block;
                     margin-top: 15px;
-                    height: 235px;
+                    height: 360px;
                     overflow: auto;
 
                     .checkbox {
@@ -108,8 +108,12 @@ osg-strength-athlete-trophy-wall {
                 }
             }
             .conventions{
-                display: block;
+                //display: block;
                 margin-bottom: 20px;
+                display: flex;
+                /* flex-wrap: wrap; */
+                /* flex-grow: 1; */
+                justify-content: space-evenly;
                 p {
                     color: #838383;
                     font-size: rem(12);
@@ -189,6 +193,24 @@ osg-strength-athlete-trophy-wall {
                                 height: 16px;
                             }
                         }
+                    }
+                }
+            }
+
+
+            svg{
+                .pretest{
+                    stroke: #86d531;
+                    fill: transparent !important;
+                    &.extra{
+                        stroke-width: 3px;
+                    }
+                }
+                .posttest{
+                    stroke: #ff0000;
+                    fill: transparent !important;
+                    &.extra{
+                        stroke-width: 3px;
                     }
                 }
             }

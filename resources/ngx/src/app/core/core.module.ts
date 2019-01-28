@@ -10,6 +10,7 @@ import { InformationComponent } from './components/info/info.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { GaugeComponent } from './components/gauge/gauge.component';
 import { SelectComponent } from './components/select/select.component';
+import { EnterInformation } from './components/enter-information/enter-information.component';
 
 
 let components = [
@@ -20,7 +21,8 @@ let components = [
     InformationComponent,
     NotificationsComponent,
     GaugeComponent,
-    SelectComponent
+    SelectComponent,
+    EnterInformation
 ];
 
 @NgModule({

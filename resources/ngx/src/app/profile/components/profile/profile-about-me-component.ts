@@ -7,8 +7,12 @@ import { Component, Input } from '@angular/core';
 export class ProfileAboutMeComponent {
   
   @Input() text: string = '';
-  @Input() interests: string = 'Norges idrettshöyskole';
-  @Input() experience: string = 'Sport performance';
+  @Input() interests: string = '';
+  @Input() education: string = '';
+  @Input() specialities: string = '';
+  @Input() experience: string = '';
+  @Input() country: string = '';
+  @Input() location: string = '';
   @Input() profile: string = '';
 
 }
