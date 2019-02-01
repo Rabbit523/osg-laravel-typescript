@@ -82,6 +82,8 @@ osg-navigation {
                     position: relative;
                     height: 40px;
                     margin-right: 10px;
+                    font-family: $secondary-font;
+                    font-size: rem(16);
                     transition: 0.4s linear all;
 
                     &.active,
@@ -106,7 +108,7 @@ osg-navigation {
                     a {
                         color: #FFF;
                         position: relative;
-                        padding-left: 20px;
+                        padding-left: 30px;
                         height: 55px;
                         transition: 0.4s linear all;
 
@@ -129,7 +131,7 @@ osg-navigation {
                         }
 
                         img {
-                            width: 15px;
+                            width: 25px;
                             margin-right: 2px;
                             position: absolute;
                             top: 8px;

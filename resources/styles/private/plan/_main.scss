@@ -12,7 +12,7 @@ osg-plan-builder {
     }
 
     h2 {
-        @include section-title(rem(16));
+        @include section-title(rem(18));
     }
 
     @import 'calendar-builder/main';

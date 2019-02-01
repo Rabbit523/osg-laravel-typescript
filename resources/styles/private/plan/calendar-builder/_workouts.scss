@@ -9,7 +9,9 @@ osg-plan-builder-workout {
         padding: 25px 15px 29px;
     }
     h3{
-        @include section-title(rem(14));
+        @include section-title(rem(16));
+        font-family: $secondary-font;
+        font-weight: bold;
         span{
             color: #000;
             background: $yellow;
@@ -22,8 +24,9 @@ osg-plan-builder-workout {
         }
     }
     .table-responsive{
-        height: 553px;
-        overflow-y: auto;
+        height: 780px;
+        overflow-x: inherit;
+
     }
     table{
         margin-bottom: 0;
@@ -32,16 +35,37 @@ osg-plan-builder-workout {
                 &:first-child{
                     th{
                         border-top: none;
+                        &:nth-child(2) {
+                          background: #f0feff;
+                        }
+                        &:nth-child(3) {
+                          background: #fff0e8;
+                        }
+                        &:nth-child(4) {
+                          background: #fff;
+                        }
                     }
                 }
                 th{
                     border: solid 1px #d8ddd1;
                     font-family: $secondary-font;
                     font-weight: bold;
-                    font-size: 0.8rem;
+                    font-size: rem(14);
                     text-transform: uppercase;
                     text-align: center;
                     vertical-align: middle;
+                    &:nth-child(2) {
+                      background: #f0feff;
+                    }
+                    &:nth-child(3) {
+                      background: #f0feff;
+                    }
+                    &:nth-child(4) {
+                      background: #fff0e8;
+                    }
+                    &:nth-child(5) {
+                      background: #fff0e8;
+                    }
                 }
             }
         }
@@ -50,7 +74,8 @@ osg-plan-builder-workout {
                 td{
                     border: solid 1px #d8ddd1;
                     font-family: $secondary-font;
-                    font-size: 0.8rem;
+                    font-size: rem(14);
+                    text-align: center;
                     text-transform: uppercase;
                     vertical-align: middle;
                 }
@@ -67,7 +92,8 @@ osg-plan-builder-workout {
         span{
             display: inline-block;
             font-size: 14px;
-            background: $yellow;
+            font-weight: bold;
+            background: $green;
             width: 16px;
             height: 16px;
             border-radius: 100%;
@@ -81,6 +107,7 @@ osg-plan-builder-workout {
         span{
             display: inline-block;
             font-size: 14px;
+            font-weight: bold;
             background: $red;
             width: 16px;
             height: 16px;
@@ -96,7 +123,10 @@ osg-plan-builder-workout {
         border-top: solid 1px #d8ddd1;
         border-right: solid 1px #d8ddd1;
         .btn{
-            font-size: rem(8);
+            font-size: rem(14);
+            font-weight: bold;
+            font-family: $secondary-font;
+            letter-spacing: 0;
             span{
                 display: inline-block;
                 background: $yellow;

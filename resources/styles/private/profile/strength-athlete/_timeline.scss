@@ -41,7 +41,7 @@ osg-strength-athlete-timeline {
                         color: #000;
                         font-family: $secondary-font;
                         font-weight: bold;
-                        font-size: rem(10);
+                        font-size: rem(14);
                         text-transform: uppercase;
                         border-top: none;
                         border-bottom: 1px solid #dadada;
@@ -75,13 +75,13 @@ osg-strength-athlete-timeline {
                             background: #fff6e1;
                             color: #000;
                             font-family: $secondary-font;
-                            font-size: rem(10);
+                            font-size: rem(14);
                             font-weight: bold;
                             text-transform: uppercase;
                         }
 
                         &:not(:first-child) {
-                            font-size: rem(12);
+                            font-size: rem(14);
                             color: #838383;
                             background: #FFF;
                         }
@@ -136,6 +136,7 @@ osg-strength-athlete-timeline {
 
                             a {
                                 color: #838383;
+                                font-size: rem(14);
 
                                 span {
                                     background: #000;
@@ -171,7 +172,7 @@ osg-strength-athlete-timeline {
     .conventions {
         p {
             color: #838383;
-            font-size: rem(12);
+            font-size: rem(14);
             display: inline-block;
             margin-left: 15px;
             &.pause{

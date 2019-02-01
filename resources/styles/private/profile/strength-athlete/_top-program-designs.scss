@@ -14,12 +14,13 @@ osg-strength-athlete-top-program-designs {
 
         .sort-box {
             font-weight: bold;
-            font-size: rem(12);
+            font-size: rem(14);
             font-family: $secondary-font;
 
             p {
                 display: inline-block;
                 color: #ababab;
+                font-size: rem(14);
                 text-transform: uppercase;
             }
 
@@ -31,6 +32,7 @@ osg-strength-athlete-top-program-designs {
                     background: transparent;
                     outline: none;
                     color: #000;
+                    font-weight: bold;
                     text-transform: uppercase;
                 }
             }
@@ -47,7 +49,7 @@ osg-strength-athlete-top-program-designs {
                         background: #FFF;
                         text-transform: uppercase;
                         font-family: $secondary-font;
-                        font-size: rem(10);
+                        font-size: rem(14);
                         color: #000;
                         border-top: 2px solid #78cd18;
                         border-right: 2px solid #78cd18;
@@ -62,8 +64,10 @@ osg-strength-athlete-top-program-designs {
                 td {
                     background: #FFF;
                     border: 1px solid #dadada;
-                    font-size: rem(10);
-                    padding: 0.55rem;
+                    font-size: rem(14);
+                    padding: 7px 12px;
+                    line-height: 16px;
+                    font-family: $secondary-font;
                     color: #000;
                     &.orange{
                         background: #fff0cf;
@@ -103,7 +107,7 @@ osg-strength-athlete-top-program-designs {
                 &:first-child,
                 &:nth-child(2) {
                     td {
-                        font-size: rem(12);
+                        font-size: rem(14);
                         color: #000 !important;
                     }
                 }

@@ -11,7 +11,7 @@
                         <div class="icon"></div>
                         <h3>program designs</h3>
                         <ul>
-                            <li>Volume</li>
+                            <li>Volumeeee</li>
                             <li>Intensity</li>
                             <li>Frequency</li>
                             <li>Other variables</li>

@@ -9,14 +9,15 @@ osg-strength-athlete-trophy-wall {
     h4 {
         text-transform: uppercase;
         color: #000;
-        font-family: $primary-font;
-        font-size: rem(10);
+        font-family: $secondary-font;
+        font-size: rem(14);
+        font-weight: bold;
         margin: 0;
     }
 
     p {
         color: #838383;
-        font-size: rem(12);
+        font-size: rem(14);
         margin: 0;
         b {
             color: #000;
@@ -126,7 +127,7 @@ osg-strength-athlete-trophy-wall {
                     &:last-child{
                         margin-right: 0px;
                     }
-        
+
                     span {
                         display: inline-block;
                         margin-right: 5px;
@@ -272,7 +273,8 @@ osg-strength-athlete-trophy-wall {
                 }
 
                 p{
-                    font-size: rem(10);
+                    font-size: rem(14);
+                    line-height: rem(18);
                 }
 
                 &.no-border{

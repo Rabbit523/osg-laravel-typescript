@@ -13,10 +13,9 @@ osg-profile-about-me {
     }
 
     .about-me-container {
-        @include shadowed-container;
+        border: solid 1px #e2ded3;
         min-height: 400px;
         padding: 20px 15px 50px;
-        text-align: justify;
 
 
         .summary {

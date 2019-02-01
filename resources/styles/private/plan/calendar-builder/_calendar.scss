@@ -9,7 +9,9 @@ osg-plan-builder-calendar {
         padding: 30px 15px 35px;
     }
     h3{
-        @include section-title(rem(14));
+        @include section-title(rem(16));
+        font-family: $secondary-font;
+        font-weight: bold;
     }
     .workouts-list{
         padding: 10px 15px 0px;
@@ -17,8 +19,10 @@ osg-plan-builder-calendar {
         border-left: solid 1px #d8ddd1;
         border-right: solid 1px #d8ddd1;
         .workout{
-            @include section-title(rem(8));
+            @include section-title(rem(14));
             margin-bottom: 10px;
+            font-weight: bold;
+            font-family: $secondary-font;
             span{
                 color: #000;
                 background: $yellow;
@@ -32,14 +36,16 @@ osg-plan-builder-calendar {
             p{
                 color: #838383;
                 margin-bottom: 0px;
+                font-family: $secondary-font;
+                font-size: 14px;
                 display: inline-block;
                 margin-left: 10px;
             }
         }
     }
     .table-responsive{
-        height: 352px;
-        overflow-y: auto;
+        height: 563px;
+        overflow-x: inherit;
     }
     table{
         margin-bottom: 0px;
@@ -54,7 +60,7 @@ osg-plan-builder-calendar {
                     border: solid 1px #d8ddd1;
                     font-family: $secondary-font;
                     font-weight: bold;
-                    font-size: 0.8rem;
+                    font-size: rem(14);
                     text-transform: uppercase;
                     text-align: center;
                     vertical-align: middle;
@@ -66,15 +72,17 @@ osg-plan-builder-calendar {
                 td{
                     border: solid 1px #d8ddd1;
                     font-family: $secondary-font;
-                    font-size: 0.8rem;
+                    font-size: rem(14);
+                    padding: 0.874rem;
                     text-transform: uppercase;
                     vertical-align: middle;
-                    text-align: center;
+                    text-align: left;
                     span{
                         color: #000;
                         background: $yellow;
                         width: 30px;
                         height: 30px;
+                        font-weight: bold;
                         border-radius: 100%;
                         line-height: 30px;
                         text-align: center;
@@ -96,7 +104,10 @@ osg-plan-builder-calendar {
         border-top: solid 2px #d8ddd1;
         border-right: solid 1px #d8ddd1;
         .btn{
-            font-size: rem(8);
+            font-size: rem(14);
+            font-family: $secondary-font;
+            font-weight: bold;
+            letter-spacing: 0;
             span{
                 display: inline-block;
                 background: $yellow;
@@ -123,27 +134,31 @@ osg-plan-builder-calendar {
         border-right: solid 1px #d8ddd1;
         p{
             margin-bottom: 0px;
-            font-size: 10px;
+            font-size: rem(14);
             span{
-                font-family: $primary-font;
+                font-family: $secondary-font;
+                font-weight: bold;
                 color: #000;
                 text-transform: uppercase;
             }
             &.program{
                 color: $light-blue;
-                font-family: $primary-font;
+                font-family: $secondary-font;
+                font-weight: bold;
                 text-transform: uppercase;
             }
             &.category{
                 color: $red;
-                font-family: $primary-font;
+                font-family: $secondary-font;
+                font-weight: bold;
                 text-transform: uppercase;
             }
             &.description{
                 color: #838383;
-                font-size: rem(12);
+                font-size: rem(14);
                 span{
-                    font-size: 10px;
+                    font-size: rem(14);
+                    font-family: $secondary-font;
                 }
             }
         }

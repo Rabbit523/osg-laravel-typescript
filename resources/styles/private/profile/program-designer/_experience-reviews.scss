@@ -24,15 +24,16 @@ osg-program-designer-experience-reviews{
             }
         }
         .btn{
-            font-size: rem(8);
+            font-size: rem(14);
             span{
                 color: $orange;
+                font-size: rem(9);
                 .fa-inverse{
                     color: $black;
                 }
             }
             img{
-                width: 16px;
+                width: 13px;
             }
         }
     }
@@ -42,15 +43,16 @@ osg-program-designer-experience-reviews{
         @extend .col-lg;
         margin-top: 20px;
         .review{
-            @include shadowed-container;
             display: block;
             background: #FFF;
             font-size: rem(12);
             text-align: center;
+            border: 1px solid #dee2e6;
             padding: 20px 10px;
             height: 100%;
             p{
                 color: $text-gray;
+                font-size: rem(14);
                 &.name{
                     color: $light-blue;
                     margin-bottom: 5px;

@@ -1,6 +1,6 @@
 osg-calendar-builder {
     display: block;
-    
+
     .container-box {
         background: #FFF;
         position: relative;
@@ -34,7 +34,7 @@ osg-calendar-builder {
         @extend .col;
 
         .btn {
-            font-size: rem(9);
+            font-size: rem(14);
 
             img {
                 width: 15px;
@@ -42,6 +42,7 @@ osg-calendar-builder {
 
             &:first-child {
                 margin-right: 15px;
+                font-weight: bold;
             }
 
             &.btn-next {

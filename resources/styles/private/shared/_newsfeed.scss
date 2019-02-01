@@ -14,7 +14,7 @@ osg-news-feed {
     }
 
     .post-creator {
-        @include shadowed-container;
+        border: solid 1px #dadada;
         padding: 20px 15px 30px;
 
         figure {
@@ -51,14 +51,14 @@ osg-news-feed {
                 color: $text-gray;
             }
             .btn{
-                font-size: rem(12);
+                font-size: rem(16);
             }
         }
     }
 
 
     .post {
-        @include shadowed-container;
+        border: solid 1px #dadada;
         min-height: 280px;
         margin: 15px 0;
 

@@ -118,7 +118,7 @@ osg-progression-builder-training-program {
                         &:focus{
                             box-shadow: none;
                         }
-    
+
                         &.dropdown-toggle {
                             &:before {
                                 display: block;
@@ -131,7 +131,7 @@ osg-progression-builder-training-program {
                                 right: 25px;
                                 pointer-events: none;
                             }
-    
+
                             &:after {
                                 float: right;
                                 margin-top: -12px;
@@ -148,7 +148,7 @@ osg-progression-builder-training-program {
                         padding: 0px;
                         margin: 1px 0px 0px;
                         overflow: hidden;
-    
+
                         a {
                             color: #8c8c8c;
                             border-bottom: 1px solid #b7b7b7;
@@ -157,7 +157,7 @@ osg-progression-builder-training-program {
                             &:last-child{
                                 border-bottom: none;
                             }
-    
+
                             &:hover {
                                 background: #323232;
                                 color: #c4c4c4;
@@ -197,7 +197,7 @@ osg-progression-builder-training-program {
                 }
                 a.add{
                     color: #000;
-                    background: $yellow;
+                    background: $green;
                     display: block;
                     width: 20px;
                     height: 20px;
@@ -339,12 +339,12 @@ osg-progression-builder-training-program {
                     }
                     &.remove{
                         span{
-                            background: $yellow;
+                            background: $red;
                         }
                     }
                     &.add{
                         span{
-                            background: $red;
+                            background: $green;
                         }
                     }
                 }

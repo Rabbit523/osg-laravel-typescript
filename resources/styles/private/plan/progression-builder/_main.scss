@@ -7,7 +7,10 @@ osg-progression-builder{
     .general-actions{
         @extend .row;
         .btn{
-            font-size: rem(9);
+            font-size: rem(14);
+            font-weight: bold;
+            font-family: $secondary-font;
+            letter-spacing: 0;
             img {
                 width: 15px;
             }
@@ -16,7 +19,7 @@ osg-progression-builder{
                 padding: 0.55rem 1rem 0.55rem 1.5rem;
                 -webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 50%);
                 clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 50%);
-    
+
                 &:after {
                     display: block;
                     content: "\f104";

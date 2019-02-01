@@ -22,8 +22,8 @@ osg-personal-trainer-offers {
             margin-bottom: 2rem;
 
             .content-offer {
-                @include shadowed-container;
                 display: block;
+                border: solid 1px #e2ded3;
                 background: $white;
                 padding-bottom: rem(30);
                 height: 100%;
@@ -44,13 +44,14 @@ osg-personal-trainer-offers {
                 .pricing {
                     text-align: center;
                     margin: 0 20px;
+                    font-weight: bold;
 
                     span {
                         display: block;
                     }
                     .btn{
                         text-transform: uppercase;
-                        font-size: rem(12);
+                        font-size: rem(16);
                         @extend .py-2;
                         @extend .mt-1;
                     }

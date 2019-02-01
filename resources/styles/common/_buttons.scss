@@ -20,8 +20,7 @@
 .btn-yellow-gradient {
     @include yellowGradient;
     color: #000;
-    letter-spacing: le(100);
-    font-family: $primary-font;
+    font-family: $secondary-font;
 
     &:hover,
     &:focus {
@@ -32,8 +31,8 @@
 .btn-green-gradient {
     @include greenGradient;
     color: #FFF !important;
-    letter-spacing: le(100);
-    font-family: $primary-font;
+    font-size: rem(14);
+    font-weight: bold;
 
     &:hover,
     &:focus {
@@ -44,8 +43,8 @@
 .btn-black {
     background: #000;
     color: #FFF;
-    letter-spacing: le(100);
-    font-family: $primary-font;
+    font-size: rem(16);
+    font-family: $secondary-font;
 
     &:hover,
     &:focus {

@@ -19,7 +19,7 @@ osg-strength-standards-exercise-table {
 
             .exercise-box {
                 font-weight: bold;
-                font-size: 1.1rem;
+                font-size: 1.4rem;
                 font-family: $primary-font;
 
                 p {
@@ -36,6 +36,8 @@ osg-strength-standards-exercise-table {
                         background: transparent;
                         outline: none;
                         color: #ababab;
+                        font-family: $secondary-font;
+                        font-size: 18px;
                         text-transform: uppercase;
 
                         &:focus {

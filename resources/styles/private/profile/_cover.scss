@@ -9,7 +9,7 @@ osg-profile-cover {
     -webkit-clip-path: ellipse(100% 60% at 50% 40%);
     position: relative;
     z-index: 3;
-    
+
     .information {
         text-align: center;
         position: relative;
@@ -30,8 +30,8 @@ osg-profile-cover {
             display: inline-block;
             background: #000;
             color: #FFF;
-            font-family: $primary-font;
-            font-size: rem(12);
+            font-family: $secondary-font;
+            font-size: rem(16);
             text-transform: uppercase;
             text-align: center;
             border-radius: 5px;

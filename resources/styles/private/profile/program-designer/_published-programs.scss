@@ -26,8 +26,9 @@ osg-program-designer-published-programs{
             p {
                 display: inline-block;
                 text-transform: uppercase;
-                font-family: $primary-font;
+                font-family: $secondary-font;
                 font-size: rem(14);
+                font-weight: bold;
                 margin: 0px;
             }
 
@@ -46,10 +47,11 @@ osg-program-designer-published-programs{
         }
 
         .btn {
-            font-size: rem(10);
+            font-size: rem(14);
+            font-weight: bold;
             font-family: $secondary-font;
         }
-        
+
     }
 
     table{
@@ -59,7 +61,7 @@ osg-program-designer-published-programs{
                 th{
                     border: solid 1px #dadada;
                     background: #fff6e1;
-                    font-size: 0.8rem;
+                    font-size: rem(14);
                     font-weight: bold;
                     text-transform: uppercase;
                     text-align: left;
@@ -75,14 +77,15 @@ osg-program-designer-published-programs{
                 td{
                     border: solid 1px #dadada;
                     background: #FFF;
-                    font-size: 0.8rem;
+                    font-size: rem(14);
                     color: #838383;
                     &:first-child{
                         color: #000;
                         text-transform: uppercase;
-                        font-family: $primary-font;
+                        font-family: $secondary-font;
                         background: #fff6e1;
-                        font-size: rem(10)
+                        font-weight: bold;
+                        font-size: rem(14)
                     }
                 }
             }
