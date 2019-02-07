@@ -20,24 +20,26 @@
                 <a href="" class="add-media"><img src="/assets/images/icons/icon-camera.png" class="img-fluid mr-1" alt="">Photo/Video</a>
             </div>
             <div class="col-12 col-sm-12 col-lg-5 mt-3 mt-lg-0">
-                <a href="" class="btn btn-block btn-black">POST</a>
+                <a href="" class="btn btn-block btn-black">
+                    <img src="/assets/images/icons/icon-pencil.svg" class="d-inline-block img-fluid" alt="Post">
+                    POST</a>
             </div>
         </div>
     </div>
 </div>
-<div class="post">
+<div class="post" *ngFor="let post of feed.posts">
     <div class="content">
         <div class="author">
             <div class="row no-gutters align-items-center">
                 <div class="col-auto mr-2">
                     <figure>
-                        <img src="/assets/images/icons/icon-account-gray.png" class="img-fluid d-block mx-auto" />
+                        <img src="{{post.author.imageUrl}}" class="img-fluid d-block mx-auto" />
                     </figure>
                 </div>
                 <div class="col-8 col-sm-8 col-md-6 col-lg-8">
                     <div class="summary">
-                        <a href="#">Sara Smith</a>
-                        <span>30 minutes ago</span>
+                        <a href="#">{{post.author.name}}</a>
+                        <span>{{post.postedAt}}</span>
                     </div>
                 </div>
                 <div class="col text-right">
@@ -53,24 +55,32 @@
             </div>
         </div>
         <div class="post-content">
-            <p>The GVT programe is awesome. I really respond well to the big training volume. </p>
+            <p>{{post.content.text}}</p>
+            <div class="photos">
+                <figure *ngFor="let url of post.content.photoUrls">
+                    <img  src="{{url}}" />
+                </figure>
+            </div>
+            <div class="video">
+                <img src="{{post.content.videoUrl}}" class="img-fluid d-block mx-auto" />
+            </div>
         </div>
     </div>
     <div class="comments-box">
-        <div class="comment">
+        <div class="comment" *ngFor="let comment of post.comments">
             <div class="row no-gutters">
                 <div class="col-auto mr-2">
                     <figure>
-                        <img src="/assets/images/icons/icon-account-gray.png" class="img-fluid d-block mx-auto" />
+                        <img src="{{comment.author.imageUrl}}" class="img-fluid d-block mx-auto" />
                     </figure>
                 </div>
                 <div class="col">
                     <div class="speech-bubble">
                         <div class="comment-container">
-                                <a href="#">Nohman Janjua</a>
-                                <p>Pictures looks awesome yo, next session is going to be lit!</p>
+                                <a href="#">{{comment.author.name}}</a>
+                                <p>{{comment.text}}</p>
                         </div>
-                        <span>30 minutes ago</span>
+                        <span>{{comment.postedAt}}</span>
                     </div>
                 </div>
                 <div class="col-auto align-self-center">
@@ -85,7 +95,6 @@
                 </div>
             </div>
         </div>
-
         <div class="comment-creator">
             <div class="row no-gutters align-items-center">
                 <div class="col-auto mr-3">
@@ -104,7 +113,7 @@
     </div>
 </div>
 
-<div class="post">
+<!-- <div class="post">
     <div class="content">
         <div class="author">
             <div class="row no-gutters align-items-center">
@@ -218,4 +227,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

@@ -15,6 +15,7 @@ import { ApplicationService } from './core/services/application.service';
 import { AuthInterceptor } from './core/services/auth.interceptor';
 import { ExperienceBankModule } from './experience-bank/experience-bank.module';
 import { StrengthStandardsModule } from './strength-standards/strength-standards.module';
+import { MockDataService } from './core/services/mock-data.service';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { StrengthStandardsModule } from './strength-standards/strength-standards
   ],
   providers: [
     ApplicationService,
+    MockDataService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]

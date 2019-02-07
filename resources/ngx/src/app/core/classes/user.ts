@@ -6,7 +6,9 @@ export enum ApplicationUserRole{
 }
 
 export interface IApplicationUser{
-    role: ApplicationUserRole
+    role?: ApplicationUserRole,
+    name?: string;
+    imageUrl?: string;
 }
 
 export class ApplicationUser implements IApplicationUser{
