@@ -1,0 +1,354 @@
+osg-progression-builder-training-program {
+    position: relative;
+    display: block;
+    width: 100%;
+    $DayWidth: 650px;
+    $WeekWidth: 135px;
+    .title {
+        display: block;
+        width: 100%;
+
+        .control-slider {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 15px;
+
+            p {
+                display: inline-block;
+                text-transform: uppercase;
+                font-family: $primary-font;
+                font-size: rem(14);
+                margin: 0px;
+            }
+
+            a {
+                display: inline-block;
+                width: 31px;
+                height: 31px;
+                background: #000;
+                color: #FFF;
+                text-align: center;
+                border-radius: 5px;
+                line-height: 31px;
+                font-size: rem(20);
+                margin-left: 10px;
+            }
+        }
+
+        .btn {
+            font-size: rem(10);
+            font-family: $secondary-font;
+        }
+
+    }
+    .training-program-wrapper{
+        position: relative;
+        left: 0;
+        display: block;
+        width: calc( (#{$DayWidth} * 7) + #{$WeekWidth} + 1px);
+        border-top: solid 1px #dbdbdb;
+        border-left: solid 1px #dbdbdb;
+        background: #FFF;
+        transition: all 0.3s linear;
+        .week{
+            width: $WeekWidth;
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+            border-bottom: solid 1px #dbdbdb;
+            border-right: solid 1px #dbdbdb;
+        }
+        .day{
+            width: $DayWidth;
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+            border-bottom: solid 1px #dbdbdb;
+            border-right: solid 1px #dbdbdb;
+        }
+        .thead{
+            font-family: $primary-font;
+            font-size: rem(14);
+            text-transform: uppercase;
+            .week{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .day{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        .tbody{
+            .week{
+                text-align: center;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                span{
+                    background: #000;
+                    color: #FFF;
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100px;
+                    font-family: $primary-font;
+                    font-size: rem(16);
+                    margin: 0 auto;
+                    line-height: 30px
+                }
+                p{
+                    font-size: 0.8rem;
+                    margin: 0px 0px 5px 0px;
+                }
+                .dropdown {
+                    position: relative;
+                    .btn-border {
+                        text-align: left;
+                        border: solid 1px #b7b7b7;
+                        color: #000;
+                        height: 34px;
+                        background: #FFF;
+                        display: inline-block;
+                        width: auto;
+                        padding-right: 30px;
+                        position: relative;
+                        &:focus{
+                            box-shadow: none;
+                        }
+
+                        &.dropdown-toggle {
+                            &:before {
+                                display: block;
+                                content: "";
+                                background: #b7b7b7;
+                                width: 1px;
+                                height: 100%;
+                                position: absolute;
+                                top: 0px;
+                                right: 25px;
+                                pointer-events: none;
+                            }
+
+                            &:after {
+                                float: right;
+                                margin-top: -12px;
+                                color: #b7b7b7;
+                                position: relative;
+                                right: -20px;
+                            }
+                        }
+                    }
+                    .dropdown-menu {
+                        /* width: 100%; */
+                        background: #FFF;
+                        color: #8c8c8c;
+                        padding: 0px;
+                        margin: 1px 0px 0px;
+                        overflow: hidden;
+
+                        a {
+                            color: #8c8c8c;
+                            border-bottom: 1px solid #b7b7b7;
+                            padding: 10px;
+                            font-size: rem(16);
+                            &:last-child{
+                                border-bottom: none;
+                            }
+
+                            &:hover {
+                                background: #323232;
+                                color: #c4c4c4;
+                            }
+                        }
+                    }
+                }
+            }
+            .day{
+                background: #f5f5f5;
+                padding-top: 20px;
+                h6{
+                    font-family: $primary-font;
+                    font-size: rem(14);
+                    text-transform: uppercase;
+                    color: #000;
+                    span{
+                        color: $yellow;
+                        display: inline-block;
+                    }
+                }
+                a.remove{
+                    color: #000;
+                    background: $red;
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 100px;
+                    text-align: center;
+                    line-height: 20px;
+                    font-family: $primary-font;
+                    font-size: rem(18);
+                    position: absolute;
+                    bottom: -10px;
+                    z-index: 8;
+                    right: -74px;
+                }
+                a.add{
+                    color: #000;
+                    background: $green;
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 100px;
+                    text-align: center;
+                    line-height: 20px;
+                    font-family: $primary-font;
+                    font-size: rem(18);
+                    position: absolute;
+                    bottom: -10px;
+                    right: -11px;
+                    z-index: 8;
+                }
+                table{
+                    table-layout: fixed ;
+                    thead{
+                        tr{
+                            th{
+                                background: #fff0cf;
+                                font-family: $secondary-font;
+                                font-size: .6rem;
+                                font-weight: bold;
+                                text-align: center;
+                                vertical-align: middle;
+                                border: solid 1px #000;
+                                position: relative;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                font-size: 0.6rem;
+                                color: #000;
+                                border: solid 1px #dadada;
+                                text-align: center;
+                                position: relative;
+                                &:nth-last-child(2),
+                                &:nth-last-child(3),
+                                &:last-child,
+                                &.white{
+                                    background: #FFF;
+                                }
+                                &.blue,
+                                &:nth-last-child(8),
+                                &:nth-last-child(7){
+                                    background: #f0feff;
+                                }
+                                &.red,
+                                &:nth-last-child(5),
+                                &:nth-last-child(6){
+                                    background: #fff0e8;
+                                }
+                                &:nth-last-child(4),
+                                &.combine{
+                                    background: rgba(240,254,255,1);
+                                    background: -moz-linear-gradient(left, rgba(240,254,255,1) 0%, rgba(240,254,255,1) 50%, rgba(255,240,232,1) 50%, rgba(255,240,232,1) 100%);
+                                    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,254,255,1)), color-stop(50%, rgba(240,254,255,1)), color-stop(50%, rgba(255,240,232,1)), color-stop(100%, rgba(255,240,232,1)));
+                                    background: -webkit-linear-gradient(left, rgba(240,254,255,1) 0%, rgba(240,254,255,1) 50%, rgba(255,240,232,1) 50%, rgba(255,240,232,1) 100%);
+                                    background: -o-linear-gradient(left, rgba(240,254,255,1) 0%, rgba(240,254,255,1) 50%, rgba(255,240,232,1) 50%, rgba(255,240,232,1) 100%);
+                                    background: -ms-linear-gradient(left, rgba(240,254,255,1) 0%, rgba(240,254,255,1) 50%, rgba(255,240,232,1) 50%, rgba(255,240,232,1) 100%);
+                                    background: linear-gradient(to right, rgba(240,254,255,1) 0%, rgba(240,254,255,1) 50%, rgba(255,240,232,1) 50%, rgba(255,240,232,1) 100%);
+                                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0feff', endColorstr='#fff0e8', GradientType=1 );
+                                }
+                            }
+                            &:first-child{
+                                td{
+                                    &:first-child,
+                                    &:nth-child(2){
+                                        background: #FFF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    tfoot{
+                        background: #1c93d0;
+                        tr{
+                            td{
+                                font-size: 0.6rem;
+                                color: #000;
+                                border-bottom: solid 2px #1c93d0;
+                                border-top: solid 2px #1c93d0;
+                                border-right: solid 2px #1c93d0;
+                                text-align: center;
+                                vertical-align: middle;
+                                &:nth-child(2){
+                                    background: #f0feff;
+                                }
+                                &:nth-child(3),
+                                &:nth-child(5),
+                                &:nth-child(7){
+                                    background: $yellow;
+                                }
+                                &:nth-child(4){
+                                    background: #fff0e8;
+                                }
+                                &:nth-child(6){
+                                    background: rgba(240,254,255,1);
+                                    background: -moz-linear-gradient(left, rgba(240,254,255,1) 0%, rgba(240,254,255,1) 50%, rgba(255,240,232,1) 50%, rgba(255,240,232,1) 100%);
+                                    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,254,255,1)), color-stop(50%, rgba(240,254,255,1)), color-stop(50%, rgba(255,240,232,1)), color-stop(100%, rgba(255,240,232,1)));
+                                    background: -webkit-linear-gradient(left, rgba(240,254,255,1) 0%, rgba(240,254,255,1) 50%, rgba(255,240,232,1) 50%, rgba(255,240,232,1) 100%);
+                                    background: -o-linear-gradient(left, rgba(240,254,255,1) 0%, rgba(240,254,255,1) 50%, rgba(255,240,232,1) 50%, rgba(255,240,232,1) 100%);
+                                    background: -ms-linear-gradient(left, rgba(240,254,255,1) 0%, rgba(240,254,255,1) 50%, rgba(255,240,232,1) 50%, rgba(255,240,232,1) 100%);
+                                    background: linear-gradient(to right, rgba(240,254,255,1) 0%, rgba(240,254,255,1) 50%, rgba(255,240,232,1) 50%, rgba(255,240,232,1) 100%);
+                                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0feff', endColorstr='#fff0e8', GradientType=1 );
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .tfooter{
+            .footer-cell{
+                width: 100%;
+                position: relative;
+                min-height: 1px;
+                padding-right: 15px;
+                padding-left: 15px;
+                border-bottom: solid 1px #dbdbdb;
+                border-right: solid 1px #dbdbdb;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                a{
+                    display: inline-block;
+                    color: #000;
+                    margin-right: 15px;
+                    span{
+                        color: #000;
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 100px;
+                        text-align: center;
+                        line-height: 20px;
+                        float: left;
+                        margin-right: 10px;
+                    }
+                    &.remove{
+                        span{
+                            background: $red;
+                        }
+                    }
+                    &.add{
+                        span{
+                            background: $green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

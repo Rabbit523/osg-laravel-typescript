@@ -1,0 +1,99 @@
+osg-plan-builder-exercises{
+    @extend .col;
+    @extend .col-md-3;
+    .search-form{
+        display: block;
+        padding: 20px 15px 0px;
+        border-left: solid 1px #d8ddd1;
+        border-right: solid 1px #d8ddd1;
+        padding-bottom: 10px;
+        margin-top: 10px;
+        position: relative;
+        background: #FFF;
+        &:before{
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: rgba(226,134,42,1);
+            background: -moz-linear-gradient(left, rgba(226,134,42,1) 0%, rgba(255,166,0,1) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(226,134,42,1)), color-stop(100%, rgba(255,166,0,1)));
+            background: -webkit-linear-gradient(left, rgba(226,134,42,1) 0%, rgba(255,166,0,1) 100%);
+            background: -o-linear-gradient(left, rgba(226,134,42,1) 0%, rgba(255,166,0,1) 100%);
+            background: -ms-linear-gradient(left, rgba(226,134,42,1) 0%, rgba(255,166,0,1) 100%);
+            background: linear-gradient(to right, rgba(226,134,42,1) 0%, rgba(255,166,0,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2862a', endColorstr='#ffa600', GradientType=1 );
+        }
+        .form-group{
+            position: relative;
+            .form-control{
+                border-radius: 0px;
+                border-top: solid 1px #d8ddd1;
+                border-right: solid 1px #d8ddd1;
+                border-left: solid 1px #d8ddd1;
+                border-bottom: solid 2px #a9a9a9;
+                font-size: rem(16);
+                padding-right: 30px;
+            }
+            &:after{
+                content: "\f002";
+                color: #000;
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                font: normal normal normal 18px/1 FontAwesome;
+            }
+        }
+    }
+    .exercises-list{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        height: 419px;
+        overflow-y: auto;
+        background: #FFF;
+        margin-bottom: 20px;
+        border-top: solid 1px #d8ddd1;
+        border-right: solid 1px #d8ddd1;
+        border-left: solid 1px #d8ddd1;
+        border-bottom: solid 2px #a9a9a9;
+        h3{
+            @include section-title(rem(16));
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-family: $secondary-font;
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 100%;
+        }
+        .exercise{
+            @extend .col-6;
+            @extend .col-sm-12;
+            @extend .col-md-6;
+            text-align: center;
+            figure{
+                border: solid 1px #d8ddd1;
+                border-bottom: solid 2px #a9a9a9;
+                display: block;
+                padding: 20px;
+                height: calc(100% - 20px);
+                @include media-breakpoint-down(lg){
+                    padding: 20px 5px;
+                }
+            }
+            h4{
+                @include section-title(rem(14));
+                font-family: $secondary-font;
+                font-weight: bold;
+                @include media-breakpoint-down(lg){
+                    font-size: rem(14);
+
+                }
+            }
+        }
+    }
+}

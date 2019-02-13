@@ -1,0 +1,28 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import '../mixins/main';
+@import '../common/main';
+
+html, body{
+    height: 100%;
+}
+body {
+    display: block;
+    font-size: $browser-context + px;
+    font-family: $secondary-font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &.ngx-osg {
+        optimal-strength-gains{
+            display: block;
+            width: 100%;
+            height: 100%;
+            @import 'shared/main';
+            @import 'profile/main';
+            @import 'plan/main';
+            @import 'experience-bank/main';
+            @import 'strength-standards/main';
+        }
+        @import "profile/program-designer/training-day-modal";
+        @import 'profile/personal-trainer/booking-details-modal';
+    }
+}

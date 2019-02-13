@@ -1,0 +1,17 @@
+// Sizes
+
+$lg-size: 2.8rem;
+$regular-size: 1.6rem;
+$md-size: 1.4rem;
+$sm-size: 1.2rem;
+
+// CrossBrowser
+
+@mixin crossBrowser($property, $css) {
+  -webkit-#{$property} : $css;
+  -moz-#{$property} : $css;
+  -o-#{$property} : $css;
+  #{$property} : $css;
+} 
+
+

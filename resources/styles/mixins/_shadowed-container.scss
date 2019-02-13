@@ -1,0 +1,7 @@
+@mixin shadowed-container{
+    border: 1px solid #e8e8e8;
+    $shadow-color: #949494;
+    -webkit-box-shadow: 0px 2px 2px 0px $shadow-color;
+    -moz-box-shadow: 0px 2px 2px 0px $shadow-color;
+    box-shadow: 0px 2px 2px 0px $shadow-color;
+}

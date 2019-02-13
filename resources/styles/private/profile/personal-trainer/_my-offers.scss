@@ -1,0 +1,81 @@
+osg-personal-trainer-offers {
+    display: block;
+    border-bottom: solid 1px #bfbfbf;
+    margin-bottom: 40px;
+
+    .title {
+        display: block;
+        margin-bottom: 10px;
+
+        h3 {
+            @include section-title;
+        }
+    }
+
+    .offers-container {
+        @extend .row;
+
+        .offer {
+            @extend .col-lg-3;
+            @extend .col-sm-6;
+            @extend .col-12;
+            margin-bottom: 2rem;
+
+            .content-offer {
+                display: block;
+                border: solid 1px #e2ded3;
+                background: $white;
+                padding-bottom: rem(30);
+                height: 100%;
+
+                header {
+                    display: block;
+                    background: $black;
+                    clip-path: ellipse(100% 60% at 65% 40%);
+                    -webkit-clip-path: ellipse(100% 60% at 65% 40%);
+                    figure{
+                        display: block;
+                        margin: 0 auto;
+                        width: 60px;
+                        padding: 70px 0px;
+                    }
+                }
+
+                .pricing {
+                    text-align: center;
+                    margin: 0 20px;
+                    font-weight: bold;
+
+                    span {
+                        display: block;
+                    }
+                    .btn{
+                        text-transform: uppercase;
+                        font-size: rem(16);
+                        @extend .py-2;
+                        @extend .mt-1;
+                    }
+                }
+
+                .description {
+                    margin: 30px auto;
+                    display: block;
+                    text-align: center;
+                    width: 85%;
+                    @include section-separator(25px, #c6c6c6);
+                    h4{
+                        text-transform: uppercase;
+                        font-family: $secondary-font;
+                        font-weight: bold;
+                        color: #000;
+                        font-size: rem(14);
+                        margin: 0;
+                    }
+                    span{
+                        color: $text-gray;
+                    }
+                }
+            }
+        }
+    }
+}

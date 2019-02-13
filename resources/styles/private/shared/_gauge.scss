@@ -1,0 +1,71 @@
+@mixin colored-gauge($color){
+    svg{
+        .animatable{
+            stroke: $color;
+        }
+
+        circle, text{
+            fill: $color;
+        }
+    }
+}
+osg-gauge{
+    display: block;
+    svg{
+        > path{
+            transition: stroke-dasharray .7s ease-in-out;
+            &.animatable{
+                stroke-dasharray: 0px, 100px;
+            }
+            &:first-child{
+                stroke: $lightgray;
+            }
+        }
+        text{
+            font-family: "Square 721 BT Bold Extended";
+        }
+    }
+
+    .figure{
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+
+    }
+
+    &.yellow{
+        @include colored-gauge($yellow);
+    }
+
+    &.green{
+        @include colored-gauge($green);
+    }
+
+    &.light-blue, &.blue{
+        @include colored-gauge($light-blue);
+    }
+
+    &.orange{
+        @include colored-gauge($orange);
+    }
+
+    &.red{
+        @include colored-gauge($red);
+    }
+
+    &.dark-green{
+        @include colored-gauge($dark-green);
+    }
+
+    &.no-circle{
+        svg{
+            circle{
+                display: none;
+            }
+            text{
+                font-size: 6px;
+            }
+        }
+    }
+}

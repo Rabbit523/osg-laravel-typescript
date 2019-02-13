@@ -1,0 +1,242 @@
+<div class="row no-gutters">
+    <div class="col-12 col-sm-auto">
+        <div class="strenght-level">
+            <div class="title">
+                <h4>STRENGTH LEVEL</h4>
+                <p>Choose test exercise</p>
+            </div>
+            <div class="exercise-list">
+                <h4>{{title}}</h4>
+                <div class="list">
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Bench Press
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Incline Bench Press
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Decline Bench Press
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Flat Dumbell Press
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Barbell Bench Press
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Incline Cable Flye
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Dips for Chest
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Bench Press
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Incline Bench Press
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Decline Bench Press
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Flat Dumbell Press
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Barbell Bench Press
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Incline Cable Flye
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <label>
+                            <input type="checkbox" value="">Dips for Chest
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm">
+        <div class="performance-graph">
+            <div class="row">
+                <div class="col-12 col-sm-7">
+                    <div class="title">
+                        <h4>PERFORMANCE GRAPH</h4>
+                        <p>Bench Press (1RM)</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-5">
+                    <img src="assets/images/icons/trophy.svg" class="img-fluid trophy" alt="">
+                    <img src="assets/images/icons/trophy.svg" class="img-fluid trophy" alt="">
+                    <img src="assets/images/icons/trophy.svg" class="img-fluid trophy" alt="">
+                </div>
+            </div>
+            <div [id]="performanceGraphId"></div>
+            <div class="descriptions">
+                <div>
+                    <div>
+                        <span>Ladder Strength</span>
+                        <span>01.03.18 - 30.04.18</span>
+                        <span><b>5kg</b> increase</span>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <span>Power Building</span>
+                        <span>01.05.18 - 31.05.18</span>
+                        <span><b>8kg</b> increase</span>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <span>5x5</span>
+                        <span>01.08.18 - 16.09.18</span>
+                        <span><b>12kg</b> increase</span>
+                    </div>
+                </div>
+            </div>
+            <div class="conventions">
+                <p class="start-end"><span></span>Start/End program</p>
+                <p class="performance"><span></span>Performance</p>
+                <p class="levels"><span></span>Levels</p>
+                <p class="pretest"><span></span>Pretest</p>
+                <p class="posttest"><span></span>Posttest</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-3">
+        <div class="total-percentage">
+            <div class="row h-100">
+                <div class="col-12">
+                    <div class="text-center">
+                        <div class="title">
+                            <h4>TOTAL PERCENTAGE INCREASE</h4>
+                        </div>
+
+                        <div class="gauge-container">
+                            <osg-gauge [css]="gaugeCss" [value]="33"></osg-gauge>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center align-self-end">
+                    <div class="program-period">
+                        <h4>ALL PROGRAMS</h4>
+                        <p><b>Period:</b> Jun. 2015 - Sept. 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="current-level">
+            <div class="row no-gutters align-items-center">
+                <div class="col-12 col-sm-auto">
+                    <div class="title">
+                        <h4>CURRENT LEVEL</h4>
+                        <p>You are stronger than:</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <div class="level no-border">
+                                <div class="gauge-container">
+                                    <osg-gauge css="green no-circle" [value]="25"></osg-gauge>
+                                </div>
+                                <p>of male lifters<br> at your <b>strength<br> level</b></p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="level">
+                                <div class="gauge-container">
+                                    <osg-gauge css="orange no-circle" [value]="10"></osg-gauge>
+                                </div>
+                                <p>of male lifters<br> with your<br> <b>height</b></p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="level">
+                                <div class="gauge-container">
+                                    <osg-gauge css="red no-circle" [value]="4"></osg-gauge>
+                                </div>
+                                <p>of male lifters<br> at your<br> <b>age</b></p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="level">
+                                <div class="gauge-container">
+                                    <osg-gauge css="blue no-circle" [value]="33"></osg-gauge>
+                                </div>
+                                <p>of male lifters<br> with your <br><b>body weight</b></p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="level">
+                                <div class="gauge-container">
+                                    <osg-gauge css="red no-circle" [value]="33"></osg-gauge>
+                                </div>
+                                <p>of male lifters<br> with your <br><b>waist-hip ratio</b></p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="level">
+                                <div class="gauge-container">
+                                    <osg-gauge css="orange no-circle" [value]="33"></osg-gauge>
+                                </div>
+                                <p>of male lifters<br> with your<br> <b>muscle fiber type</b></p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="level yellow-bg">
+                                <div class="gauge-container">
+                                    <osg-gauge css="blue no-circle" [value]="33"></osg-gauge>
+                                </div>
+                                <p>of your <b>mirror athletes</b> (all variables combined)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

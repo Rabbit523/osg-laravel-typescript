@@ -1,0 +1,24 @@
+#symbiose{
+    padding: 100px 0px 50px;
+    margin: 0;
+    background: url("/images/symbiose-bg.jpg" );
+    color: #FFF;
+    background-size: cover;
+    .title{
+        h2{
+            text-align: center;
+            font-family: $primary-font;
+            text-transform: uppercase;
+            font-size: rem(25);
+        }
+        span{
+            display: block;
+            text-align: center;
+            font-size: rem(16);
+        }
+    }
+    figure{
+        display: block;
+        margin: 0;
+    }
+}

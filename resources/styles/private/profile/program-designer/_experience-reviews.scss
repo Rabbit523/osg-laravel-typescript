@@ -1,0 +1,98 @@
+osg-program-designer-experience-reviews{
+    .title {
+        display: block;
+        width: 100%;
+
+        h3 {
+            @include section-title;
+            width: 100%;
+            &:after{
+                content: "";
+                background: #b7b7b7;
+                display: block;
+                width: 105%;
+                height: 1px;
+                margin-top: 15px;
+                @include media-breakpoint-down(md){
+                    display: none;
+                }
+            }
+
+            span {
+                color: $light-blue;
+                display: inline-block;
+            }
+        }
+        .btn{
+            font-size: rem(14);
+            span{
+                color: $orange;
+                font-size: rem(9);
+                .fa-inverse{
+                    color: $black;
+                }
+            }
+            img{
+                width: 13px;
+            }
+        }
+    }
+    .review-box{
+        @extend .col-12;
+        @extend .col-md-auto;
+        @extend .col-lg;
+        margin-top: 20px;
+        .review{
+            display: block;
+            background: #FFF;
+            font-size: rem(12);
+            text-align: center;
+            border: 1px solid #dee2e6;
+            padding: 20px 10px;
+            height: 100%;
+            p{
+                color: $text-gray;
+                font-size: rem(14);
+                &.name{
+                    color: $light-blue;
+                    margin-bottom: 5px;
+                }
+            }
+            figure{
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .rating{
+        font-size: 10px;
+        color: #b7b7b7;
+        display: block;
+        margin-bottom: 5px;
+        text-align: center;
+        &:before{
+            content:"";
+            display: block;
+            background: #bebebe;
+            width: 50%;
+            height: 1px;
+            margin: 15px auto;
+        }
+        span{
+            color: #b7b7b7;
+            &.excellent{
+                color: #4b870a;
+            }
+            &.good{
+                color: $dark-green;
+            }
+            &.middle{
+                color: $orange;
+            }
+        }
+        p{
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 0;
+        }
+    }
+}

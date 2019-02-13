@@ -1,0 +1,21 @@
+osg-footer{
+    background: black;
+    display: block;
+    color: white;
+    .footer-info {
+        color: $white;
+        display: block;
+        font-family: $third-font;
+        padding: 20px 0px;
+        font-size: 14px;
+
+        .logo-footer {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        a {
+            color: #FFF;
+        }
+    }
+}

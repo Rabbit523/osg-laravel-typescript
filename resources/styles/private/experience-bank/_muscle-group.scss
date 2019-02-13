@@ -1,0 +1,169 @@
+osg-experience-bank-muscle-group-table {
+    .muscle-group-table {
+        @extend .row;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 40px;
+
+        .cell {
+            @extend .col-12;
+            @extend .col-sm-6;
+            @extend .col-md-3;
+            padding-right: 0;
+            padding-left: 0;
+
+            &:first-child {
+                .title {
+                    border-left: solid 1px #dadada;
+                }
+
+                .content {
+                    border-left: solid 1px #dadada;
+                }
+            }
+
+            .title {
+                display: block;
+                background: #fff6e1;
+                font-family: $secondary-font;
+                font-size: .8rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 15px;
+                border-right: solid 1px #dadada;
+                border-top: solid 1px #dadada;
+                border-bottom: solid 1px #dadada;
+            }
+
+            .content {
+                display: block;
+                width: 100%;
+                height: calc(100% - 40px);
+                padding: 15px;
+                background: #FFF;
+                border-right: solid 1px #dadada;
+                border-bottom: solid 3px #dadada;
+
+                ol,
+                ul {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                ol {
+                    list-style: none;
+
+                    li {
+                        counter-increment: li;
+                        position: relative;
+                        padding-left: 25px;
+
+                        &:before {
+                            display: block;
+                            text-align: center;
+                            content: counter(li)'.';
+                            color: #000;
+                            position: absolute;
+                            left: 0px;
+                            top: 0px;
+                        }
+                    }
+                }
+
+                h4 {
+                    font-size: 1.4rem;
+                    text-transform: uppercase;
+                    color: $yellow;
+                    font-family: $primary-font;
+                }
+
+                .dropdown {
+                    display: block;
+                    width: 100%;
+                    .btn-border {
+                        text-align: left;
+                        border: solid 1px #b7b7b7;
+                        color: #000;
+                        /* border-radius: 0px; */
+                        height: 44px;
+                        background: #FFF;
+                        &:focus{
+                            box-shadow: none;
+                        }
+
+                        &.dropdown-toggle {
+                            &:before {
+                                display: block;
+                                content: "";
+                                background: #b7b7b7;
+                                width: 1px;
+                                height: 100%;
+                                position: absolute;
+                                top: 0px;
+                                right: 35px;
+                                pointer-events: none;
+                            }
+
+                            &:after {
+                                float: right;
+                                margin-top: 10px;
+                                color: #b7b7b7;
+                            }
+                        }
+                    }
+                    .dropdown-menu {
+                        width: 100%;
+                        background: #FFF;
+                        color: #8c8c8c;
+                        padding: 0px;
+                        margin: 1px 0px 0px;
+                        overflow: hidden;
+
+                        a {
+                            color: #8c8c8c;
+                            border-bottom: 1px solid #b7b7b7;
+                            padding: 10px;
+                            font-size: rem(16);
+                            &:last-child{
+                                border-bottom: none;
+                            }
+
+                            &:hover {
+                                background: #323232;
+                                color: #c4c4c4;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.muscle{
+                .content{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
+            }
+
+            &.exercise{
+                .content{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
+            }
+
+            &.program {
+                .content {
+                    color: $light-blue;
+                }
+            }
+
+            &.increase {
+                .content {
+                    color: #838383;
+                }
+            }
+        }
+    }
+}

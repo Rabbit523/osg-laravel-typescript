@@ -1,0 +1,179 @@
+osg-progression-builder-progressive-overload-graph{
+    h2{
+
+    }
+    .graph{
+        @include shadowed-container;
+        display: block;
+        width: 100%;
+        background: #FFF;
+        padding-top: 30px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+        .week-types{
+            display: flex;
+            flex-direction: row;
+
+            > div{
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                > div{
+                    width: 80%;
+                    margin: 0 auto;
+                    text-align: center;
+                    span{
+                        display: block;
+                        font-size: 0.75rem;
+                        &:first-child{
+                            color: #838383;
+                        }
+                        &:last-child{
+                            color: black;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .conventions {
+            display: block;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            .dropdown {
+                display: inline-block;
+                margin-right: 10px;
+                p{
+                    margin: 0px 10px 0px 0px;
+                }
+                .btn-border {
+                    text-align: left;
+                    border: solid 1px #b7b7b7;
+                    color: #000;
+                    height: 34px;
+                    background: #FFF;
+                    display: inline-block;
+                    width: auto;
+                    padding-right: 30px;
+                    position: relative;
+                    &:focus{
+                        box-shadow: none;
+                    }
+
+                    &.dropdown-toggle {
+                        &:before {
+                            display: block;
+                            content: "";
+                            background: #b7b7b7;
+                            width: 1px;
+                            height: 100%;
+                            position: absolute;
+                            top: 0px;
+                            right: 25px;
+                            pointer-events: none;
+                        }
+
+                        &:after {
+                            float: right;
+                            margin-top: 10px;
+                            color: #b7b7b7;
+                            position: relative;
+                            right: -20px;
+                        }
+                    }
+                }
+                .dropdown-menu {
+                    /* width: 100%; */
+                    background: #FFF;
+                    color: #8c8c8c;
+                    padding: 0px;
+                    margin: 1px 0px 0px;
+                    overflow: hidden;
+
+                    a {
+                        color: #8c8c8c;
+                        border-bottom: 1px solid #b7b7b7;
+                        padding: 10px;
+                        font-size: rem(16);
+                        &:last-child{
+                            border-bottom: none;
+                        }
+
+                        &:hover {
+                            background: #323232;
+                            color: #c4c4c4;
+                        }
+                    }
+                }
+            }
+
+            .control-slider {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 15px;
+                p {
+                    display: inline-block;
+                    text-transform: uppercase;
+                    font-family: $primary-font;
+                    font-size: rem(14);
+                    margin: 0px;
+                }
+    
+                a {
+                    display: inline-block;
+                    width: 31px;
+                    height: 31px;
+                    background: #000;
+                    color: #FFF;
+                    text-align: center;
+                    border-radius: 5px;
+                    line-height: 31px;
+                    font-size: rem(20);
+                    margin-left: 10px;
+                }
+            }
+    
+            p {
+                color: #838383;
+                font-size: rem(12);
+                display: inline-block;
+                margin-right: 10px;
+                margin-left: 10px;
+    
+                span {
+                    display: inline-block;
+                    width: 10px;
+                    height: 3px;
+                    margin-right: 10px;
+                }
+    
+                &.volume {
+                    span {
+                        border-top: solid 3px #ff0000;
+                    }
+                }
+    
+                &.intensity {
+                    span {
+                        border-top: solid 3px $light-blue;
+                    }
+                }
+    
+                &.volume-load {
+                    span {
+                        border-top: solid 3px $green;
+                    }
+                }
+                &.frequency {
+                    span {
+                        height: 10px;
+                        background: $green;
+                    }
+                }
+    
+            }
+        }
+    }
+}

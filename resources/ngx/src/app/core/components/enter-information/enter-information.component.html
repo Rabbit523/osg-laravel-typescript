@@ -1,0 +1,87 @@
+<h2>Enter your information</h2>
+
+<div class="row mb-4">
+    <div class="col-12 col-sm-6 col-md-4">
+        <div class="checbox-dropdown">
+            <div class="checkbox custom-checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <osg-select label="Gender" [(value)]="information.gender" [options]="genderOptions" (change)="onGenderChange()"></osg-select>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4">
+        <div class="checbox-dropdown">
+            <div class="checkbox custom-checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <osg-select label="Body Weight (kg)" [(value)]="information.bodyWeight" [options]="bodyWeightOptions"></osg-select>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4">
+        <div class="checbox-dropdown">
+            <div class="checkbox custom-checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <osg-select label="Height" [(value)]="information.height" [options]="heightOptions"></osg-select>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 col-sm-6 col-md-4">
+        <div class="checbox-dropdown">
+            <div class="checkbox custom-checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <osg-select label="Waist-Hip Ratio" [(value)]="information.waistHipRatio" [options]="waistToHipRatioOptions"></osg-select>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4">
+        <div class="checbox-dropdown">
+            <div class="checkbox custom-checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <osg-select label="Age (years)" [(value)]="information.age" [options]="ageOptions"></osg-select>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4">
+        <div class="checbox-dropdown">
+            <div class="checkbox custom-checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <osg-select label="Muscle Fiber Type" [(value)]="information.muscleFiberType" [options]="muscleFiberOptions"></osg-select>
+        </div>
+    </div>
+</div>
+
+<div class="actions">
+    <div class="col-12 col-lg-8">
+        <div class="results">
+            <h4>Results: </h4>
+            <p>Male<span>x</span></p>
+        </div>
+    </div>
+    <div class="col-12 col-lg-3 mt-2 mt-lg-0 text-center text-lg-right">
+        <a href="" class="btn btn-yellow-gradient py-2 btn-block">DONE</a>
+    </div>
+</div>

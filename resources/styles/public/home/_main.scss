@@ -1,0 +1,25 @@
+.home{
+    // TODO: This might a global thing, still uncertain.
+    .title-row{ 
+        text-align: center;
+        h2{
+            margin: 2.0rem;
+        }
+        padding: 40px 0;
+    }
+    
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    
+    .btn{
+        text-transform: uppercase;
+    }
+    
+    @import 'call-to-action';
+    @import 'main-features';
+    @import 'symbiose';
+    @import 'profiles';
+    @import 'get-started';
+}

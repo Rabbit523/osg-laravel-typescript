@@ -1,0 +1,191 @@
+<div class="title">
+  <div class="row align-items-center">
+    <div class="col-12 col-sm">
+      <h3>PERFORMANCE TABLE (YOUR RESULTS)</h3>
+    </div>
+    <div class="col-12 col-sm-auto text-right">
+      <div class="sort-box">
+        <p>PROGRAM:</p>
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GVT</button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">BASE LIFTS</a>
+                <a class="dropdown-item" href="#">STARTING STRENGTH</a>
+                <a class="dropdown-item" href="#">LADDER STRENGTH</a>
+                <a class="dropdown-item" href="#">POWER BUILDING</a>
+                <a class="dropdown-item" href="#">GVT</a>
+                <a class="dropdown-item" href="#">5x5</a>
+            </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="perfomance-table">
+    <div class="table-responsive">
+        <table class="table main-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <table class="first-table" height="185">
+                            <tr>
+                                <td>Program:</td>
+                                <td>GVT</td>
+                            </tr>
+                            <tr>
+                                <td>Category:</td>
+                                <td>Hypertrophy</td>
+                            </tr>
+                            <tr>
+                                <td>Period:</td>
+                                <td>01.06.18 - 31.07.18</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table class="second-table" height="185">
+                            <thead>
+                                <tr>
+                                    <th>TEST EXERCISE:</th>
+                                    <th>PRE TEST (1RM):</th>
+                                    <th>POSTEST (1RM):</th>
+                                    <th>RESULTS (% INCREASE):</th>
+                                    <th>PRETEST (LEVEL):</th>
+                                    <th>POSTTEST (LEVEL):</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bench Press</td>
+                                    <td>100</td>
+                                    <td>108</td>
+                                    <td>8,00%</td>
+                                    <td>Intermediate</td>
+                                    <td>Intermediate</td>
+                                </tr>
+                                <tr>
+                                    <td>Squat</td>
+                                    <td>140</td>
+                                    <td>145</td>
+                                    <td>3,57%</td>
+                                    <td>intermediate</td>
+                                    <td>intermediate</td>
+                                </tr>
+                                <tr>
+                                    <td>Dead lift</td>
+                                    <td>150</td>
+                                    <td>157</td>
+                                    <td>4,67%</td>
+                                    <td>intermediate</td>
+                                    <td>intermediate</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table width="100%">
+                            <tr>
+                                <td class="title-variables">BACKGROUND VARIABLES:</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table class="third-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>BODY WEIGHT:</th>
+                                    <th>WAIST-HIP RATIO:</th>
+                                    <th>CALORIE INTAKE:</th>
+                                    <th>STRESS LEVEL:</th>
+                                    <th>SLEEP LEVEL:</th>
+                                    <th>MUSCLE FIBER TYPE:</th>
+                                    <th>HEIGHT:</th>
+                                    <th>AGE:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PRETEST:</td>
+                                    <td>105</td>
+                                    <td>0,97</td>
+                                    <td>Deficit</td>
+                                    <td>Ok</td>
+                                    <td>Good</td>
+                                    <td>Slow twich</td>
+                                    <td>190</td>
+                                    <td>38</td>
+                                </tr>
+                                <tr>
+                                    <td>POSTtTEST:</td>
+                                    <td>105</td>
+                                    <td>0,97</td>
+                                    <td>Deficit</td>
+                                    <td>Ok</td>
+                                    <td>Good</td>
+                                    <td>Slow twich</td>
+                                    <td>190</td>
+                                    <td>38</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-12 col-sm-9">
+        <div class="row">
+            <div class="col-sm-4" *ngFor="let comparison of comparisons">
+                <osg-strength-athlete-performance-comparison [title]="comparison"></osg-strength-athlete-performance-comparison>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-12 col-sm-3">
+        <div class="recomendations">
+            <div class="title-recomendations">
+                <h4>Recomendations</h4>
+                <p>Take necessary action(s).</p>
+            </div>
+            <ul>
+                <li>Eat slightly more</li>
+                <li>Try different training design</li>
+                <li>Try different training design</li>
+                <li>Get more sleep</li>
+            </ul>
+        </div>
+
+        <div class="exercise-notes mt-4">
+            <div class="title-exercise">
+                <h4>EXERCISE NOTES</h4>
+                <p>View your notes</p>
+                <ul>
+                    <li><time>11.06.17</time>
+                    <p>Exercise notes 1</p><a href="">View</a></li>
+                    <li><time>11.06.17</time>
+                    <p>Exercise notes 2</p><a href="">View</a></li>
+                    <li><time>11.06.17</time>
+                    <p>Exercise notes 3</p><a href="">View</a></li>
+                    <li><time>11.06.17</time>
+                    <p>Exercise notes 4</p><a href="">View</a></li>
+                    <li><time>11.06.17</time>
+                    <p>Exercise notes 5</p><a href="">View</a></li>
+                    <li><time>11.06.17</time>
+                    <p>Exercise notes 6</p><a href="">View</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

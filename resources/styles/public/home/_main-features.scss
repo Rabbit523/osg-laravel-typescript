@@ -1,0 +1,122 @@
+#main-features {
+    background: $white;
+    padding: 80px 0;
+
+    h2 {
+        display: block;
+        font-size: rem(25);
+        font-family: $primary-font;
+        color: #000;
+        text-align: center;
+        text-transform: uppercase;
+
+        small {
+            display: block;
+            font-size: 50%;
+        }
+    }
+
+    .feature {
+        display: block;
+        height: 100%;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background: #d8d8d8;
+        }
+
+        .description {
+            display: block;
+
+            @include media-breakpoint-down(sm) {
+                width: 75%;
+                margin: 0px auto;
+            }
+
+            h3 {
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                text-align: center;
+                font-family: $primary-font;
+                margin: 0 0 30px;
+            }
+
+            .icon {
+                height: 200px;
+                background: center no-repeat;
+                background-size: 120px;
+            }
+
+            ul {
+                font-size: rem(12);
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 20px;
+
+                li {
+                    display: block;
+                    position: relative;
+                    margin-bottom: 10px;
+
+                    /* &:before {
+                        position: absolute;
+                        top: 0px;
+                        line-height: 1;
+                        left: 0px;
+                        color: #ffbf00;
+                        content: "\2022";
+                        font-size: 2em;
+                    } */
+                }
+            }
+        }
+
+        &.program-designs {
+            .icon {
+                background-image: url('/images/icons/program-designs.png');
+            }
+        }
+
+        &.experience-bank {
+            @include media-breakpoint-down(md) {
+                &:after {
+                    display: none;
+                }
+            }
+
+            .icon {
+                background-image: url('/images/icons/experience-bank.png');
+            }
+        }
+
+        &.strength-standards {
+            .icon {
+                background-image: url('/images/icons/strength-standards.png');
+            }
+        }
+
+        &.auto-regulation {
+            &:after {
+                display: none;
+            }
+
+            .icon {
+                background-image: url('/images/icons/auto-regulation.png');
+            }
+        }
+    }
+
+    .actions{
+        .btn{
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+    }
+
+}

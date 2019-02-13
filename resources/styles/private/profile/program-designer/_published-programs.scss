@@ -1,0 +1,94 @@
+osg-program-designer-published-programs{
+    .title {
+        display: block;
+        width: 100%;
+
+        h3 {
+            @include section-title;
+            width: 100%;
+            &:after{
+                content: "";
+                background: #b7b7b7;
+                display: block;
+                width: 105%;
+                height: 1px;
+                margin-top: 15px;
+                @include media-breakpoint-down(md){
+                    display: none;
+                }
+            }
+        }
+
+        .control-slider {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 15px;
+            p {
+                display: inline-block;
+                text-transform: uppercase;
+                font-family: $secondary-font;
+                font-size: rem(14);
+                font-weight: bold;
+                margin: 0px;
+            }
+
+            a {
+                display: inline-block;
+                width: 31px;
+                height: 31px;
+                background: #000;
+                color: #FFF;
+                text-align: center;
+                border-radius: 5px;
+                line-height: 31px;
+                font-size: rem(20);
+                margin-left: 10px;
+            }
+        }
+
+        .btn {
+            font-size: rem(14);
+            font-weight: bold;
+            font-family: $secondary-font;
+        }
+
+    }
+
+    table{
+        margin-top: 20px;
+        thead{
+            tr{
+                th{
+                    border: solid 1px #dadada;
+                    background: #fff6e1;
+                    font-size: rem(14);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    text-align: left;
+                    color: $light-blue;
+                    &:first-child{
+                        color: #000;
+                    }
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    border: solid 1px #dadada;
+                    background: #FFF;
+                    font-size: rem(14);
+                    color: #838383;
+                    &:first-child{
+                        color: #000;
+                        text-transform: uppercase;
+                        font-family: $secondary-font;
+                        background: #fff6e1;
+                        font-weight: bold;
+                        font-size: rem(14)
+                    }
+                }
+            }
+        }
+    }
+}

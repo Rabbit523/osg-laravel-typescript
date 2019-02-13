@@ -1,0 +1,7 @@
+@mixin section-title($size: 1.1rem){
+    text-transform: uppercase;
+    font-family: $primary-font;
+    font-size: $size;
+    margin: 0px;
+    display: block;
+}

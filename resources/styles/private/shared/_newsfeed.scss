@@ -1,0 +1,304 @@
+osg-news-feed {
+    display: block;
+
+    h3 {
+        @include section-title;
+        float: left;
+    }
+
+    .edit {
+        display: block;
+        float: right;
+        width: 20px;
+        filter: brightness(0.5) sepia(1) hue-rotate(140deg) saturate(0);
+    }
+
+    .post-creator {
+        border: solid 1px #dadada;
+        padding: 20px 15px 30px;
+
+        figure {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            overflow: hidden;
+            background: #b6b6b6;
+        }
+
+        .message {
+            @include placeholderColor($text-gray);
+            border: none;
+            display: block;
+            width: 100%;
+            resize: none;
+            outline: none;
+            color: $text-gray;
+            padding: 5px;
+            margin-bottom: 10px;
+            transition: all 0.2s linear;
+            &:focus{
+                box-shadow: 0px 0px 3px 0px #7b7b7b;
+            }
+        }
+
+        .actions {
+            display: block;
+            border-top: solid 1px #e8e8e8;
+            padding-top: 15px;
+
+            .add-media {
+                color: $text-gray;
+            }
+            .btn{
+                font-size: rem(16);
+                img{
+                    width: 15px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+
+    .post {
+        border: solid 1px #dadada;
+        /* min-height: 280px; */
+        margin: 15px 0;
+
+        .content {
+            margin: 20px 15px;
+
+            .author {
+                height: 60px;
+                display: block;
+                border-bottom: 1px solid $lightgray;
+                position: relative;
+
+                figure {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    overflow: hidden;
+                    background: #b6b6b6;
+                    margin: 0;
+                }
+
+                .summary {
+                    display: block;
+                    line-height: 1;
+
+                    a {
+                        color: #0880e6;
+                    }
+
+                    span {
+                        display: block;
+                        color: $text-gray;
+                        font-size: rem(12);
+                    }
+                }
+
+                .toggle-popover {
+                    font-size: rem(30);
+                    color: #ababab;
+                    position: relative;
+                    z-index: 7;
+                }
+            }
+
+            .post-content {
+                margin: 20px 0;
+                .photos{
+                    @extend .row;
+                    figure{
+                        img{
+                            @extend .img-fluid;
+                            margin: 0px auto;
+                            display: block;
+                        }
+                    }
+                    
+                    /* one item */
+                    figure:first-child:nth-last-child(1) {
+                        @extend .col-12;
+                    }
+                    
+                    /* two items */
+                    figure:first-child:nth-last-child(even),
+                    figure:first-child:nth-last-child(even) ~ figure {
+                        @extend .col-6;
+                    }
+                    
+                    /* three items */
+                    figure:first-child:nth-last-child(odd),
+                    figure:first-child:nth-last-child(odd) ~ figure {
+                        @extend .col-4;
+                    }
+                    
+                    /* four items */
+                    /* figure:first-child:nth-last-child(4),
+                    figure:first-child:nth-last-child(4) ~ figure {
+                        @extend .col-4;
+                    } */
+                    
+                    /* five items */
+                    /* figure:first-child:nth-last-child(5),
+                    figure:first-child:nth-last-child(5) ~ figure {
+                        width: 20%;
+                    } */
+                }
+            }
+        }
+
+        .comments-box {
+
+            .comment {
+                padding: 20px 15px;
+                border-top: 1px solid $lightgray;
+                display: block;
+                position: relative;
+
+                figure {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    overflow: hidden;
+                    background: #b6b6b6;
+                    margin: 0;
+                }
+                .popover-menu{
+                    top: 50%;
+                    &:before{
+                        margin: 0% 0% 0% 50%;
+                    }
+                }
+            }
+
+            .comment-creator {
+                padding: 20px 15px;
+                border-top: 1px solid $lightgray;
+
+                figure {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    overflow: hidden;
+                    background: #b6b6b6;
+                    margin: 0;
+                }
+
+                .input-container {
+                    display: block;
+                    width: 100%;
+                    position: relative;
+
+                    input {
+                        @include placeholderColor($text-gray);
+                        background: #f5f5f5;
+                        border-radius: 5px;
+                        border: solid 1px #c6c6c6;
+                        color: $text-gray;
+                        display: block;
+                        outline: none;
+                        position: relative;
+                        z-index: 1;
+                        width: 100%;
+                        padding: 5px 20px 5px 10px;
+                        transition: all 0.2s linear;
+                        &:focus{
+                            box-shadow: 0px 0px 3px 0px #7b7b7b;
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        position: absolute;
+                        width: 18px;
+                        top: 5px;
+                        right: 10px;
+                        z-index: 2;
+                        opacity: 0.7;
+                    }
+                }
+
+            }
+
+            .comment {
+                .speech-bubble {
+                    width: 98%;
+
+                    .comment-container {
+                        display: block;
+                        padding: 10px;
+                        border-radius: 5px;
+                        background: #f5f5f5;
+
+                        a {
+                            color: #0880e6;
+                        }
+
+                        p {
+                            margin: 0;
+                        }
+                    }
+
+                    span {
+                        padding-left: 10px;
+                        color: $text-gray;
+                        font-size: rem(12);
+                    }
+                }
+
+                .toggle-popover {
+                    font-size: rem(20);
+                    color: #ababab;
+                    position: relative;
+                    z-index: 7;
+                }
+            }
+        }
+
+        .popover-menu{
+            text-align: right;
+            position: absolute;
+            z-index: 5;
+            top: 20px;
+            right: -30px;
+            font-size: 14px;
+            &:before{
+                content: "";
+                pointer-events: none;
+                display: block;
+                margin: 0% 0% 0% 55%;
+                width: 0;
+                height: 0;
+                border-color: transparent transparent #000 transparent;
+                border-style: solid;
+                border-width: 12px;
+            }
+            ul{
+                display: block;
+                background: #000;
+                list-style: none;
+                padding: 10px 15px;
+                margin: 0px;
+                border-radius: 5px;
+                li{
+                    display: block;
+                    margin-bottom: 5px;
+                    a{
+                        color: $white;
+                        &:hover{
+                            color: $yellow;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

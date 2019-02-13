@@ -1,0 +1,17 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import '../mixins/main';
+@import '../common/main';
+
+body {
+    display: block;
+    background: #000;
+    font-size: $browser-context + px;
+    font-family: $secondary-font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &.osg-public {
+        @import 'shared/main';
+        @import 'home/main';
+        @import 'auth/main';
+    }
+}

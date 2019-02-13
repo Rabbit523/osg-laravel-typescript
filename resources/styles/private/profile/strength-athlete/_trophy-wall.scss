@@ -1,0 +1,289 @@
+osg-strength-athlete-trophy-wall {
+    display: block;
+
+    h3 {
+        @include section-title;
+        float: left;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        color: #000;
+        font-family: $secondary-font;
+        font-size: rem(14);
+        font-weight: bold;
+        margin: 0;
+    }
+
+    p {
+        color: #838383;
+        font-size: rem(14);
+        margin: 0;
+        b {
+            color: #000;
+        }
+    }
+
+    osg-strength-athlete-trophy {
+        @include shadowed-container;
+        display: block;
+        background: #FFF;
+        margin-top: 15px;
+        margin-bottom: 30px;
+
+        .strenght-level {
+            display: block;
+            border-right: 1px #dadada solid;
+            height: 100%;
+            padding: 30px 20px;
+
+            .exercise-list {
+                display: block;
+                margin-top: 15px;
+
+                .list {
+                    display: block;
+                    margin-top: 15px;
+                    height: 360px;
+                    overflow: auto;
+
+                    .checkbox {
+                        color: #838383;
+                        font-size: rem(10);
+                        margin-bottom: 5px;
+                        display: block;
+
+                        .checkmark {
+                            background: #FFF;
+                            border-color: #dadada;
+                        }
+
+                        label {
+                            margin-top: 5px;
+
+                            input:checked~.checkmark {
+                                border-color: #2ebf0d;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .performance-graph {
+            display: block;
+            height: 100%;
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            .trophy{
+                width: 40px;
+            }
+
+            .descriptions{
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 30px;
+                width: 90%;
+                > div{
+                    text-align: center;
+                    span{
+                        display: block;
+                        font-size: 0.75rem;
+                        color: #838383;
+                        &:first-child{
+                            color: $light-blue;
+                        }
+                    }
+                    &:first-child{
+                        width: 25%;
+                    }
+
+                    &:nth-child(2){
+                        width: 50%;
+                    }
+
+                    &:last-child{
+                        width: 25%;
+                    }
+                }
+            }
+            .conventions{
+                //display: block;
+                margin-bottom: 20px;
+                display: flex;
+                /* flex-wrap: wrap; */
+                /* flex-grow: 1; */
+                justify-content: space-evenly;
+                p {
+                    color: #838383;
+                    font-size: rem(12);
+                    display: inline-block;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    &:first-child{
+                        margin-left: 0px;
+                    }
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+
+                    span {
+                        display: inline-block;
+                        margin-right: 5px;
+                    }
+                    &.start-end{
+                        span{
+                            width: 25px;
+                            height: 2px;
+                            background: #838383;
+                        }
+                    }
+                    &.performance{
+                        span{
+                            width: 25px;
+                            height: 2px;
+                            background: #ffa500;
+                        }
+                    }
+                    &.levels{
+                        span{
+                            width: 25px;
+                            height: 2px;
+                            background: #dadada;
+                        }
+                    }
+                    &.pretest{
+                        span{
+                            width: 10px;
+                            height: 10px;
+                            background: #FFF;
+                            border: solid 3px #86d531;
+                            border-radius: 100%;
+                            position: relative;
+                            &:after{
+                                content: "";
+                                border: solid 1px #86d531;
+                                display: block;
+                                position: absolute;
+                                top: -6px;
+                                left: -6px;
+                                border-radius: 100%;
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                    }
+                    &.posttest{
+                        span{
+                            width: 10px;
+                            height: 10px;
+                            background: #FFF;
+                            border: solid 3px #ff0000;
+                            border-radius: 100%;
+                            position: relative;
+                            &:after{
+                                content: "";
+                                border: solid 1px #ff0000;
+                                display: block;
+                                position: absolute;
+                                top: -6px;
+                                left: -6px;
+                                border-radius: 100%;
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            svg{
+                .pretest{
+                    stroke: #86d531;
+                    fill: transparent !important;
+                    &.extra{
+                        stroke-width: 3px;
+                    }
+                }
+                .posttest{
+                    stroke: #ff0000;
+                    fill: transparent !important;
+                    &.extra{
+                        stroke-width: 3px;
+                    }
+                }
+            }
+        }
+
+        .total-percentage {
+            display: block;
+            border-left: 1px #dadada solid;
+            height: 100%;
+            padding-top: 30px;
+            .title{
+                padding: 0px 15px;
+            }
+            .program-period{
+                display: block;
+                border-top: 1px #dadada solid;
+                padding: 20px;
+            }
+
+            .gauge-container{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                margin-top: 2rem;
+                osg-gauge{
+                    width: 60%;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .current-level {
+            display: block;
+            border-top: 2px #dadada solid;
+            padding: 0px;
+
+            .title{
+                padding-top: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .level {
+                display: block;
+                height: 100%;
+                text-align: center;
+                border-left: 1px #dadada solid;
+                padding: 20px 15px;
+
+                .gauge-container{
+                    display: block;
+                    margin: 0 auto 15px;
+                    osg-gauge{
+                        width: 60%;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+
+                p{
+                    font-size: rem(14);
+                    line-height: rem(18);
+                }
+
+                &.no-border{
+                    border: none;
+                }
+                &.yellow-bg{
+                    background: #fff6e1;
+                }
+            }
+        }
+    }
+}

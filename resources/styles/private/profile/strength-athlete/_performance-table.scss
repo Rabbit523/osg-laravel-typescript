@@ -1,0 +1,334 @@
+osg-strength-athlete-performance-table{
+    display: block;
+    .title {
+        display: block;
+        width: 100%;
+        h3 {
+            @include section-title;
+            float: left;
+        }
+        .sort-box{
+            font-weight: bold;
+            font-size: rem(14);
+            font-family: $secondary-font;
+            p{
+                display: inline-block;
+                color: #ababab;
+            }
+            .dropdown{
+                display: inline-block;
+                outline: none;
+                .btn{
+                    background: transparent;
+                    outline: none;
+                    color: $light-blue;
+                    font-size: rem(14);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .perfomance-table{
+        .main-table{
+            .title-variables{
+                background: #fff6e1;
+                text-transform: uppercase;
+                font-family: $secondary-font;
+                font-weight: bold;
+                font-size: rem(14);
+                color: #000;
+                padding: 0.75rem;
+                border-left: 1px solid #dadada;
+                border-right: 1px solid #dadada;
+                border-top: none;
+            }
+            >tbody{
+                > tr{
+                    > td{
+                        padding: 0;
+                        border: none;
+                    }
+                    /* &:nth-child(2){
+                        td{
+                            background: #fff6e1;
+                            text-transform: uppercase;
+                            font-family: $primary-font;
+                            font-size: rem(8);
+                            color: #000;
+                            padding: 0.75rem;
+                            border-left: 1px solid #dadada;
+                            border-right: 1px solid #dadada;
+                        }
+                    } */
+                }
+            }
+            .first-table{
+                width: 100%;
+                tr{
+                    td{
+                        background: #FFF;
+                        font-size: rem(14);
+                        color: #838383;
+                        border: 1px solid #dadada;
+                        &:first-child{
+                            background: #fff6e1;
+                            text-transform: uppercase;
+                            font-family: $secondary-font;
+                            font-weight: bold;
+                            font-size: rem(14);
+                            color: #000;
+                        }
+                        &:not(:first-child){
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+            .second-table{
+                width: 100%;
+                thead{
+                    tr{
+                        th{
+                            background: #fff6e1;
+                            text-transform: uppercase;
+                            font-family: $secondary-font;
+                            font-size: rem(14);
+                            font-weight: bold;
+                            color: #000;
+                            border: 1px solid #dadada;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            background: #FFF;
+                            font-size: rem(14);
+                            color: #838383;
+                            border: 1px solid #dadada;
+                            border: 1px solid #dadada;
+                        }
+                    }
+                }
+            }
+        }
+        .third-table{
+            width: 100%;
+            thead{
+                tr{
+                    th{
+                        background: #fff6e1;
+                        text-transform: uppercase;
+                        font-family: $secondary-font;
+                        font-weight: bold;
+                        font-size: rem(14);
+                        color: #000;
+                        border: 1px solid #dadada;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        background: #FFF;
+                        font-size: rem(14);
+                        color: #838383;
+                        border: 1px solid #dadada;
+                        &:first-child{
+                            background: #fff6e1;
+                            text-transform: uppercase;
+                            font-family: $secondary-font;
+                            font-weight: bold;
+                            font-size: rem(14);
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    osg-strength-athlete-performance-comparison{
+        background: #FFF;
+        display: block;
+        border-left: 1px solid #dadada;
+        margin-bottom: 20px;
+        .detail-title{
+            display: block;
+            padding: 20px 10px;
+            border-top: 1px solid #dadada;
+            border-right: 1px solid #dadada;
+            border-bottom: 1px solid #dadada;
+            h4{
+                color: $light-blue;
+                text-transform: uppercase;
+                font-family: $secondary-font;
+                font-weight: bold;
+                font-size: rem(14);
+                margin: 0;
+            }
+            p{
+                color: #838383;
+                font-size: rem(14);
+                margin: 0;
+            }
+        }
+        .graph{
+            display: block;
+            height: 100%;
+            padding: 15px 10px;
+            border-bottom: 1px solid #dadada;
+            border-right: 1px solid #dadada;
+
+            .gauge-container{
+                display: block;
+                margin: 0 auto 15px;
+                osg-gauge{
+                    width: 80%;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            p {
+                color: #838383;
+                font-size: rem(14);
+                line-height: rem(18);
+                margin: 0;
+                b {
+                    color: #000;
+                }
+            }
+        }
+        .detail-footer{
+            display: block;
+            background: #fff6e1;
+            padding: 10px 5px;
+            border-bottom: 1px solid #dadada;
+            border-right: 1px solid #dadada;
+            p {
+                color: #000;
+                font-size: rem(14);
+                font-weight: bold;
+                margin: 0;
+            }
+
+            .row{
+                > div{
+                    &:last-child{
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .recomendations{
+        display: block;
+        background: #FFF;
+        border: 1px solid #dadada;
+        padding: 20px 15px;
+        .title-recomendations{
+            h4{
+                color: #000;
+                text-transform: uppercase;
+                font-family: $secondary-font;
+                font-weight: bold;
+                font-size: rem(14);
+                margin: 0;
+            }
+            p{
+                color: #838383;
+                font-size: rem(14);
+                margin: 0;
+            }
+        }
+        ul{
+            list-style: none;
+            display: block;
+            padding: 0;
+            margin: 20px 0px 0px;
+            padding-top: 10px;
+            border-top: solid 1px #dadada;
+            li{
+                position: relative;
+                display: block;
+                color: #838383;
+                font-size: rem(14);
+                margin: 0;
+                padding-left: 20px;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                border-bottom: solid 1px #dadada;
+                &:after{
+                    display: block;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    color: $yellow;
+                    content: "\f005";
+                    font: normal normal normal 14px/1 FontAwesome;
+                }
+            }
+        }
+    }
+
+    .exercise-notes{
+        display: block;
+        background: #FFF;
+        border: 1px solid #dadada;
+        padding: 20px 15px;
+        .title-exercise{
+            h4{
+                color: #000;
+                text-transform: uppercase;
+                font-family: $secondary-font;
+                font-weight: bold;
+                font-size: rem(14);
+                margin: 0;
+            }
+            p{
+                color: #000;
+                font-size: rem(14);
+                margin: 0;
+            }
+        }
+        ul{
+            display: block;
+            padding: 0;
+            margin: 20px 0px 0px;
+            list-style: none;
+            height: 375px;
+            overflow: auto;
+            li{
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                border-bottom: solid 1px #dadada;
+                display: inline-block;
+                width: 100%;
+                time{
+                    color: #838383;
+                    font-size: rem(12);
+                    display: block;
+                    width: 100%;
+                }
+                p{
+                    color: #000;
+                    font-size: rem(14);
+                    margin: 0;
+                    display: block;
+                    width: 75%;
+                    float: left;
+                }
+                a{
+                    display: block;
+                    float: left;
+                    width: 25%;
+                    color: $light-blue;
+                    font-size: rem(14);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<osg-calendar-builder *ngIf="isBuildingCalendar" (complete)="next()"></osg-calendar-builder>
+<osg-progression-builder *ngIf="isBuildingProgress" (cancel)="previous()"></osg-progression-builder>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <hr>
+            <osg-get-started view="secondary" [sections]="getStartedSections"></osg-get-started>
+        </div>
+    </div>
+</div>

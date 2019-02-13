@@ -1,0 +1,157 @@
+#main-call-to-action {
+    @include section-with-overlay(black);
+    clip-path: ellipse(100% 60% at 50% 40%);
+    -webkit-clip-path: ellipse(100% 60% at 50% 40%);
+
+    @include media-breakpoint-down(sm) {
+        height: 550px;
+    }
+    &>img {
+        position: relative;
+        z-index: -2;
+        @include media-breakpoint-down(sm) {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content-cta {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 2;
+
+        h2 {
+            font-family: $primary-font;
+            text-align: center;
+            margin: 0;
+            color: white;
+            font-size: rem(30);
+            text-transform: uppercase;
+            font-weight: bold;
+
+            small {
+                display: block;
+                font-size: rem(16);
+            }
+            @include media-breakpoint-down(md) {
+                font-size: rem(20);
+            }
+        }
+
+        form.get-started {
+            .form-control {
+                @include placeholderColor(#000);
+                height: auto;
+                font-size: rem(14);
+                border: none;
+            }
+
+            .btn {
+                font-size: 0.8rem;
+                font-family: $secondary-font;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    .view-more {
+        border: 2px solid white;
+        width: rem(50);
+        height: rem(50);
+        position: absolute;
+        bottom: 30px;
+        outline: none;
+        left: 0%;
+        right: 0px;
+        z-index: 2;
+        margin: 0px auto;
+        text-align: center;
+        border-radius: 100%;
+        font-size: rem(40);
+        line-height: 1.2;
+
+        i {
+            color: $yellow;
+        }
+    }
+}
+
+#secondary-call-to-action {
+    position: relative;
+    z-index: 1;
+    margin-top: -55px;
+
+    .call-to-action {
+        position: relative;
+        @include section-with-overlay(black);
+
+        @include media-breakpoint-down(md) {
+            height: 600px;
+        }
+        @include media-breakpoint-down(sm) {
+            height: auto;
+        }
+
+        &>img {
+            position: relative;
+            z-index: -2;
+            @include media-breakpoint-down(md) {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content {
+            position: absolute;
+            bottom: 0;
+            padding: 0 40px 40px;
+            color: white;
+            @include media-breakpoint-down(md) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            h2 {
+                font-family: $primary-font;
+                text-transform: uppercase;
+                font-size: rem(30);
+
+                @include media-breakpoint-down(md) {
+                    font-size: rem(25);
+                }
+
+                small {
+                    display: block;
+                    font-size: 50%;
+                }
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+            .buttons{
+                a{
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    @include media-breakpoint-down(lg){
+                        display: block;
+                        text-align: center;
+                    }
+                    &.learn-more{
+                        color: #FFF;
+                        text-transform: uppercase;
+                        font-family: $primary-font;
+                        @include media-breakpoint-down(lg){
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

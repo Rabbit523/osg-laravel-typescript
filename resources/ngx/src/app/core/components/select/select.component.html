@@ -1,0 +1,9 @@
+<!-- <div class="dropdown black-dropdown with-label">
+    
+</div> -->
+
+<label for="">{{label}}</label>
+<button class="btn dropdown-toggle btn-block" type="button" (click)="toggle()">{{selection}}</button>
+<div class="dropdown-menu" [ngClass]="{'show': open}" aria-labelledby="dropdownMenuButton1">
+    <a *ngFor="let option of options" class="dropdown-item" (click)="select(option)">{{option}}</a>
+</div>

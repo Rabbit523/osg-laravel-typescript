@@ -1,0 +1,166 @@
+osg-plan-builder-calendar {
+    @extend .col;
+    @extend .col-md-4;
+    .subtitle{
+        border-left: solid 1px #d8ddd1;
+        border-right: solid 1px #d8ddd1;
+        border-bottom: solid 1px #d8ddd1;
+        display: block;
+        padding: 30px 15px 35px;
+    }
+    h3{
+        @include section-title(rem(16));
+        font-family: $secondary-font;
+        font-weight: bold;
+    }
+    .workouts-list{
+        padding: 10px 15px 0px;
+        border-bottom: solid 1px #d8ddd1;
+        border-left: solid 1px #d8ddd1;
+        border-right: solid 1px #d8ddd1;
+        .workout{
+            @include section-title(rem(14));
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-family: $secondary-font;
+            span{
+                color: #000;
+                background: $yellow;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                line-height: 30px;
+                text-align: center;
+                display: inline-block;
+            }
+            p{
+                color: #838383;
+                margin-bottom: 0px;
+                font-family: $secondary-font;
+                font-size: 14px;
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+    .table-responsive{
+        height: 563px;
+        overflow-x: inherit;
+    }
+    table{
+        margin-bottom: 0px;
+        thead{
+            tr{
+                &:first-child{
+                    th{
+                        border-top: none;
+                    }
+                }
+                th{
+                    border: solid 1px #d8ddd1;
+                    font-family: $secondary-font;
+                    font-weight: bold;
+                    font-size: rem(14);
+                    text-transform: uppercase;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    border: solid 1px #d8ddd1;
+                    font-family: $secondary-font;
+                    font-size: rem(14);
+                    padding: 0.874rem;
+                    text-transform: uppercase;
+                    vertical-align: middle;
+                    text-align: left;
+                    span{
+                        color: #000;
+                        background: $yellow;
+                        width: 30px;
+                        height: 30px;
+                        font-weight: bold;
+                        border-radius: 100%;
+                        line-height: 30px;
+                        text-align: center;
+                        display: inline-block;
+                    }
+                }
+                &:last-child{
+                    td{
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+    .actions{
+        display: block;
+        padding: 10px 15px 10px;
+        border-left: solid 1px #d8ddd1;
+        border-top: solid 2px #d8ddd1;
+        border-right: solid 1px #d8ddd1;
+        .btn{
+            font-size: rem(14);
+            font-family: $secondary-font;
+            font-weight: bold;
+            letter-spacing: 0;
+            span{
+                display: inline-block;
+                background: $yellow;
+                width: 13px;
+                height: 13px;
+                border-radius: 100%;
+                text-align: center;
+                line-height: 13px;
+                color: #000;
+            }
+            img{
+                width: 13px;
+            }
+            &.btn-gray{
+                margin-left: 10px;
+            }
+        }
+    }
+    .calendar-info{
+        display: block;
+        padding: 20px 15px 20px;
+        border-left: solid 1px #d8ddd1;
+        border-top: solid 1px #d8ddd1;
+        border-right: solid 1px #d8ddd1;
+        p{
+            margin-bottom: 0px;
+            font-size: rem(14);
+            span{
+                font-family: $secondary-font;
+                font-weight: bold;
+                color: #000;
+                text-transform: uppercase;
+            }
+            &.program{
+                color: $light-blue;
+                font-family: $secondary-font;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            &.category{
+                color: $red;
+                font-family: $secondary-font;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            &.description{
+                color: #838383;
+                font-size: rem(14);
+                span{
+                    font-size: rem(14);
+                    font-family: $secondary-font;
+                }
+            }
+        }
+    }
+}

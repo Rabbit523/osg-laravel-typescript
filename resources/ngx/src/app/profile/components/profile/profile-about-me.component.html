@@ -1,0 +1,23 @@
+<div class="row mb-2 align-items-center">
+    <div class="col text-left"><h3>about me</h3></div>
+    <div class="col text-right"><a href="" class="edit"><img src="/assets/images/icons/icon-pencil.svg" class="img-fluid" alt=""></a></div>
+</div>
+<div class="about-me-container">
+    <p>{{text}}</p>
+    <div class="summary">
+        <div *ngIf="interests" class="entry"><span> <img src="/assets/images/icons/icon-star.png" class="img-fluid d-inline-block" alt=""> Interests:</span><span>{{interests}}</span></div>
+
+        <div *ngIf="education" class="entry"><span><img src="/assets/images/icons/icon-education.png" class="img-fluid d-inline-block" alt=""> Education:</span><span>{{education}}</span></div>
+
+        <div *ngIf="specialities" class="entry"><span><img src="/assets/images/icons/icon-star.png" class="img-fluid d-inline-block" alt=""> Specialities:</span><span>{{specialities}}</span></div>
+        
+        <div *ngIf="experience" class="entry"><span><img src="/assets/images/icons/icon-calendar.png" class="img-fluid d-inline-block" alt=""> Experience:</span><span>{{experience}}</span></div>
+
+        <div *ngIf="country" class="entry"><span><img src="/assets/images/icons/icon-world.png" class="img-fluid d-inline-block" alt=""> Country:</span><span>{{country}}</span></div>
+
+        <div *ngIf="location" class="entry"><span><img src="/assets/images/icons/icon-pin-map.png" class="img-fluid d-inline-block" alt=""> Location:</span><span>{{location}}</span></div>
+
+        <div *ngIf="profile" class="entry"><span><img src="/assets/images/icons/icon-profile.png" class="img-fluid d-inline-block" alt=""> Profile:</span><span>{{profile}}</span></div>
+    </div>
+    <button class="btn btn-black btn-block text-uppercase py-2"> <img src="/assets/images/icons/icon-go-to.svg" class="d-inline-block img-fluid" alt=""> Contact me</button>
+</div>
